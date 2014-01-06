@@ -1,0 +1,16 @@
+
+The Airline Game
+================
+
+UI: two columns
+-Messages stream by on the left
+-Menus of commands / control panels appear on the right
+-Single-key commands
+-Spacebar to pause/unpause
+
+Runtime: one process per airport, plus one for planes in the air, and the main (UI)
+process
+
+Main menu: show each save file as a company name and date (maybe some other info too)
+-Plus a New Game option
+
