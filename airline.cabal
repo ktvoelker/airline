@@ -33,8 +33,12 @@ Executable airline
     data-lens-fd         >= 2.0  && < 2.1,
     data-lens-template   >= 2.1  && < 2.2,
     template-haskell     >= 2.7  && < 2.9,
-    vty                  >= 4.7  && < 4.8,
-    vty-ui               >= 1.6  && < 1.7,
+    bytestring           >= 0.10 && < 0.11,
+    wai-app-static,
+    warp,
+    wai,
+    wai-websockets,
+    websockets,
     Hydrogen
   default-extensions:
     NoImplicitPrelude
