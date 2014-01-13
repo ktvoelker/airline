@@ -34,11 +34,11 @@ Executable airline
     data-lens-template   >= 2.1  && < 2.2,
     template-haskell     >= 2.7  && < 2.9,
     bytestring           >= 0.10 && < 0.11,
-    wai-app-static,
-    warp,
-    wai,
-    wai-websockets,
-    websockets,
+    wai-app-static       >= 2.0  && < 2.1,
+    warp                 >= 2.0  && < 2.1,
+    wai                  >= 2.0  && < 2.1,
+    wai-websockets       >= 2.0  && < 2.1,
+    websockets           >= 0.8  && < 0.9,
     Hydrogen
   default-extensions:
     NoImplicitPrelude
