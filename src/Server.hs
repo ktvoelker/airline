@@ -1,10 +1,11 @@
 
-module Server (Handler, run) where
+module Server (run) where
 
-import Control.Concurrent
+import Control.Concurrent (ThreadId, forkIO)
 import qualified Data.ByteString as BS
 import qualified Data.ByteString.Lazy as BSL
 import Data.IORef
+import H.Chan
 import H.Common
 import qualified Network.Wai as WAI
 import qualified Network.Wai.Application.Static as Stat
@@ -30,17 +31,16 @@ data Message =
   | ClientDisconnect Client
   deriving (Eq, Show)
 
-type Handler = Message -> IO ()
-
-webSocketServer :: IORef ClientId -> Handler -> WS.ServerApp
+webSocketServer :: (WChan chan) => IORef ClientId -> chan Message -> WS.ServerApp
 webSocketServer cidRef h = WS.acceptRequest >=> \conn -> do
   cid <- readIORef cidRef
   writeIORef cidRef $ nextClientId cid
   chan <- newChan
   let client = Client cid chan
-  h $ ClientConnect client
+  writeChan h $ ClientConnect client
   -- TODO stop ignoring the ThreadIds
-  void . forkIO $ inputHandler (h $ ClientDisconnect client) (writeChan chan) conn
+  let discon = writeChan h $ ClientDisconnect client
+  void . forkIO $ inputHandler discon (writeChan chan) conn
   void . forkIO $ outputHandler (readChan chan) conn
 
 inputHandler :: IO () -> (BS.ByteString -> IO ()) -> WS.Connection -> IO ()
@@ -62,13 +62,13 @@ outputHandler h conn =
 app :: WAI.Application
 app = Stat.staticApp $ Stat.defaultFileServerSettings "./static"
 
-settings :: IORef ClientId -> Handler -> Warp.Settings
+settings :: (WChan chan) => IORef ClientId -> chan Message -> Warp.Settings
 settings cidRef h = Warp.defaultSettings
   { Warp.settingsIntercept = WAIWS.intercept $ webSocketServer cidRef h
   , Warp.settingsPort = 8042
   }
 
-run :: Handler -> IO ThreadId
+run :: (WChan chan) => chan Message -> IO ThreadId
 run h = do
   cidRef <- newIORef $ ClientId 0
   forkIO $ Warp.runSettings (settings cidRef h) app
