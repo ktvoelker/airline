@@ -2,26 +2,7 @@
 TODO
 ====
 
-Get rid of global messages and the whole message channel concept
+Finish the WebSockets module
 
-Take assumptions about data format (like JSON) out of the Server module
-
-The Server.run function should be parameterized with nothing but a Client Message
-Handler Function, which runs in any MonadIO monad
-
-The Server module will handle the creation of a thread per client to receive messages
-and run the handler function for each message
-
-What about sending data to the client? The message handler could return messages to
-send, but that's not flexible enough. We might want to send data to a client from
-anywhere, even from code dealing with a different client.
-
-How about this: the client message handler function takes two parameters: the message
-and an output channel for that client. The Server module handles the spawning of
-output threads for each client.
-
-Also, the user of Server can optionally provide special handlers for client init
-and disconnect, which just take the client as a parameter and not a message.
-That way, the normal message handler doesn't always have to have the special cases
-looming over it.
+Finish the Server module
 

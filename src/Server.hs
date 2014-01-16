@@ -1,75 +1,58 @@
 
-module Server (run) where
+module Server where
 
-import Control.Concurrent (ThreadId, forkIO)
-import qualified Data.ByteString as BS
-import qualified Data.ByteString.Lazy as BSL
+import Control.Concurrent
 import Data.IORef
-import H.Chan
+import qualified Data.Set as S
 import H.Common
-import qualified Network.Wai as WAI
-import qualified Network.Wai.Application.Static as Stat
-import qualified Network.Wai.Handler.Warp as Warp
-import qualified Network.Wai.Handler.WebSockets as WAIWS
-import qualified Network.WebSockets as WS
 
-newtype ClientId = ClientId Integer deriving (Eq, Show)
-
-nextClientId :: ClientId -> ClientId
-nextClientId (ClientId n) = ClientId $ n + 1
-
-data Client = Client ClientId (Chan BS.ByteString)
-
-instance Eq Client where
-  (Client a _) == (Client b _) = a == b
-
-instance Show Client where
-  showsPrec p (Client (ClientId n) _) = ("(Client " ++) . showsPrec p n . (")" ++)
-
-data Message =
-    ClientConnect Client
-  | ClientDisconnect Client
-  deriving (Eq, Show)
-
-webSocketServer :: (WChan chan) => IORef ClientId -> chan Message -> WS.ServerApp
-webSocketServer cidRef h = WS.acceptRequest >=> \conn -> do
-  cid <- readIORef cidRef
-  writeIORef cidRef $ nextClientId cid
-  chan <- newChan
-  let client = Client cid chan
-  writeChan h $ ClientConnect client
-  -- TODO stop ignoring the ThreadIds
-  let discon = writeChan h $ ClientDisconnect client
-  void . forkIO $ inputHandler discon (writeChan chan) conn
-  void . forkIO $ outputHandler (readChan chan) conn
-
-inputHandler :: IO () -> (BS.ByteString -> IO ()) -> WS.Connection -> IO ()
-inputHandler h f conn = WS.receive conn >>= \case
-  (WS.ControlMessage (WS.Close _)) ->
-    (WS.send conn . WS.ControlMessage . WS.Close $ mempty) >> h
-  (WS.ControlMessage _)            -> loop
-  (WS.DataMessage (WS.Text _))     -> loop
-  (WS.DataMessage (WS.Binary bs))  -> (f . BS.concat . BSL.toChunks $ bs) >> loop
-  where
-    loop = inputHandler h f conn
-
-outputHandler :: (IO BS.ByteString) -> WS.Connection -> IO ()
-outputHandler h conn =
-  h >>= WS.send conn . WS.DataMessage . WS.Binary . BSL.fromChunks . (: []) >> loop
-  where
-    loop = outputHandler h conn
-
-app :: WAI.Application
-app = Stat.staticApp $ Stat.defaultFileServerSettings "./static"
-
-settings :: (WChan chan) => IORef ClientId -> chan Message -> Warp.Settings
-settings cidRef h = Warp.defaultSettings
-  { Warp.settingsIntercept = WAIWS.intercept $ webSocketServer cidRef h
-  , Warp.settingsPort = 8042
+data Client c = Client
+  { cId         :: Integer
+  , cReadThread :: ThreadId
+  , cConnection :: c
   }
 
-run :: (WChan chan) => chan Message -> IO ThreadId
-run h = do
-  cidRef <- newIORef $ ClientId 0
-  forkIO $ Warp.runSettings (settings cidRef h) app
+instance Eq (Client c) where
+  (==) = (==) `on` cId
+
+instance Ord (Client c) where
+  compare = compare `on` cId
+
+instance Show (Client c) where
+  showsPrec p = showsPrec p . cId
+
+data Server m p c w = Server
+  { sMasterThread :: IORef (Maybe (ThreadId))
+  , sNextClientId :: IORef Integer
+  , sClients      :: IORef (S.Set (Client c))
+  , sHandleClient :: p -> m ()
+  , sWriteMessage :: Client c -> w -> m ()
+  }
+
+data Config m p c r w = Config
+  { waitForClient :: m p
+  , acceptClient  :: p -> m c
+  , rejectClient  :: p -> m ()
+  , getMessage    :: c -> m r
+  , putMessage    :: c -> w -> m ()
+  , readMessage   :: Client c -> r -> m ()
+  }
+
+newServer :: (MonadIO m) => Config m p c r w -> m (Server m p c w)
+newServer = todo
+
+startServer :: (MonadIO m) => Server m p c w -> m ()
+startServer = todo
+
+stopServer :: (MonadIO m) => Server m p c w -> m ()
+stopServer = todo
+
+serverRunning :: (MonadIO m) => Server m p c w -> m Bool
+serverRunning = liftIO . readIORef . sMasterThread >=> return . isJust
+
+handleClient :: (MonadIO m) => Server m p c w -> p -> m ()
+handleClient = sHandleClient
+
+writeMessage :: (MonadIO m) => Server m p c w -> Client c -> w -> m ()
+writeMessage = sWriteMessage
 

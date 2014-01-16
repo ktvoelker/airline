@@ -1,14 +1,12 @@
 
 module Main where
 
-import H.Chan
 import H.Common
 
-import qualified Server
+import WebSockets
 
 main :: IO ()
 main = do
-  (rChan, wChan) <- newSplitChan
-  server <- Server.run wChan
-  todo server rChan
+  tid <- run
+  todo tid
 
