@@ -2,3 +2,9 @@
 TODO
 ====
 
+Switch to Dart
+
+Handle disconnection properly
+
+Write a message-decoding layer
+
