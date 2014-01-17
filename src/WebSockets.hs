@@ -2,7 +2,6 @@
 module WebSockets (run) where
 
 import Control.Concurrent (ThreadId, forkIO)
--- import qualified Data.ByteString.Lazy as BSL
 import H.Common
 import qualified Network.Wai as WAI
 import qualified Network.Wai.Application.Static as Stat
@@ -12,7 +11,11 @@ import qualified Network.WebSockets as WS
 
 import qualified Server as S
 
+type Handler = S.Client WS.Connection -> WS.Message -> IO ()
+
 type WebSocketServer = S.Server IO WS.PendingConnection WS.Connection WS.Message
+
+type Config = S.Config IO WS.PendingConnection WS.Connection WS.Message WS.Message
 
 webSocketServer :: WebSocketServer -> WS.PendingConnection -> IO ()
 webSocketServer = S.handleClient
@@ -44,9 +47,16 @@ settings server = Warp.defaultSettings
   , Warp.settingsPort = 8042
   }
 
-serverConfig :: S.Config IO WS.PendingConnection WS.Connection WS.Message WS.Message
-serverConfig = todo
+serverConfig :: Handler -> Config
+serverConfig h = S.Config
+  { S.waitForClient = undefined
+  , S.acceptClient  = WS.acceptRequest
+  , S.rejectClient  = flip WS.rejectRequest ""
+  , S.getMessage    = WS.receive
+  , S.putMessage    = WS.send
+  , S.readMessage   = h
+  }
 
-run :: IO ThreadId
-run = S.newServer serverConfig >>= forkIO . flip Warp.runSettings app . settings
+run :: Handler -> IO ThreadId
+run h = S.newServer (serverConfig h) >>= forkIO . flip Warp.runSettings app . settings
 

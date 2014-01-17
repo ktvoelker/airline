@@ -7,6 +7,6 @@ import WebSockets
 
 main :: IO ()
 main = do
-  tid <- run
+  tid <- run todo
   todo tid
 
