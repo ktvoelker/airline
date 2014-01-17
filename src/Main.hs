@@ -7,7 +7,9 @@ import H.Common
 import Server
 
 handler :: Handler
-handler = writeMessage
+handler server cid msg = do
+  print msg
+  writeMessage server cid msg
 
 main :: IO ()
 main = void $ forkPromise (run handler) >>= wait

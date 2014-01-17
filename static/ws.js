@@ -1,15 +1,20 @@
 
-function run() {
+var next = 0;
+
+function start() {
+  var index = next;
+  next += 1;
   var ws = new WebSocket('ws://localhost:8042');
-  window.karlWS = ws;
-  var ab = new ArrayBuffer(4);
-  var abv = new Uint8Array(ab);
-  for (var i = 0; i < 4; ++i) {
-    abv[i] = i + 1;
-  }
-  ws.addEventListener('open', function() {
-    ws.send(abv);
-    ws.close();
+  ws.addEventListener('message', function(evt) {
+    console.log("" + index + " " + evt.data);
   });
+  ws.addEventListener('open', function() {
+    console.log("" + index + " OPEN");
+  });
+  return ws;
+}
+
+function send(ws) {
+  ws.send("Hello, world!");
 }
 

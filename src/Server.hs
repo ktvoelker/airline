@@ -8,7 +8,6 @@ module Server
   , writeMessage
   ) where
 
-import Control.Concurrent
 import Data.IORef
 import qualified Data.Map as M
 import H.Common
@@ -34,24 +33,9 @@ firstClientId = ClientId 0
 nextClientId :: ClientId -> ClientId
 nextClientId = ClientId . (+ 1) . cidInteger
 
-data Client = Client
-  { cId         :: ClientId
-  , cReadThread :: ThreadId
-  , cConnection :: WS.Connection
-  }
-
-instance Eq Client where
-  (==) = (==) `on` cId
-
-instance Ord Client where
-  compare = compare `on` cId
-
-instance Show Client where
-  showsPrec p = showsPrec p . cId
-
 data Server = Server
   { sNextClientId :: IORef ClientId
-  , sClients      :: IORef (M.Map ClientId Client)
+  , sClients      :: IORef (M.Map ClientId WS.Connection)
   , sHandler      :: Handler
   }
 
@@ -64,23 +48,23 @@ newServer h = do
 handleClient :: Server -> WS.PendingConnection -> IO ()
 handleClient server@Server{..} p = readIORef sClients >>= \case
   set
-    | M.size set > maxClients
+    | M.size set >= maxClients
       -> WS.rejectRequest p "Too many clients"
     | otherwise
       -> WS.acceptRequest p >>= initForClient server
 
 initForClient :: Server -> WS.Connection -> IO ()
 initForClient server@Server{..} conn = do
-  cid <- readIORef sNextClientId
-  writeIORef sNextClientId $ nextClientId cid
-  tid <- forkIO $ forever $ WS.receive conn >>= sHandler server cid
-  modifyIORef' sClients $ M.insert cid $ Client cid tid conn
+  cid <- atomicModifyIORef' sNextClientId $ \cid -> (nextClientId cid, cid)
+  print cid
+  atomicModifyIORef' sClients $ (, ()) . M.insert cid conn
+  forever $ WS.receive conn >>= sHandler server cid
 
 writeMessage :: Server -> ClientId -> WS.Message -> IO ()
 writeMessage Server{..} cid msg = do
   (readIORef sClients >>=) $ M.lookup cid >>> \case
-    Nothing         -> todo
-    Just Client{..} -> WS.send cConnection msg
+    Nothing         -> error "Not implemented: write to unknown ClientId"
+    Just conn -> WS.send conn msg
 
 app :: WAI.Application
 app = Stat.staticApp $ Stat.defaultFileServerSettings "./static"
