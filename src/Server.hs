@@ -6,6 +6,10 @@ import Data.IORef
 import qualified Data.Set as S
 import H.Common
 
+-- TODO configurable
+maxClients :: Int
+maxClients = 9
+
 data Client c = Client
   { cId         :: Integer
   , cReadThread :: ThreadId
@@ -39,7 +43,22 @@ data Config m p c r w = Config
   }
 
 newServer :: (MonadIO m) => Config m p c r w -> m (Server m p c w)
-newServer = todo
+newServer config@Config{..} = do
+  masterThread <- liftIO (newIORef Nothing)
+  nextClientId <- liftIO (newIORef 0)
+  clients      <- liftIO (newIORef S.empty)
+  let
+  { handler p = liftIO (readIORef clients) >>= \case
+      set
+        | S.size set > maxClients
+          -> rejectClient p
+        | otherwise
+          -> acceptClient p >>= initForClient config
+  }
+  return . Server masterThread nextClientId clients handler $ putMessage . cConnection
+
+initForClient :: (MonadIO m) => Config m p c r w -> c -> m ()
+initForClient = todo
 
 startServer :: (MonadIO m) => Server m p c w -> m ()
 startServer = todo
