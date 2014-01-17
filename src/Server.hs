@@ -3,8 +3,13 @@ module Server where
 
 import Control.Concurrent
 import Data.IORef
-import qualified Data.Set as S
+import qualified Data.Map as M
 import H.Common
+import qualified Network.Wai as WAI
+import qualified Network.Wai.Application.Static as Stat
+import qualified Network.Wai.Handler.Warp as Warp
+import qualified Network.Wai.Handler.WebSockets as WAIWS
+import qualified Network.WebSockets as WS
 
 -- TODO configurable
 maxClients :: Int
@@ -20,74 +25,80 @@ firstClientId = ClientId 0
 nextClientId :: ClientId -> ClientId
 nextClientId = ClientId . (+ 1) . cidInteger
 
-data Client c = Client
+data Client = Client
   { cId         :: ClientId
   , cReadThread :: ThreadId
-  , cConnection :: c
+  , cConnection :: WS.Connection
   }
 
-instance Eq (Client c) where
+instance Eq Client where
   (==) = (==) `on` cId
 
-instance Ord (Client c) where
+instance Ord Client where
   compare = compare `on` cId
 
-instance Show (Client c) where
+instance Show Client where
   showsPrec p = showsPrec p . cId
 
-data Server p c w = Server
-  { sMasterThread :: IORef (Maybe (ThreadId))
-  , sNextClientId :: IORef ClientId
-  , sClients      :: IORef (S.Set (Client c))
-  , sHandleClient :: p -> IO ()
-  , sWriteMessage :: Client c -> w -> IO ()
+data Server = Server
+  { sNextClientId :: IORef ClientId
+  , sClients      :: IORef (M.Map ClientId Client)
   }
 
-data Config p c r w = Config
-  { waitForClient :: IO p
-  , acceptClient  :: p -> IO c
-  , rejectClient  :: p -> IO ()
-  , getMessage    :: c -> IO r
-  , putMessage    :: c -> w -> IO ()
-  , readMessage   :: ClientId -> r -> IO ()
-  }
-
-newServer :: Config p c r w -> IO (Server p c w)
-newServer Config{..} = do
-  masterThreadRef <- newIORef Nothing
+newServer :: IO Server
+newServer = do
   nextClientIdRef <- newIORef firstClientId
-  clientsRef      <- newIORef S.empty
-  let
-  { init conn = do
-      cid <- readIORef nextClientIdRef
-      writeIORef nextClientIdRef $ nextClientId cid
-      tid <- forkIO $ forever $ getMessage conn >>= readMessage cid
-      modifyIORef' clientsRef $ S.insert $ Client cid tid conn
+  clientsRef      <- newIORef M.empty
+  return $ Server nextClientIdRef clientsRef
+
+handleClient :: Server -> WS.PendingConnection -> IO ()
+handleClient server@Server{..} p = readIORef sClients >>= \case
+  set
+    | M.size set > maxClients
+      -> WS.rejectRequest p "Too many clients"
+    | otherwise
+      -> WS.acceptRequest p >>= initForClient server
+
+initForClient :: Server -> WS.Connection -> IO ()
+initForClient Server{..} conn = do
+  cid <- readIORef sNextClientId
+  writeIORef sNextClientId $ nextClientId cid
+  tid <- forkIO $ forever $ WS.receive conn >>= readMessage cid
+  modifyIORef' sClients $ M.insert cid $ Client cid tid conn
+
+readMessage :: ClientId -> WS.Message -> IO ()
+readMessage = error "This should actually be a callback sent into this module"
+
+writeMessage :: Server -> ClientId -> WS.Message -> IO ()
+writeMessage = todo
+
+{-
+inputHandler :: IO () -> (BS.ByteString -> IO ()) -> WS.Connection -> IO ()
+inputHandler h f conn = WS.receive conn >>= \case
+  (WS.ControlMessage (WS.Close _)) ->
+    (WS.send conn . WS.ControlMessage . WS.Close $ mempty) >> h
+  (WS.ControlMessage _)            -> loop
+  (WS.DataMessage (WS.Text _))     -> loop
+  (WS.DataMessage (WS.Binary bs))  -> (f . BS.concat . BSL.toChunks $ bs) >> loop
+  where
+    loop = inputHandler h f conn
+
+outputHandler :: (IO BS.ByteString) -> WS.Connection -> IO ()
+outputHandler h conn =
+  h >>= WS.send conn . WS.DataMessage . WS.Binary . BSL.fromChunks . (: []) >> loop
+  where
+    loop = outputHandler h conn
+-}
+
+app :: WAI.Application
+app = Stat.staticApp $ Stat.defaultFileServerSettings "./static"
+
+settings :: Server -> Warp.Settings
+settings server = Warp.defaultSettings
+  { Warp.settingsIntercept = WAIWS.intercept $ handleClient server
+  , Warp.settingsPort      = 8042
   }
-  let
-  { handler p = readIORef clientsRef >>= \case
-      set
-        | S.size set > maxClients
-          -> rejectClient p
-        | otherwise
-          -> acceptClient p >>= init
-  }
-  return
-    $ Server masterThreadRef nextClientIdRef clientsRef handler
-    $ putMessage . cConnection
 
-startServer :: Server p c w -> IO ()
-startServer = todo
-
-stopServer :: Server p c w -> IO ()
-stopServer = todo
-
-serverRunning :: Server p c w -> IO Bool
-serverRunning = readIORef . sMasterThread >=> return . isJust
-
-handleClient :: Server p c w -> p -> IO ()
-handleClient = sHandleClient
-
-writeMessage :: Server p c w -> Client c -> w -> IO ()
-writeMessage = sWriteMessage
+run :: IO ThreadId
+run = newServer >>= forkIO . flip Warp.runSettings app . settings
 

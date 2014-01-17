@@ -3,10 +3,10 @@ module Main where
 
 import H.Common
 
-import WebSockets
+import Server
 
 main :: IO ()
 main = do
-  tid <- run todo
+  tid <- run
   todo tid
 
