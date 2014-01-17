@@ -1,5 +1,12 @@
 
-module Server where
+module Server
+  ( Handler
+  , maxClients
+  , ClientId()
+  , Server()
+  , run
+  , writeMessage
+  ) where
 
 import Control.Concurrent
 import Data.IORef
@@ -10,6 +17,8 @@ import qualified Network.Wai.Application.Static as Stat
 import qualified Network.Wai.Handler.Warp as Warp
 import qualified Network.Wai.Handler.WebSockets as WAIWS
 import qualified Network.WebSockets as WS
+
+type Handler = Server -> ClientId -> WS.Message -> IO ()
 
 -- TODO configurable
 maxClients :: Int
@@ -43,13 +52,14 @@ instance Show Client where
 data Server = Server
   { sNextClientId :: IORef ClientId
   , sClients      :: IORef (M.Map ClientId Client)
+  , sHandler      :: Handler
   }
 
-newServer :: IO Server
-newServer = do
+newServer :: Handler -> IO Server
+newServer h = do
   nextClientIdRef <- newIORef firstClientId
   clientsRef      <- newIORef M.empty
-  return $ Server nextClientIdRef clientsRef
+  return $ Server nextClientIdRef clientsRef h
 
 handleClient :: Server -> WS.PendingConnection -> IO ()
 handleClient server@Server{..} p = readIORef sClients >>= \case
@@ -60,35 +70,17 @@ handleClient server@Server{..} p = readIORef sClients >>= \case
       -> WS.acceptRequest p >>= initForClient server
 
 initForClient :: Server -> WS.Connection -> IO ()
-initForClient Server{..} conn = do
+initForClient server@Server{..} conn = do
   cid <- readIORef sNextClientId
   writeIORef sNextClientId $ nextClientId cid
-  tid <- forkIO $ forever $ WS.receive conn >>= readMessage cid
+  tid <- forkIO $ forever $ WS.receive conn >>= sHandler server cid
   modifyIORef' sClients $ M.insert cid $ Client cid tid conn
 
-readMessage :: ClientId -> WS.Message -> IO ()
-readMessage = error "This should actually be a callback sent into this module"
-
 writeMessage :: Server -> ClientId -> WS.Message -> IO ()
-writeMessage = todo
-
-{-
-inputHandler :: IO () -> (BS.ByteString -> IO ()) -> WS.Connection -> IO ()
-inputHandler h f conn = WS.receive conn >>= \case
-  (WS.ControlMessage (WS.Close _)) ->
-    (WS.send conn . WS.ControlMessage . WS.Close $ mempty) >> h
-  (WS.ControlMessage _)            -> loop
-  (WS.DataMessage (WS.Text _))     -> loop
-  (WS.DataMessage (WS.Binary bs))  -> (f . BS.concat . BSL.toChunks $ bs) >> loop
-  where
-    loop = inputHandler h f conn
-
-outputHandler :: (IO BS.ByteString) -> WS.Connection -> IO ()
-outputHandler h conn =
-  h >>= WS.send conn . WS.DataMessage . WS.Binary . BSL.fromChunks . (: []) >> loop
-  where
-    loop = outputHandler h conn
--}
+writeMessage Server{..} cid msg = do
+  (readIORef sClients >>=) $ M.lookup cid >>> \case
+    Nothing         -> todo
+    Just Client{..} -> WS.send cConnection msg
 
 app :: WAI.Application
 app = Stat.staticApp $ Stat.defaultFileServerSettings "./static"
@@ -99,6 +91,6 @@ settings server = Warp.defaultSettings
   , Warp.settingsPort      = 8042
   }
 
-run :: IO ThreadId
-run = newServer >>= forkIO . flip Warp.runSettings app . settings
+run :: Handler -> IO ThreadId
+run h = newServer h >>= forkIO . flip Warp.runSettings app . settings
 
