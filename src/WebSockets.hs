@@ -11,11 +11,11 @@ import qualified Network.WebSockets as WS
 
 import qualified Server as S
 
-type Handler = S.Client WS.Connection -> WS.Message -> IO ()
+type Handler = S.ClientId -> WS.Message -> IO ()
 
-type WebSocketServer = S.Server IO WS.PendingConnection WS.Connection WS.Message
+type WebSocketServer = S.Server WS.PendingConnection WS.Connection WS.Message
 
-type Config = S.Config IO WS.PendingConnection WS.Connection WS.Message WS.Message
+type Config = S.Config WS.PendingConnection WS.Connection WS.Message WS.Message
 
 webSocketServer :: WebSocketServer -> WS.PendingConnection -> IO ()
 webSocketServer = S.handleClient

@@ -10,8 +10,18 @@ import H.Common
 maxClients :: Int
 maxClients = 9
 
+newtype ClientId = ClientId
+  { cidInteger :: Integer
+  } deriving (Eq, Ord, Show)
+
+firstClientId :: ClientId
+firstClientId = ClientId 0
+
+nextClientId :: ClientId -> ClientId
+nextClientId = ClientId . (+ 1) . cidInteger
+
 data Client c = Client
-  { cId         :: Integer
+  { cId         :: ClientId
   , cReadThread :: ThreadId
   , cConnection :: c
   }
@@ -25,53 +35,59 @@ instance Ord (Client c) where
 instance Show (Client c) where
   showsPrec p = showsPrec p . cId
 
-data Server m p c w = Server
+data Server p c w = Server
   { sMasterThread :: IORef (Maybe (ThreadId))
-  , sNextClientId :: IORef Integer
+  , sNextClientId :: IORef ClientId
   , sClients      :: IORef (S.Set (Client c))
-  , sHandleClient :: p -> m ()
-  , sWriteMessage :: Client c -> w -> m ()
+  , sHandleClient :: p -> IO ()
+  , sWriteMessage :: Client c -> w -> IO ()
   }
 
-data Config m p c r w = Config
-  { waitForClient :: m p
-  , acceptClient  :: p -> m c
-  , rejectClient  :: p -> m ()
-  , getMessage    :: c -> m r
-  , putMessage    :: c -> w -> m ()
-  , readMessage   :: Client c -> r -> m ()
+data Config p c r w = Config
+  { waitForClient :: IO p
+  , acceptClient  :: p -> IO c
+  , rejectClient  :: p -> IO ()
+  , getMessage    :: c -> IO r
+  , putMessage    :: c -> w -> IO ()
+  , readMessage   :: ClientId -> r -> IO ()
   }
 
-newServer :: (MonadIO m) => Config m p c r w -> m (Server m p c w)
-newServer config@Config{..} = do
-  masterThread <- liftIO (newIORef Nothing)
-  nextClientId <- liftIO (newIORef 0)
-  clients      <- liftIO (newIORef S.empty)
+newServer :: Config p c r w -> IO (Server p c w)
+newServer Config{..} = do
+  masterThreadRef <- newIORef Nothing
+  nextClientIdRef <- newIORef firstClientId
+  clientsRef      <- newIORef S.empty
   let
-  { handler p = liftIO (readIORef clients) >>= \case
+  { init conn = do
+      cid <- readIORef nextClientIdRef
+      writeIORef nextClientIdRef $ nextClientId cid
+      tid <- forkIO $ forever $ getMessage conn >>= readMessage cid
+      modifyIORef' clientsRef $ S.insert $ Client cid tid conn
+  }
+  let
+  { handler p = readIORef clientsRef >>= \case
       set
         | S.size set > maxClients
           -> rejectClient p
         | otherwise
-          -> acceptClient p >>= initForClient config
+          -> acceptClient p >>= init
   }
-  return . Server masterThread nextClientId clients handler $ putMessage . cConnection
+  return
+    $ Server masterThreadRef nextClientIdRef clientsRef handler
+    $ putMessage . cConnection
 
-initForClient :: (MonadIO m) => Config m p c r w -> c -> m ()
-initForClient = todo
-
-startServer :: (MonadIO m) => Server m p c w -> m ()
+startServer :: Server p c w -> IO ()
 startServer = todo
 
-stopServer :: (MonadIO m) => Server m p c w -> m ()
+stopServer :: Server p c w -> IO ()
 stopServer = todo
 
-serverRunning :: (MonadIO m) => Server m p c w -> m Bool
-serverRunning = liftIO . readIORef . sMasterThread >=> return . isJust
+serverRunning :: Server p c w -> IO Bool
+serverRunning = readIORef . sMasterThread >=> return . isJust
 
-handleClient :: (MonadIO m) => Server m p c w -> p -> m ()
+handleClient :: Server p c w -> p -> IO ()
 handleClient = sHandleClient
 
-writeMessage :: (MonadIO m) => Server m p c w -> Client c -> w -> m ()
+writeMessage :: Server p c w -> Client c -> w -> IO ()
 writeMessage = sWriteMessage
 
