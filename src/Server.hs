@@ -91,6 +91,6 @@ settings server = Warp.defaultSettings
   , Warp.settingsPort      = 8042
   }
 
-run :: Handler -> IO ThreadId
-run h = newServer h >>= forkIO . flip Warp.runSettings app . settings
+run :: Handler -> IO ()
+run h = newServer h >>= flip Warp.runSettings app . settings
 

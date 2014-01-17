@@ -1,6 +1,7 @@
 
 module Main where
 
+import Control.Concurrent.Future
 import H.Common
 
 import Server
@@ -9,7 +10,5 @@ handler :: Handler
 handler = writeMessage
 
 main :: IO ()
-main = do
-  tid <- run handler
-  todo tid
+main = void $ forkPromise (run handler) >>= wait
 
