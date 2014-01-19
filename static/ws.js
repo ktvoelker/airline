@@ -1,21 +1,30 @@
 
-var next = 0;
+define(['classy'], function(classy) {
 
-function start() {
-  var index = next;
-  next += 1;
-  var ws = new WebSocket('ws://localhost:8042');
-  ws.addEventListener('message', function(evt) {
-    console.log(index);
-    console.log(JSON.parse(evt.data));
-  });
-  ws.addEventListener('open', function() {
-    console.log("" + index + " OPEN");
-  });
-  return ws;
-}
+  var next = 0;
 
-function send(ws) {
-  ws.send(JSON.stringify({key: "Hello, world!"}));
-}
+  function start() {
+    var index = next;
+    next += 1;
+    var ws = new WebSocket('ws://localhost:8042');
+    ws.addEventListener('message', function(evt) {
+      console.log(index);
+      console.log(JSON.parse(evt.data));
+    });
+    ws.addEventListener('open', function() {
+      console.log("" + index + " OPEN");
+    });
+    return ws;
+  }
+
+  function send(ws) {
+    ws.send(JSON.stringify({key: "Hello, world!"}));
+  }
+
+  return {
+    start: start,
+    send: send
+  };
+
+});
 
