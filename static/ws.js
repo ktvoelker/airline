@@ -6,7 +6,8 @@ function start() {
   next += 1;
   var ws = new WebSocket('ws://localhost:8042');
   ws.addEventListener('message', function(evt) {
-    console.log("" + index + " " + evt.data);
+    console.log(index);
+    console.log(JSON.parse(evt.data));
   });
   ws.addEventListener('open', function() {
     console.log("" + index + " OPEN");
@@ -15,6 +16,6 @@ function start() {
 }
 
 function send(ws) {
-  ws.send("Hello, world!");
+  ws.send(JSON.stringify({key: "Hello, world!"}));
 }
 
