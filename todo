@@ -2,9 +2,9 @@
 TODO
 ====
 
-Switch to Dart
+Write an abstraction around WebSockets on the JS side
 
-Handle disconnection properly
+  Bring in requirejs and that class-defining thing
 
-Write a message-decoding layer
+Create a trivial game state and simulation loop
 

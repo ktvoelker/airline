@@ -8,6 +8,7 @@ module Server
   , writeMessage
   ) where
 
+import qualified Control.Exception as Exn
 import Data.IORef
 import qualified Data.Map as M
 import H.Common
@@ -16,8 +17,9 @@ import qualified Network.Wai.Application.Static as Stat
 import qualified Network.Wai.Handler.Warp as Warp
 import qualified Network.Wai.Handler.WebSockets as WAIWS
 import qualified Network.WebSockets as WS
+import System.IO (putStrLn)
 
-type Handler = Server -> ClientId -> WS.Message -> IO ()
+type Handler = Server -> ClientId -> WS.DataMessage -> IO ()
 
 -- TODO configurable
 maxClients :: Int
@@ -56,15 +58,16 @@ handleClient server@Server{..} p = readIORef sClients >>= \case
 initForClient :: Server -> WS.Connection -> IO ()
 initForClient server@Server{..} conn = do
   cid <- atomicModifyIORef' sNextClientId $ \cid -> (nextClientId cid, cid)
-  print cid
+  putStrLn $ "Opened: " ++ show cid
   atomicModifyIORef' sClients $ (, ()) . M.insert cid conn
-  forever $ WS.receive conn >>= sHandler server cid
+  Exn.catch (forever $ WS.receiveDataMessage conn >>= sHandler server cid)
+    $ \WS.ConnectionClosed -> putStrLn $ "Closed: " ++ show cid
 
-writeMessage :: Server -> ClientId -> WS.Message -> IO ()
+writeMessage :: Server -> ClientId -> WS.DataMessage -> IO ()
 writeMessage Server{..} cid msg = do
   (readIORef sClients >>=) $ M.lookup cid >>> \case
-    Nothing         -> error "Not implemented: write to unknown ClientId"
-    Just conn -> WS.send conn msg
+    Nothing         -> error $ "Unknown ClientId: " ++ show cid
+    Just conn -> WS.sendDataMessage conn msg
 
 app :: WAI.Application
 app = Stat.staticApp $ Stat.defaultFileServerSettings "./static"
