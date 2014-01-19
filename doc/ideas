@@ -14,8 +14,3 @@ process
 Main menu: show each save file as a company name and date (maybe some other info too)
 -Plus a New Game option
 
-Libraries and modules to use:
--Async
--Unix.create_process
--Curses
-
