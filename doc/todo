@@ -2,9 +2,5 @@
 TODO
 ====
 
-Write an abstraction around WebSockets on the JS side
-
-  Bring in requirejs and that class-defining thing
-
 Create a trivial game state and simulation loop
 
