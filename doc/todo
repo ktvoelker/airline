@@ -2,5 +2,22 @@
 TODO
 ====
 
-Create a trivial game state and simulation loop
+Create game state and simulation loop
 
+  Still need types for:
+
+    Communication channels into and out of local state threads (airports)
+
+    Comm channel for global state
+
+    Local state for airports and airborne
+
+      Including references to the global channel
+
+  Need to update existing types for:
+
+    The user's aircraft fleet
+
+    Number of gates at each airport
+
+    References to the sector channels from the global state
