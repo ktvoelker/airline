@@ -4,14 +4,11 @@ module Types.Comm where
 
 import Data.Lens.Template
 import qualified Data.Map as M
+import H.Chan
 import H.Common
 
 import Id
 import Types
-
-type RChan a = IO a
-
-type WChan a = a -> IO ()
 
 data Arrival =
   Arrival
@@ -28,14 +25,14 @@ data Departure =
 
 data MainChannels =
   MainChannels
-  { _chDepartures :: RChan Departure
-  , _chArrivals   :: M.Map (Id Airport) (WChan Arrival)
+  { _chDepartures :: ReadChan Departure
+  , _chArrivals   :: M.Map (Id Airport) (WriteChan Arrival)
   }
 
 data AirportChannels =
   AirportChannels
-  { _apchDepartures :: WChan Departure
-  , _apchArrivals   :: RChan Arrival
+  { _apchDepartures :: WriteChan Departure
+  , _apchArrivals   :: ReadChan Arrival
   }
 
 makeLenses [''Arrival, ''Departure, ''MainChannels, ''AirportChannels]

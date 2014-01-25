@@ -2,9 +2,11 @@
 TODO
 ====
 
-Create simulation loop
+Finish the generic simulation loop module
 
-  Have a pool of worker threads that pull simulation chunks out of a queue
+Write data types for events sent to the client and input received from the client
 
-  Once all the chunks finish, run any global-level simulation tasks
+Create a super simple simulation loop that ignores most data
+
+Get the client working with the simulation loop
 
