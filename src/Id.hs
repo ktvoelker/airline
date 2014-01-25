@@ -3,12 +3,13 @@ module Id
   ( Id()
   , IdMap
   , IdSet
-  , first
-  , next
+  , firstId
+  , nextId
   ) where
 
 import qualified Data.Map as M
 import qualified Data.Set as S
+import H.Common
 
 newtype Id a = Id Integer deriving (Eq, Ord, Show)
 

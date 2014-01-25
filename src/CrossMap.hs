@@ -7,11 +7,12 @@ module CrossMap
   ) where
 
 import qualified Data.Map as M
+import H.Common hiding (empty, lookup)
 
-newtype CrossMap a b = CrossMap (M.Map (a, a) b) deriving Show
+newtype CrossMap a b = CrossMap (M.Map (a, a) b) deriving (Eq, Ord, Show)
 
 empty :: CrossMap a b
-empty = M.empty
+empty = CrossMap M.empty
 
 insert :: (Ord a) => a -> a -> b -> CrossMap a b -> CrossMap a b
 insert k1 k2 v (CrossMap m) = CrossMap $ M.insert (sortPair k1 k2) v m
