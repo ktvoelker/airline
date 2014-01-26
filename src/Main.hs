@@ -9,7 +9,6 @@ import Server
 import Simulation ()
 import Types ()
 import Types.Comm ()
-import Types.State ()
 
 handler :: Handler
 handler server cid msg = do

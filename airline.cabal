@@ -45,6 +45,7 @@ Executable airline
     aeson                >= 0.6  && < 0.7,
     future               >= 2.0  && < 2.1,
     time                 >= 1.4  && < 1.5,
+    SafeSemaphore        >= 0.9  && < 1.0,
     Hydrogen
   default-extensions:
     NoImplicitPrelude
