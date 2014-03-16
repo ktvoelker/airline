@@ -2,8 +2,6 @@
 TODO
 ====
 
-Finish the generic simulation loop module
-
 Write data types for events sent to the client and input received from the client
 
 Create a super simple simulation loop that ignores most data
