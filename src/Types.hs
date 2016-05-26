@@ -25,40 +25,36 @@ makeLenses ''Model
 
 data Aircraft =
   Aircraft
-  { _acModel :: Id Model
+  { _acId    :: T.Text
+  , _acModel :: Model
   } deriving (Eq, Ord, Show)
 
 makeLenses ''Aircraft
-
-data City =
-  City
-  { _cName       :: T.Text
-  , _cPopulation :: Integer
-  , _cAirports   :: IdSet Airport
-  } deriving (Eq, Ord, Show)
 
 data Airport =
   Airport
   { _apCode     :: T.Text
   , _apName     :: T.Text
-  , _apCity     :: Id City
-  , _apRunways  :: Integer
-  , _apGates    :: Integer
-  , _apAircraft :: S.Set (Id Aircraft)
+  , _apCapacity :: Integer
+  , _apAircraft :: S.Set Aircraft
+  } deriving (Eq, Ord, Show)
+
+makeLenses ''Airport
+
+data City =
+  City
+  { _cName       :: T.Text
+  , _cPopulation :: Integer
+  , _cAirports   :: S.Set Airport
   } deriving (Eq, Ord, Show)
 
 makeLenses ''City
-
-makeLenses ''Airport
 
 data Game =
   Game
   { _gCities    :: IdMap City
   , _gDistances :: CM.CrossMap (Id City) Integer
-  , _gAirports  :: IdMap Airport
-  , _gModels    :: IdMap Model
-  , _gAirborne  :: S.Set (Id Aircraft)
-  , _gAircraft  :: IdMap Aircraft
+  , _gAirborne  :: S.Set Aircraft
   , _gMoney     :: Integer
   } deriving (Eq, Ord, Show)
 
