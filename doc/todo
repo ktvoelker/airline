@@ -10,5 +10,3 @@ Figure out how to get user input into the simulation loop even when it's running
 
   Warn if user commands are left in the queue when time expires
 
-  Warn if a single user command puts the time over by a lot
-

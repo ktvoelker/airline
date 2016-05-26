@@ -34,6 +34,9 @@ data Master g p =
 defaultSpeed :: NominalDiffTime
 defaultSpeed = 1
 
+pausedSpeed :: NominalDiffTime
+pausedSpeed = defaultSpeed
+
 forkSim :: Sim g p -> g -> IO (ThreadId, (MVar (), IORef NominalDiffTime))
 forkSim sim st = do
   pausedVar <- newEmptyMVar
@@ -53,31 +56,35 @@ runWorker f rc wc sig = forever $ readChan rc >>= f >>= writeChan wc >> sig
 
 runMaster :: Master g p -> Sim g p -> g -> IO ()
 runMaster Master{..} Sim{..} st = flip evalStateT st $ forever $ do
-  -- Wait until un-paused
-  liftIO $ takeMVar mPaused
+  -- Check if paused
+  pausedIfNothing <- liftIO $ tryTakeMVar mPaused
   -- Read the current speed
-  speed <- liftIO $ readIORef mSpeed
+  speed <- maybe (pure pausedSpeed) (const . liftIO $ readIORef mSpeed) pausedIfNothing
   -- Record the current time
   startTime <- liftIO getCurrentTime
   -- Read the current state
   global <- get
-  -- Split the current state into parts
-  let parts = simSplit global
-  -- Send the parts out to the workers
-  liftIO $ mapM_ (writeChan mPartsOut) parts
-  -- Count the number of parts
-  let n_parts = length parts
-  -- Wait for the counter to reach the number of parts
-  liftIO $ Sem.wait mCounter n_parts
-  -- Merge the outputs from the workers
-  -- Run the final step on the merged state
-  liftIO (
-    simMerge
-      <$> replicateM n_parts (readChan mPartsIn)
-      <*> pure global
-    >>= simFinal) >>= put
+  -- Run one simulation step if not paused
+  whenJust pausedIfNothing . const $ do
+    -- Split the current state into parts
+    let parts = simSplit global
+    -- Send the parts out to the workers
+    liftIO $ mapM_ (writeChan mPartsOut) parts
+    -- Count the number of parts
+    let n_parts = length parts
+    -- Wait for the counter to reach the number of parts
+    liftIO $ Sem.wait mCounter n_parts
+    -- Merge the outputs from the workers
+    -- Run the final step on the merged state
+    liftIO (
+      simMerge
+        <$> replicateM n_parts (readChan mPartsIn)
+        <*> pure global
+      >>= simFinal) >>= put
   -- Calculate the remaining time for this cycle
   remaining <- (`subtract` speed) . (`diffUTCTime` startTime) <$> liftIO getCurrentTime
+  -- TODO handle user input during time remaining
+  -- TODO warn if not all user input is handled
   -- If too much time has elapsed, log a warning
   -- Otherwise, sleep until enough time has elapsed
   if remaining < 0
