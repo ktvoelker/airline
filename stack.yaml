@@ -1,0 +1,11 @@
+resolver: lts-6.0
+packages:
+- '.'
+- location:
+    git: https://github.com/ktvoelker/hydrogen.git
+    commit: 3c67d58a0126e80e94aa7c75e99258f5ea452a85
+- location:
+    git: https://github.com/ktvoelker/AParsec.git
+    commit: ef20c84228e3653d7505ed468788972f0636b83c
+extra-deps: []
+flags: {}

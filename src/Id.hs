@@ -9,7 +9,7 @@ module Id
 
 import qualified Data.Map as M
 import qualified Data.Set as S
-import H.Common
+import H.Prelude
 
 newtype Id a = Id Integer deriving (Eq, Ord, Show)
 

@@ -1,6 +1,0 @@
-[submodule "external/classy"]
-	path = external/classy
-	url = https://github.com/mitsuhiko/classy.git
-[submodule "external/requirejs"]
-	path = external/requirejs
-	url = https://github.com/jrburke/requirejs.git

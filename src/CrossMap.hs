@@ -7,7 +7,7 @@ module CrossMap
   ) where
 
 import qualified Data.Map as M
-import H.Common hiding (empty, lookup)
+import H.Prelude hiding (empty)
 
 newtype CrossMap a b = CrossMap (M.Map (a, a) b) deriving (Eq, Ord, Show)
 

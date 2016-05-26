@@ -1,4 +1,3 @@
-
 name:           airline
 version:        0.0.1
 cabal-version:  >= 1.10
@@ -7,15 +6,19 @@ license:        GPL-3
 license-file:   LICENSE.txt
 copyright:      (c) 2014 Karl Voelker
 author:         Karl Voelker
-maintainer:     karl+airline@karlv.net
+maintainer:     airline@karlv.net
 stability:      experimental
-bug-reports:    mailto:karl+airline@karlv.net
+bug-reports:    mailto:airline@karlv.net
 synopsis:       Airline simulator
 category:       Game
-tested-with:    GHC == 7.6.3
 
 Executable airline
   main-is:          Main.hs
+  other-modules:
+    CrossMap
+    Id
+    Simulation
+    Types
   default-language: Haskell2010
   hs-source-dirs:   src
   ghc-options:
@@ -29,24 +32,15 @@ Executable airline
     -with-rtsopts=-N
   build-depends:
     base                 >= 4    && < 5,
-    containers           >= 0.4  && < 0.6,
-    text                 >= 0.11 && < 0.12,
-    mtl                  >= 2.1  && < 2.2,
-    data-lens            >= 2.10 && < 2.11,
-    data-lens-fd         >= 2.0  && < 2.1,
-    data-lens-template   >= 2.1  && < 2.2,
-    template-haskell     >= 2.7  && < 2.9,
+    SafeSemaphore        >= 0.9  && < 0.11,
+    applicative-parsec   >= 0.1  && < 0.2,
     bytestring           >= 0.10 && < 0.11,
-    wai-app-static       >= 2.0  && < 2.1,
-    warp                 >= 2.0  && < 2.1,
-    wai                  >= 2.0  && < 2.1,
-    wai-websockets       >= 2.0  && < 2.1,
-    websockets           >= 0.8  && < 0.9,
-    aeson                >= 0.6  && < 0.7,
-    future               >= 2.0  && < 2.1,
-    time                 >= 1.4  && < 1.5,
-    SafeSemaphore        >= 0.9  && < 1.0,
-    Hydrogen
+    containers           >= 0.4  && < 0.6,
+    hydrogen             >= 0.4  && < 0.5,
+    lens                 >= 4.13 && < 4.14,
+    mtl                  >= 2.1  && < 2.3,
+    text                 >= 1.2  && < 1.3,
+    time                 >= 1.4  && < 1.7
   default-extensions:
     NoImplicitPrelude
     TupleSections
@@ -61,4 +55,3 @@ Executable airline
     RecordWildCards
   other-extensions:
     TemplateHaskell
-

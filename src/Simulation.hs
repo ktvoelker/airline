@@ -5,10 +5,13 @@ import Control.Concurrent (ThreadId, forkIO, getNumCapabilities, threadDelay)
 import Control.Concurrent.MVar
 import qualified Control.Concurrent.MSemN as Sem
 import Data.IORef
+import Data.List (replicate)
 import Data.Time
 import qualified Data.Text.IO as TIO
 import H.Chan
-import H.Common
+import H.Prelude
+import H.IO
+import Prelude (subtract)
 
 data Sim g p =
   Sim
@@ -78,7 +81,7 @@ runMaster Master{..} Sim{..} st = flip evalStateT st $ forever $ do
   -- If too much time has elapsed, log a warning
   -- Otherwise, sleep until enough time has elapsed
   if remaining < 0
-    then liftIO $ TIO.putStrLn $ "Cycle took too long! " <> showText remaining
+    then liftIO $ TIO.putStrLn $ "Cycle took too long! " <> show remaining
     else liftIO $ threadDelay' remaining
 
 threadDelay' :: NominalDiffTime -> IO ()

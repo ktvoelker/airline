@@ -2,13 +2,33 @@
 {-# LANGUAGE TemplateHaskell #-}
 module Types where
 
-import Data.Lens.Template
+import Control.Lens.TH
 import qualified Data.Set as S
 import qualified Data.Text as T
-import H.Common
+import H.Prelude
 
 import qualified CrossMap as CM
 import Id
+
+data Model =
+  Model
+  { _mName  :: T.Text
+  , _mSpeed :: Integer
+  , _mRange :: Integer
+  , _mCost  :: Integer
+  , _mFuel  :: Integer
+  , _mSeats :: Integer
+  , _mPrice :: Integer
+  } deriving (Eq, Ord, Show)
+
+makeLenses ''Model
+
+data Aircraft =
+  Aircraft
+  { _acModel :: Id Model
+  } deriving (Eq, Ord, Show)
+
+makeLenses ''Aircraft
 
 data City =
   City
@@ -27,21 +47,9 @@ data Airport =
   , _apAircraft :: S.Set (Id Aircraft)
   } deriving (Eq, Ord, Show)
 
-data Model =
-  Model
-  { _mName  :: T.Text
-  , _mSpeed :: Integer
-  , _mRange :: Integer
-  , _mCost  :: Integer
-  , _mFuel  :: Integer
-  , _mSeats :: Integer
-  , _mPrice :: Integer
-  } deriving (Eq, Ord, Show)
+makeLenses ''City
 
-data Aircraft =
-  Aircraft
-  { _acModel :: Id Model
-  } deriving (Eq, Ord, Show)
+makeLenses ''Airport
 
 data Game =
   Game
@@ -54,5 +62,5 @@ data Game =
   , _gMoney     :: Integer
   } deriving (Eq, Ord, Show)
 
-makeLenses [''City, ''Airport, ''Model, ''Aircraft, ''Game]
+makeLenses ''Game
 
