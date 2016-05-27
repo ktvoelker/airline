@@ -15,6 +15,7 @@ category:       Game
 Executable airline
   main-is:          Main.hs
   other-modules:
+    CLI
     CrossMap
     Id
     Simulation
@@ -33,9 +34,9 @@ Executable airline
   build-depends:
     base                 >= 4    && < 5,
     SafeSemaphore        >= 0.9  && < 0.11,
-    applicative-parsec   >= 0.1  && < 0.2,
     bytestring           >= 0.10 && < 0.11,
     containers           >= 0.4  && < 0.6,
+    haskeline            >= 0.7  && < 0.8,
     hydrogen             >= 0.4  && < 0.5,
     lens                 >= 4.13 && < 4.14,
     mtl                  >= 2.1  && < 2.3,
