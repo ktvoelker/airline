@@ -2,11 +2,15 @@
 TODO
 ====
 
-Figure out how to get user input into the simulation loop even when it's running
+Solve the lack of a non-blocking command channel
 
-  There should be a channel for user commands, and a channel for responses to those commands
+Start the simulation in the background
 
-  Use the remaining time in each loop iteration to execute user commands
+Connect the CLI to the simulation via the channels
 
-  Warn if user commands are left in the queue when time expires
+Define an initial set of cities and airports to play with
+
+Add data types for flights
+
+Add user commands
 

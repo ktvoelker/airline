@@ -5,10 +5,7 @@ import System.Console.Haskeline
 import H.IO
 import H.Prelude
 
-data Command =
-    Pass
-  | Quit
-  deriving (Eq, Show)
+import Types.Command
 
 runCLI :: IO ()
 runCLI = runInputT defaultSettings $ f

@@ -20,6 +20,7 @@ Executable airline
     Id
     Simulation
     Types
+    Types.Command
   default-language: Haskell2010
   hs-source-dirs:   src
   ghc-options:
