@@ -2,8 +2,6 @@
 TODO
 ====
 
-Solve the lack of a non-blocking command channel
-
 Start the simulation in the background
 
 Connect the CLI to the simulation via the channels

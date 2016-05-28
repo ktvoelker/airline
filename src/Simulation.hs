@@ -4,11 +4,11 @@ module Simulation where
 import Control.Concurrent (ThreadId, forkIO, getNumCapabilities, threadDelay)
 import Control.Concurrent.MVar
 import qualified Control.Concurrent.MSemN as Sem
+import Control.Concurrent.STM
 import Data.IORef
 import Data.List (replicate)
 import Data.Time
 import qualified Data.Text.IO as TIO
-import H.Chan
 import H.Prelude
 import H.IO
 import Prelude (subtract)
@@ -24,13 +24,12 @@ data Sim g p c r =
 
 data Master g p c r =
   Master
-  { mPartsOut  :: WriteChan p
-  , mPartsIn   :: ReadChan p
+  { mParts     :: TChan p
   , mPaused    :: MVar ()
   , mSpeed     :: IORef NominalDiffTime
   , mCounter   :: Sem.MSemN Int
-  , mCommands  :: ReadChan c
-  , mResponses :: WriteChan r
+  , mCommands  :: TChan c
+  , mResponses :: TChan r
   , mWorkers   :: [ThreadId]
   }
 
@@ -43,24 +42,24 @@ pausedSpeed = defaultSpeed
 userInputCutOff :: NominalDiffTime
 userInputCutOff = 0.05
 
-forkSim :: Sim g p c r -> g -> IO (ThreadId, (MVar (), IORef NominalDiffTime, WriteChan c, ReadChan r))
+forkSim :: Sim g p c r -> g -> IO (ThreadId, (MVar (), IORef NominalDiffTime, TChan c, TChan r))
 forkSim sim st = do
   pausedVar <- newEmptyMVar
   speedRef <- newIORef defaultSpeed
-  (readCmd, writeCmd) <- newSplitChan
-  (readResp, writeResp) <- newSplitChan
-  fmap (, (pausedVar, speedRef, writeCmd, readResp)) . forkIO $ do
+  cmdChan <- newTChanIO
+  respChan <- newTChanIO
+  fmap (, (pausedVar, speedRef, cmdChan, respChan)) . forkIO $ do
     n <- getNumCapabilities
-    (rcOut, wcOut) <- newSplitChan
-    (rcIn, wcIn) <- newSplitChan
+    partsChan <- newTChanIO
     sem <- Sem.new 0
-    let worker = runWorker (simPart sim) rcOut wcIn (Sem.signal sem 1)
-    Master wcOut rcIn pausedVar speedRef sem readCmd writeResp
+    let worker = runWorker (simPart sim) partsChan (Sem.signal sem 1)
+    Master partsChan pausedVar speedRef sem cmdChan respChan
       <$> (sequence . replicate (n - 2) . forkIO) worker
       >>= flip (flip runMaster sim) st
 
-runWorker :: (p -> IO p) -> ReadChan p -> WriteChan p -> IO () -> IO ()
-runWorker f rc wc sig = forever $ readChan rc >>= f >>= writeChan wc >> sig
+runWorker :: (p -> IO p) -> TChan p -> IO () -> IO ()
+runWorker f partsChan sig =
+  forever $ atomically (readTChan partsChan) >>= f >>= atomically . writeTChan partsChan >> sig
 
 runMaster :: Master g p c r -> Sim g p c r -> g -> IO ()
 runMaster Master{..} Sim{..} st = flip evalStateT st $ forever $ do
@@ -77,7 +76,7 @@ runMaster Master{..} Sim{..} st = flip evalStateT st $ forever $ do
     -- Split the current state into parts
     let parts = simSplit global
     -- Send the parts out to the workers
-    liftIO $ mapM_ (writeChan mPartsOut) parts
+    liftIO $ mapM_ (atomically . writeTChan mParts) parts
     -- Count the number of parts
     let n_parts = length parts
     -- Wait for the counter to reach the number of parts
@@ -86,7 +85,7 @@ runMaster Master{..} Sim{..} st = flip evalStateT st $ forever $ do
     -- Run the final step on the merged state
     liftIO (
       simMerge
-        <$> replicateM n_parts (readChan mPartsIn)
+        <$> replicateM n_parts (atomically $ readTChan mParts)
         <*> pure global
       >>= simFinal) >>= put
   -- Handle user input
@@ -99,27 +98,17 @@ runMaster Master{..} Sim{..} st = flip evalStateT st $ forever $ do
     then liftIO $ TIO.putStrLn $ "Cycle took too long! " <> show remaining
     else liftIO $ threadDelay' remaining
 
-{--
- - This is missing from the Control.Concurrent.Chan interface (and H.Chan).
- - We need to switch to Control.Concurrent.STM.TChan as the basis for H.Chan.
- --}
-readChanNB :: ReadChan a -> IO (Maybe a)
-readChanNB = todo
-
-isEmptyChan :: ReadChan a -> IO Bool
-isEmptyChan = todo
-
-handleUserInput :: UTCTime -> NominalDiffTime -> ReadChan c -> WriteChan r -> (c -> StateT g IO r) -> StateT g IO ()
+handleUserInput :: UTCTime -> NominalDiffTime -> TChan c -> TChan r -> (c -> StateT g IO r) -> StateT g IO ()
 handleUserInput startTime speed readCmd writeResp handler = do
   remaining <- (`subtract` speed) . (`diffUTCTime` startTime) <$> liftIO getCurrentTime
   case remaining > userInputCutOff of
     False -> liftIO $ do
-      moreCommands <- isEmptyChan readCmd
+      moreCommands <- atomically $ isEmptyTChan readCmd
       when moreCommands $ TIO.putStrLn "Unprocessed user commands remain at end of cycle!"
     True -> do
-      mCmd <- liftIO $ readChanNB readCmd
+      mCmd <- liftIO $ atomically $ tryReadTChan readCmd
       whenJust mCmd $ \cmd -> do
-        handler cmd >>= liftIO . writeChan writeResp
+        handler cmd >>= liftIO . atomically . writeTChan writeResp
         handleUserInput startTime speed readCmd writeResp handler
 
 threadDelay' :: NominalDiffTime -> IO ()
