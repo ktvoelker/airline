@@ -9,7 +9,7 @@ import Types
 import Types.Command
 
 newtype GamePart = GamePart Game
-  deriving (Eq, Ord, Show)
+  deriving (Eq, Ord)
 
 handleCommand :: CoreCommand -> StateT Game IO Response
 handleCommand = const $ pure Empty

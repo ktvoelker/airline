@@ -19,6 +19,7 @@ Executable airline
     CrossMap
     Demo
     Game
+    Object
     Simulation
     Types
     Types.Command

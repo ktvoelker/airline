@@ -5,10 +5,10 @@ module Types where
 import Control.Lens.TH
 import qualified Data.Set as S
 import qualified Data.Text as T
-import qualified Data.Vector as V
 import H.Prelude
 
 import qualified CrossMap as CM
+import Object
 
 data Model =
   Model
@@ -23,40 +23,50 @@ data Model =
 
 makeLenses ''Model
 
-data Aircraft =
-  Aircraft
+data AircraftState =
+  AircraftState
   { _acId    :: T.Text
   , _acModel :: Model
   } deriving (Eq, Ord, Show)
 
-makeLenses ''Aircraft
+makeLenses ''AircraftState
 
-data Airport =
-  Airport
+type Aircraft = Object AircraftState
+
+data AirportState =
+  AirportState
   { _apCode     :: T.Text
   , _apName     :: T.Text
   , _apCapacity :: Integer
   , _apAircraft :: S.Set Aircraft
-  } deriving (Eq, Ord, Show)
+  } deriving (Eq, Ord)
 
-makeLenses ''Airport
+makeLenses ''AirportState
 
-data City =
-  City
+type Airport = Object AirportState
+
+data CityState =
+  CityState
   { _cName       :: T.Text
   , _cPopulation :: Integer
   , _cAirports   :: S.Set Airport
-  } deriving (Eq, Ord, Show)
+  } deriving (Eq, Ord)
 
-makeLenses ''City
+makeLenses ''CityState
 
-data Game =
-  Game
-  { _gCities    :: V.Vector City
-  , _gDistances :: CM.CrossMap Int Integer
+type City = Object CityState
+
+data GameState =
+  GameState
+  { _gCities    :: S.Set City
+  , _gAirports  :: S.Set Airport
+  , _gDistances :: CM.CrossMap Airport Integer
+  , _gAircraft  :: S.Set Aircraft
   , _gAirborne  :: S.Set Aircraft
   , _gMoney     :: Integer
-  } deriving (Eq, Ord, Show)
+  } deriving (Eq, Ord)
 
-makeLenses ''Game
+makeLenses ''GameState
+
+type Game = Object GameState
 
