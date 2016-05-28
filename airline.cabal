@@ -49,16 +49,17 @@ Executable airline
     time                 >= 1.4  && < 1.7,
     vector               >= 0.11 && < 0.12
   default-extensions:
-    NoImplicitPrelude
-    TupleSections
-    ScopedTypeVariables
-    FlexibleInstances
-    FlexibleContexts
-    GADTs
     DataKinds
+    FlexibleContexts
+    FlexibleInstances
+    GADTs
+    GeneralizedNewtypeDeriving
     LambdaCase
+    NoImplicitPrelude
     OverloadedStrings
-    ViewPatterns
     RecordWildCards
+    ScopedTypeVariables
+    TupleSections
+    ViewPatterns
   other-extensions:
     TemplateHaskell
