@@ -18,7 +18,6 @@ Executable airline
     CLI
     CrossMap
     Game
-    Id
     Simulation
     Types
     Types.Command
@@ -44,7 +43,8 @@ Executable airline
     mtl                  >= 2.1  && < 2.3,
     stm                  >= 2.4  && < 2.5,
     text                 >= 1.2  && < 1.3,
-    time                 >= 1.4  && < 1.7
+    time                 >= 1.4  && < 1.7,
+    vector               >= 0.11 && < 0.12
   default-extensions:
     NoImplicitPrelude
     TupleSections

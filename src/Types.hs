@@ -5,10 +5,10 @@ module Types where
 import Control.Lens.TH
 import qualified Data.Set as S
 import qualified Data.Text as T
+import qualified Data.Vector as V
 import H.Prelude
 
 import qualified CrossMap as CM
-import Id
 
 data Model =
   Model
@@ -52,8 +52,8 @@ makeLenses ''City
 
 data Game =
   Game
-  { _gCities    :: IdMap City
-  , _gDistances :: CM.CrossMap (Id City) Integer
+  { _gCities    :: V.Vector City
+  , _gDistances :: CM.CrossMap Int Integer
   , _gAirborne  :: S.Set Aircraft
   , _gMoney     :: Integer
   } deriving (Eq, Ord, Show)

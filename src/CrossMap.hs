@@ -27,5 +27,5 @@ sortPair a b = case a > b of
   False -> (a, b)
 
 fromList :: (Ord a) => [((a, a), b)] -> CrossMap a b
-fromList = CrossMap . M.fromList
+fromList = CrossMap . M.fromList . map (\(k, v) -> (uncurry sortPair k, v))
 

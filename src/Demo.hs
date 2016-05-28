@@ -1,11 +1,10 @@
 
 module Demo where
 
-import qualified Data.Map as M
 import qualified Data.Set as S
+import qualified Data.Vector as V
 
 import qualified CrossMap as CM
-import Id
 import Types
 
 oHare :: Airport
@@ -51,17 +50,11 @@ minneapolis =
   , _cAirports   = S.fromList [msp]
   }
 
-chicagoId :: Id City
-chicagoId = firstId
-
-minneapolisId :: Id City
-minneapolisId = nextId chicagoId
-
 demo :: Game
 demo =
   Game
-  { _gCities    = M.fromList [(chicagoId, chicago), (minneapolisId, minneapolis)]
-  , _gDistances = CM.fromList [((chicagoId, minneapolisId), 354)]
+  { _gCities    = V.fromList [chicago, minneapolis]
+  , _gDistances = CM.fromList [((0, 1), 354)]
   , _gAirborne  = S.empty
   , _gMoney     = 100000
   }
