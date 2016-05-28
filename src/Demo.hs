@@ -14,7 +14,8 @@ import Types
 model737800 :: Model
 model737800 =
   Model
-  { _mName  = "Boeing 737-800"
+  { _mCode  = "B738"
+  , _mName  = "Boeing 737-800"
   , _mSpeed = 511
   , _mRange = 6340
   , _mSeats = 220
@@ -69,6 +70,7 @@ demo = atomically $ do
     , _gMoney     = 1000000
     , _gModels    = S.fromList [model737800]
     , _gFlights   = M.empty
+    , _gSchedule  = M.empty
     , _gWeek      = 0
     , _gTime      = TimeOfWeek 0
     }

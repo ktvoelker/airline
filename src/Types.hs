@@ -14,7 +14,8 @@ import Object
 
 data Model =
   Model
-  { _mName  :: T.Text
+  { _mCode  :: T.Text
+  , _mName  :: T.Text
   , _mSpeed :: Integer
   , _mRange :: Integer
   , _mCost  :: Integer
@@ -54,12 +55,16 @@ type Airport = Object AirportState
 newtype TimeOfWeek = TimeOfWeek { offset :: Minutes }
   deriving (Eq, Ord, Show)
 
+newtype FlightNumber = FlightNumber Int
+  deriving (Eq, Ord, Show)
+
 data Flight =
   Flight
-  { _fOrigin      :: Airport
+  { _fNumber      :: Int
+  , _fOrigin      :: Airport
   , _fDestination :: Airport
   , _fModel       :: Model
-  , _fTime        :: TimeOfWeek
+  , _fTimes       :: [TimeOfWeek]
   } deriving (Eq, Ord)
 
 data AircraftFlightState =
@@ -96,7 +101,8 @@ data GameState =
   , _gAirborne  :: S.Set AircraftFlight
   , _gMoney     :: Integer
   , _gModels    :: S.Set Model
-  , _gFlights   :: M.Map TimeOfWeek (S.Set Flight)
+  , _gFlights   :: M.Map FlightNumber Flight
+  , _gSchedule  :: M.Map TimeOfWeek (S.Set Flight)
   , _gWeek      :: Integer
   , _gTime      :: TimeOfWeek
   }
