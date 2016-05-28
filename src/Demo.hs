@@ -11,10 +11,13 @@ import qualified CrossMap as CM
 import Object
 import Types
 
-model737800 :: Model
-model737800 =
+b738Code :: ModelCode
+b738Code = "B738"
+
+b738 :: Model
+b738 =
   Model
-  { _mCode  = "B738"
+  { _mCode  = b738Code
   , _mName  = "Boeing 737-800"
   , _mSpeed = 511
   , _mRange = 6340
@@ -22,11 +25,20 @@ model737800 =
   , _mCost  = 10000
   }
 
+ordCode :: AirportCode
+ordCode = "ORD"
+
+mdwCode :: AirportCode
+mdwCode = "MDW"
+
+mspCode :: AirportCode
+mspCode = "MSP"
+
 demo :: IO Game
 demo = atomically $ do
   ordMovements <- newTQueue
   oHare <- newObject $ AirportState
-    { _apCode          = "ORD"
+    { _apCode          = ordCode
     , _apName          = "Chicago O'Hare International Airport"
     , _apCapacity      = 2400
     , _apAircraft      = S.empty
@@ -35,7 +47,7 @@ demo = atomically $ do
     }
   mdwMovements <- newTQueue
   midway <- newObject $ AirportState
-    { _apCode          = "MDW"
+    { _apCode          = mdwCode
     , _apName          = "Chicago Midway International Airport"
     , _apCapacity      = 700
     , _apAircraft      = S.empty
@@ -49,7 +61,7 @@ demo = atomically $ do
     }
   mspMovements <- newTQueue
   msp <- newObject $ AirportState
-    { _apCode          = "MSP"
+    { _apCode          = mspCode
     , _apName          = "Minneapolis–Saint Paul International Airport"
     , _apCapacity      = 1100
     , _apAircraft      = S.empty
@@ -64,11 +76,11 @@ demo = atomically $ do
   newObject $ GameState
     { _gCities    = S.fromList [chicago, minneapolis]
     , _gDistances = CM.fromList [((oHare, midway), 2), ((oHare, msp), 354), ((midway, msp), 355)]
-    , _gAirports  = S.fromList [oHare, midway, msp]
-    , _gAircraft  = S.empty
+    , _gAirports  = M.fromList [(ordCode, oHare), (mdwCode, midway), (mspCode, msp)]
+    , _gAircraft  = M.empty
     , _gAirborne  = S.empty
     , _gMoney     = 1000000
-    , _gModels    = S.fromList [model737800]
+    , _gModels    = M.fromList [(b738Code, b738)]
     , _gFlights   = M.empty
     , _gSchedule  = M.empty
     , _gWeek      = 0

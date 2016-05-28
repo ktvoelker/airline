@@ -6,15 +6,19 @@ import Control.Concurrent.STM
 import Control.Lens.TH
 import qualified Data.Map as M
 import qualified Data.Set as S
+import Data.String (IsString())
 import qualified Data.Text as T
 import H.Prelude
 
 import qualified CrossMap as CM
 import Object
 
+newtype ModelCode = ModelCode T.Text
+  deriving (Eq, Ord, IsString, Show)
+
 data Model =
   Model
-  { _mCode  :: T.Text
+  { _mCode  :: ModelCode
   , _mName  :: T.Text
   , _mSpeed :: Integer
   , _mRange :: Integer
@@ -24,9 +28,12 @@ data Model =
 
 makeLenses ''Model
 
+newtype AircraftCode = AircraftCode T.Text
+  deriving (Eq, Ord, IsString, Show)
+
 data AircraftState =
   AircraftState
-  { _acId    :: T.Text
+  { _acCode  :: AircraftCode
   , _acModel :: Model
   } deriving (Show)
 
@@ -40,9 +47,12 @@ type Aircraft = Object AircraftState
 data Movement = Landing AircraftFlight | Takeoff AircraftFlight
   deriving (Eq, Ord)
 
+newtype AirportCode = AirportCode T.Text
+  deriving (Eq, Ord, IsString, Show)
+
 data AirportState =
   AirportState
-  { _apCode          :: T.Text
+  { _apCode          :: AirportCode
   , _apName          :: T.Text
   , _apCapacity      :: Integer
   , _apAircraft      :: S.Set Aircraft
@@ -95,12 +105,12 @@ type City = Object CityState
 data GameState =
   GameState
   { _gCities    :: S.Set City
-  , _gAirports  :: S.Set Airport
+  , _gAirports  :: M.Map AirportCode Airport
   , _gDistances :: CM.CrossMap Airport Integer
-  , _gAircraft  :: S.Set Aircraft
+  , _gAircraft  :: M.Map AircraftCode Aircraft
   , _gAirborne  :: S.Set AircraftFlight
   , _gMoney     :: Integer
-  , _gModels    :: S.Set Model
+  , _gModels    :: M.Map ModelCode Model
   , _gFlights   :: M.Map FlightNumber Flight
   , _gSchedule  :: M.Map TimeOfWeek (S.Set Flight)
   , _gWeek      :: Integer
