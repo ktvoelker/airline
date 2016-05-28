@@ -4,6 +4,7 @@ module Object
   , newObject
   , newObjectIO
   , readObject
+  , readObjectIO
   , writeObject
   , modifyObject
   , modifyObject'
@@ -37,6 +38,9 @@ newObjectIO = atomically . newObject
 
 readObject :: Object a -> STM a
 readObject = readTVar . objectVar
+
+readObjectIO :: Object a -> IO a
+readObjectIO = readTVarIO . objectVar
 
 writeObject :: Object a -> a -> STM ()
 writeObject obj = writeTVar $ objectVar obj
