@@ -9,9 +9,9 @@ data Speed = SpeedSlow | SpeedMedium | SpeedFast
 
 speedToCycleLength :: Speed -> NominalDiffTime
 speedToCycleLength = \case
-  SpeedSlow   -> 1.0
-  SpeedMedium -> 0.6
-  SpeedFast   -> 0.2
+  SpeedSlow   -> 0.20
+  SpeedMedium -> 0.15
+  SpeedFast   -> 0.10
 
 data Command =
     Pass

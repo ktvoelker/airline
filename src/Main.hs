@@ -7,10 +7,10 @@ import H.Prelude
 import CLI
 import Game
 import Simulation
-import Types ()
+import Types.Command
 
 main :: IO ()
 main = do
-  masterHandle <- forkSim gameSim todo
+  masterHandle <- forkSim (speedToCycleLength SpeedSlow) gameSim todo
   runCLI masterHandle
 

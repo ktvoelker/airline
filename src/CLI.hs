@@ -29,6 +29,10 @@ parseCommand = \case
   "quit" -> Right Quit
   "pause" -> Right Pause
   "resume" -> Right Resume
+  "speed slow" -> Right (Speed SpeedSlow)
+  "speed medium" -> Right (Speed SpeedMedium)
+  "speed fast" -> Right (Speed SpeedFast)
+  "core pass" -> Right (Core CorePass)
   _ -> Left "Parse error."
 
 runCommand :: MasterHandle Game GamePart CoreCommand Response -> Command -> IO Bool

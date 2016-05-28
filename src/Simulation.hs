@@ -41,19 +41,16 @@ data MasterHandle g p c r =
   , mhResponses :: TChan r
   }
 
-defaultSpeed :: NominalDiffTime
-defaultSpeed = 1
-
 pausedSpeed :: NominalDiffTime
-pausedSpeed = defaultSpeed
+pausedSpeed = 0.1
 
 userInputCutOff :: NominalDiffTime
 userInputCutOff = 0.05
 
-forkSim :: Sim g p c r -> g -> IO (MasterHandle g p c r)
-forkSim sim st = do
+forkSim :: NominalDiffTime -> Sim g p c r -> g -> IO (MasterHandle g p c r)
+forkSim startSpeed sim st = do
   pausedRef <- newIORef True
-  speedRef <- newIORef defaultSpeed
+  speedRef <- newIORef startSpeed
   cmdChan <- newTChanIO
   respChan <- newTChanIO
   masterThreadId <- forkIO $ do
