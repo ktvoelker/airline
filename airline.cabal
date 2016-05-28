@@ -17,6 +17,7 @@ Executable airline
   other-modules:
     CLI
     CrossMap
+    Game
     Id
     Simulation
     Types

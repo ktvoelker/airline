@@ -2,7 +2,6 @@
 module Simulation where
 
 import Control.Concurrent (ThreadId, forkIO, getNumCapabilities, threadDelay)
-import Control.Concurrent.MVar
 import qualified Control.Concurrent.MSemN as Sem
 import Control.Concurrent.STM
 import Data.IORef
@@ -25,12 +24,21 @@ data Sim g p c r =
 data Master g p c r =
   Master
   { mParts     :: TChan p
-  , mPaused    :: MVar ()
+  , mPaused    :: IORef Bool
   , mSpeed     :: IORef NominalDiffTime
   , mCounter   :: Sem.MSemN Int
   , mCommands  :: TChan c
   , mResponses :: TChan r
   , mWorkers   :: [ThreadId]
+  }
+
+data MasterHandle g p c r =
+  MasterHandle
+  { mhThreadId  :: ThreadId
+  , mhPaused    :: IORef Bool
+  , mhSpeed     :: IORef NominalDiffTime
+  , mhCommands  :: TChan c
+  , mhResponses :: TChan r
   }
 
 defaultSpeed :: NominalDiffTime
@@ -42,20 +50,27 @@ pausedSpeed = defaultSpeed
 userInputCutOff :: NominalDiffTime
 userInputCutOff = 0.05
 
-forkSim :: Sim g p c r -> g -> IO (ThreadId, (MVar (), IORef NominalDiffTime, TChan c, TChan r))
+forkSim :: Sim g p c r -> g -> IO (MasterHandle g p c r)
 forkSim sim st = do
-  pausedVar <- newEmptyMVar
+  pausedRef <- newIORef True
   speedRef <- newIORef defaultSpeed
   cmdChan <- newTChanIO
   respChan <- newTChanIO
-  fmap (, (pausedVar, speedRef, cmdChan, respChan)) . forkIO $ do
+  masterThreadId <- forkIO $ do
     n <- getNumCapabilities
     partsChan <- newTChanIO
     sem <- Sem.new 0
     let worker = runWorker (simPart sim) partsChan (Sem.signal sem 1)
-    Master partsChan pausedVar speedRef sem cmdChan respChan
+    Master partsChan pausedRef speedRef sem cmdChan respChan
       <$> (sequence . replicate (n - 2) . forkIO) worker
       >>= flip (flip runMaster sim) st
+  pure $ MasterHandle
+    { mhThreadId  = masterThreadId
+    , mhPaused    = pausedRef
+    , mhSpeed     = speedRef
+    , mhCommands  = cmdChan
+    , mhResponses = respChan
+    }
 
 runWorker :: (p -> IO p) -> TChan p -> IO () -> IO ()
 runWorker f partsChan sig =
@@ -64,15 +79,15 @@ runWorker f partsChan sig =
 runMaster :: Master g p c r -> Sim g p c r -> g -> IO ()
 runMaster Master{..} Sim{..} st = flip evalStateT st $ forever $ do
   -- Check if paused
-  pausedIfNothing <- liftIO $ tryTakeMVar mPaused
+  paused <- liftIO $ readIORef mPaused
   -- Read the current speed
-  speed <- maybe (pure pausedSpeed) (const . liftIO $ readIORef mSpeed) pausedIfNothing
+  speed <- if paused then pure pausedSpeed else liftIO (readIORef mSpeed)
   -- Record the current time
   startTime <- liftIO getCurrentTime
   -- Read the current state
   global <- get
   -- Run one simulation step if not paused
-  whenJust pausedIfNothing . const $ do
+  when paused $ do
     -- Split the current state into parts
     let parts = simSplit global
     -- Send the parts out to the workers

@@ -2,11 +2,15 @@
 module Main where
 
 import H.IO
+import H.Prelude
 
 import CLI
-import Simulation ()
+import Game
+import Simulation
 import Types ()
 
 main :: IO ()
-main = runCLI
+main = do
+  masterHandle <- forkSim gameSim todo
+  runCLI masterHandle
 

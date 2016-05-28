@@ -2,9 +2,7 @@
 TODO
 ====
 
-Start the simulation in the background
-
-Connect the CLI to the simulation via the channels
+Implement speed in the command parser
 
 Define an initial set of cities and airports to play with
 
