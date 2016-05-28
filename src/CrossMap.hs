@@ -4,6 +4,7 @@ module CrossMap
   , empty
   , insert
   , lookup
+  , fromList
   ) where
 
 import qualified Data.Map as M
@@ -24,4 +25,7 @@ sortPair :: (Ord a) => a -> a -> (a, a)
 sortPair a b = case a > b of
   True  -> (b, a)
   False -> (a, b)
+
+fromList :: (Ord a) => [((a, a), b)] -> CrossMap a b
+fromList = CrossMap . M.fromList
 
