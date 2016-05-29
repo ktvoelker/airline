@@ -16,8 +16,7 @@ speedToCycleLength = \case
   SpeedFast   -> 0.10
 
 data Command =
-    Quit
-  | Pause
+    Pause
   | Resume
   | Speed Speed
   | BuyAircraft ModelCode AirportCode
@@ -29,4 +28,18 @@ data Command =
   | ShowAllModels
   | ShowModel ModelCode
   deriving (Eq, Ord, Show)
+
+type AirportResponse = (AirportCode, Int, Int, Int, Text)
+
+type AircraftResponse = (AircraftCode, ModelCode, Maybe AirportCode)
+
+data Response =
+    NoResponse
+  | AirportList [AirportResponse]
+  | AircraftList [AircraftResponse]
+  | PurchasedAircraft AircraftCode
+  | NotEnoughMoney
+  | InvalidModel ModelCode
+  | InvalidAirport AirportCode
+  deriving (Eq, Ord)
 

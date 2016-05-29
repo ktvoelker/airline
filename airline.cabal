@@ -16,6 +16,8 @@ Executable airline
   main-is:          Main.hs
   other-modules:
     CLI
+    CLI.Output
+    Command
     CrossMap
     Demo
     Game

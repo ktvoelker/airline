@@ -53,7 +53,7 @@ data AirportState =
   AirportState
   { _apCode          :: AirportCode
   , _apName          :: T.Text
-  , _apCapacity      :: Integer
+  , _apCapacity      :: Int
   , _apAircraft      :: S.Set Aircraft
   , _apPending       :: TQueue Movement
   , _apPendingCount  :: Int

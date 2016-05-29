@@ -1,24 +1,23 @@
 
 module CLI where
 
-import Control.Concurrent.STM
 import Control.Lens
-import Data.IORef
-import qualified Data.Map as M
 import qualified Data.Set as S
 import qualified Data.Text as T
 import System.Console.Haskeline
 import H.IO
 import H.Prelude
-import Prelude (subtract)
-import System.Random
 import Text.Parsec.Applicative
 
+import CLI.Output
+import Command
 import Game
-import Object
 import Simulation
 import Types
 import Types.Command
+
+data CLICommand = Quit | GameCommand Command
+  deriving (Eq, Ord, Show)
 
 runCLI :: MasterHandle Game GamePart () () -> Game -> IO ()
 runCLI mh game = runInputT defaultSettings $ f
@@ -28,7 +27,7 @@ runCLI mh game = runInputT defaultSettings $ f
       whenJust mXs $ \xs -> do
         continue <- liftIO $ case parseCommand xs of
           Left err -> putStrLn err >> pure True
-          Right cmd -> runCommand mh game cmd
+          Right cmd -> runCLICommand mh game cmd
         when continue $ f
 
 data TT = TKeyword Text | TString
@@ -76,13 +75,17 @@ type P a = Parser () TT TD a
 kw :: Text -> P ()
 kw xs = void $ token (TKeyword xs)
 
-oneCommand :: P Command
-oneCommand = command <* eof
+oneCLICommand :: P CLICommand
+oneCLICommand = cliCommand <* eof
+
+cliCommand :: P CLICommand
+cliCommand =
+  kw "quit" *> pure Quit
+  <|> fmap GameCommand command
 
 command :: P Command
 command =
-  kw "quit" *> pure Quit
-  <|> kw "pause" *> pure Pause
+  kw "pause" *> pure Pause
   <|> kw "resume" *> pure Resume
   <|> kw "speed" *> (Speed <$> speed)
   <|> kw "show" *> showCommand
@@ -109,73 +112,11 @@ speed =
   <|> kw "medium" *> pure SpeedMedium
   <|> kw "fast" *> pure SpeedFast
 
-parseCommand :: Text -> Either Text Command
-parseCommand xs = either (Left . show) Right $ parse oneCommand (tokenize xs)
+parseCommand :: Text -> Either Text CLICommand
+parseCommand xs = either (Left . show) Right $ parse oneCLICommand (tokenize xs)
 
-runCommand :: MasterHandle Game GamePart () () -> Game -> Command -> IO Bool
-runCommand mh game = \case
+runCLICommand :: MasterHandle Game GamePart () () -> Game -> CLICommand -> IO Bool
+runCLICommand mh game = \case
   Quit -> pure False
-  Pause -> writeIORef (mhPaused mh) True >> pure True
-  Resume -> writeIORef (mhPaused mh) False >> pure True
-  Speed speed -> writeIORef (mhSpeed mh) (speedToCycleLength speed) >> pure True
-  ShowAllAirports -> do
-    putStrLn "Code  Capacity  Present  Pending  Name"
-    airports <- atomically $ fmap (^. gAirports) (readObject game) >>= mapM readObject
-    mapM_ (putStrLn . formatAirport) airports
-    pure True
-  ShowAllAircraft -> do
-    putStrLn "Code   Model  Location"
-    aircraft <- atomically
-      $ fmap (^. gAircraft) (readObject game)
-      >>= mapM (readObject >=> \a -> (a,) <$> mapM readObject (a ^. acLocation))
-    mapM_ (putStrLn . uncurry formatAircraft) aircraft
-    pure True
-  BuyAircraft modelCode airportCode -> do
-    random <- newStdGen
-    outcome <- atomically $ do
-      gameState <- readObject game
-      let model = M.lookup modelCode $ gameState ^. gModels
-      let airport = M.lookup airportCode $ gameState ^. gAirports
-      case (model, airport) of
-        (Nothing, _) -> pure "Invalid model."
-        (_, Nothing) -> pure "Invalid airport."
-        (Just model@Model{..}, Just airport) -> do
-          if gameState ^. gMoney >= _mCost
-          then do
-            let aircraftCode = randomAircraftCode random $ M.keysSet $ gameState ^. gAircraft
-            aircraft <- newObject
-              $ AircraftState { _acCode = aircraftCode, _acModel = model, _acLocation = Just airport }
-            modifyObject' airport $ over apAircraft (S.insert aircraft)
-            modifyObject' game $ over gMoney (subtract _mCost) . over gAircraft (M.insert aircraftCode aircraft)
-            pure "Purchased."
-          else pure "Not enough money!"
-    putStrLn outcome
-    pure True
-  _ -> todo
-
-randomAircraftCode :: (RandomGen g) => g -> S.Set AircraftCode -> AircraftCode
-randomAircraftCode _ _ = AircraftCode $ "TODO"
-
-formatField :: Bool -> Int -> Text -> Text
-formatField rightJustified fieldLength xs = (if rightJustified then (affix <>) else (<> affix)) xs
-  where
-    remainingLen = fieldLength - T.length xs
-    affix = T.replicate remainingLen " "
-
-formatIntegral :: (Integral a, Show a) => Int -> a -> Text
-formatIntegral fieldLength = formatField True fieldLength . show
-
-formatAirport :: AirportState -> Text
-formatAirport AirportState{..} =
-  formatField False 3 (unAirportCode _apCode)
-  <> "   " <> formatIntegral 8 _apCapacity
-  <> "  " <> formatIntegral 7 (S.size _apAircraft)
-  <> "  " <> formatIntegral 7 _apPendingCount
-  <> "  " <> _apName
-
-formatAircraft :: AircraftState -> Maybe AirportState -> Text
-formatAircraft AircraftState{..} ap =
-  formatField False 5 (unAircraftCode _acCode) 
-  <> "  " <> formatField False 5 (unModelCode $ _acModel ^. mCode)
-  <> "  " <> formatField False 3 (maybe "---" (unAirportCode . (^. apCode)) ap)
+  GameCommand command -> runCommand mh game command >>= putStr . formatResponse >> pure True
 
