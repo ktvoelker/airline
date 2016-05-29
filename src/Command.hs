@@ -28,6 +28,7 @@ aircraftResponse AircraftState{..} airport = (_acCode, _acModel ^. mCode, fmap _
 
 runCommand :: MasterHandle Game GamePart () () -> Game -> Command -> IO Response
 runCommand mh game = \case
+  Error xs -> pure $ ErrorResponse xs
   Pause -> writeIORef (mhPaused mh) True >> pure NoResponse
   Resume -> writeIORef (mhPaused mh) False >> pure NoResponse
   Speed speed -> writeIORef (mhSpeed mh) (speedToCycleLength speed) >> pure NoResponse

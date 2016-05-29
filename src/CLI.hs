@@ -86,6 +86,12 @@ type P a = Parser () TT TD a
 kw :: Text -> P ()
 kw xs = void $ token (TKeyword xs)
 
+str :: P Text
+str = (^. wspValue) . snd <$> token TString
+
+readable :: (Integral a, Read a) => P (Maybe a)
+readable = read <$> str
+
 oneCLICommand :: P CLICommand
 oneCLICommand = cliCommand <* eof
 
@@ -122,15 +128,19 @@ flightCommand =
   <*> (kw "with" *> modelCode)
   <*> (flightTimes <$> (kw "on" *> daysOfWeek) <*> (kw "at" *> timeOfWeek))
   where
+    f Nothing _ _ _ _ = Error "Invalid flight number."
     f _ _ _ _ Nothing = Error "Invalid time specification."
-    f n f t m (Just ts) = SetFlight n f t m ts
+    f (Just n) f t m (Just ts) = SetFlight n f t m ts
 
 removeCommand :: P Command
 removeCommand =
-  RemoveFlight <$> (kw "flight" *> flightNumber)
+  f <$> (kw "flight" *> flightNumber)
+  where
+    f Nothing = Error "Invalid flight number."
+    f (Just n) = RemoveFlight n
 
-flightNumber :: P FlightNumber
-flightNumber = todo
+flightNumber :: P (Maybe FlightNumber)
+flightNumber = fmap FlightNumber <$> readable
 
 flightTimes :: Maybe [Minutes] -> Maybe Minutes -> Maybe [TimeOfWeek]
 flightTimes maybeDays maybeOffset = do
@@ -142,7 +152,7 @@ minutesPerDay :: Minutes
 minutesPerDay = 24 * 60
 
 daysOfWeek :: P (Maybe [Minutes])
-daysOfWeek = sequence . map f . unpack . T.toLower . (^. wspValue) . snd <$> token TString
+daysOfWeek = sequence . map f . unpack . T.toLower <$> str
   where
     f = \case
       's' -> Just 0
@@ -155,7 +165,7 @@ daysOfWeek = sequence . map f . unpack . T.toLower . (^. wspValue) . snd <$> tok
       _   -> Nothing
 
 timeOfWeek :: P (Maybe Minutes)
-timeOfWeek = f . (^. wspValue) . snd <$> token TString
+timeOfWeek = f <$> str
   where
     f xs = case T.splitOn ":" xs of
       [hoursText, minutesText] -> do
@@ -166,10 +176,10 @@ timeOfWeek = f . (^. wspValue) . snd <$> token TString
     g = fmap fromInteger . read
 
 modelCode :: P ModelCode
-modelCode = ModelCode . (^. wspValue) . snd <$> token TString
+modelCode = ModelCode <$> str
 
 airportCode :: P AirportCode
-airportCode = AirportCode . (^. wspValue) . snd <$> token TString
+airportCode = AirportCode <$> str
 
 speed :: P Speed
 speed =
