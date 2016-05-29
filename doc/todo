@@ -2,9 +2,17 @@
 TODO
 ====
 
-Add user commands
+Implement SetFlight and RemoveFlight commands
+
+Add data to AircraftFlightState to track progress
+
+  Show this data in the aircraft list
 
 Implement the simulation of the flight schedule
 
 Add saving and loading
+
+Implement other "show" commands
+
+Add a GUI
 

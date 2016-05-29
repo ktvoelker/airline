@@ -20,6 +20,8 @@ data Command =
   | Resume
   | Speed Speed
   | BuyAircraft ModelCode AirportCode
+  | SetFlight FlightNumber AirportCode AirportCode ModelCode [TimeOfWeek]
+  | RemoveFlight FlightNumber
   | ShowAllAirports
   | ShowAirport AirportCode
   | ShowAllAircraft
