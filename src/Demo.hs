@@ -43,6 +43,7 @@ demo = atomically $ do
     , _apCapacity      = 2400
     , _apAircraft      = S.empty
     , _apPending       = ordMovements
+    , _apPendingCount  = 0
     , _apMovementDelay = 0
     }
   mdwMovements <- newTQueue
@@ -52,6 +53,7 @@ demo = atomically $ do
     , _apCapacity      = 700
     , _apAircraft      = S.empty
     , _apPending       = mdwMovements
+    , _apPendingCount  = 0
     , _apMovementDelay = 0
     }
   chicago <- newObject $ CityState
@@ -66,6 +68,7 @@ demo = atomically $ do
     , _apCapacity      = 1100
     , _apAircraft      = S.empty
     , _apPending       = mspMovements
+    , _apPendingCount  = 0
     , _apMovementDelay = 0
     }
   minneapolis <- newObject $ CityState

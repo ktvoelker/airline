@@ -2,6 +2,7 @@
 module CLI where
 
 import Control.Concurrent.STM
+import Control.Lens
 import Data.IORef
 import qualified Data.Set as S
 import qualified Data.Text as T
@@ -11,19 +12,20 @@ import H.Prelude
 import Text.Parsec.Applicative
 
 import Game
+import Object
 import Simulation
 import Types
 import Types.Command
 
-runCLI :: MasterHandle Game GamePart CoreCommand Response -> IO ()
-runCLI mh = runInputT defaultSettings $ f
+runCLI :: MasterHandle Game GamePart () () -> Game -> IO ()
+runCLI mh game = runInputT defaultSettings $ f
   where
     f = do
       mXs <- fmap pack <$> getInputLine "> "
       whenJust mXs $ \xs -> do
         continue <- liftIO $ case parseCommand xs of
           Left err -> putStrLn err >> pure True
-          Right cmd -> runCommand mh cmd
+          Right cmd -> runCommand mh game cmd
         when continue $ f
 
 data TT = TKeyword Text | TString
@@ -33,6 +35,7 @@ keywords :: Set Text
 keywords =
   S.fromList
   [ "aircraft"
+  , "airport"
   , "airports"
   , "at"
   , "buy"
@@ -79,7 +82,7 @@ command =
   <|> kw "pause" *> pure Pause
   <|> kw "resume" *> pure Resume
   <|> kw "speed" *> (Speed <$> speed)
-  <|> kw "show" *> pure (Core CorePass)
+  <|> kw "show" *> kw "airports" *> pure ShowAllAirports
 
 speed :: P Speed
 speed =
@@ -90,15 +93,33 @@ speed =
 parseCommand :: Text -> Either Text Command
 parseCommand xs = either (Left . show) Right $ parse oneCommand (tokenize xs)
 
-runCommand :: MasterHandle Game GamePart CoreCommand Response -> Command -> IO Bool
-runCommand mh = \case
-  Pass -> pure True
+runCommand :: MasterHandle Game GamePart () () -> Game -> Command -> IO Bool
+runCommand mh game = \case
   Quit -> pure False
   Pause -> writeIORef (mhPaused mh) True >> pure True
   Resume -> writeIORef (mhPaused mh) False >> pure True
   Speed speed -> writeIORef (mhSpeed mh) (speedToCycleLength speed) >> pure True
-  Core cmd -> do
-    atomically (writeTChan (mhCommands mh) cmd)
-    atomically (readTChan (mhResponses mh)) >>= putStrLn . show
+  ShowAllAirports -> do
+    putStrLn "Code  Capacity  Present  Pending  Name"
+    airports <- atomically $ do
+      airportObjects <- (^. gAirports) <$> readObject game
+      mapM readObject airportObjects
+    mapM_ (putStrLn . formatAirport) airports
     pure True
+  _ -> todo
+
+formatIntegral :: (Integral a, Show a) => a -> Int -> Text
+formatIntegral n len = prefix <> digits
+  where
+    digits = show n
+    remainingLen = len - T.length digits
+    prefix = T.replicate remainingLen " "
+
+formatAirport :: AirportState -> Text
+formatAirport AirportState{..} =
+  unAirportCode _apCode
+  <> "   " <> formatIntegral _apCapacity 8
+  <> "  " <> formatIntegral (S.size _apAircraft) 7
+  <> "  " <> formatIntegral _apPendingCount 7
+  <> "  " <> _apName
 

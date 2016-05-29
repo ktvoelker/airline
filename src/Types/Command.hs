@@ -4,6 +4,8 @@ module Types.Command where
 import Data.Time.Clock
 import H.Prelude
 
+import Types
+
 data Speed = SpeedSlow | SpeedMedium | SpeedFast
   deriving (Eq, Ord, Enum, Bounded, Show)
 
@@ -14,19 +16,17 @@ speedToCycleLength = \case
   SpeedFast   -> 0.10
 
 data Command =
-    Pass
-  | Quit
+    Quit
   | Pause
   | Resume
   | Speed Speed
-  | Core CoreCommand
-  deriving (Eq, Ord, Show)
-
-data CoreCommand =
-    CorePass
-  deriving (Eq, Ord, Show)
-
-data Response =
-    Empty
+  | BuyAircraft ModelCode AirportCode
+  | ShowAllAirports
+  | ShowAirport AirportCode
+  | ShowAllAircraft
+  | ShowAircraft AircraftCode
+  | ShowAllCities
+  | ShowAllModels
+  | ShowModel ModelCode
   deriving (Eq, Ord, Show)
 

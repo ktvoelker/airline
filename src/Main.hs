@@ -2,7 +2,6 @@
 module Main where
 
 import H.IO
-import H.Prelude
 
 import CLI
 import Demo
@@ -12,6 +11,7 @@ import Types.Command
 
 main :: IO ()
 main = do
-  masterHandle <- demo >>= forkSim (speedToCycleLength SpeedSlow) gameSim
-  runCLI masterHandle
+  game <- demo
+  masterHandle <- forkSim (speedToCycleLength SpeedSlow) gameSim game
+  runCLI masterHandle game
 

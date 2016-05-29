@@ -13,7 +13,7 @@ import H.Prelude
 import qualified CrossMap as CM
 import Object
 
-newtype ModelCode = ModelCode T.Text
+newtype ModelCode = ModelCode { unModelCode :: T.Text }
   deriving (Eq, Ord, IsString, Show)
 
 data Model =
@@ -28,7 +28,7 @@ data Model =
 
 makeLenses ''Model
 
-newtype AircraftCode = AircraftCode T.Text
+newtype AircraftCode = AircraftCode { unAircraftCode :: T.Text }
   deriving (Eq, Ord, IsString, Show)
 
 data AircraftState =
@@ -47,7 +47,7 @@ type Aircraft = Object AircraftState
 data Movement = Landing AircraftFlight | Takeoff AircraftFlight
   deriving (Eq, Ord)
 
-newtype AirportCode = AirportCode T.Text
+newtype AirportCode = AirportCode { unAirportCode :: T.Text }
   deriving (Eq, Ord, IsString, Show)
 
 data AirportState =
@@ -57,6 +57,7 @@ data AirportState =
   , _apCapacity      :: Integer
   , _apAircraft      :: S.Set Aircraft
   , _apPending       :: TQueue Movement
+  , _apPendingCount  :: Int
   , _apMovementDelay :: Minutes
   }
 
