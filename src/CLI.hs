@@ -19,8 +19,15 @@ import Types.Command
 data CLICommand = Quit | GameCommand Command
   deriving (Eq, Ord, Show)
 
+cliSettings :: Settings IO
+cliSettings =
+  defaultSettings
+  { historyFile    = Just ".airline-history"
+  , autoAddHistory = True
+  }
+
 runCLI :: MasterHandle Game GamePart () () -> Game -> IO ()
-runCLI mh game = runInputT defaultSettings $ f
+runCLI mh game = runInputT cliSettings $ f
   where
     f = do
       mXs <- fmap pack <$> getInputLine "> "
