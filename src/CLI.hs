@@ -4,11 +4,14 @@ module CLI where
 import Control.Concurrent.STM
 import Control.Lens
 import Data.IORef
+import qualified Data.Map as M
 import qualified Data.Set as S
 import qualified Data.Text as T
 import System.Console.Haskeline
 import H.IO
 import H.Prelude
+import Prelude (subtract)
+import System.Random
 import Text.Parsec.Applicative
 
 import Game
@@ -83,11 +86,22 @@ command =
   <|> kw "resume" *> pure Resume
   <|> kw "speed" *> (Speed <$> speed)
   <|> kw "show" *> showCommand
+  <|> kw "buy" *> buyCommand
 
 showCommand :: P Command
 showCommand =
   kw "airports" *> pure ShowAllAirports
   <|> kw "aircraft" *> pure ShowAllAircraft
+
+buyCommand :: P Command
+buyCommand =
+  (BuyAircraft <$> (kw "aircraft" *> modelCode) <*> (kw "at" *> airportCode))
+
+modelCode :: P ModelCode
+modelCode = ModelCode . (^. wspValue) . snd <$> token TString
+
+airportCode :: P AirportCode
+airportCode = AirportCode . (^. wspValue) . snd <$> token TString
 
 speed :: P Speed
 speed =
@@ -116,7 +130,31 @@ runCommand mh game = \case
       >>= mapM (readObject >=> \a -> (a,) <$> mapM readObject (a ^. acLocation))
     mapM_ (putStrLn . uncurry formatAircraft) aircraft
     pure True
+  BuyAircraft modelCode airportCode -> do
+    random <- newStdGen
+    outcome <- atomically $ do
+      gameState <- readObject game
+      let model = M.lookup modelCode $ gameState ^. gModels
+      let airport = M.lookup airportCode $ gameState ^. gAirports
+      case (model, airport) of
+        (Nothing, _) -> pure "Invalid model."
+        (_, Nothing) -> pure "Invalid airport."
+        (Just model@Model{..}, Just airport) -> do
+          if gameState ^. gMoney >= _mCost
+          then do
+            let aircraftCode = randomAircraftCode random $ M.keysSet $ gameState ^. gAircraft
+            aircraft <- newObject
+              $ AircraftState { _acCode = aircraftCode, _acModel = model, _acLocation = Just airport }
+            modifyObject' airport $ over apAircraft (S.insert aircraft)
+            modifyObject' game $ over gMoney (subtract _mCost) . over gAircraft (M.insert aircraftCode aircraft)
+            pure "Purchased."
+          else pure "Not enough money!"
+    putStrLn outcome
+    pure True
   _ -> todo
+
+randomAircraftCode :: (RandomGen g) => g -> S.Set AircraftCode -> AircraftCode
+randomAircraftCode _ _ = AircraftCode $ "TODO"
 
 formatField :: Bool -> Int -> Text -> Text
 formatField rightJustified fieldLength xs = (if rightJustified then (affix <>) else (<> affix)) xs

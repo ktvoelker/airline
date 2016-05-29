@@ -44,6 +44,7 @@ Executable airline
     hydrogen             >= 0.4  && < 0.5,
     lens                 >= 4.13 && < 4.14,
     mtl                  >= 2.1  && < 2.3,
+    random               >= 1.1  && < 1.2,
     stm                  >= 2.4  && < 2.5,
     text                 >= 1.2  && < 1.3,
     time                 >= 1.4  && < 1.7,
