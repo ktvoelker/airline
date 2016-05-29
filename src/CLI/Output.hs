@@ -10,6 +10,7 @@ import Types.Command
 formatResponse :: Response -> Text
 formatResponse = \case
   NoResponse -> "Done.\n"
+  ErrorResponse xs -> xs <> "\n"
   AirportList xs -> "Code  Capacity  Present  Pending  Name\n" <> mconcat (map formatAirport xs)
   AircraftList xs -> "Code   Model  Location\n" <> mconcat (map formatAircraft xs)
   PurchasedAircraft code -> "Purchased aircraft: " <> unAircraftCode code <> ".\n"

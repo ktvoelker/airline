@@ -16,7 +16,8 @@ speedToCycleLength = \case
   SpeedFast   -> 0.10
 
 data Command =
-    Pause
+    Error Text
+  | Pause
   | Resume
   | Speed Speed
   | BuyAircraft ModelCode AirportCode
@@ -37,6 +38,7 @@ type AircraftResponse = (AircraftCode, ModelCode, Maybe AirportCode)
 
 data Response =
     NoResponse
+  | ErrorResponse Text
   | AirportList [AirportResponse]
   | AircraftList [AircraftResponse]
   | PurchasedAircraft AircraftCode
