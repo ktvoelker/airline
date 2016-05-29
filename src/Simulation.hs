@@ -10,7 +10,6 @@ import Data.Time
 import qualified Data.Text.IO as TIO
 import H.Prelude
 import H.IO
-import Prelude (subtract)
 
 data Sim g p c r =
   Sim

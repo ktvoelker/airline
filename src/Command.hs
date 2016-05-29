@@ -8,7 +8,6 @@ import qualified Data.Map as M
 import qualified Data.Set as S
 import H.IO
 import H.Prelude
-import Prelude (subtract)
 import System.Random
 
 import Game
