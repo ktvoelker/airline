@@ -33,11 +33,10 @@ newtype AircraftCode = AircraftCode { unAircraftCode :: T.Text }
 
 data AircraftState =
   AircraftState
-  { _acCode  :: AircraftCode
-  , _acModel :: Model
-  } deriving (Show)
-
-makeLenses ''AircraftState
+  { _acCode     :: AircraftCode
+  , _acModel    :: Model
+  , _acLocation :: Maybe Airport
+  }
 
 newtype Minutes = Minutes Int
   deriving (Eq, Ord, Num, Real, Integral, Enum, Bounded, Show)
@@ -85,6 +84,8 @@ data AircraftFlightState =
   } deriving (Eq, Ord)
 
 type AircraftFlight = Object AircraftFlightState
+
+makeLenses ''AircraftState
 
 makeLenses ''AirportState
 

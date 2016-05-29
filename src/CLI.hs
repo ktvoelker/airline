@@ -82,7 +82,12 @@ command =
   <|> kw "pause" *> pure Pause
   <|> kw "resume" *> pure Resume
   <|> kw "speed" *> (Speed <$> speed)
-  <|> kw "show" *> kw "airports" *> pure ShowAllAirports
+  <|> kw "show" *> showCommand
+
+showCommand :: P Command
+showCommand =
+  kw "airports" *> pure ShowAllAirports
+  <|> kw "aircraft" *> pure ShowAllAircraft
 
 speed :: P Speed
 speed =
@@ -101,25 +106,38 @@ runCommand mh game = \case
   Speed speed -> writeIORef (mhSpeed mh) (speedToCycleLength speed) >> pure True
   ShowAllAirports -> do
     putStrLn "Code  Capacity  Present  Pending  Name"
-    airports <- atomically $ do
-      airportObjects <- (^. gAirports) <$> readObject game
-      mapM readObject airportObjects
+    airports <- atomically $ fmap (^. gAirports) (readObject game) >>= mapM readObject
     mapM_ (putStrLn . formatAirport) airports
+    pure True
+  ShowAllAircraft -> do
+    putStrLn "Code   Model  Location"
+    aircraft <- atomically
+      $ fmap (^. gAircraft) (readObject game)
+      >>= mapM (readObject >=> \a -> (a,) <$> mapM readObject (a ^. acLocation))
+    mapM_ (putStrLn . uncurry formatAircraft) aircraft
     pure True
   _ -> todo
 
-formatIntegral :: (Integral a, Show a) => a -> Int -> Text
-formatIntegral n len = prefix <> digits
+formatField :: Bool -> Int -> Text -> Text
+formatField rightJustified fieldLength xs = (if rightJustified then (affix <>) else (<> affix)) xs
   where
-    digits = show n
-    remainingLen = len - T.length digits
-    prefix = T.replicate remainingLen " "
+    remainingLen = fieldLength - T.length xs
+    affix = T.replicate remainingLen " "
+
+formatIntegral :: (Integral a, Show a) => Int -> a -> Text
+formatIntegral fieldLength = formatField True fieldLength . show
 
 formatAirport :: AirportState -> Text
 formatAirport AirportState{..} =
-  unAirportCode _apCode
-  <> "   " <> formatIntegral _apCapacity 8
-  <> "  " <> formatIntegral (S.size _apAircraft) 7
-  <> "  " <> formatIntegral _apPendingCount 7
+  formatField False 3 (unAirportCode _apCode)
+  <> "   " <> formatIntegral 8 _apCapacity
+  <> "  " <> formatIntegral 7 (S.size _apAircraft)
+  <> "  " <> formatIntegral 7 _apPendingCount
   <> "  " <> _apName
+
+formatAircraft :: AircraftState -> Maybe AirportState -> Text
+formatAircraft AircraftState{..} ap =
+  formatField False 5 (unAircraftCode _acCode) 
+  <> "  " <> formatField False 5 (unModelCode $ _acModel ^. mCode)
+  <> "  " <> formatField False 3 (maybe "---" (unAirportCode . (^. apCode)) ap)
 
