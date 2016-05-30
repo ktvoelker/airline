@@ -11,6 +11,7 @@ import Text.Parsec.Applicative
 
 import CLI.Output
 import Command
+import Command.Monad (runCM)
 import Game
 import Simulation
 import Types
@@ -193,5 +194,5 @@ parseCommand xs = either (Left . show) Right $ parse oneCLICommand (tokenize xs)
 runCLICommand :: MasterHandle Game GamePart () () -> Game -> CLICommand -> IO Bool
 runCLICommand mh game = \case
   Quit -> pure False
-  GameCommand command -> runCommand mh game command >>= putStr . formatResponse >> pure True
+  GameCommand command -> runCM (runCommand game command) mh >>= putStr . formatResponse >> pure True
 

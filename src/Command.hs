@@ -1,18 +1,13 @@
 
 module Command where
 
-import Control.Concurrent.STM
 import Control.Lens
-import Data.IORef
 import qualified Data.Map as M
 import qualified Data.Set as S
-import H.IO
 import H.Prelude
-import System.Random
 
-import Game
+import Command.Monad
 import Object
-import Simulation
 import Types
 import Types.Command
 
@@ -25,12 +20,12 @@ airportResponse AirportState{..} = (_apCode, _apCapacity, S.size _apAircraft, _a
 aircraftResponse :: AircraftState -> Maybe AirportState -> AircraftResponse
 aircraftResponse AircraftState{..} airport = (_acCode, _acModel ^. mCode, fmap _apCode airport)
 
-runCommand :: MasterHandle Game GamePart () () -> Game -> Command -> IO Response
-runCommand mh game = \case
+runCommand :: Game -> Command -> CM Response
+runCommand game = \case
   Error xs -> pure $ ErrorResponse xs
-  Pause -> writeIORef (mhPaused mh) True >> pure NoResponse
-  Resume -> writeIORef (mhPaused mh) False >> pure NoResponse
-  Speed speed -> writeIORef (mhSpeed mh) (speedToCycleLength speed) >> pure NoResponse
+  Pause -> setPaused True >> pure NoResponse
+  Resume -> setPaused False >> pure NoResponse
+  Speed speed -> setSpeed (speedToCycleLength speed) >> pure NoResponse
   ShowAllAirports ->
     fmap (AirportList . map airportResponse . M.elems)
     $ atomically
