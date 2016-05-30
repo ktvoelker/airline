@@ -9,9 +9,13 @@ module Object
   , modifyObject
   , modifyObject'
   , swapObject
+  , useObject
+  , overObject
+  , overObject'
   ) where
 
 import Control.Concurrent.STM
+import Control.Lens
 import H.IO
 import H.Prelude
 import System.IO.Unsafe
@@ -53,4 +57,13 @@ modifyObject' obj = modifyTVar' $ objectVar obj
 
 swapObject :: Object a -> a -> STM a
 swapObject obj = swapTVar $ objectVar obj
+
+useObject :: Getting a s a -> Object s -> STM a
+useObject q obj = view q <$> readObject obj
+
+overObject :: ASetter s s a b -> (a -> b) -> Object s -> STM ()
+overObject q f obj = modifyObject obj $ over q f
+
+overObject' :: ASetter s s a b -> (a -> b) -> Object s -> STM ()
+overObject' q f obj = modifyObject' obj $ over q f
 
