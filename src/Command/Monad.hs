@@ -7,6 +7,7 @@ module Command.Monad
   , setSpeed
   , atomically
   , newStdGen
+  , getGame
   , module Control.Concurrent.STM
   , module System.Random
   ) where
@@ -22,6 +23,7 @@ import System.Random hiding (getStdRandom, getStdGen, setStdGen, newStdGen, rand
 import qualified System.Random as R
 
 import Simulation
+import Types (Game())
 
 data CommandInstruction a where
   CILog        :: Text -> CommandInstruction ()
@@ -29,19 +31,21 @@ data CommandInstruction a where
   CISetSpeed   :: NominalDiffTime -> CommandInstruction ()
   CIAtomically :: STM a -> CommandInstruction a
   CINewStdGen  :: CommandInstruction StdGen
+  CIGetGame    :: CommandInstruction Game
 
 type CM a = Program CommandInstruction a
 
-runCM :: CM a -> MasterHandle g p -> IO a
-runCM m mh = interpretWithMonad (interpreter mh) m
+runCM :: CM a -> MasterHandle g p -> Game -> IO a
+runCM m mh game = interpretWithMonad (interpreter mh game) m
 
-interpreter :: MasterHandle g p -> CommandInstruction a -> IO a
-interpreter mh = \case
+interpreter :: MasterHandle g p -> Game -> CommandInstruction a -> IO a
+interpreter mh game = \case
   CILog xs -> putStrLn xs
   CISetPaused paused -> writeIORef (mhPaused mh) paused
   CISetSpeed speed -> writeIORef (mhSpeed mh) speed
   CIAtomically stm -> STM.atomically stm
   CINewStdGen -> R.newStdGen
+  CIGetGame -> pure game
 
 log :: Text -> CM ()
 log = singleton . CILog
@@ -57,4 +61,7 @@ atomically = singleton . CIAtomically
 
 newStdGen :: CM StdGen
 newStdGen = singleton CINewStdGen
+
+getGame :: CM Game
+getGame = singleton CIGetGame
 

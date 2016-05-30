@@ -4,19 +4,33 @@ module CLI.Output where
 import qualified Data.Text as T
 import H.Prelude
 
+import Command.BuyAircraft
+import Command.ShowAllAircraft
+import Command.ShowAllAirports
+import Command.Simple
 import Types
-import Types.Command
 
-formatResponse :: Response -> Text
-formatResponse = \case
-  NoResponse -> "Done.\n"
-  ErrorResponse xs -> xs <> "\n"
-  AirportList xs -> "Code  Capacity  Present  Pending  Name\n" <> mconcat (map formatAirport xs)
-  AircraftList xs -> "Code   Model  Location\n" <> mconcat (map formatAircraft xs)
-  PurchasedAircraft code -> "Purchased aircraft: " <> unAircraftCode code <> ".\n"
-  NotEnoughMoney -> "Not enough money.\n"
-  InvalidAirport code -> "Invalid airport: " <> unAirportCode code <> ".\n"
-  InvalidModel code -> "Invalid model: " <> unModelCode code <> ".\n"
+class CLIResponse a where
+  formatResponse :: a -> Text
+
+instance CLIResponse () where
+  formatResponse _ = "Done.\n"
+
+instance CLIResponse Error where
+  formatResponse (Error xs) = xs <> "\n"
+
+instance CLIResponse BuyAircraftResponse where
+  formatResponse = \case
+    PurchasedAircraft code -> "Purchased aircraft: " <> unAircraftCode code <> ".\n"
+    NotEnoughMoney -> "Not enough money.\n"
+    InvalidAirport code -> "Invalid airport: " <> unAirportCode code <> ".\n"
+    InvalidModel code -> "Invalid model: " <> unModelCode code <> ".\n"
+
+instance CLIResponse AircraftList where
+  formatResponse (AircraftList xs) = "Code   Model  Location\n" <> mconcat (map formatAircraft xs)
+
+instance CLIResponse AirportList where
+  formatResponse (AirportList xs) = "Code  Capacity  Present  Pending  Name\n" <> mconcat (map formatAirport xs)
 
 formatField :: Bool -> Int -> Text -> Text
 formatField rightJustified fieldLength xs = (if rightJustified then (affix <>) else (<> affix)) xs

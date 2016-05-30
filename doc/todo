@@ -16,3 +16,10 @@ Implement other "show" commands
 
 Add a GUI
 
+More commands
+    ShowAirport AirportCode
+    ShowAircraft AircraftCode
+    ShowAllCities
+    ShowAllModels
+    ShowModel ModelCode
+

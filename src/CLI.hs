@@ -11,14 +11,20 @@ import Text.Parsec.Applicative
 
 import CLI.Output
 import Command
+import Command.BuyAircraft
 import Command.Monad (runCM)
+import Command.RemoveFlight
+import Command.SetFlight
+import Command.ShowAllAircraft
+import Command.ShowAllAirports
+import Command.Simple
 import Game
 import Simulation
 import Types
-import Types.Command
 
-data CLICommand = Quit | GameCommand Command
-  deriving (Eq, Ord, Show)
+data GameCommand = forall a. (Command a, CLIResponse (Response a)) => GameCommand a
+
+data CLICommand = CLIQuit | CLIGameCommand GameCommand
 
 cliSettings :: Settings IO
 cliSettings =
@@ -98,29 +104,29 @@ oneCLICommand = cliCommand <* eof
 
 cliCommand :: P CLICommand
 cliCommand =
-  kw "quit" *> pure Quit
-  <|> fmap GameCommand command
+  kw "quit" *> pure CLIQuit
+  <|> fmap CLIGameCommand command
 
-command :: P Command
+command :: P GameCommand
 command =
-  kw "pause" *> pure Pause
-  <|> kw "resume" *> pure Resume
-  <|> kw "speed" *> (Speed <$> speed)
+  kw "pause" *> pure (GameCommand $ SetPaused True)
+  <|> kw "resume" *> pure (GameCommand $ SetPaused False)
+  <|> kw "speed" *> (GameCommand . SetSpeed <$> speed)
   <|> kw "show" *> showCommand
   <|> kw "buy" *> buyCommand
   <|> kw "flight" *> flightCommand
   <|> kw "remove" *> removeCommand
 
-showCommand :: P Command
+showCommand :: P GameCommand
 showCommand =
-  kw "airports" *> pure ShowAllAirports
-  <|> kw "aircraft" *> pure ShowAllAircraft
+  kw "airports" *> pure (GameCommand ShowAllAirports)
+  <|> kw "aircraft" *> pure (GameCommand ShowAllAircraft)
 
-buyCommand :: P Command
+buyCommand :: P GameCommand
 buyCommand =
-  BuyAircraft <$> (kw "aircraft" *> modelCode) <*> (kw "at" *> airportCode)
+  fmap GameCommand $ BuyAircraft <$> (kw "aircraft" *> modelCode) <*> (kw "at" *> airportCode)
 
-flightCommand :: P Command
+flightCommand :: P GameCommand
 flightCommand =
   f
   <$> flightNumber
@@ -129,16 +135,16 @@ flightCommand =
   <*> (kw "with" *> modelCode)
   <*> (flightTimes <$> (kw "on" *> daysOfWeek) <*> (kw "at" *> timeOfWeek))
   where
-    f Nothing _ _ _ _ = Error "Invalid flight number."
-    f _ _ _ _ Nothing = Error "Invalid time specification."
-    f (Just n) f t m (Just ts) = SetFlight n f t m ts
+    f Nothing _ _ _ _ = GameCommand $ Error "Invalid flight number."
+    f _ _ _ _ Nothing = GameCommand $ Error "Invalid time specification."
+    f (Just n) f t m (Just ts) = GameCommand $ SetFlight n f t m ts
 
-removeCommand :: P Command
+removeCommand :: P GameCommand
 removeCommand =
   f <$> (kw "flight" *> flightNumber)
   where
-    f Nothing = Error "Invalid flight number."
-    f (Just n) = RemoveFlight n
+    f Nothing = GameCommand $ Error "Invalid flight number."
+    f (Just n) = GameCommand $ RemoveFlight n
 
 flightNumber :: P (Maybe FlightNumber)
 flightNumber = fmap FlightNumber <$> readable
@@ -193,6 +199,6 @@ parseCommand xs = either (Left . show) Right $ parse oneCLICommand (tokenize xs)
 
 runCLICommand :: MasterHandle Game GamePart -> Game -> CLICommand -> IO Bool
 runCLICommand mh game = \case
-  Quit -> pure False
-  GameCommand command -> runCM (runCommand game command) mh >>= putStr . formatResponse >> pure True
+  CLIQuit -> pure False
+  CLIGameCommand (GameCommand command) -> runCM (runCommand command) mh game >>= putStr . formatResponse >> pure True
 
