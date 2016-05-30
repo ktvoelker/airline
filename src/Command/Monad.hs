@@ -32,10 +32,10 @@ data CommandInstruction a where
 
 type CM a = Program CommandInstruction a
 
-runCM :: CM a -> MasterHandle g p () () -> IO a
+runCM :: CM a -> MasterHandle g p -> IO a
 runCM m mh = interpretWithMonad (interpreter mh) m
 
-interpreter :: MasterHandle g p () () -> CommandInstruction a -> IO a
+interpreter :: MasterHandle g p -> CommandInstruction a -> IO a
 interpreter mh = \case
   CILog xs -> putStrLn xs
   CISetPaused paused -> writeIORef (mhPaused mh) paused

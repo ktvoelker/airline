@@ -27,7 +27,7 @@ cliSettings =
   , autoAddHistory = True
   }
 
-runCLI :: MasterHandle Game GamePart () () -> Game -> IO ()
+runCLI :: MasterHandle Game GamePart -> Game -> IO ()
 runCLI mh game = runInputT cliSettings $ f
   where
     f = do
@@ -191,7 +191,7 @@ speed =
 parseCommand :: Text -> Either Text CLICommand
 parseCommand xs = either (Left . show) Right $ parse oneCLICommand (tokenize xs)
 
-runCLICommand :: MasterHandle Game GamePart () () -> Game -> CLICommand -> IO Bool
+runCLICommand :: MasterHandle Game GamePart -> Game -> CLICommand -> IO Bool
 runCLICommand mh game = \case
   Quit -> pure False
   GameCommand command -> runCM (runCommand game command) mh >>= putStr . formatResponse >> pure True
