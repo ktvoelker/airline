@@ -19,7 +19,11 @@ data AircraftList = AircraftList [AircraftResponse]
   deriving (Show)
 
 aircraftResponse :: AircraftState -> Maybe AirportState -> AircraftResponse
-aircraftResponse AircraftState{..} airport = (_acCode, _acModel ^. mCode, fmap _apCode airport)
+aircraftResponse AircraftState{..} airport =
+  ( _acCode
+  , view mCode _acModel
+  , fmap _apCode airport
+  )
 
 instance Command ShowAllAircraft where
   type Response ShowAllAircraft = AircraftList
@@ -27,6 +31,6 @@ instance Command ShowAllAircraft where
     game <- getGame
     fmap (AircraftList . map (uncurry aircraftResponse) . M.elems)
       $ atomically
-      $ fmap (^. gAircraft) (readObject game)
-        >>= mapM (readObject >=> \a -> (a,) <$> mapM readObject (a ^. acLocation))
+      $ useObject gAircraft game
+        >>= mapM (readObject >=> \a -> (a,) <$> mapM readObject (view acLocation a))
 

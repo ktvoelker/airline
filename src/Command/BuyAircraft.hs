@@ -31,19 +31,25 @@ instance Command BuyAircraft where
     random <- newStdGen
     atomically $ do
       gameState <- readObject game
-      let model = M.lookup modelCode $ gameState ^. gModels
-      let airport = M.lookup airportCode $ gameState ^. gAirports
+      let model = M.lookup modelCode $ view gModels gameState
+      let airport = M.lookup airportCode $ view gAirports gameState
       case (model, airport) of
         (Nothing, _) -> pure $ InvalidModel modelCode
         (_, Nothing) -> pure $ InvalidAirport airportCode
         (Just model@Model{..}, Just airport) -> do
-          if gameState ^. gMoney >= _mCost
+          if view gMoney gameState >= _mCost
           then do
-            let aircraftCode = randomAircraftCode random $ M.keysSet $ gameState ^. gAircraft
+            let takenCodes = M.keysSet $ view gAircraft gameState
+            let aircraftCode = randomAircraftCode random takenCodes
             aircraft <- newObject
-              $ AircraftState { _acCode = aircraftCode, _acModel = model, _acLocation = Just airport }
-            modifyObject' airport $ over apAircraft (S.insert aircraft)
-            modifyObject' game $ over gMoney (subtract _mCost) . over gAircraft (M.insert aircraftCode aircraft)
+              $ AircraftState
+                { _acCode = aircraftCode
+                , _acModel = model
+                , _acLocation = Just airport
+                }
+            overObject' apAircraft (S.insert aircraft) airport
+            overObject' gMoney (subtract _mCost) game
+            overObject' gAircraft (M.insert aircraftCode aircraft) game
             pure $ PurchasedAircraft aircraftCode
           else pure NotEnoughMoney
 

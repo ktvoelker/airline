@@ -1,7 +1,6 @@
 
 module Command.ShowAllAirports where
 
-import Control.Lens
 import qualified Data.Map as M
 import qualified Data.Set as S
 import H.Prelude
@@ -20,7 +19,13 @@ data AirportList = AirportList [AirportResponse]
   deriving (Show)
 
 airportResponse :: AirportState -> AirportResponse
-airportResponse AirportState{..} = (_apCode, _apCapacity, S.size _apAircraft, _apPendingCount, _apName)
+airportResponse AirportState{..} =
+  ( _apCode
+  , _apCapacity
+  , S.size _apAircraft
+  , _apPendingCount
+  , _apName
+  )
 
 instance Command ShowAllAirports where
   type Response ShowAllAirports = AirportList
@@ -28,5 +33,5 @@ instance Command ShowAllAirports where
     game <- getGame
     fmap (AirportList . map airportResponse . M.elems)
       $ atomically
-      $ fmap (^. gAirports) (readObject game) >>= mapM readObject
+      $ useObject gAirports game >>= mapM readObject
 
