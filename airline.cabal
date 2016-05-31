@@ -52,6 +52,7 @@ Executable airline
     haskeline            >= 0.7  && < 0.8,
     hydrogen             >= 0.4  && < 0.5,
     lens                 >= 4.13 && < 4.14,
+    monad-stm            >= 0.1  && < 0.2,
     mtl                  >= 2.1  && < 2.3,
     operational          >= 0.2  && < 0.3,
     random               >= 1.1  && < 1.2,

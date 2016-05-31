@@ -32,7 +32,7 @@ instance Command BuyAircraft where
     random <- newStdGen
     atomically $ do
       game <- ask
-      gameState <- liftSTM $ readObject game
+      gameState <- readObject game
       let model = M.lookup modelCode $ view gModels gameState
       let airport = M.lookup airportCode $ view gAirports gameState
       case (model, airport) of
@@ -40,7 +40,7 @@ instance Command BuyAircraft where
         (_, Nothing) -> throwError $ InvalidAirport airportCode
         (Just model@Model{..}, Just airport) -> do
           if view gMoney gameState >= _mCost
-          then liftSTM $ do
+          then do
             let takenCodes = M.keysSet $ view gAircraft gameState
             let aircraftCode = randomAircraftCode random takenCodes
             aircraft <- newObject

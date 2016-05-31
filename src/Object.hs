@@ -16,6 +16,7 @@ module Object
 
 import Control.Concurrent.STM
 import Control.Lens
+import Control.Monad.STM.Class
 import H.IO
 import H.Prelude
 import System.IO.Unsafe
@@ -30,8 +31,8 @@ instance Ord (Object a) where
 counter :: TVar Integer
 counter = unsafePerformIO $ newTVarIO 0
 
-newObject :: a -> STM (Object a)
-newObject x = do
+newObject :: (MonadSTM m) => a -> m (Object a)
+newObject x = liftSTM $ do
   n <- readTVar counter
   v <- newTVar x
   writeTVar counter $ n + 1
@@ -40,30 +41,30 @@ newObject x = do
 newObjectIO :: a -> IO (Object a)
 newObjectIO = atomically . newObject
 
-readObject :: Object a -> STM a
-readObject = readTVar . objectVar
+readObject :: (MonadSTM m) => Object a -> m a
+readObject = liftSTM . readTVar . objectVar
 
 readObjectIO :: Object a -> IO a
 readObjectIO = readTVarIO . objectVar
 
-writeObject :: Object a -> a -> STM ()
-writeObject obj = writeTVar $ objectVar obj
+writeObject :: (MonadSTM m) => Object a -> a -> m ()
+writeObject obj = liftSTM . writeTVar (objectVar obj)
 
-modifyObject :: Object a -> (a -> a) -> STM ()
-modifyObject obj = modifyTVar $ objectVar obj
+modifyObject :: (MonadSTM m) => Object a -> (a -> a) -> m ()
+modifyObject obj = liftSTM . modifyTVar (objectVar obj)
 
-modifyObject' :: Object a -> (a -> a) -> STM ()
-modifyObject' obj = modifyTVar' $ objectVar obj
+modifyObject' :: (MonadSTM m) => Object a -> (a -> a) -> m ()
+modifyObject' obj = liftSTM . modifyTVar' (objectVar obj)
 
-swapObject :: Object a -> a -> STM a
-swapObject obj = swapTVar $ objectVar obj
+swapObject :: (MonadSTM m) => Object a -> a -> m a
+swapObject obj = liftSTM . swapTVar (objectVar obj)
 
-useObject :: Getting a s a -> Object s -> STM a
-useObject q obj = view q <$> readObject obj
+useObject :: (MonadSTM m) => Getting a s a -> Object s -> m a
+useObject q obj = liftSTM $ view q <$> readObject obj
 
-overObject :: ASetter s s a b -> (a -> b) -> Object s -> STM ()
-overObject q f obj = modifyObject obj $ over q f
+overObject :: (MonadSTM m) => ASetter s s a b -> (a -> b) -> Object s -> m ()
+overObject q f obj = liftSTM $ modifyObject obj $ over q f
 
-overObject' :: ASetter s s a b -> (a -> b) -> Object s -> STM ()
-overObject' q f obj = modifyObject' obj $ over q f
+overObject' :: (MonadSTM m) => ASetter s s a b -> (a -> b) -> Object s -> m ()
+overObject' q f obj = liftSTM $ modifyObject' obj $ over q f
 

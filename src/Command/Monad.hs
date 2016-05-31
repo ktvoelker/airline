@@ -1,7 +1,6 @@
 
 module Command.Monad
   ( CSTM()
-  , liftSTM
   , CM()
   , runCM
   , log
@@ -11,12 +10,14 @@ module Command.Monad
   , newStdGen
   , getGame
   , module Control.Concurrent.STM
+  , module Control.Monad.STM.Class
   , module System.Random
   ) where
 
 import Control.Concurrent.STM hiding (atomically)
 import qualified Control.Concurrent.STM as STM
 import Control.Monad.Operational
+import Control.Monad.STM.Class
 import Data.IORef
 import Data.Time.Clock
 import H.IO
@@ -28,10 +29,7 @@ import Simulation
 import Types (Game())
 
 newtype CSTM e a = CSTM { unCSTM :: ReaderT Game (ExceptT e STM) a }
-  deriving (Functor, Applicative, Monad, MonadReader Game, MonadError e)
-
-liftSTM :: STM a -> CSTM e a
-liftSTM = CSTM . lift . lift
+  deriving (Functor, Applicative, Monad, MonadReader Game, MonadError e, MonadSTM)
 
 data CommandInstruction e a where
   CILog        :: Text -> CommandInstruction e ()

@@ -33,6 +33,5 @@ instance Command ShowAllAirports where
     game <- getGame
     fmap (AirportList . map airportResponse . M.elems)
       $ atomically
-      $ liftSTM
       $ useObject gAirports game >>= mapM readObject
 

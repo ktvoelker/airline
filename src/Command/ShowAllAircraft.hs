@@ -31,7 +31,6 @@ instance Command ShowAllAircraft where
     game <- getGame
     fmap (AircraftList . map (uncurry aircraftResponse) . M.elems)
       $ atomically
-      $ liftSTM
       $ useObject gAircraft game
         >>= mapM (readObject >=> \a -> (a,) <$> mapM readObject (view acLocation a))
 

@@ -2,15 +2,6 @@
 TODO
 ====
 
-Try to clean up the monad mess that has arisen
-
-  Consider getting rid of the monad transformers in favor of building all the necessary things into the
-  instruction set.
-
-    This would mean having two operational monads: one that goes to IO and another that goes to STM.
-
-  If we had a truly canonical replacement monad for STM, we could also move all the Object functions into it.
-
 Finish ChangeFlight
 
 Implement RemoveFlight
