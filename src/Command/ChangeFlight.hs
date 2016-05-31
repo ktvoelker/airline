@@ -30,7 +30,7 @@ data ChangeFlightError =
   deriving (Show)
 
 lookupInGame :: (Ord k) => Getter GameState (M.Map k a) -> e -> k -> CSTM e a
-lookupInGame lens err key = get >>= liftSTM . useObject (lens . at key) >>= \case
+lookupInGame lens err key = ask >>= liftSTM . useObject (lens . at key) >>= \case
   Nothing -> throwError err
   Just x -> pure x
 
@@ -43,11 +43,11 @@ lookupModel = lookupInGame gModels
 instance Command ChangeFlight where
   type Response ChangeFlight = ()
   type Error ChangeFlight = ChangeFlightError
-  runCommand ChangeFlight{..} = atomically' $ do
+  runCommand ChangeFlight{..} = atomically $ do
     origin <- maybe (pure Nothing) (fmap Just . lookupAirport CFInvalidOrigin) cfOrigin
     destination <- maybe (pure Nothing) (fmap Just . lookupAirport CFInvalidDestination) cfDestination
     model <- maybe (pure Nothing) (fmap Just . lookupModel CFInvalidModel) cfModel
-    game <- get
+    game <- ask
     maybeFlight <- liftSTM $ useObject (gFlights . at cfFlightNumber) game
     case maybeFlight of
       Nothing -> case (origin, destination, model, cfDaysOfWeek, cfTimeOfDay) of

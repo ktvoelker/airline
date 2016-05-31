@@ -6,7 +6,6 @@ import qualified Data.Map as M
 import H.Prelude
 
 import Command
-import Command.Monad
 import Object
 import Types
 
@@ -28,10 +27,11 @@ aircraftResponse AircraftState{..} airport =
 instance Command ShowAllAircraft where
   type Response ShowAllAircraft = AircraftList
   type Error ShowAllAircraft = ()
-  runCommand _ = lift $ do
+  runCommand _ = do
     game <- getGame
     fmap (AircraftList . map (uncurry aircraftResponse) . M.elems)
       $ atomically
+      $ liftSTM
       $ useObject gAircraft game
         >>= mapM (readObject >=> \a -> (a,) <$> mapM readObject (view acLocation a))
 

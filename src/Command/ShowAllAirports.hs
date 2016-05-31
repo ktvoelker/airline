@@ -6,7 +6,6 @@ import qualified Data.Set as S
 import H.Prelude
 
 import Command
-import Command.Monad
 import Object
 import Types
 
@@ -30,9 +29,10 @@ airportResponse AirportState{..} =
 instance Command ShowAllAirports where
   type Response ShowAllAirports = AirportList
   type Error ShowAllAirports = ()
-  runCommand _ = lift $ do
+  runCommand _ = do
     game <- getGame
     fmap (AirportList . map airportResponse . M.elems)
       $ atomically
+      $ liftSTM
       $ useObject gAirports game >>= mapM readObject
 

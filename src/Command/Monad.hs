@@ -1,6 +1,8 @@
 
 module Command.Monad
-  ( CM
+  ( CSTM()
+  , liftSTM
+  , CM()
   , runCM
   , log
   , setPaused
@@ -25,43 +27,64 @@ import qualified System.Random as R
 import Simulation
 import Types (Game())
 
-data CommandInstruction a where
-  CILog        :: Text -> CommandInstruction ()
-  CISetPaused  :: Bool -> CommandInstruction ()
-  CISetSpeed   :: NominalDiffTime -> CommandInstruction ()
-  CIAtomically :: STM a -> CommandInstruction a
-  CINewStdGen  :: CommandInstruction StdGen
-  CIGetGame    :: CommandInstruction Game
+newtype CSTM e a = CSTM { unCSTM :: ReaderT Game (ExceptT e STM) a }
+  deriving (Functor, Applicative, Monad, MonadReader Game, MonadError e)
 
-type CM = Program CommandInstruction
+liftSTM :: STM a -> CSTM e a
+liftSTM = CSTM . lift . lift
 
-runCM :: CM a -> MasterHandle g p -> Game -> IO a
-runCM m mh game = interpretWithMonad (interpreter mh game) m
+data CommandInstruction e a where
+  CILog        :: Text -> CommandInstruction e ()
+  CISetPaused  :: Bool -> CommandInstruction e ()
+  CISetSpeed   :: NominalDiffTime -> CommandInstruction e ()
+  CIAtomically :: CSTM e a -> CommandInstruction e a
+  CINewStdGen  :: CommandInstruction e StdGen
+  CIGetGame    :: CommandInstruction e Game
+  CICatchError :: CM e a -> (e -> CM e a) -> CommandInstruction e a
+  CIThrowError :: e -> CommandInstruction e a
 
-interpreter :: MasterHandle g p -> Game -> CommandInstruction a -> IO a
-interpreter mh game = \case
-  CILog xs -> putStrLn xs
-  CISetPaused paused -> writeIORef (mhPaused mh) paused
-  CISetSpeed speed -> writeIORef (mhSpeed mh) speed
-  CIAtomically stm -> STM.atomically stm
-  CINewStdGen -> R.newStdGen
-  CIGetGame -> pure game
+newtype CM e a = CM { unCM :: Program (CommandInstruction e) a }
+  deriving (Functor, Applicative, Monad)
 
-log :: Text -> CM ()
-log = singleton . CILog
+instance MonadError e (CM e) where
+  catchError m f = CM . singleton $ CICatchError m f
+  throwError = CM . singleton . CIThrowError
 
-setPaused :: Bool -> CM ()
-setPaused = singleton . CISetPaused
+runCM :: CM e a -> MasterHandle g p -> Game -> IO (Either e a)
+runCM m mh game = case view $ unCM m of
+  Return x -> pure $ Right x
+  m' :>>= k -> case m' of
+    CILog xs -> putStrLn xs >>= continue k
+    CISetPaused paused -> writeIORef (mhPaused mh) paused >>= continue k
+    CISetSpeed speed -> writeIORef (mhSpeed mh) speed >>= continue k
+    CIAtomically cstm -> STM.atomically (runExceptT $ runReaderT (unCSTM cstm) game) >>= \case
+      Left err -> pure $ Left err
+      Right b -> continue k b
+    CINewStdGen -> R.newStdGen >>= continue k
+    CIGetGame -> continue k game
+    CICatchError m'' f -> runCM m'' mh game >>= \case
+      Left err -> runCM (f err >>= CM . k) mh game
+      Right b -> continue k b
+    CIThrowError err -> pure $ Left err
+  where
+    continue :: (a -> Program (CommandInstruction e) b) -> a -> IO (Either e b)
+    continue k b = runCM (CM $ k b) mh game
 
-setSpeed :: NominalDiffTime -> CM ()
-setSpeed = singleton . CISetSpeed
+log :: Text -> CM e ()
+log = CM . singleton . CILog
 
-atomically :: STM a -> CM a
-atomically = singleton . CIAtomically
+setPaused :: Bool -> CM e ()
+setPaused = CM . singleton . CISetPaused
 
-newStdGen :: CM StdGen
-newStdGen = singleton CINewStdGen
+setSpeed :: NominalDiffTime -> CM e ()
+setSpeed = CM . singleton . CISetSpeed
 
-getGame :: CM Game
-getGame = singleton CIGetGame
+atomically :: CSTM e a -> CM e a
+atomically = CM . singleton . CIAtomically
+
+newStdGen :: CM e StdGen
+newStdGen = CM $ singleton CINewStdGen
+
+getGame :: CM e Game
+getGame = CM $ singleton CIGetGame
 

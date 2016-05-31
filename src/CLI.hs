@@ -14,7 +14,6 @@ import CLI.Output
 import Command
 import Command.BuyAircraft
 import Command.ChangeFlight
-import Command.Monad (runCM)
 import Command.RemoveFlight
 import Command.ShowAllAircraft
 import Command.ShowAllAirports
@@ -215,7 +214,7 @@ runCLICommand :: MasterHandle Game GamePart -> Game -> CLICommand -> IO Bool
 runCLICommand mh game = \case
   CLIQuit -> pure False
   CLIGameCommand (GameCommand command) -> do
-    runCM (runExceptT $ runCommand command) mh game >>= \case
+    runCM (runCommand command) mh game >>= \case
       Left err -> putStrLn $ show err
       Right resp -> putStr $ formatResponse resp
     pure True

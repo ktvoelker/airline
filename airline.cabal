@@ -70,6 +70,7 @@ Executable airline
     ImpredicativeTypes
     LambdaCase
     LiberalTypeSynonyms
+    MultiParamTypeClasses
     NoImplicitPrelude
     OverloadedStrings
     RankNTypes

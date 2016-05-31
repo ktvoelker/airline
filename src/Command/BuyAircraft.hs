@@ -7,7 +7,6 @@ import qualified Data.Set as S
 import H.Prelude
 
 import Command
-import Command.Monad
 import Object
 import Types
 
@@ -30,9 +29,9 @@ instance Command BuyAircraft where
   type Response BuyAircraft = BuyAircraftResponse
   type Error BuyAircraft = BuyAircraftError
   runCommand (BuyAircraft modelCode airportCode) = do
-    random <- lift newStdGen
-    atomically' $ do
-      game <- get
+    random <- newStdGen
+    atomically $ do
+      game <- ask
       gameState <- liftSTM $ readObject game
       let model = M.lookup modelCode $ view gModels gameState
       let airport = M.lookup airportCode $ view gAirports gameState
