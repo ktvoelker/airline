@@ -2,9 +2,7 @@
 TODO
 ====
 
-Implement SetFlight, ChangeFlight, and RemoveFlight commands
-
-  Add parsing for ChangeFlight
+Implement ChangeFlight and RemoveFlight commands
 
 Add data to AircraftFlightState to track progress
 

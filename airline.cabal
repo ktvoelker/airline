@@ -19,9 +19,9 @@ Executable airline
     CLI.Output
     Command
     Command.BuyAircraft
+    Command.ChangeFlight
     Command.Monad
     Command.RemoveFlight
-    Command.SetFlight
     Command.ShowAllAircraft
     Command.ShowAllAirports
     Command.Simple

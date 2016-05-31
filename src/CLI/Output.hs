@@ -5,7 +5,7 @@ import qualified Data.Text as T
 import H.Prelude
 
 import Command.BuyAircraft
-import Command.SetFlight
+import Command.ChangeFlight
 import Command.ShowAllAircraft
 import Command.ShowAllAirports
 import Types
@@ -28,9 +28,6 @@ instance CLIResponse AircraftList where
 
 instance CLIResponse AirportList where
   formatResponse (AirportList xs) = "Code  Capacity  Present  Pending  Name\n" <> mconcat (map formatAirport xs)
-
-instance CLIResponse SetFlightResponse where
-  formatResponse _ = todo
 
 instance CLIResponse ChangeFlightResponse where
   formatResponse _ = todo

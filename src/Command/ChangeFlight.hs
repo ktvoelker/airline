@@ -1,5 +1,5 @@
 
-module Command.SetFlight where
+module Command.ChangeFlight where
 
 import qualified Data.Set as S
 import H.Prelude
@@ -7,24 +7,6 @@ import H.Prelude
 import Command
 import Types
 import Types.Time
-
-data SetFlight =
-  SetFlight
-  { sfFlightNumber :: FlightNumber
-  , sfOrigin       :: AirportCode
-  , sfDestination  :: AirportCode
-  , sfModel        :: ModelCode
-  , sfDaysOfWeek   :: S.Set DayOfWeek
-  , sfTimeOfDay    :: TimeOfDay
-  } deriving (Show)
-
-data SetFlightResponse =
-    SFFlightExists
-  | SFInvalidOrigin
-  | SFInvalidDestination
-  | SFInvalidModel
-  | SFTooShort
-  deriving (Show)
 
 data ChangeFlight =
   ChangeFlight
@@ -37,16 +19,12 @@ data ChangeFlight =
   } deriving (Show)
 
 data ChangeFlightResponse =
-    CFInvalidFlight
+    CFMissingParameter
   | CFInvalidOrigin
   | CFInvalidDestination
   | CFInvalidModel
   | CFTooShort
   deriving (Show)
-
-instance Command SetFlight where
-  type Response SetFlight = SetFlightResponse
-  runCommand _ = todo
 
 instance Command ChangeFlight where
   type Response ChangeFlight = ChangeFlightResponse

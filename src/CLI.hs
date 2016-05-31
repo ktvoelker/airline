@@ -13,9 +13,9 @@ import Text.Parsec.Applicative
 import CLI.Output
 import Command
 import Command.BuyAircraft
+import Command.ChangeFlight
 import Command.Monad (runCM)
 import Command.RemoveFlight
-import Command.SetFlight
 import Command.ShowAllAircraft
 import Command.ShowAllAirports
 import Command.Simple
@@ -134,13 +134,13 @@ buyCommand =
 flightCommand :: P GameCommand
 flightCommand =
   fmap GameCommand
-  $ SetFlight
+  $ ChangeFlight
   <$> flightNumber
-  <*> (kw "from" *> airportCode)
-  <*> (kw "to" *> airportCode)
-  <*> (kw "with" *> modelCode)
-  <*> (kw "on" *> daysOfWeek)
-  <*> (kw "at" *> timeOfDay')
+  <*> option (kw "from" *> airportCode)
+  <*> option (kw "to" *> airportCode)
+  <*> option (kw "with" *> modelCode)
+  <*> option (kw "on" *> daysOfWeek)
+  <*> option (kw "at" *> timeOfDay')
 
 removeCommand :: P GameCommand
 removeCommand = GameCommand . RemoveFlight <$> (kw "flight" *> flightNumber)
