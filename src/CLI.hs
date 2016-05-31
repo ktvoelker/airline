@@ -21,6 +21,7 @@ import Command.Simple
 import Game
 import Simulation
 import Types
+import Types.Time
 
 data GameCommand = forall a. (Command a, CLIResponse (Response a)) => GameCommand a
 
@@ -133,11 +134,13 @@ flightCommand =
   <*> (kw "from" *> airportCode)
   <*> (kw "to" *> airportCode)
   <*> (kw "with" *> modelCode)
-  <*> (flightTimes <$> (kw "on" *> daysOfWeek) <*> (kw "at" *> timeOfWeek))
+  <*> (kw "on" *> daysOfWeek)
+  <*> (kw "at" *> timeOfDay')
   where
-    f Nothing _ _ _ _ = GameCommand $ Error "Invalid flight number."
-    f _ _ _ _ Nothing = GameCommand $ Error "Invalid time specification."
-    f (Just n) f t m (Just ts) = GameCommand $ SetFlight n f t m ts
+    f Nothing _ _ _ _ _ = GameCommand $ Error "Invalid flight number."
+    f _ _ _ _ Nothing _ = GameCommand $ Error "Invalid days."
+    f _ _ _ _ _ Nothing = GameCommand $ Error "Invalid times."
+    f (Just n) f t m (Just dows) (Just tod) = GameCommand $ SetFlight n f t m dows tod
 
 removeCommand :: P GameCommand
 removeCommand =
@@ -149,36 +152,28 @@ removeCommand =
 flightNumber :: P (Maybe FlightNumber)
 flightNumber = fmap FlightNumber <$> readable
 
-flightTimes :: Maybe [Minutes] -> Maybe Minutes -> Maybe [TimeOfWeek]
-flightTimes maybeDays maybeOffset = do
-  days <- maybeDays
-  offset <- maybeOffset
-  pure $ map (TimeOfWeek . (+ offset)) days
-
-minutesPerDay :: Minutes
-minutesPerDay = 24 * 60
-
-daysOfWeek :: P (Maybe [Minutes])
-daysOfWeek = sequence . map f . unpack . T.toLower <$> str
+daysOfWeek :: P (Maybe (S.Set DayOfWeek))
+daysOfWeek = fmap (S.fromList . concat) . sequence . map f . unpack . T.toLower <$> str
   where
     f = \case
-      's' -> Just 0
-      'm' -> Just minutesPerDay
-      't' -> Just $ 2 * minutesPerDay
-      'w' -> Just $ 3 * minutesPerDay
-      'r' -> Just $ 4 * minutesPerDay
-      'f' -> Just $ 5 * minutesPerDay
-      'a' -> Just $ 6 * minutesPerDay
+      '*' -> Just [minBound .. maxBound]
+      's' -> Just [Sunday]
+      'm' -> Just [Monday]
+      't' -> Just [Tuesday]
+      'w' -> Just [Wednesday]
+      'r' -> Just [Thursday]
+      'f' -> Just [Friday]
+      'a' -> Just [Saturday]
       _   -> Nothing
 
-timeOfWeek :: P (Maybe Minutes)
-timeOfWeek = f <$> str
+timeOfDay' :: P (Maybe TimeOfDay)
+timeOfDay' = f <$> str
   where
     f xs = case T.splitOn ":" xs of
       [hoursText, minutesText] -> do
         hours <- g hoursText
         minutes <- g minutesText
-        pure $ (hours * 60) + minutes
+        pure . timeOfDay $ (hours * 60) + minutes
       _ -> Nothing
     g = fmap fromInteger . read
 

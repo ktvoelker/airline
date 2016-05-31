@@ -5,6 +5,7 @@ import qualified Data.Text as T
 import H.Prelude
 
 import Command.BuyAircraft
+import Command.SetFlight
 import Command.ShowAllAircraft
 import Command.ShowAllAirports
 import Command.Simple
@@ -31,6 +32,12 @@ instance CLIResponse AircraftList where
 
 instance CLIResponse AirportList where
   formatResponse (AirportList xs) = "Code  Capacity  Present  Pending  Name\n" <> mconcat (map formatAirport xs)
+
+instance CLIResponse SetFlightResponse where
+  formatResponse _ = todo
+
+instance CLIResponse ChangeFlightResponse where
+  formatResponse _ = todo
 
 formatField :: Bool -> Int -> Text -> Text
 formatField rightJustified fieldLength xs = (if rightJustified then (affix <>) else (<> affix)) xs

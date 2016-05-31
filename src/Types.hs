@@ -12,6 +12,7 @@ import H.Prelude
 
 import qualified CrossMap as CM
 import Object
+import Types.Time
 
 newtype ModelCode = ModelCode { unModelCode :: T.Text }
   deriving (Eq, Ord, IsString, Show)
@@ -38,9 +39,6 @@ data AircraftState =
   , _acLocation :: Maybe Airport
   }
 
-newtype Minutes = Minutes Int
-  deriving (Eq, Ord, Num, Real, Integral, Enum, Bounded, Show)
-
 type Aircraft = Object AircraftState
 
 data Movement = Landing AircraftFlight | Takeoff AircraftFlight
@@ -61,9 +59,6 @@ data AirportState =
   }
 
 type Airport = Object AirportState
-
-newtype TimeOfWeek = TimeOfWeek { offset :: Minutes }
-  deriving (Eq, Ord, Show)
 
 newtype FlightNumber = FlightNumber Int
   deriving (Eq, Ord, Show)
@@ -115,8 +110,7 @@ data GameState =
   , _gModels    :: M.Map ModelCode Model
   , _gFlights   :: M.Map FlightNumber Flight
   , _gSchedule  :: M.Map TimeOfWeek (S.Set Flight)
-  , _gWeek      :: Integer
-  , _gTime      :: TimeOfWeek
+  , _gTime      :: AbsoluteTime
   }
 
 makeLenses ''GameState

@@ -2,7 +2,12 @@
 TODO
 ====
 
-Implement SetFlight and RemoveFlight commands
+Add predicate support to applicative-parsec so we don't have to thread weird parse
+errors upward.
+
+Implement SetFlight, ChangeFlight, and RemoveFlight commands
+
+  Add parsing for ChangeFlight
 
 Add data to AircraftFlightState to track progress
 

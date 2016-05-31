@@ -10,6 +10,7 @@ import H.Prelude
 import qualified CrossMap as CM
 import Object
 import Types
+import Types.Time
 
 b738Code :: ModelCode
 b738Code = "B738"
@@ -86,7 +87,6 @@ demo = atomically $ do
     , _gModels    = M.fromList [(b738Code, b738)]
     , _gFlights   = M.empty
     , _gSchedule  = M.empty
-    , _gWeek      = 0
-    , _gTime      = TimeOfWeek 0
+    , _gTime      = AbsoluteTime 0
     }
 
