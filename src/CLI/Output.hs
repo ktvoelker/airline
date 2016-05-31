@@ -5,7 +5,6 @@ import qualified Data.Text as T
 import H.Prelude
 
 import Command.BuyAircraft
-import Command.ChangeFlight
 import Command.ShowAllAircraft
 import Command.ShowAllAirports
 import Types
@@ -17,20 +16,13 @@ instance CLIResponse () where
   formatResponse _ = "Done.\n"
 
 instance CLIResponse BuyAircraftResponse where
-  formatResponse = \case
-    PurchasedAircraft code -> "Purchased aircraft: " <> unAircraftCode code <> ".\n"
-    NotEnoughMoney -> "Not enough money.\n"
-    InvalidAirport code -> "Invalid airport: " <> unAirportCode code <> ".\n"
-    InvalidModel code -> "Invalid model: " <> unModelCode code <> ".\n"
+  formatResponse (PurchasedAircraft code) = "Purchased aircraft: " <> unAircraftCode code <> ".\n"
 
 instance CLIResponse AircraftList where
   formatResponse (AircraftList xs) = "Code   Model  Location\n" <> mconcat (map formatAircraft xs)
 
 instance CLIResponse AirportList where
   formatResponse (AirportList xs) = "Code  Capacity  Present  Pending  Name\n" <> mconcat (map formatAirport xs)
-
-instance CLIResponse ChangeFlightResponse where
-  formatResponse _ = todo
 
 formatField :: Bool -> Int -> Text -> Text
 formatField rightJustified fieldLength xs = (if rightJustified then (affix <>) else (<> affix)) xs

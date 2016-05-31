@@ -65,7 +65,7 @@ newtype FlightNumber = FlightNumber Int
 
 data Flight =
   Flight
-  { _fNumber      :: Int
+  { _fNumber      :: FlightNumber
   , _fOrigin      :: Airport
   , _fDestination :: Airport
   , _fModel       :: Model

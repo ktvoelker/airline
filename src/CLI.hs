@@ -24,7 +24,7 @@ import Simulation
 import Types
 import Types.Time
 
-data GameCommand = forall a. (Command a, CLIResponse (Response a)) => GameCommand a
+data GameCommand = forall a. (Command a, CLIResponse (Response a), Show (Error a)) => GameCommand a
 
 data CLICommand = CLIQuit | CLIGameCommand GameCommand
 
@@ -214,5 +214,9 @@ parseCommand xs = either (Left . show) Right $ parse oneCLICommand (tokenize xs)
 runCLICommand :: MasterHandle Game GamePart -> Game -> CLICommand -> IO Bool
 runCLICommand mh game = \case
   CLIQuit -> pure False
-  CLIGameCommand (GameCommand command) -> runCM (runCommand command) mh game >>= putStr . formatResponse >> pure True
+  CLIGameCommand (GameCommand command) -> do
+    runCM (runExceptT $ runCommand command) mh game >>= \case
+      Left err -> putStrLn $ show err
+      Right resp -> putStr $ formatResponse resp
+    pure True
 

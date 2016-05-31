@@ -29,7 +29,8 @@ airportResponse AirportState{..} =
 
 instance Command ShowAllAirports where
   type Response ShowAllAirports = AirportList
-  runCommand _ = do
+  type Error ShowAllAirports = ()
+  runCommand _ = lift $ do
     game <- getGame
     fmap (AirportList . map airportResponse . M.elems)
       $ atomically

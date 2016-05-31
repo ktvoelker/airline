@@ -11,5 +11,6 @@ data RemoveFlight = RemoveFlight FlightNumber
 
 instance Command RemoveFlight where
   type Response RemoveFlight = ()
+  type Error RemoveFlight = ()
   runCommand _ = todo
 

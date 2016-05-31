@@ -33,7 +33,7 @@ data CommandInstruction a where
   CINewStdGen  :: CommandInstruction StdGen
   CIGetGame    :: CommandInstruction Game
 
-type CM a = Program CommandInstruction a
+type CM = Program CommandInstruction
 
 runCM :: CM a -> MasterHandle g p -> Game -> IO a
 runCM m mh game = interpretWithMonad (interpreter mh game) m

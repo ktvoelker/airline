@@ -27,7 +27,8 @@ aircraftResponse AircraftState{..} airport =
 
 instance Command ShowAllAircraft where
   type Response ShowAllAircraft = AircraftList
-  runCommand _ = do
+  type Error ShowAllAircraft = ()
+  runCommand _ = lift $ do
     game <- getGame
     fmap (AircraftList . map (uncurry aircraftResponse) . M.elems)
       $ atomically
