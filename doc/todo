@@ -2,6 +2,9 @@
 TODO
 ====
 
+Switch to using real exceptions, because STM already has a function for throwing
+them the right way
+
 Finish ChangeFlight
 
 Implement RemoveFlight
