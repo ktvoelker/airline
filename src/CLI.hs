@@ -2,6 +2,7 @@
 module CLI where
 
 import Control.Lens
+import qualified Data.Map as M
 import qualified Data.Set as S
 import qualified Data.Text as T
 import System.Console.Haskeline
@@ -95,10 +96,13 @@ kw :: Text -> P ()
 kw xs = void $ token (TKeyword xs)
 
 str :: P Text
-str = (^. wspValue) . snd <$> token TString
+str = view wspValue . snd <$> token TString
 
-readable :: (Integral a, Read a) => P (Maybe a)
-readable = read <$> str
+strPred :: Text -> (Text -> Bool) -> P Text
+strPred _ predFunc =
+  view wspValue . snd <$> token' TString (predicate () predFunc')
+  where
+    predFunc' = predFunc . view wspValue
 
 oneCLICommand :: P CLICommand
 oneCLICommand = cliCommand <* eof
@@ -129,53 +133,68 @@ buyCommand =
 
 flightCommand :: P GameCommand
 flightCommand =
-  f
+  fmap GameCommand
+  $ SetFlight
   <$> flightNumber
   <*> (kw "from" *> airportCode)
   <*> (kw "to" *> airportCode)
   <*> (kw "with" *> modelCode)
   <*> (kw "on" *> daysOfWeek)
   <*> (kw "at" *> timeOfDay')
-  where
-    f Nothing _ _ _ _ _ = GameCommand $ Error "Invalid flight number."
-    f _ _ _ _ Nothing _ = GameCommand $ Error "Invalid days."
-    f _ _ _ _ _ Nothing = GameCommand $ Error "Invalid times."
-    f (Just n) f t m (Just dows) (Just tod) = GameCommand $ SetFlight n f t m dows tod
 
 removeCommand :: P GameCommand
-removeCommand =
-  f <$> (kw "flight" *> flightNumber)
-  where
-    f Nothing = GameCommand $ Error "Invalid flight number."
-    f (Just n) = GameCommand $ RemoveFlight n
+removeCommand = GameCommand . RemoveFlight <$> (kw "flight" *> flightNumber)
 
-flightNumber :: P (Maybe FlightNumber)
-flightNumber = fmap FlightNumber <$> readable
-
-daysOfWeek :: P (Maybe (S.Set DayOfWeek))
-daysOfWeek = fmap (S.fromList . concat) . sequence . map f . unpack . T.toLower <$> str
+flightNumber :: P FlightNumber
+flightNumber =
+  FlightNumber
+  . fromJust
+  . readInt
+  <$> strPred "flight-number" (isJust . readInt)
   where
-    f = \case
-      '*' -> Just [minBound .. maxBound]
-      's' -> Just [Sunday]
-      'm' -> Just [Monday]
-      't' -> Just [Tuesday]
-      'w' -> Just [Wednesday]
-      'r' -> Just [Thursday]
-      'f' -> Just [Friday]
-      'a' -> Just [Saturday]
-      _   -> Nothing
+    readInt :: Text -> Maybe Int
+    readInt = read
 
-timeOfDay' :: P (Maybe TimeOfDay)
-timeOfDay' = f <$> str
+daysOfWeekMap :: M.Map Char [DayOfWeek]
+daysOfWeekMap =
+  M.fromList
+  [ ('*', [minBound .. maxBound])
+  , ('s', [Sunday])
+  , ('m', [Monday])
+  , ('t', [Tuesday])
+  , ('w', [Wednesday])
+  , ('r', [Thursday])
+  , ('f', [Friday])
+  , ('a', [Saturday])
+  ]
+
+daysOfWeek :: P (S.Set DayOfWeek)
+daysOfWeek =
+  S.fromList
+  . concat
+  . map (daysOfWeekMap M.!)
+  . unpack
+  . T.toLower
+  <$> strPred "days-of-week" (\xs -> T.all (`M.member` daysOfWeekMap) xs)
+
+parseTimeOfDay :: Text -> Maybe (Integer, Integer)
+parseTimeOfDay xs = case T.splitOn ":" xs of
+  [hoursText, minutesText] -> do
+    hours <- g hoursText
+    minutes <- g minutesText
+    if hours >= 0 && hours < 24 && minutes >= 0 && minutes < 60
+    then pure (hours, minutes)
+    else Nothing
+  _ -> Nothing
   where
-    f xs = case T.splitOn ":" xs of
-      [hoursText, minutesText] -> do
-        hours <- g hoursText
-        minutes <- g minutesText
-        pure . timeOfDay $ (hours * 60) + minutes
-      _ -> Nothing
     g = fmap fromInteger . read
+
+timeOfDay' :: P TimeOfDay
+timeOfDay' = f <$> strPred "time-of-day" (isJust . parseTimeOfDay)
+  where
+    f xs = case parseTimeOfDay xs of
+      Just (hours, minutes) -> timeOfDay . Minutes $ (hours * 60) + minutes
+      Nothing -> undefined
 
 modelCode :: P ModelCode
 modelCode = ModelCode <$> str

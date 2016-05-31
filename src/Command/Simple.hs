@@ -7,9 +7,6 @@ import H.Prelude
 import Command
 import Command.Monad
 
-data Error = Error Text
-  deriving (Show)
-
 data SetPaused = SetPaused Bool
   deriving (Show)
 
@@ -24,10 +21,6 @@ speedToCycleLength = \case
   SpeedSlow   -> 0.20
   SpeedMedium -> 0.15
   SpeedFast   -> 0.10
-
-instance Command Error where
-  type Response Error = Error
-  runCommand = pure
 
 instance Command SetPaused where
   type Response SetPaused = ()

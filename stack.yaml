@@ -6,6 +6,6 @@ packages:
     commit: 189d7ad6eeef8ee5337f4cf126714c4f9055ac24
 - location:
     git: https://github.com/ktvoelker/AParsec.git
-    commit: ef20c84228e3653d7505ed468788972f0636b83c
+    commit: 9fcb7b53f9208d9b77bc5b2fe36bc927f67932aa
 extra-deps: []
 flags: {}

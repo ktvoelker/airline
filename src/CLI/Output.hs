@@ -8,7 +8,6 @@ import Command.BuyAircraft
 import Command.SetFlight
 import Command.ShowAllAircraft
 import Command.ShowAllAirports
-import Command.Simple
 import Types
 
 class CLIResponse a where
@@ -16,9 +15,6 @@ class CLIResponse a where
 
 instance CLIResponse () where
   formatResponse _ = "Done.\n"
-
-instance CLIResponse Error where
-  formatResponse (Error xs) = xs <> "\n"
 
 instance CLIResponse BuyAircraftResponse where
   formatResponse = \case
