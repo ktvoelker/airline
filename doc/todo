@@ -2,10 +2,6 @@
 TODO
 ====
 
-Finish ChangeFlight
-
-Implement RemoveFlight
-
 Add data to AircraftFlightState to track progress
 
   Show this data in the aircraft list
