@@ -201,7 +201,7 @@ modelCode = ModelCode <$> str
 airportCode :: P AirportCode
 airportCode = AirportCode <$> str
 
-speed :: P Speed
+speed :: P SimulationSpeed
 speed =
   kw "slow" *> pure SpeedSlow
   <|> kw "medium" *> pure SpeedMedium

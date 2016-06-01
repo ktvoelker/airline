@@ -43,7 +43,7 @@ instance Command BuyAircraft where
                 , _acLocation = Just airport
                 }
             overObject' apAircraft (S.insert aircraft) airport
-            overObject' gMoney (subtract _mCost) game
+            overObject' gMoney (`minusMoney` _mCost) game
             overObject' gAircraft (M.insert aircraftCode aircraft) game
             pure $ PurchasedAircraft aircraftCode
           else throwSTM NotEnoughMoney

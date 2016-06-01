@@ -14,6 +14,24 @@ import qualified CrossMap as CM
 import Object
 import Types.Time
 
+newtype Distance = Distance { miles :: Double }
+  deriving (Eq, Ord, Show)
+
+newtype Speed = Speed { milesPerMinute :: Double }
+  deriving (Eq, Ord, Show)
+
+distanceToTimeAtSpeed :: Distance -> Speed -> Minutes
+distanceToTimeAtSpeed Distance{..} Speed{..} = Minutes . round $ miles / milesPerMinute
+
+newtype Money = Money { dollars :: Integer }
+  deriving (Eq, Ord, Show)
+
+plusMoney :: Money -> Money -> Money
+plusMoney a b = Money $ dollars a + dollars b
+
+minusMoney :: Money -> Money -> Money
+minusMoney a b = Money $ dollars a - dollars b
+
 newtype ModelCode = ModelCode { unModelCode :: T.Text }
   deriving (Eq, Ord, IsString, Show)
 
@@ -21,10 +39,10 @@ data Model =
   Model
   { _mCode  :: ModelCode
   , _mName  :: T.Text
-  , _mSpeed :: Integer
-  , _mRange :: Integer
-  , _mCost  :: Integer
-  , _mSeats :: Integer
+  , _mSpeed :: Speed
+  , _mRange :: Distance
+  , _mCost  :: Money
+  , _mSeats :: Int
   } deriving (Eq, Ord, Show)
 
 makeLenses ''Model
@@ -77,6 +95,7 @@ data AircraftFlightState =
   AircraftFlightState
   { _afsAircraft :: Aircraft
   , _afsFlight   :: Flight
+  , _afsTraveled :: Distance
   } deriving (Eq, Ord)
 
 type AircraftFlight = Object AircraftFlightState
@@ -104,10 +123,10 @@ data GameState =
   GameState
   { _gCities    :: S.Set City
   , _gAirports  :: M.Map AirportCode Airport
-  , _gDistances :: CM.CrossMap Airport Integer
+  , _gDistances :: CM.CrossMap Airport Distance
   , _gAircraft  :: M.Map AircraftCode Aircraft
   , _gAirborne  :: S.Set AircraftFlight
-  , _gMoney     :: Integer
+  , _gMoney     :: Money
   , _gModels    :: M.Map ModelCode Model
   , _gFlights   :: M.Map FlightNumber Flight
   , _gSchedule  :: M.Map TimeOfWeek (S.Set Flight)

@@ -33,8 +33,8 @@ lookupAirport = lookupInGame gAirports InvalidAirport
 lookupModel :: ModelCode -> CSTM Model
 lookupModel = lookupInGame gModels InvalidModel
 
-getAirportDistance :: Airport -> Airport -> CSTM Integer
-getAirportDistance a b = fmap (maybe 0 id) $ getGame >>= useObject (gDistances . to (CM.lookup a b))
+getAirportDistance :: Airport -> Airport -> CSTM Distance
+getAirportDistance a b = fmap (maybe (Distance 0) id) $ getGame >>= useObject (gDistances . to (CM.lookup a b))
 
 instance Command ChangeFlight where
   type Response ChangeFlight = ()
@@ -73,8 +73,8 @@ instance Command ChangeFlight where
         validateFlight newFlight
         overObject gFlights (M.insert cfFlightNumber newFlight) game
 
-minFlightDistance :: Integer
-minFlightDistance = 50
+minFlightDistance :: Distance
+minFlightDistance = Distance { miles = 50 }
 
 validateFlight :: Flight -> CSTM ()
 validateFlight Flight{..} = do

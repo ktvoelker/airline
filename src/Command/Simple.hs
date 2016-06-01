@@ -9,13 +9,13 @@ import Command
 data SetPaused = SetPaused Bool
   deriving (Show)
 
-data SetSpeed = SetSpeed Speed
+data SetSpeed = SetSpeed SimulationSpeed
   deriving (Show)
 
-data Speed = SpeedSlow | SpeedMedium | SpeedFast
+data SimulationSpeed = SpeedSlow | SpeedMedium | SpeedFast
   deriving (Eq, Ord, Enum, Bounded, Show)
 
-speedToCycleLength :: Speed -> NominalDiffTime
+speedToCycleLength :: SimulationSpeed -> NominalDiffTime
 speedToCycleLength = \case
   SpeedSlow   -> 0.20
   SpeedMedium -> 0.15

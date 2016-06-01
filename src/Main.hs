@@ -4,7 +4,7 @@ module Main where
 import H.IO
 
 import CLI
-import Command.Simple (speedToCycleLength, Speed(SpeedSlow))
+import Command.Simple (speedToCycleLength, SimulationSpeed(SpeedSlow))
 import Demo
 import Game
 import Simulation

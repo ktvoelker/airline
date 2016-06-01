@@ -2,9 +2,9 @@
 TODO
 ====
 
-Add data to AircraftFlightState to track progress
+Show flight progress in the aircraft list
 
-  Show this data in the aircraft list
+Consider bringing in a nice units-of-measure library
 
 Implement the simulation of the flight schedule
 

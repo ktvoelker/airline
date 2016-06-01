@@ -20,10 +20,10 @@ b738 =
   Model
   { _mCode  = b738Code
   , _mName  = "Boeing 737-800"
-  , _mSpeed = 511
-  , _mRange = 6340
+  , _mSpeed = Speed { milesPerMinute = 8.52 }
+  , _mRange = Distance { miles = 6340 }
   , _mSeats = 220
-  , _mCost  = 10000
+  , _mCost  = Money { dollars = 10000 }
   }
 
 ordCode :: AirportCode
@@ -45,7 +45,7 @@ demo = atomically $ do
     , _apAircraft      = S.empty
     , _apPending       = ordMovements
     , _apPendingCount  = 0
-    , _apMovementDelay = 0
+    , _apMovementDelay = Minutes 0
     }
   mdwMovements <- newTQueue
   midway <- newObject $ AirportState
@@ -55,7 +55,7 @@ demo = atomically $ do
     , _apAircraft      = S.empty
     , _apPending       = mdwMovements
     , _apPendingCount  = 0
-    , _apMovementDelay = 0
+    , _apMovementDelay = Minutes 0
     }
   chicago <- newObject $ CityState
     { _cName       = "Chicago"
@@ -70,7 +70,7 @@ demo = atomically $ do
     , _apAircraft      = S.empty
     , _apPending       = mspMovements
     , _apPendingCount  = 0
-    , _apMovementDelay = 0
+    , _apMovementDelay = Minutes 0
     }
   minneapolis <- newObject $ CityState
     { _cName       = "Minneapolis–St. Paul"
@@ -79,14 +79,15 @@ demo = atomically $ do
     }
   newObject $ GameState
     { _gCities    = S.fromList [chicago, minneapolis]
-    , _gDistances = CM.fromList [((oHare, midway), 2), ((oHare, msp), 354), ((midway, msp), 355)]
+    , _gDistances
+        = CM.fromList [((oHare, midway), Distance 2), ((oHare, msp), Distance 354), ((midway, msp), Distance 355)]
     , _gAirports  = M.fromList [(ordCode, oHare), (mdwCode, midway), (mspCode, msp)]
     , _gAircraft  = M.empty
     , _gAirborne  = S.empty
-    , _gMoney     = 1000000
+    , _gMoney     = Money { dollars = 1000000 }
     , _gModels    = M.fromList [(b738Code, b738)]
     , _gFlights   = M.empty
     , _gSchedule  = M.empty
-    , _gTime      = AbsoluteTime 0
+    , _gTime      = AbsoluteTime $ Minutes 0
     }
 

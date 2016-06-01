@@ -1,6 +1,7 @@
 
 module Types.Time
   ( Minutes(..)
+  , plusMinutes
   , Weeks(..)
   , AbsoluteTime(..)
   , incrAbsoluteTime
@@ -20,22 +21,25 @@ import H.Prelude
 import Prelude (fromIntegral)
 
 newtype Minutes = Minutes { unMinutes :: Integer }
-  deriving (Eq, Ord, Num, Real, Integral, Enum, Show)
+  deriving (Eq, Ord, Show)
+
+plusMinutes :: Minutes -> Minutes -> Minutes
+plusMinutes a b = Minutes $ unMinutes a + unMinutes b
 
 newtype Weeks = Weeks { unWeeks :: Integer }
-  deriving (Eq, Ord, Num, Real, Integral, Enum, Show)
+  deriving (Eq, Ord, Show)
 
 newtype AbsoluteTime = AbsoluteTime { absOffset :: Minutes }
   deriving (Eq, Ord, Show)
 
 incrAbsoluteTime :: AbsoluteTime -> AbsoluteTime
-incrAbsoluteTime AbsoluteTime{..} = AbsoluteTime $ absOffset + 1
+incrAbsoluteTime AbsoluteTime{..} = AbsoluteTime $ absOffset `plusMinutes` Minutes 1
 
 newtype TimeOfWeek = TimeOfWeek { towOffset :: Minutes }
   deriving (Eq, Ord, Show)
 
 timeOfWeek :: Minutes -> TimeOfWeek
-timeOfWeek n = case n >= 0 && n < Minutes minutesPerWeek of
+timeOfWeek n = case n >= Minutes 0 && n < Minutes minutesPerWeek of
   True  -> TimeOfWeek n
   False -> error "TimeOfWeek out of range."
 
@@ -52,7 +56,7 @@ newtype TimeOfDay = TimeOfDay { todOffset :: Minutes }
   deriving (Eq, Ord, Show)
 
 timeOfDay :: Minutes -> TimeOfDay
-timeOfDay n = case n >= 0 && n < Minutes minutesPerDay of
+timeOfDay n = case n >= Minutes 0 && n < Minutes minutesPerDay of
   True  -> TimeOfDay n
   False -> error "TimeOfDay out of range."
 
@@ -63,7 +67,7 @@ unpackAbsoluteTime AbsoluteTime{..} =
 
 packAbsoluteTime :: Weeks -> TimeOfWeek -> AbsoluteTime
 packAbsoluteTime Weeks{..} TimeOfWeek{..} =
-  AbsoluteTime $ Minutes (unWeeks * minutesPerWeek) + towOffset
+  AbsoluteTime $ Minutes (unWeeks * minutesPerWeek) `plusMinutes` towOffset
 
 unpackTimeOfWeek :: TimeOfWeek -> (DayOfWeek, TimeOfDay)
 unpackTimeOfWeek TimeOfWeek{..} =
@@ -72,5 +76,5 @@ unpackTimeOfWeek TimeOfWeek{..} =
 
 packTimeOfWeek :: DayOfWeek -> TimeOfDay -> TimeOfWeek
 packTimeOfWeek dow tod =
-  TimeOfWeek $ Minutes (fromIntegral (fromEnum dow) * minutesPerDay) + todOffset tod
+  TimeOfWeek $ Minutes (fromIntegral (fromEnum dow) * minutesPerDay) `plusMinutes` todOffset tod
 
