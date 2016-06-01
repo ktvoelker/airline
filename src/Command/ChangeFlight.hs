@@ -21,33 +21,24 @@ data ChangeFlight =
   , cfTimeOfDay    :: Maybe TimeOfDay
   } deriving (Show)
 
-data ChangeFlightError =
-    CFMissingParameter
-  | CFInvalidOrigin
-  | CFInvalidDestination
-  | CFInvalidModel
-  | CFTooShort
-  deriving (Show)
-
-lookupInGame :: (Ord k) => Getter GameState (M.Map k a) -> e -> k -> CSTM e a
-lookupInGame lens err key = ask >>= useObject (lens . at key) >>= \case
-  Nothing -> throwError err
+lookupInGame :: (Ord k) => Getter GameState (M.Map k a) -> (k -> CommandError) -> k -> CSTM a
+lookupInGame lens err key = getGame >>= useObject (lens . at key) >>= \case
+  Nothing -> throw $ err key
   Just x -> pure x
 
-lookupAirport :: e -> AirportCode -> CSTM e Airport
-lookupAirport = lookupInGame gAirports
+lookupAirport :: AirportCode -> CSTM Airport
+lookupAirport = lookupInGame gAirports InvalidAirport
 
-lookupModel :: e -> ModelCode -> CSTM e Model
-lookupModel = lookupInGame gModels
+lookupModel :: ModelCode -> CSTM Model
+lookupModel = lookupInGame gModels InvalidModel
 
 instance Command ChangeFlight where
   type Response ChangeFlight = ()
-  type Error ChangeFlight = ChangeFlightError
   runCommand ChangeFlight{..} = atomically $ do
-    origin <- maybe (pure Nothing) (fmap Just . lookupAirport CFInvalidOrigin) cfOrigin
-    destination <- maybe (pure Nothing) (fmap Just . lookupAirport CFInvalidDestination) cfDestination
-    model <- maybe (pure Nothing) (fmap Just . lookupModel CFInvalidModel) cfModel
-    game <- ask
+    origin <- maybe (pure Nothing) (fmap Just . lookupAirport) cfOrigin
+    destination <- maybe (pure Nothing) (fmap Just . lookupAirport) cfDestination
+    model <- maybe (pure Nothing) (fmap Just . lookupModel) cfModel
+    game <- getGame
     maybeFlight <- useObject (gFlights . at cfFlightNumber) game
     case maybeFlight of
       Nothing -> case (origin, destination, model, cfDaysOfWeek, cfTimeOfDay) of
@@ -64,9 +55,9 @@ instance Command ChangeFlight where
           }
           validateFlight newFlight
           overObject gFlights (M.insert cfFlightNumber newFlight) game
-        _ -> throwError CFMissingParameter
+        _ -> throw MissingParameter
       Just _ -> todo
 
-validateFlight :: Flight -> CSTM ChangeFlightError ()
+validateFlight :: Flight -> CSTM ()
 validateFlight = todo
 

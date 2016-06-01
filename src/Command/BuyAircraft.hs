@@ -16,28 +16,21 @@ data BuyAircraft = BuyAircraft ModelCode AirportCode
 data BuyAircraftResponse = PurchasedAircraft AircraftCode
   deriving (Show)
 
-data BuyAircraftError =
-    NotEnoughMoney
-  | InvalidModel ModelCode
-  | InvalidAirport AirportCode
-  deriving (Show)
-
 randomAircraftCode :: (RandomGen g) => g -> S.Set AircraftCode -> AircraftCode
 randomAircraftCode _ _ = AircraftCode $ "TODO"
 
 instance Command BuyAircraft where
   type Response BuyAircraft = BuyAircraftResponse
-  type Error BuyAircraft = BuyAircraftError
   runCommand (BuyAircraft modelCode airportCode) = do
     random <- newStdGen
     atomically $ do
-      game <- ask
+      game <- getGame
       gameState <- readObject game
       let model = M.lookup modelCode $ view gModels gameState
       let airport = M.lookup airportCode $ view gAirports gameState
       case (model, airport) of
-        (Nothing, _) -> throwError $ InvalidModel modelCode
-        (_, Nothing) -> throwError $ InvalidAirport airportCode
+        (Nothing, _) -> throwSTM $ InvalidModel modelCode
+        (_, Nothing) -> throwSTM $ InvalidAirport airportCode
         (Just model@Model{..}, Just airport) -> do
           if view gMoney gameState >= _mCost
           then do
@@ -53,5 +46,5 @@ instance Command BuyAircraft where
             overObject' gMoney (subtract _mCost) game
             overObject' gAircraft (M.insert aircraftCode aircraft) game
             pure $ PurchasedAircraft aircraftCode
-          else throwError NotEnoughMoney
+          else throwSTM NotEnoughMoney
 

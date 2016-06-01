@@ -23,11 +23,9 @@ speedToCycleLength = \case
 
 instance Command SetPaused where
   type Response SetPaused = ()
-  type Error SetPaused = ()
   runCommand (SetPaused paused) = setPaused paused
 
 instance Command SetSpeed where
   type Response SetSpeed = ()
-  type Error SetSpeed = ()
   runCommand (SetSpeed speed) = setSpeed $ speedToCycleLength speed
 
