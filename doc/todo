@@ -2,10 +2,6 @@
 TODO
 ====
 
-Show flight progress in the aircraft list
-
-Consider bringing in a nice units-of-measure library
-
 Implement the simulation of the flight schedule
 
 Add saving and loading

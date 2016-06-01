@@ -6,30 +6,42 @@ import qualified Data.Map as M
 import H.Prelude
 
 import Command
+import Command.Util
 import Object
 import Types
 
 data ShowAllAircraft = ShowAllAircraft
   deriving (Show)
 
-type AircraftResponse = (AircraftCode, ModelCode, Maybe AirportCode)
+type FlightResponse = (AirportCode, AirportCode, Distance, Distance)
+
+type AircraftResponse = (AircraftCode, ModelCode, Either FlightResponse AirportCode)
 
 data AircraftList = AircraftList [AircraftResponse]
   deriving (Show)
 
-aircraftResponse :: AircraftState -> Maybe AirportState -> AircraftResponse
-aircraftResponse AircraftState{..} airport =
-  ( _acCode
-  , view mCode _acModel
-  , fmap _apCode airport
-  )
+aircraftResponse :: Aircraft -> CSTM AircraftResponse
+aircraftResponse aircraft = do
+  AircraftState{..} <- readObject aircraft
+  locationResponse <- either (fmap Left . flightResponse) (fmap Right . useObject apCode) _acLocation
+  pure
+    ( _acCode
+    , view mCode _acModel
+    , locationResponse
+    )
+
+flightResponse :: AircraftFlight -> CSTM FlightResponse
+flightResponse flight = do
+  AircraftFlightState{..} <- readObject flight
+  let origin = view fOrigin _afsFlight
+  let destination = view fDestination _afsFlight
+  AirportState{_apCode = originCode} <- readObject origin
+  AirportState{_apCode = destinationCode} <- readObject destination
+  distance <- getFlightDistance origin destination
+  pure (originCode, destinationCode, _afsTraveled, distance)
 
 instance Command ShowAllAircraft where
   type Response ShowAllAircraft = AircraftList
-  runCommand _ = do
-    game <- getGame
-    fmap (AircraftList . map (uncurry aircraftResponse) . M.elems)
-      $ atomically
-      $ useObject gAircraft game
-        >>= mapM (readObject >=> \a -> (a,) <$> mapM readObject (view acLocation a))
+  runCommand _ =
+    fmap (AircraftList . M.elems) $ atomically $ getGame >>= useObject gAircraft >>= mapM aircraftResponse
 

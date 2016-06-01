@@ -46,6 +46,15 @@ formatAircraft :: AircraftResponse -> Text
 formatAircraft (aircraft, model, location) =
   formatField False 5 (unAircraftCode aircraft) 
   <> "  " <> formatField False 5 (unModelCode model)
-  <> "  " <> formatField False 3 (maybe "---" unAirportCode location)
+  <> "  " <> formatField False 3 (formatLocation location)
   <> "\n"
+
+formatLocation :: Either FlightResponse AirportCode -> Text
+formatLocation = either formatAircraftFlight unAirportCode
+
+formatAircraftFlight :: FlightResponse -> Text
+formatAircraftFlight (origin, destination, traveled, distance) =
+  unAirportCode origin <> "--"
+  <> show (round $ miles traveled :: Integer) <> "/" <> show (round $ miles distance :: Integer)
+  <> "->" <> unAirportCode destination
 

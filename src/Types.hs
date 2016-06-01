@@ -54,7 +54,7 @@ data AircraftState =
   AircraftState
   { _acCode     :: AircraftCode
   , _acModel    :: Model
-  , _acLocation :: Maybe Airport
+  , _acLocation :: Either AircraftFlight Airport
   }
 
 type Aircraft = Object AircraftState

@@ -25,6 +25,7 @@ Executable airline
     Command.ShowAllAircraft
     Command.ShowAllAirports
     Command.Simple
+    Command.Util
     CrossMap
     Demo
     Game

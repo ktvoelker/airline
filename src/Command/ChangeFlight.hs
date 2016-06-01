@@ -7,7 +7,7 @@ import qualified Data.Set as S
 import H.Prelude
 
 import Command
-import CrossMap as CM
+import Command.Util
 import Object
 import Types
 import Types.Time
@@ -21,20 +21,6 @@ data ChangeFlight =
   , cfDaysOfWeek   :: Maybe (S.Set DayOfWeek)
   , cfTimeOfDay    :: Maybe TimeOfDay
   } deriving (Show)
-
-lookupInGame :: (Ord k) => Getter GameState (M.Map k a) -> (k -> CommandError) -> k -> CSTM a
-lookupInGame lens err key = getGame >>= useObject (lens . at key) >>= \case
-  Nothing -> throwSTM $ err key
-  Just x -> pure x
-
-lookupAirport :: AirportCode -> CSTM Airport
-lookupAirport = lookupInGame gAirports InvalidAirport
-
-lookupModel :: ModelCode -> CSTM Model
-lookupModel = lookupInGame gModels InvalidModel
-
-getAirportDistance :: Airport -> Airport -> CSTM Distance
-getAirportDistance a b = fmap (maybe (Distance 0) id) $ getGame >>= useObject (gDistances . to (CM.lookup a b))
 
 instance Command ChangeFlight where
   type Response ChangeFlight = ()
@@ -78,6 +64,6 @@ minFlightDistance = Distance { miles = 50 }
 
 validateFlight :: Flight -> CSTM ()
 validateFlight Flight{..} = do
-  distance <- getAirportDistance _fOrigin _fDestination
+  distance <- getFlightDistance _fOrigin _fDestination
   when (distance < minFlightDistance) $ throwSTM RouteTooShort
 

@@ -40,7 +40,7 @@ instance Command BuyAircraft where
               $ AircraftState
                 { _acCode = aircraftCode
                 , _acModel = model
-                , _acLocation = Just airport
+                , _acLocation = Right airport
                 }
             overObject' apAircraft (S.insert aircraft) airport
             overObject' gMoney (`minusMoney` _mCost) game
