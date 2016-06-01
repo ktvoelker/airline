@@ -7,6 +7,7 @@ import qualified Data.Set as S
 import H.Prelude
 
 import Command
+import CrossMap as CM
 import Object
 import Types
 import Types.Time
@@ -23,7 +24,7 @@ data ChangeFlight =
 
 lookupInGame :: (Ord k) => Getter GameState (M.Map k a) -> (k -> CommandError) -> k -> CSTM a
 lookupInGame lens err key = getGame >>= useObject (lens . at key) >>= \case
-  Nothing -> throw $ err key
+  Nothing -> throwSTM $ err key
   Just x -> pure x
 
 lookupAirport :: AirportCode -> CSTM Airport
@@ -31,6 +32,9 @@ lookupAirport = lookupInGame gAirports InvalidAirport
 
 lookupModel :: ModelCode -> CSTM Model
 lookupModel = lookupInGame gModels InvalidModel
+
+getAirportDistance :: Airport -> Airport -> CSTM Integer
+getAirportDistance a b = fmap (maybe 0 id) $ getGame >>= useObject (gDistances . to (CM.lookup a b))
 
 instance Command ChangeFlight where
   type Response ChangeFlight = ()
@@ -50,14 +54,30 @@ instance Command ChangeFlight where
               , _fOrigin      = origin
               , _fDestination = destination
               , _fModel       = model
-              , _fTimes       = map (\dow -> packTimeOfWeek dow timeOfDay) $ S.elems daysOfWeek
+              , _fDays        = daysOfWeek
+              , _fTime        = timeOfDay
               }
           }
           validateFlight newFlight
           overObject gFlights (M.insert cfFlightNumber newFlight) game
         _ -> throw MissingParameter
-      Just _ -> todo
+      Just oldFlight -> do
+        let
+        { setOrigin = maybe id (set fOrigin) origin
+        ; setDestination = maybe id (set fDestination) destination
+        ; setModel = maybe id (set fModel) model
+        ; setDays = maybe id (set fDays) cfDaysOfWeek
+        ; setTime = maybe id (set fTime) cfTimeOfDay
+        ; newFlight = setOrigin . setDestination . setModel . setDays . setTime $ oldFlight
+        }
+        validateFlight newFlight
+        overObject gFlights (M.insert cfFlightNumber newFlight) game
+
+minFlightDistance :: Integer
+minFlightDistance = 50
 
 validateFlight :: Flight -> CSTM ()
-validateFlight = todo
+validateFlight Flight{..} = do
+  distance <- getAirportDistance _fOrigin _fDestination
+  when (distance < minFlightDistance) $ throwSTM RouteTooShort
 

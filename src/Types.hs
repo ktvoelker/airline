@@ -69,7 +69,8 @@ data Flight =
   , _fOrigin      :: Airport
   , _fDestination :: Airport
   , _fModel       :: Model
-  , _fTimes       :: [TimeOfWeek]
+  , _fDays        :: S.Set DayOfWeek
+  , _fTime        :: TimeOfDay
   } deriving (Eq, Ord)
 
 data AircraftFlightState =
