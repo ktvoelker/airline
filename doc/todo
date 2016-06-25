@@ -4,6 +4,27 @@ TODO
 
 Implement the simulation of the flight schedule
 
+  One cycle is one minute.
+
+  Enqueue takeoffs according to the schedule, cancelling flights for which
+  there is no available aircraft.
+
+  Decrement movement delay at all airports where it is non-zero.
+
+  Partition the airports with zero movement delay into those with a takeoff at
+  the front of the movement queue, and those without (either a landing at the
+  front of the movement queue, or an empty movement queue). These are the
+  "takeoff set" and "landing set".
+
+  Execute a takeoff for each airport in the takeoff set, resetting each such
+  airport's movement delay according to its capacity.
+
+  Advance the position of each aircraft in flight, including those which just took off.
+  Enqueue landings for any aircraft that reach their destinations.
+
+  Execute a landing for each airport in the landing set with a non-empty queue,
+  resetting each such airport's movement delay according to its capacity.
+
 Add saving and loading
 
 Implement other "show" commands
