@@ -1,20 +1,12 @@
 
 module Game where
 
+import H.IO
 import H.Prelude
 
-import Simulation
+import Parallel ()
 import Types
 
-newtype GamePart = GamePart Game
-  deriving (Eq, Ord)
-
-gameSim :: Sim Game GamePart
-gameSim =
-  Sim
-  { simPart  = pure
-  , simSplit = \g -> [GamePart g]
-  , simMerge = \[GamePart g] _ -> g
-  , simFinal = pure
-  }
+gameSim :: Game -> IO ()
+gameSim = todo
 

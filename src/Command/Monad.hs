@@ -75,7 +75,7 @@ type CM = Program CommandInstruction
 instance MonadCommand CM where
   getGame = singleton CIGetGame
 
-runCM :: CM a -> MasterHandle g p -> Game -> IO a
+runCM :: CM a -> MasterHandle -> Game -> IO a
 runCM m mh game = case view m of
   Return x -> pure x
   m' :>>= k -> case m' of

@@ -18,7 +18,6 @@ import Command.RemoveFlight
 import Command.ShowAllAircraft
 import Command.ShowAllAirports
 import Command.Simple
-import Game
 import Simulation
 import Types
 import Types.Time
@@ -34,7 +33,7 @@ cliSettings =
   , autoAddHistory = True
   }
 
-runCLI :: MasterHandle Game GamePart -> Game -> IO ()
+runCLI :: MasterHandle -> Game -> IO ()
 runCLI mh game = runInputT cliSettings $ f
   where
     f = do
@@ -213,7 +212,7 @@ parseCommand xs = either (Left . show) Right $ parse oneCLICommand (tokenize xs)
 handleCommandError :: CommandError -> IO ()
 handleCommandError = putStrLn . show
 
-runCLICommand :: MasterHandle Game GamePart -> Game -> CLICommand -> IO Bool
+runCLICommand :: MasterHandle -> Game -> CLICommand -> IO Bool
 runCLICommand mh game = \case
   CLIQuit -> pure False
   CLIGameCommand (GameCommand command) -> do
