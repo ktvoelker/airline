@@ -74,6 +74,8 @@ data AirportState =
   , _apPending       :: TQueue Movement
   , _apPendingCount  :: Int
   , _apMovementDelay :: Minutes
+  , _apInbound       :: S.Set AircraftFlight
+  , _apOutbound      :: S.Set AircraftFlight
   }
 
 type Airport = Object AirportState

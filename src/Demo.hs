@@ -46,6 +46,8 @@ demo = atomically $ do
     , _apPending       = ordMovements
     , _apPendingCount  = 0
     , _apMovementDelay = Minutes 0
+    , _apInbound       = S.empty
+    , _apOutbound      = S.empty
     }
   mdwMovements <- newTQueue
   midway <- newObject $ AirportState
@@ -56,6 +58,8 @@ demo = atomically $ do
     , _apPending       = mdwMovements
     , _apPendingCount  = 0
     , _apMovementDelay = Minutes 0
+    , _apInbound       = S.empty
+    , _apOutbound      = S.empty
     }
   chicago <- newObject $ CityState
     { _cName       = "Chicago"
@@ -71,6 +75,8 @@ demo = atomically $ do
     , _apPending       = mspMovements
     , _apPendingCount  = 0
     , _apMovementDelay = Minutes 0
+    , _apInbound       = S.empty
+    , _apOutbound      = S.empty
     }
   minneapolis <- newObject $ CityState
     { _cName       = "Minneapolis–St. Paul"
