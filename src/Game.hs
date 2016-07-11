@@ -4,7 +4,6 @@ module Game where
 import Control.Concurrent.STM
 import Control.Lens
 import Control.Monad.STM.Class
-import qualified Data.List as L
 import qualified Data.Map as M
 import qualified Data.Set as S
 import H.IO
@@ -17,10 +16,11 @@ import Types.Time
 
 gameSim :: Game -> IO ()
 gameSim g = do
-  parallelize splitByAirport (enqueueTakeoffs g) nullJoiner g
-  (takeoffAirports, landingAirports) <- atomically $ partitionByNextMovement g
-  parallelize (const $ pure takeoffAirports) (executeTakeoff g) nullJoiner g
+  parallelize splitByAirport (prepare g) nullJoiner g
+  landingAirportsVar <- newTVarIO []
+  parallelize splitByAirport (executeTakeoff g landingAirportsVar) nullJoiner g
   parallelize splitByAircraftFlight (flyAircraft g) nullJoiner g
+  landingAirports <- atomically $ readTVar landingAirportsVar
   parallelize (const $ pure landingAirports) (executeLanding g) nullJoiner g
 
 splitByAirport :: (Functor m, MonadSTM m) => Game -> m [Airport]
@@ -31,6 +31,11 @@ splitByAircraftFlight g = view (gAirborne . to S.toList) <$> readObject g
 
 nullJoiner :: Game -> [()] -> IO ()
 nullJoiner = const . const $ pure ()
+
+prepare :: Game -> Airport -> IO ()
+prepare g ap = do
+  enqueueTakeoffs g ap
+  overObject apMovementDelay (max (Minutes 0) . plusMinutes (Minutes (-1))) ap
 
 enqueueTakeoffs :: Game -> Airport -> IO ()
 enqueueTakeoffs g ap = do
@@ -62,26 +67,24 @@ aircraftModelIs desiredModel ac = do
   actualModel <- useObject acModel ac
   pure $ actualModel == desiredModel
 
-partitionByNextMovement :: Game -> STM ([Airport], [Airport])
-partitionByNextMovement g = do
-  airports <- splitByAirport g
-  airportsKeyed <- mapM (\ap -> (ap,) <$> nextMovementIsTakeoff ap) airports
-  let (ts, fs) = L.partition snd airportsKeyed
-  pure (map fst ts, map fst fs)
-
-nextMovementIsTakeoff :: Airport -> STM Bool
-nextMovementIsTakeoff ap = do
-  movements <- useObject apPending ap
-  tryPeekTQueue movements >>= \case
-    Nothing -> pure False
-    Just (Takeoff _) -> pure True
-    Just (Landing _) -> pure False
-
-executeTakeoff :: Game -> Airport -> IO ()
-executeTakeoff = todo
+executeTakeoff :: Game -> TVar [Airport] -> Airport -> IO ()
+executeTakeoff g landingAirports ap = atomically $ do
+  delay <- useObject apMovementDelay ap
+  when (delay == Minutes 0) $ do
+    movements <- useObject apPending ap
+    tryReadTQueue movements >>= \case
+      Just (Takeoff af) -> overObject gAirborne (S.insert af) g
+      _ -> modifyTVar landingAirports (ap :)
 
 flyAircraft :: Game -> AircraftFlight -> IO ()
 flyAircraft = todo
 
 executeLanding :: Game -> Airport -> IO ()
-executeLanding = todo
+executeLanding _ ap = atomically $ do
+  movements <- useObject apPending ap
+  tryReadTQueue movements >>= \case
+    Nothing -> pure ()
+    Just (Landing af) -> do
+      aircraft <- useObject afsAircraft af
+      overObject apAircraft (S.insert aircraft) ap
+    Just (Takeoff _) -> error "Impossible: unexpected takeoff in queue!"
