@@ -1,0 +1,197 @@
+{
+  "NY": {
+    "name": "New York",
+    "population": 23723696,
+    "airports": [
+      "EWR",
+      "LGA",
+      "JFK",
+      "SWF",
+      "TEB",
+      "HPN"
+    ]
+  },
+  "LA": {
+    "name": "Los Angeles",
+    "population": 18679763,
+    "airports": [
+      "LAX",
+      "BUR",
+      "SNA",
+      "LGB",
+      "ONT",
+      "VNY",
+      "OXR"
+    ]
+  },
+  "CHI": {
+    "name": "Chicago",
+    "population": 9923358,
+    "airports": ["ORD", "MDW", "GYY"]
+  },
+  "WSH": {
+    "name": "Washington - Baltimore",
+    "population": 9625360,
+    "airports": ["IAD", "DCA", "BWI"]
+  },
+  "SF": {
+    "name": "San Jose - San Francisco - Oakland",
+    "population": 8713914,
+    "airports": ["SFO", "SJC", "OAK"]
+  },
+  "BOS": {
+    "name": "Boston",
+    "population": 8152573,
+    "airports": ["BOS", "MHT", "PVD"]
+  },
+  "DFW": {
+    "name": "Dallas - Fort Worth",
+    "population": 7504362,
+    "airports": ["DFW", "DAL"]
+  },
+  "PHL": {
+    "name": "Philadelphia",
+    "population": 7183479,
+    "airports": ["PHL"]
+  },
+  "HOU": {
+    "name": "Houston",
+    "population": 6855069,
+    "airports": ["IAH", "HOU"]
+  },
+  "MIA": {
+    "name": "Miami - Fort Lauderdale",
+    "population": 6654565,
+    "airports": ["MIA", "FLL", "PBI"]
+  },
+  "ATL": {
+    "name": "Atlanta",
+    "population": 6365108,
+    "airports": ["ATL"]
+  },
+  "DET": {
+    "name": "Detroit",
+    "population": 5319913,
+    "airports": ["DTW"]
+  },
+  "SEA": {
+    "name": "Seattle - Tacoma",
+    "population": 4602591,
+    "airports": ["SEA"]
+  },
+  "MSP": {
+    "name": "Minneapolis - St. Paul",
+    "population": 3866768,
+    "airports": ["MSP"]
+  },
+  "CLE": {
+    "name": "Cleveland",
+    "population": 3493596,
+    "airports": ["CLE"]
+  },
+  "DEN": {
+    "name": "Denver",
+    "population": 3418876,
+    "airports": ["DEN"]
+  },
+  "ORL": {
+    "name": "Orlando",
+    "population": 3129308,
+    "airports": ["MCO"]
+  },
+  "POR": {
+    "name": "Portland",
+    "population": 3110906,
+    "airports": ["PDX"]
+  },
+  "STL": {
+    "name": "St. Louis",
+    "population": 2916447,
+    "airports": ["STL"]
+  },
+  "PIT": {
+    "name": "Pittsburgh",
+    "population": 2648605,
+    "airports": ["PIT"]
+  },
+  "CLT": {
+    "name": "Charlotte",
+    "population": 2583956,
+    "airports": ["CLT"]
+  },
+  "SAC": {
+    "name": "Sacramento",
+    "population": 2544026,
+    "airports": ["SMF"]
+  },
+  "SLC": {
+    "name": "Salt Lake City",
+    "population": 2467709,
+    "airports": ["SLC"]
+  },
+  "KC": {
+    "name": "Kansas City",
+    "population": 2428362,
+    "airports": ["MCI"]
+  },
+  "IND": {
+    "name": "Indianapolis",
+    "population": 2372530,
+    "airports": ["IND"]
+  },
+  "LV": {
+    "name": "Las Vegas",
+    "population": 2362015,
+    "airports": ["LAS"]
+  },
+  "CIN": {
+    "name": "Cincinnati",
+    "population": 2216735,
+    "airports": ["CVG"]
+  },
+  "RAL": {
+    "name": "Raleigh - Durham",
+    "population": 2117103,
+    "airports": ["RDU"]
+  },
+  "MKE": {
+    "name": "Milwaukee",
+    "population": 2046092,
+    "airports": ["MKE"]
+  },
+  "NSH": {
+    "name": "Nashville",
+    "population": 1951644,
+    "airports": ["BNA"]
+  },
+  "JAC": {
+    "name": "Jacksonville",
+    "population": 1573606,
+    "airports": ["JAX"]
+  },
+  "NOL": {
+    "name": "New Orleans",
+    "population": 1493205,
+    "airports": ["MSY"]
+  },
+  "HRT": {
+    "name": "Hartford",
+    "population": 1483187,
+    "airports": ["BDL"]
+  },
+  "MEM": {
+    "name": "Memphis",
+    "population": 1370716,
+    "airports": ["MEM"]
+  },
+  "BHM": {
+    "name": "Birmingham",
+    "population": 1319238,
+    "airports": ["BHM"]
+  },
+  "BUF": {
+    "name": "Buffalo",
+    "population": 1213152,
+    "airports": ["BUF"]
+  }
+}
