@@ -7,7 +7,12 @@ import sys
 
 RE_GEO = re.compile(r'^(\d+)-(\d+)-(\d+\.\d+)([NSEW])$')
 SKIP_STATES = {
+    'AS',
+    'CQ',
+    'GU',
     'MQ',
+    'PR',
+    'VI',
     'WQ',
 }
 
@@ -54,6 +59,8 @@ with open('APM-Report-45560.csv', 'r') as apm_file:
     apm = csv.reader(apm_file)
     next(apm)
     for row in apm:
+        if row[0] not in facilities:
+            continue
         facility = facilities[row[0]]
         facility['departures'] = row[3]
         facility['arrivals'] = row[4]

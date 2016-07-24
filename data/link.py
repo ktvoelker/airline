@@ -7,15 +7,6 @@ import sys
 RE_DROP = re.compile(r'[^a-z]')
 
 
-SKIP_STATES = {
-    'as',
-    'cq',
-    'gu',
-    'pr',
-    'vi',
-}
-
-
 def normalize(xs):
     return RE_DROP.sub('', xs.lower())
 
@@ -45,8 +36,6 @@ unknown_counties = 0
 for code, airport in airports.items():
     state = normalize(airport['state'])
     county = normalize(airport['county'])
-    if state in SKIP_STATES:
-        continue
     if state not in counties:
         raise ValueError('Unknown state in airport: %s.' % airport)
     if county not in counties[state]:
