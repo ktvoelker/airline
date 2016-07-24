@@ -1,0 +1,541 @@
+{
+  "VNY": {
+    "longitude": -118.48997222222222,
+    "name": "VAN NUYS",
+    "departures": 7647,
+    "arrivals": 7811,
+    "latitude": 34.20980555555556
+  },
+  "OAK": {
+    "longitude": -122.22114888888889,
+    "name": "METROPOLITAN OAKLAND INTL",
+    "departures": 67648,
+    "arrivals": 67506,
+    "latitude": 37.72125966666667
+  },
+  "AUS": {
+    "longitude": -97.66988888888889,
+    "name": "AUSTIN-BERGSTROM INTL",
+    "departures": 63821,
+    "arrivals": 63480,
+    "latitude": 30.19452777777778
+  },
+  "HOU": {
+    "longitude": -95.27888888888889,
+    "name": "WILLIAM P HOBBY",
+    "departures": 67226,
+    "arrivals": 67318,
+    "latitude": 29.645416666666666
+  },
+  "BNA": {
+    "longitude": -86.67816666666667,
+    "name": "NASHVILLE INTL",
+    "departures": 71763,
+    "arrivals": 71634,
+    "latitude": 36.124472222222224
+  },
+  "CVG": {
+    "longitude": -84.66782222222223,
+    "name": "CINCINNATI/NORTHERN KENTUCKY INTL",
+    "departures": 60317,
+    "arrivals": 60742,
+    "latitude": 39.048836666666666
+  },
+  "PSP": {
+    "longitude": -116.50669444444445,
+    "name": "PALM SPRINGS INTL",
+    "departures": 14524,
+    "arrivals": 14529,
+    "latitude": 33.82966666666667
+  },
+  "CLE": {
+    "longitude": -81.85469444444443,
+    "name": "CLEVELAND-HOPKINS INTL",
+    "departures": 53630,
+    "arrivals": 53519,
+    "latitude": 41.409416666666665
+  },
+  "TEB": {
+    "longitude": -74.06083333333333,
+    "name": "TETERBORO",
+    "departures": 31831,
+    "arrivals": 31834,
+    "latitude": 40.85011111111111
+  },
+  "SAN": {
+    "longitude": -117.18966666666667,
+    "name": "SAN DIEGO INTL",
+    "departures": 91269,
+    "arrivals": 90745,
+    "latitude": 32.733555555555554
+  },
+  "EWR": {
+    "longitude": -74.16868677777778,
+    "name": "NEWARK LIBERTY INTL",
+    "departures": 200800,
+    "arrivals": 199480,
+    "latitude": 40.69247983333333
+  },
+  "SDF": {
+    "longitude": -85.73649888888889,
+    "name": "LOUISVILLE INTL-STANDIFORD FIELD",
+    "departures": 64884,
+    "arrivals": 64455,
+    "latitude": 38.17408583333333
+  },
+  "SEA": {
+    "longitude": -122.31177777777778,
+    "name": "SEATTLE-TACOMA INTL",
+    "departures": 187043,
+    "arrivals": 187082,
+    "latitude": 47.449888888888886
+  },
+  "BOS": {
+    "longitude": -71.00638888888889,
+    "name": "GENERAL EDWARD LAWRENCE LOGAN INTL",
+    "departures": 176397,
+    "arrivals": 171231,
+    "latitude": 42.362944444444445
+  },
+  "GYY": {
+    "longitude": -87.41452777777778,
+    "name": "GARY/CHICAGO INTL",
+    "departures": 653,
+    "arrivals": 679,
+    "latitude": 41.61725
+  },
+  "SNA": {
+    "longitude": -117.86822222222222,
+    "name": "JOHN WAYNE AIRPORT-ORANGE COUNTY",
+    "departures": 49491,
+    "arrivals": 49617,
+    "latitude": 33.675666666666665
+  },
+  "LAS": {
+    "longitude": -115.15225000000001,
+    "name": "MC CARRAN INTL",
+    "departures": 185106,
+    "arrivals": 185386,
+    "latitude": 36.08005555555556
+  },
+  "BDL": {
+    "longitude": -72.68337127777778,
+    "name": "BRADLEY INTL",
+    "departures": 38024,
+    "arrivals": 37872,
+    "latitude": 41.93914511111111
+  },
+  "ABQ": {
+    "longitude": -106.60826216666666,
+    "name": "ALBUQUERQUE INTL SUNPORT",
+    "departures": 33231,
+    "arrivals": 32951,
+    "latitude": 35.03893155555556
+  },
+  "IND": {
+    "longitude": -86.29463888888888,
+    "name": "INDIANAPOLIS INTL",
+    "departures": 67415,
+    "arrivals": 67388,
+    "latitude": 39.717305555555555
+  },
+  "BWI": {
+    "longitude": -76.66899227777779,
+    "name": "BALTIMORE/WASHINGTON INTL THURGOOD MARSHAL",
+    "departures": 112184,
+    "arrivals": 111855,
+    "latitude": 39.17572766666667
+  },
+  "RSW": {
+    "longitude": -81.75516666666667,
+    "name": "SOUTHWEST FLORIDA INTL",
+    "departures": 35574,
+    "arrivals": 35558,
+    "latitude": 26.53616666666667
+  },
+  "MEM": {
+    "longitude": -89.97666666666667,
+    "name": "MEMPHIS INTL",
+    "departures": 91908,
+    "arrivals": 91533,
+    "latitude": 35.04241666666667
+  },
+  "RDU": {
+    "longitude": -78.78747222222222,
+    "name": "RALEIGH-DURHAM INTL",
+    "departures": 66510,
+    "arrivals": 66355,
+    "latitude": 35.87763888888889
+  },
+  "CLT": {
+    "longitude": -80.94906902777778,
+    "name": "CHARLOTTE/DOUGLAS INTL",
+    "departures": 257299,
+    "arrivals": 257124,
+    "latitude": 35.213740666666666
+  },
+  "IAH": {
+    "longitude": -95.34144444444443,
+    "name": "GEORGE BUSH INTERCONTINENTAL/HOUSTON",
+    "departures": 242613,
+    "arrivals": 242795,
+    "latitude": 29.984444444444446
+  },
+  "JAX": {
+    "longitude": -81.68783333333333,
+    "name": "JACKSONVILLE INTL",
+    "departures": 35577,
+    "arrivals": 35500,
+    "latitude": 30.494055555555555
+  },
+  "HNL": {
+    "longitude": -157.92026313888888,
+    "name": "HONOLULU INTL",
+    "departures": 90406,
+    "arrivals": 87047,
+    "latitude": 21.3178275
+  },
+  "MKE": {
+    "longitude": -87.89705555555557,
+    "name": "GENERAL MITCHELL INTL",
+    "departures": 47442,
+    "arrivals": 47277,
+    "latitude": 42.94694444444444
+  },
+  "OMA": {
+    "longitude": -95.89405555555557,
+    "name": "EPPLEY AIRFIELD",
+    "departures": 32115,
+    "arrivals": 32076,
+    "latitude": 41.30316666666666
+  },
+  "RFD": {
+    "longitude": -89.09722222222221,
+    "name": "CHICAGO/ROCKFORD INTL",
+    "departures": 4454,
+    "arrivals": 4438,
+    "latitude": 42.195361111111104
+  },
+  "IAD": {
+    "longitude": -77.45994444444445,
+    "name": "WASHINGTON DULLES INTL",
+    "departures": 126460,
+    "arrivals": 125334,
+    "latitude": 38.94744444444444
+  },
+  "PHX": {
+    "longitude": -112.01158333333333,
+    "name": "PHOENIX SKY HARBOR INTL",
+    "departures": 203151,
+    "arrivals": 202031,
+    "latitude": 33.43427777777777
+  },
+  "TPA": {
+    "longitude": -82.53325,
+    "name": "TAMPA INTL",
+    "departures": 82467,
+    "arrivals": 82097,
+    "latitude": 27.97547222222222
+  },
+  "ORD": {
+    "longitude": -87.90800591666667,
+    "name": "CHICAGO O'HARE INTL",
+    "departures": 425717,
+    "arrivals": 425676,
+    "latitude": 41.97732013888889
+  },
+  "MSP": {
+    "longitude": -93.22177777777777,
+    "name": "MINNEAPOLIS-ST PAUL INTL/WOLD-CHAMBERLAIN",
+    "departures": 193790,
+    "arrivals": 194029,
+    "latitude": 44.881972222222224
+  },
+  "SJU": {
+    "longitude": -66.00213477777778,
+    "name": "LUIS MUNOZ MARIN INTL",
+    "departures": 44877,
+    "arrivals": 44204,
+    "latitude": 18.439398722222222
+  },
+  "FLL": {
+    "longitude": -80.14969444444445,
+    "name": "FORT LAUDERDALE/HOLLYWOOD INTL",
+    "departures": 115651,
+    "arrivals": 114640,
+    "latitude": 26.071666666666665
+  },
+  "MIA": {
+    "longitude": -80.29011111111112,
+    "name": "MIAMI INTL",
+    "departures": 173656,
+    "arrivals": 170530,
+    "latitude": 25.795361111111113
+  },
+  "ONT": {
+    "longitude": -117.60119444444445,
+    "name": "ONTARIO INTL",
+    "departures": 33635,
+    "arrivals": 33565,
+    "latitude": 34.056
+  },
+  "SMF": {
+    "longitude": -121.59077777777777,
+    "name": "SACRAMENTO INTL",
+    "departures": 48379,
+    "arrivals": 48331,
+    "latitude": 38.69544444444444
+  },
+  "ANC": {
+    "longitude": -149.99818863888888,
+    "name": "TED STEVENS ANCHORAGE INTL",
+    "departures": 74639,
+    "arrivals": 69958,
+    "latitude": 61.174156499999995
+  },
+  "LGB": {
+    "longitude": -118.15173266666667,
+    "name": "LONG BEACH /DAUGHERTY FIELD/",
+    "departures": 13135,
+    "arrivals": 13224,
+    "latitude": 33.81775394444445
+  },
+  "PVD": {
+    "longitude": -71.42822111111111,
+    "name": "THEODORE FRANCIS GREEN STATE",
+    "departures": 21687,
+    "arrivals": 21154,
+    "latitude": 41.723999166666665
+  },
+  "ISP": {
+    "longitude": -73.10022222222221,
+    "name": "LONG ISLAND MAC ARTHUR",
+    "departures": 6956,
+    "arrivals": 6886,
+    "latitude": 40.795249999999996
+  },
+  "DCA": {
+    "longitude": -77.03772222222221,
+    "name": "RONALD REAGAN WASHINGTON NATIONAL",
+    "departures": 144153,
+    "arrivals": 144295,
+    "latitude": 38.851444444444446
+  },
+  "MCO": {
+    "longitude": -81.309,
+    "name": "ORLANDO INTL",
+    "departures": 148884,
+    "arrivals": 148446,
+    "latitude": 28.42938888888889
+  },
+  "PDX": {
+    "longitude": -122.59686941666666,
+    "name": "PORTLAND INTL",
+    "departures": 94558,
+    "arrivals": 94399,
+    "latitude": 45.588708861111115
+  },
+  "BHM": {
+    "longitude": -86.75230555555555,
+    "name": "BIRMINGHAM-SHUTTLESWORTH INTL",
+    "departures": 24331,
+    "arrivals": 24198,
+    "latitude": 33.56388888888888
+  },
+  "MSY": {
+    "longitude": -90.25902777777777,
+    "name": "LOUIS ARMSTRONG NEW ORLEANS INTL",
+    "departures": 55117,
+    "arrivals": 55100,
+    "latitude": 29.993277777777777
+  },
+  "MDW": {
+    "longitude": -87.75241666666666,
+    "name": "CHICAGO MIDWAY INTL",
+    "departures": 104656,
+    "arrivals": 104838,
+    "latitude": 41.78597222222222
+  },
+  "OXR": {
+    "longitude": -119.20722222222223,
+    "name": "OXNARD",
+    "departures": 444,
+    "arrivals": 527,
+    "latitude": 34.20080555555556
+  },
+  "MCI": {
+    "longitude": -94.71388888888889,
+    "name": "KANSAS CITY INTL",
+    "departures": 57656,
+    "arrivals": 57579,
+    "latitude": 39.29761111111111
+  },
+  "LGA": {
+    "longitude": -73.8726111111111,
+    "name": "LAGUARDIA",
+    "departures": 179673,
+    "arrivals": 180009,
+    "latitude": 40.77725
+  },
+  "SJC": {
+    "longitude": -121.92911111111111,
+    "name": "NORMAN Y MINETA SAN JOSE INTL",
+    "departures": 56833,
+    "arrivals": 56871,
+    "latitude": 37.36266666666667
+  },
+  "DAY": {
+    "longitude": -84.21941666666667,
+    "name": "JAMES M COX DAYTON INTL",
+    "departures": 19526,
+    "arrivals": 19504,
+    "latitude": 39.902249999999995
+  },
+  "DFW": {
+    "longitude": -97.03769494444444,
+    "name": "DALLAS-FORT WORTH INTL",
+    "departures": 335820,
+    "arrivals": 335903,
+    "latitude": 32.89723155555556
+  },
+  "ATL": {
+    "longitude": -84.427864,
+    "name": "HARTSFIELD - JACKSON ATLANTA INTL",
+    "departures": 436697,
+    "arrivals": 435732,
+    "latitude": 33.63669961111111
+  },
+  "TUS": {
+    "longitude": -110.94102777777778,
+    "name": "TUCSON INTL",
+    "departures": 22279,
+    "arrivals": 22095,
+    "latitude": 32.116083333333336
+  },
+  "SAT": {
+    "longitude": -98.46905705555555,
+    "name": "SAN ANTONIO INTL",
+    "departures": 52237,
+    "arrivals": 52438,
+    "latitude": 29.533958000000002
+  },
+  "DTW": {
+    "longitude": -83.35338888888889,
+    "name": "DETROIT METROPOLITAN WAYNE COUNTY",
+    "departures": 186389,
+    "arrivals": 186018,
+    "latitude": 42.21241666666667
+  },
+  "DEN": {
+    "longitude": -104.67316666666667,
+    "name": "DENVER INTL",
+    "departures": 270255,
+    "arrivals": 270058,
+    "latitude": 39.861666666666665
+  },
+  "PBI": {
+    "longitude": -80.09558333333332,
+    "name": "PALM BEACH INTL",
+    "departures": 39038,
+    "arrivals": 38466,
+    "latitude": 26.68316666666667
+  },
+  "HPN": {
+    "longitude": -73.70756655555556,
+    "name": "WESTCHESTER COUNTY",
+    "departures": 30424,
+    "arrivals": 31003,
+    "latitude": 41.066952750000006
+  },
+  "STL": {
+    "longitude": -90.37002888888888,
+    "name": "LAMBERT-ST LOUIS INTL",
+    "departures": 87225,
+    "arrivals": 86993,
+    "latitude": 38.748697222222226
+  },
+  "MHT": {
+    "longitude": -71.43575,
+    "name": "MANCHESTER",
+    "departures": 18324,
+    "arrivals": 18307,
+    "latitude": 42.932805555555554
+  },
+  "DAL": {
+    "longitude": -96.85177194444444,
+    "name": "DALLAS LOVE FIELD",
+    "departures": 76005,
+    "arrivals": 76086,
+    "latitude": 32.84711222222222
+  },
+  "SFO": {
+    "longitude": -122.37541666666667,
+    "name": "SAN FRANCISCO INTL",
+    "departures": 204425,
+    "arrivals": 203334,
+    "latitude": 37.618805555555554
+  },
+  "PHL": {
+    "longitude": -75.24086583333333,
+    "name": "PHILADELPHIA INTL",
+    "departures": 196070,
+    "arrivals": 196154,
+    "latitude": 39.87224944444444
+  },
+  "BUR": {
+    "longitude": -118.35866666666666,
+    "name": "BOB HOPE",
+    "departures": 30164,
+    "arrivals": 30045,
+    "latitude": 34.200694444444444
+  },
+  "BUF": {
+    "longitude": -78.73058333333333,
+    "name": "BUFFALO NIAGARA INTL",
+    "departures": 33687,
+    "arrivals": 33452,
+    "latitude": 42.940416666666664
+  },
+  "JFK": {
+    "longitude": -73.77869497222223,
+    "name": "JOHN F KENNEDY INTL",
+    "departures": 213431,
+    "arrivals": 211931,
+    "latitude": 40.639925749999996
+  },
+  "SWF": {
+    "longitude": -74.10483333333333,
+    "name": "STEWART INTL",
+    "departures": 4529,
+    "arrivals": 4538,
+    "latitude": 41.50411111111111
+  },
+  "OGG": {
+    "longitude": -156.4304578611111,
+    "name": "KAHULUI",
+    "departures": 36093,
+    "arrivals": 35347,
+    "latitude": 20.89864972222222
+  },
+  "LAX": {
+    "longitude": -118.40711288888889,
+    "name": "LOS ANGELES INTL",
+    "departures": 308611,
+    "arrivals": 307846,
+    "latitude": 33.942504944444444
+  },
+  "PIT": {
+    "longitude": -80.23269444444445,
+    "name": "PITTSBURGH INTL",
+    "departures": 61848,
+    "arrivals": 61831,
+    "latitude": 40.491416666666666
+  },
+  "SLC": {
+    "longitude": -111.97777305555556,
+    "name": "SALT LAKE CITY INTL",
+    "departures": 126943,
+    "arrivals": 126534,
+    "latitude": 40.78838777777778
+  }
+}
