@@ -1,0 +1,7370 @@
+{
+  "CGZ": {
+    "name": "CASA GRANDE MUNI",
+    "longitude": -111.76683333333334,
+    "state": "AZ",
+    "city": "CASA GRANDE",
+    "county": "PINAL",
+    "latitude": 32.95488888888889
+  },
+  "YIP": {
+    "name": "WILLOW RUN",
+    "longitude": -83.53088888888888,
+    "state": "MI",
+    "city": "DETROIT",
+    "county": "WAYNE",
+    "latitude": 42.240027777777776
+  },
+  "SBS": {
+    "name": "STEAMBOAT SPRINGS/BOB ADAMS FIELD",
+    "longitude": -106.86630555555556,
+    "state": "CO",
+    "city": "STEAMBOAT SPRINGS",
+    "county": "ROUTT",
+    "latitude": 40.51625
+  },
+  "HLN": {
+    "name": "HELENA RGNL",
+    "longitude": -111.98334680555556,
+    "state": "MT",
+    "city": "HELENA",
+    "county": "LEWIS AND CLARK",
+    "latitude": 46.60671255555555
+  },
+  "MTM": {
+    "name": "METLAKATLA",
+    "longitude": -131.5780675,
+    "state": "AK",
+    "city": "METLAKATLA",
+    "county": "KETCHIKAN GATEWAY",
+    "latitude": 55.13104527777778
+  },
+  "IAH": {
+    "arrivals": "242795",
+    "name": "GEORGE BUSH INTERCONTINENTAL/HOUSTON",
+    "longitude": -95.34144444444443,
+    "state": "TX",
+    "departures": "242613",
+    "city": "HOUSTON",
+    "county": "HARRIS",
+    "latitude": 29.984444444444446
+  },
+  "BDR": {
+    "name": "IGOR I SIKORSKY MEMORIAL",
+    "longitude": -73.12616666666666,
+    "state": "CT",
+    "city": "BRIDGEPORT",
+    "county": "FAIRFIELD",
+    "latitude": 41.16347222222222
+  },
+  "BUF": {
+    "arrivals": "33452",
+    "name": "BUFFALO NIAGARA INTL",
+    "longitude": -78.73058333333333,
+    "state": "NY",
+    "departures": "33687",
+    "city": "BUFFALO",
+    "county": "ERIE",
+    "latitude": 42.940416666666664
+  },
+  "TOA": {
+    "name": "ZAMPERINI FIELD",
+    "longitude": -118.33960763888888,
+    "state": "CA",
+    "city": "TORRANCE",
+    "county": "LOS ANGELES",
+    "latitude": 33.80338286111111
+  },
+  "CHS": {
+    "name": "CHARLESTON AFB/INTL",
+    "longitude": -80.04052777777778,
+    "state": "SC",
+    "city": "CHARLESTON",
+    "county": "CHARLESTON",
+    "latitude": 32.89863888888889
+  },
+  "SKF": {
+    "name": "KELLY FLD",
+    "longitude": -98.58111666666666,
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "county": "BEXAR",
+    "latitude": 29.384233333333334
+  },
+  "TNX": {
+    "name": "TONOPAH TEST RANGE",
+    "longitude": -116.78075408333333,
+    "state": "NV",
+    "city": "TONOPAH",
+    "county": "NYE",
+    "latitude": 37.79886758333333
+  },
+  "BFL": {
+    "name": "MEADOWS FIELD",
+    "longitude": -119.05766666666666,
+    "state": "CA",
+    "city": "BAKERSFIELD",
+    "county": "KERN",
+    "latitude": 35.433861111111106
+  },
+  "FMH": {
+    "name": "CAPE COD COAST GUARD AIR STATION",
+    "longitude": -70.52280555555555,
+    "state": "MA",
+    "city": "FALMOUTH",
+    "county": "BARNSTABLE",
+    "latitude": 41.65913888888889
+  },
+  "SUA": {
+    "name": "WITHAM FIELD",
+    "longitude": -80.22130555555556,
+    "state": "FL",
+    "city": "STUART",
+    "county": "MARTIN",
+    "latitude": 27.181694444444446
+  },
+  "MGE": {
+    "name": "DOBBINS AIR RESERVE BASE",
+    "longitude": -84.51424722222222,
+    "state": "GA",
+    "city": "MARIETTA",
+    "county": "COBB",
+    "latitude": 33.91444166666667
+  },
+  "DXR": {
+    "name": "DANBURY MUNI",
+    "longitude": -73.48219444444445,
+    "state": "CT",
+    "city": "DANBURY",
+    "county": "FAIRFIELD",
+    "latitude": 41.37152777777778
+  },
+  "MPV": {
+    "name": "EDWARD F KNAPP STATE",
+    "longitude": -72.56209755555555,
+    "state": "VT",
+    "city": "BARRE/MONTPELIER",
+    "county": "WASHINGTON",
+    "latitude": 44.20348947222222
+  },
+  "PAM": {
+    "name": "TYNDALL AFB",
+    "longitude": -85.57541388888889,
+    "state": "FL",
+    "city": "PANAMA CITY",
+    "county": "BAY",
+    "latitude": 30.069566666666667
+  },
+  "DOV": {
+    "name": "DOVER AFB",
+    "longitude": -75.46596111111111,
+    "state": "DE",
+    "city": "DOVER",
+    "county": "KENT",
+    "latitude": 39.12953888888889
+  },
+  "GTF": {
+    "name": "GREAT FALLS INTL",
+    "longitude": -111.37061002777777,
+    "state": "MT",
+    "city": "GREAT FALLS",
+    "county": "CASCADE",
+    "latitude": 47.48265391666667
+  },
+  "UMP": {
+    "name": "INDIANAPOLIS METROPOLITAN",
+    "longitude": -86.04490991666667,
+    "state": "IN",
+    "city": "INDIANAPOLIS",
+    "county": "HAMILTON",
+    "latitude": 39.93522191666666
+  },
+  "EGE": {
+    "name": "EAGLE COUNTY RGNL",
+    "longitude": -106.91594444444445,
+    "state": "CO",
+    "city": "EAGLE",
+    "county": "EAGLE",
+    "latitude": 39.64275
+  },
+  "LZU": {
+    "name": "GWINNETT COUNTY - BRISCOE FIELD",
+    "longitude": -83.96237722222223,
+    "state": "GA",
+    "city": "LAWRENCEVILLE",
+    "county": "GWINNETT",
+    "latitude": 33.978076111111115
+  },
+  "MRN": {
+    "name": "FOOTHILLS REGIONAL",
+    "longitude": -81.61141666666666,
+    "state": "NC",
+    "city": "MORGANTON",
+    "county": "CALDWELL",
+    "latitude": 35.82022222222223
+  },
+  "AVX": {
+    "name": "CATALINA",
+    "longitude": -118.41576944444445,
+    "state": "CA",
+    "city": "AVALON",
+    "county": "LOS ANGELES",
+    "latitude": 33.40499722222222
+  },
+  "DTS": {
+    "name": "DESTIN EXECUTIVE",
+    "longitude": -86.47147291666667,
+    "state": "FL",
+    "city": "DESTIN",
+    "county": "OKALOOSA",
+    "latitude": 30.40005486111111
+  },
+  "CWI": {
+    "name": "CLINTON MUNI",
+    "longitude": -90.32897222222222,
+    "state": "IA",
+    "city": "CLINTON",
+    "county": "CLINTON",
+    "latitude": 41.83075
+  },
+  "BSF": {
+    "name": "BRADSHAW ARMY AIRFIELD",
+    "longitude": -155.55376619444445,
+    "state": "HI",
+    "city": "CAMP POHAKULOA",
+    "county": "HAWAII",
+    "latitude": 19.76001338888889
+  },
+  "FAR": {
+    "name": "HECTOR INTL",
+    "longitude": -96.81576388888888,
+    "state": "ND",
+    "city": "FARGO",
+    "county": "CASS",
+    "latitude": 46.920649999999995
+  },
+  "CEC": {
+    "name": "JACK MC NAMARA FIELD",
+    "longitude": -124.23652777777778,
+    "state": "CA",
+    "city": "CRESCENT CITY",
+    "county": "DEL NORTE",
+    "latitude": 41.780166666666666
+  },
+  "TUP": {
+    "name": "TUPELO RGNL",
+    "longitude": -88.76988888888889,
+    "state": "MS",
+    "city": "TUPELO",
+    "county": "LEE",
+    "latitude": 34.269
+  },
+  "PHL": {
+    "arrivals": "196154",
+    "name": "PHILADELPHIA INTL",
+    "longitude": -75.24086583333333,
+    "state": "PA",
+    "departures": "196070",
+    "city": "PHILADELPHIA",
+    "county": "PHILADELPHIA",
+    "latitude": 39.87224944444444
+  },
+  "ENW": {
+    "name": "KENOSHA RGNL",
+    "longitude": -87.92780555555557,
+    "state": "WI",
+    "city": "KENOSHA",
+    "county": "KENOSHA",
+    "latitude": 42.59569444444445
+  },
+  "MHR": {
+    "name": "SACRAMENTO MATHER",
+    "longitude": -121.29719444444444,
+    "state": "CA",
+    "city": "SACRAMENTO",
+    "county": "SACRAMENTO",
+    "latitude": 38.555305555555556
+  },
+  "VEL": {
+    "name": "VERNAL RGNL",
+    "longitude": -109.50991666666667,
+    "state": "UT",
+    "city": "VERNAL",
+    "county": "UINTAH",
+    "latitude": 40.440916666666666
+  },
+  "YKM": {
+    "name": "YAKIMA AIR TERMINAL/MCALLISTER FIELD",
+    "longitude": -120.54405555555556,
+    "state": "WA",
+    "city": "YAKIMA",
+    "county": "YAKIMA",
+    "latitude": 46.56816666666667
+  },
+  "KTN": {
+    "name": "KETCHIKAN INTL",
+    "longitude": -131.7112222222222,
+    "state": "AK",
+    "city": "KETCHIKAN",
+    "county": "KETCHIKAN GATEWAY",
+    "latitude": 55.354083333333335
+  },
+  "CNW": {
+    "name": "TSTC WACO",
+    "longitude": -97.07413888888888,
+    "state": "TX",
+    "city": "WACO",
+    "county": "MC LENNAN",
+    "latitude": 31.637805555555556
+  },
+  "CZG": {
+    "name": "TRI-CITIES",
+    "longitude": -76.09633333333333,
+    "state": "NY",
+    "city": "ENDICOTT",
+    "county": "BROOME",
+    "latitude": 42.07852777777778
+  },
+  "DUG": {
+    "name": "BISBEE DOUGLAS INTL",
+    "longitude": -109.60374999999999,
+    "state": "AZ",
+    "city": "DOUGLAS BISBEE",
+    "county": "COCHISE",
+    "latitude": 31.468944444444443
+  },
+  "CIU": {
+    "name": "CHIPPEWA COUNTY INTL",
+    "longitude": -84.47238888888889,
+    "state": "MI",
+    "city": "SAULT STE MARIE",
+    "county": "CHIPPEWA",
+    "latitude": 46.25075
+  },
+  "EKN": {
+    "name": "ELKINS-RANDOLPH CO-JENNINGS RANDOLPH FLD",
+    "longitude": -79.85713888888888,
+    "state": "WV",
+    "city": "ELKINS",
+    "county": "RANDOLPH",
+    "latitude": 38.88944444444444
+  },
+  "SEM": {
+    "name": "CRAIG FIELD",
+    "longitude": -86.98780555555555,
+    "state": "AL",
+    "city": "SELMA",
+    "county": "DALLAS",
+    "latitude": 32.34394666666667
+  },
+  "TWF": {
+    "name": "JOSLIN FIELD - MAGIC VALLEY RGNL",
+    "longitude": -114.48775,
+    "state": "ID",
+    "city": "TWIN FALLS",
+    "county": "TWIN FALLS",
+    "latitude": 42.48180555555556
+  },
+  "FFA": {
+    "name": "FIRST FLIGHT",
+    "longitude": -75.67158333333334,
+    "state": "NC",
+    "city": "KILL DEVIL HILLS",
+    "county": "DARE",
+    "latitude": 36.017583333333334
+  },
+  "DLL": {
+    "name": "BARABOO WISCONSIN DELLS",
+    "longitude": -89.77125,
+    "state": "WI",
+    "city": "BARABOO",
+    "county": "SAUK",
+    "latitude": 43.52202777777778
+  },
+  "ISM": {
+    "name": "KISSIMMEE GATEWAY",
+    "longitude": -81.43708333333333,
+    "state": "FL",
+    "city": "ORLANDO",
+    "county": "OSCEOLA",
+    "latitude": 28.289805555555557
+  },
+  "PGA": {
+    "name": "PAGE MUNI",
+    "longitude": -111.44836111111111,
+    "state": "AZ",
+    "city": "PAGE",
+    "county": "COCONINO",
+    "latitude": 36.92608333333333
+  },
+  "LWS": {
+    "name": "LEWISTON-NEZ PERCE COUNTY",
+    "longitude": -117.01538888888889,
+    "state": "ID",
+    "city": "LEWISTON",
+    "county": "NEZ PERCE",
+    "latitude": 46.3745
+  },
+  "ONP": {
+    "name": "NEWPORT MUNI",
+    "longitude": -124.05791666666667,
+    "state": "OR",
+    "city": "NEWPORT",
+    "county": "LINCOLN",
+    "latitude": 44.58036111111112
+  },
+  "PAO": {
+    "name": "PALO ALTO",
+    "longitude": -122.11505555555554,
+    "state": "CA",
+    "city": "PALO ALTO",
+    "county": "SANTA CLARA",
+    "latitude": 37.461111111111116
+  },
+  "HYS": {
+    "name": "HAYS RGNL",
+    "longitude": -99.27316666666667,
+    "state": "KS",
+    "city": "HAYS",
+    "county": "ELLIS",
+    "latitude": 38.842222222222226
+  },
+  "PNC": {
+    "name": "PONCA CITY RGNL",
+    "longitude": -97.09977777777777,
+    "state": "OK",
+    "city": "PONCA CITY",
+    "county": "KAY",
+    "latitude": 36.73191666666667
+  },
+  "HII": {
+    "name": "LAKE HAVASU CITY",
+    "longitude": -114.35827777777777,
+    "state": "AZ",
+    "city": "LAKE HAVASU CITY",
+    "county": "MOHAVE",
+    "latitude": 34.571111111111115
+  },
+  "LAW": {
+    "name": "LAWTON-FORT SILL RGNL",
+    "longitude": -98.41663666666668,
+    "state": "OK",
+    "city": "LAWTON",
+    "county": "COMANCHE",
+    "latitude": 34.56771444444445
+  },
+  "LOT": {
+    "name": "LEWIS UNIVERSITY",
+    "longitude": -88.09619444444444,
+    "state": "IL",
+    "city": "CHICAGO/ROMEOVILLE",
+    "county": "WILL",
+    "latitude": 41.608111111111114
+  },
+  "BPT": {
+    "name": "JACK BROOKS RGNL",
+    "longitude": -94.02069444444444,
+    "state": "TX",
+    "city": "BEAUMONT/PORT ARTHUR",
+    "county": "JEFFERSON",
+    "latitude": 29.950833333333332
+  },
+  "LOZ": {
+    "name": "LONDON-CORBIN ARPT-MAGEE FIELD",
+    "longitude": -84.07738888888889,
+    "state": "KY",
+    "city": "LONDON",
+    "county": "LAUREL",
+    "latitude": 37.08688888888889
+  },
+  "INW": {
+    "name": "WINSLOW-LINDBERGH RGNL",
+    "longitude": -110.72291666666666,
+    "state": "AZ",
+    "city": "WINSLOW",
+    "county": "NAVAJO",
+    "latitude": 35.02169444444444
+  },
+  "CAK": {
+    "name": "AKRON-CANTON RGNL",
+    "longitude": -81.4436388888889,
+    "state": "OH",
+    "city": "AKRON",
+    "county": "SUMMIT",
+    "latitude": 40.915055555555554
+  },
+  "NJK": {
+    "name": "EL CENTRO NAF",
+    "longitude": -115.66855722222223,
+    "state": "CA",
+    "city": "EL CENTRO",
+    "county": "IMPERIAL",
+    "latitude": 32.82663222222222
+  },
+  "AOO": {
+    "name": "ALTOONA-BLAIR COUNTY",
+    "longitude": -78.32002777777777,
+    "state": "PA",
+    "city": "ALTOONA",
+    "county": "BLAIR",
+    "latitude": 40.29636111111111
+  },
+  "NKT": {
+    "name": "CHERRY POINT MCAS /CUNNINGHAM FIELD/",
+    "longitude": -76.88077338888888,
+    "state": "NC",
+    "city": "CHERRY POINT",
+    "county": "PAMLICO",
+    "latitude": 34.90316855555555
+  },
+  "IWS": {
+    "name": "WEST HOUSTON",
+    "longitude": -95.67261111111111,
+    "state": "TX",
+    "city": "HOUSTON",
+    "county": "HARRIS",
+    "latitude": 29.818194444444444
+  },
+  "CDN": {
+    "name": "WOODWARD FIELD",
+    "longitude": -80.56486111111111,
+    "state": "SC",
+    "city": "CAMDEN",
+    "county": "KERSHAW",
+    "latitude": 34.28358333333333
+  },
+  "ASE": {
+    "name": "ASPEN-PITKIN CO/SARDY FIELD",
+    "longitude": -106.86823472222221,
+    "state": "CO",
+    "city": "ASPEN",
+    "county": "PITKIN",
+    "latitude": 39.22187777777778
+  },
+  "SSI": {
+    "name": "MCKINNON ST SIMONS ISLAND",
+    "longitude": -81.39105555555557,
+    "state": "GA",
+    "city": "BRUNSWICK",
+    "county": "GLYNN",
+    "latitude": 31.15197222222222
+  },
+  "MLI": {
+    "name": "QUAD CITY INTL",
+    "longitude": -90.50752777777778,
+    "state": "IL",
+    "city": "MOLINE",
+    "county": "ROCK ISLAND",
+    "latitude": 41.448277777777776
+  },
+  "ACJ": {
+    "name": "JIMMY CARTER RGNL",
+    "longitude": -84.18886111111111,
+    "state": "GA",
+    "city": "AMERICUS",
+    "county": "SUMTER",
+    "latitude": 32.11080555555556
+  },
+  "AUW": {
+    "name": "WAUSAU DOWNTOWN",
+    "longitude": -89.62700174999999,
+    "state": "WI",
+    "city": "WAUSAU",
+    "county": "MARATHON",
+    "latitude": 44.926284527777774
+  },
+  "NHK": {
+    "name": "PATUXENT RIVER NAS/TRAPNELL FIELD/",
+    "longitude": -76.409958,
+    "state": "MD",
+    "city": "PATUXENT RIVER",
+    "county": "ST MARYS",
+    "latitude": 38.28633158333333
+  },
+  "PNE": {
+    "name": "NORTHEAST PHILADELPHIA",
+    "longitude": -75.01058333333333,
+    "state": "PA",
+    "city": "PHILADELPHIA",
+    "county": "PHILADELPHIA",
+    "latitude": 40.081944444444446
+  },
+  "GQQ": {
+    "name": "GALION MUNI",
+    "longitude": -82.72380555555556,
+    "state": "OH",
+    "city": "GALION",
+    "county": "RICHLAND",
+    "latitude": 40.75338888888889
+  },
+  "ENV": {
+    "name": "WENDOVER",
+    "longitude": -114.02866666666667,
+    "state": "UT",
+    "city": "WENDOVER",
+    "county": "TOOELE",
+    "latitude": 40.718722222222226
+  },
+  "EMP": {
+    "name": "EMPORIA MUNI",
+    "longitude": -96.18994444444445,
+    "state": "KS",
+    "city": "EMPORIA",
+    "county": "LYON",
+    "latitude": 38.330555555555556
+  },
+  "HWO": {
+    "name": "NORTH PERRY",
+    "longitude": -80.24072222222222,
+    "state": "FL",
+    "city": "HOLLYWOOD",
+    "county": "BROWARD",
+    "latitude": 26.00122222222222
+  },
+  "ADW": {
+    "name": "JOINT BASE ANDREWS",
+    "longitude": -76.8673818611111,
+    "state": "MD",
+    "city": "CAMP SPRINGS",
+    "county": "PRINCE GEORGES",
+    "latitude": 38.81079438888889
+  },
+  "BLV": {
+    "name": "SCOTT AFB/MIDAMERICA",
+    "longitude": -89.83519444444444,
+    "state": "IL",
+    "city": "BELLEVILLE",
+    "county": "ST CLAIR",
+    "latitude": 38.54516666666667
+  },
+  "WRB": {
+    "name": "ROBINS AFB",
+    "longitude": -83.59192083333333,
+    "state": "GA",
+    "city": "WARNER ROBINS",
+    "county": "HOUSTON",
+    "latitude": 32.640170833333336
+  },
+  "LUK": {
+    "name": "CINCINNATI MUNI AIRPORT LUNKEN FIELD",
+    "longitude": -84.41861111111112,
+    "state": "OH",
+    "city": "CINCINNATI",
+    "county": "HAMILTON",
+    "latitude": 39.10333333333333
+  },
+  "VBG": {
+    "name": "VANDENBERG AFB",
+    "longitude": -120.58431255555556,
+    "state": "CA",
+    "city": "LOMPOC",
+    "county": "SANTA BARBARA",
+    "latitude": 34.737336666666664
+  },
+  "SHV": {
+    "name": "SHREVEPORT RGNL",
+    "longitude": -93.8256111111111,
+    "state": "LA",
+    "city": "SHREVEPORT",
+    "county": "CADDO",
+    "latitude": 32.44661111111111
+  },
+  "SAV": {
+    "name": "SAVANNAH/HILTON HEAD INTL",
+    "longitude": -81.2021388888889,
+    "state": "GA",
+    "city": "SAVANNAH",
+    "county": "CHATHAM",
+    "latitude": 32.127583333333334
+  },
+  "MCF": {
+    "name": "MACDILL AFB",
+    "longitude": -82.52121658333333,
+    "state": "FL",
+    "city": "TAMPA",
+    "county": "HILLSBOROUGH",
+    "latitude": 27.849341638888887
+  },
+  "FFC": {
+    "name": "ATLANTA RGNL FALCON FIELD",
+    "longitude": -84.57252777777778,
+    "state": "GA",
+    "city": "ATLANTA",
+    "county": "FAYETTE",
+    "latitude": 33.35772222222222
+  },
+  "GTB": {
+    "name": "WHEELER-SACK AAF",
+    "longitude": -75.71989772222223,
+    "state": "NY",
+    "city": "FORT DRUM",
+    "county": "JEFFERSON",
+    "latitude": 44.05561383333333
+  },
+  "LAF": {
+    "name": "PURDUE UNIVERSITY",
+    "longitude": -86.93688888888889,
+    "state": "IN",
+    "city": "LAFAYETTE",
+    "county": "TIPPECANOE",
+    "latitude": 40.412305555555555
+  },
+  "MMI": {
+    "name": "MCMINN COUNTY",
+    "longitude": -84.56177777777778,
+    "state": "TN",
+    "city": "ATHENS",
+    "county": "MC MINN",
+    "latitude": 35.39919444444445
+  },
+  "MEI": {
+    "name": "KEY FIELD",
+    "longitude": -88.75186111111111,
+    "state": "MS",
+    "city": "MERIDIAN",
+    "county": "LAUDERDALE",
+    "latitude": 32.33261111111111
+  },
+  "OSU": {
+    "name": "OHIO STATE UNIVERSITY",
+    "longitude": -83.07315169444443,
+    "state": "OH",
+    "city": "COLUMBUS",
+    "county": "FRANKLIN",
+    "latitude": 40.07983088888889
+  },
+  "CEU": {
+    "name": "OCONEE COUNTY RGNL",
+    "longitude": -82.8858888888889,
+    "state": "SC",
+    "city": "CLEMSON",
+    "county": "OCONEE",
+    "latitude": 34.67222222222222
+  },
+  "LGA": {
+    "arrivals": "180009",
+    "name": "LAGUARDIA",
+    "longitude": -73.8726111111111,
+    "state": "NY",
+    "departures": "179673",
+    "city": "NEW YORK",
+    "county": "QUEENS",
+    "latitude": 40.77725
+  },
+  "EVV": {
+    "name": "EVANSVILLE RGNL",
+    "longitude": -87.5285,
+    "state": "IN",
+    "city": "EVANSVILLE",
+    "county": "VANDERBURGH",
+    "latitude": 38.04080555555555
+  },
+  "IPL": {
+    "name": "IMPERIAL COUNTY",
+    "longitude": -115.57875,
+    "state": "CA",
+    "city": "IMPERIAL",
+    "county": "IMPERIAL",
+    "latitude": 32.83422222222222
+  },
+  "PDT": {
+    "name": "EASTERN OREGON RGNL AT PENDLETON",
+    "longitude": -118.84300894444443,
+    "state": "OR",
+    "city": "PENDLETON",
+    "county": "UMATILLA",
+    "latitude": 45.69476480555555
+  },
+  "COE": {
+    "name": "COEUR D'ALENE - PAPPY BOYINGTON FIELD",
+    "longitude": -116.81958333333333,
+    "state": "ID",
+    "city": "COEUR D'ALENE",
+    "county": "KOOTENAI",
+    "latitude": 47.77430555555556
+  },
+  "WDR": {
+    "name": "BARROW COUNTY",
+    "longitude": -83.66741666666667,
+    "state": "GA",
+    "city": "WINDER",
+    "county": "BARROW",
+    "latitude": 33.98286111111111
+  },
+  "MLU": {
+    "name": "MONROE RGNL",
+    "longitude": -92.03766666666667,
+    "state": "LA",
+    "city": "MONROE",
+    "county": "OUACHITA",
+    "latitude": 32.51086111111111
+  },
+  "FBK": {
+    "name": "LADD AAF",
+    "longitude": -147.6162235,
+    "state": "AK",
+    "city": "FAIRBANKS/FT WAINWRIGHT",
+    "county": "FAIRBANKS NORTH STAR",
+    "latitude": 64.83672438888888
+  },
+  "HSV": {
+    "name": "HUNTSVILLE INTL-CARL T JONES FIELD",
+    "longitude": -86.77505555555555,
+    "state": "AL",
+    "city": "HUNTSVILLE",
+    "county": "MADISON",
+    "latitude": 34.63719444444445
+  },
+  "CYS": {
+    "name": "CHEYENNE RGNL/JERRY OLSON FIELD",
+    "longitude": -104.81047222222222,
+    "state": "WY",
+    "city": "CHEYENNE",
+    "county": "LARAMIE",
+    "latitude": 41.15563888888889
+  },
+  "DUC": {
+    "name": "HALLIBURTON FIELD",
+    "longitude": -97.95986111111111,
+    "state": "OK",
+    "city": "DUNCAN",
+    "county": "STEPHENS",
+    "latitude": 34.47130555555556
+  },
+  "FDY": {
+    "name": "FINDLAY",
+    "longitude": -83.66861111111112,
+    "state": "OH",
+    "city": "FINDLAY",
+    "county": "HANCOCK",
+    "latitude": 41.012027777777774
+  },
+  "GEU": {
+    "name": "GLENDALE MUNI",
+    "longitude": -112.29513888888889,
+    "state": "AZ",
+    "city": "GLENDALE",
+    "county": "MARICOPA",
+    "latitude": 33.526916666666665
+  },
+  "LNS": {
+    "name": "LANCASTER",
+    "longitude": -76.29436111111112,
+    "state": "PA",
+    "city": "LANCASTER",
+    "county": "LANCASTER",
+    "latitude": 40.12236111111111
+  },
+  "PRC": {
+    "name": "ERNEST A LOVE FIELD",
+    "longitude": -112.41922222222223,
+    "state": "AZ",
+    "city": "PRESCOTT",
+    "county": "YAVAPAI",
+    "latitude": 34.65483333333333
+  },
+  "SGJ": {
+    "name": "NORTHEAST FLORIDA RGNL",
+    "longitude": -81.33972222222222,
+    "state": "FL",
+    "city": "ST AUGUSTINE",
+    "county": "ST JOHNS",
+    "latitude": 29.95925
+  },
+  "LRD": {
+    "name": "LAREDO INTL",
+    "longitude": -99.46158333333334,
+    "state": "TX",
+    "city": "LAREDO",
+    "county": "WEBB",
+    "latitude": 27.544194444444447
+  },
+  "GVL": {
+    "name": "LEE GILMER MEMORIAL",
+    "longitude": -83.83022333333334,
+    "state": "GA",
+    "city": "GAINESVILLE",
+    "county": "HALL",
+    "latitude": 34.272627
+  },
+  "AEX": {
+    "name": "ALEXANDRIA INTL",
+    "longitude": -92.54855611111111,
+    "state": "LA",
+    "city": "ALEXANDRIA",
+    "county": "RAPIDES",
+    "latitude": 31.327371666666668
+  },
+  "EUG": {
+    "name": "MAHLON SWEET FIELD",
+    "longitude": -123.21197222222223,
+    "state": "OR",
+    "city": "EUGENE",
+    "county": "LANE",
+    "latitude": 44.124583333333334
+  },
+  "POB": {
+    "name": "POPE AAF",
+    "longitude": -79.01449583333333,
+    "state": "NC",
+    "city": "FAYETTEVILLE",
+    "county": "CUMBERLAND",
+    "latitude": 35.17088888888889
+  },
+  "TRI": {
+    "name": "TRI-CITIES RGNL TN/VA",
+    "longitude": -82.40741666666668,
+    "state": "TN",
+    "city": "BRISTOL/JOHNSON/KINGSPORT",
+    "county": "SULLIVAN",
+    "latitude": 36.47519444444445
+  },
+  "SAC": {
+    "name": "SACRAMENTO EXECUTIVE",
+    "longitude": -121.49347222222222,
+    "state": "CA",
+    "city": "SACRAMENTO",
+    "county": "SACRAMENTO",
+    "latitude": 38.51252777777778
+  },
+  "MCN": {
+    "name": "MIDDLE GEORGIA RGNL",
+    "longitude": -83.64922222222224,
+    "state": "GA",
+    "city": "MACON",
+    "county": "BIBB",
+    "latitude": 32.69283333333333
+  },
+  "FLD": {
+    "name": "FOND DU LAC COUNTY",
+    "longitude": -88.48841666666667,
+    "state": "WI",
+    "city": "FOND DU LAC",
+    "county": "FOND DU LAC",
+    "latitude": 43.771166666666666
+  },
+  "PGV": {
+    "name": "PITT-GREENVILLE",
+    "longitude": -77.38408333333334,
+    "state": "NC",
+    "city": "GREENVILLE",
+    "county": "PITT",
+    "latitude": 35.63569444444445
+  },
+  "TTN": {
+    "name": "TRENTON MERCER",
+    "longitude": -74.81347222222222,
+    "state": "NJ",
+    "city": "TRENTON",
+    "county": "MERCER",
+    "latitude": 40.276694444444445
+  },
+  "GVT": {
+    "name": "MAJORS",
+    "longitude": -96.06533333333333,
+    "state": "TX",
+    "city": "GREENVILLE",
+    "county": "HUNT",
+    "latitude": 33.06783333333334
+  },
+  "FNT": {
+    "name": "BISHOP INTL",
+    "longitude": -83.74475,
+    "state": "MI",
+    "city": "FLINT",
+    "county": "GENESEE",
+    "latitude": 42.965472222222225
+  },
+  "DYS": {
+    "name": "DYESS AFB",
+    "longitude": -99.85654466666666,
+    "state": "TX",
+    "city": "ABILENE",
+    "county": "TAYLOR",
+    "latitude": 32.41847647222222
+  },
+  "MVY": {
+    "name": "MARTHA'S VINEYARD",
+    "longitude": -70.61388413888888,
+    "state": "MA",
+    "city": "VINEYARD HAVEN",
+    "county": "DUKES",
+    "latitude": 41.393422055555554
+  },
+  "GAD": {
+    "name": "NORTHEAST ALABAMA RGNL",
+    "longitude": -86.08908344444444,
+    "state": "AL",
+    "city": "GADSDEN",
+    "county": "ETOWAH",
+    "latitude": 33.97264886111111
+  },
+  "OGG": {
+    "arrivals": "35347",
+    "name": "KAHULUI",
+    "longitude": -156.4304578611111,
+    "state": "HI",
+    "departures": "36093",
+    "city": "KAHULUI",
+    "county": "MAUI",
+    "latitude": 20.89864972222222
+  },
+  "TOP": {
+    "name": "PHILIP BILLARD MUNI",
+    "longitude": -95.62249999999999,
+    "state": "KS",
+    "city": "TOPEKA",
+    "county": "SHAWNEE",
+    "latitude": 39.06866666666667
+  },
+  "MFR": {
+    "name": "ROGUE VALLEY INTL - MEDFORD",
+    "longitude": -122.87349999999999,
+    "state": "OR",
+    "city": "MEDFORD",
+    "county": "JACKSON",
+    "latitude": 42.37422222222222
+  },
+  "HMN": {
+    "name": "HOLLOMAN AFB",
+    "longitude": -106.10853758333333,
+    "state": "NM",
+    "city": "ALAMOGORDO",
+    "county": "OTERO",
+    "latitude": 32.851858222222226
+  },
+  "LUF": {
+    "name": "LUKE AFB",
+    "longitude": -112.38319958333332,
+    "state": "AZ",
+    "city": "GLENDALE",
+    "county": "MARICOPA",
+    "latitude": 33.53496694444444
+  },
+  "DEN": {
+    "arrivals": "270058",
+    "name": "DENVER INTL",
+    "longitude": -104.67316666666667,
+    "state": "CO",
+    "departures": "270255",
+    "city": "DENVER",
+    "county": "DENVER",
+    "latitude": 39.861666666666665
+  },
+  "MKK": {
+    "name": "MOLOKAI",
+    "longitude": -157.09625611111113,
+    "state": "HI",
+    "city": "KAUNAKAKAI",
+    "county": "MAUI",
+    "latitude": 21.152885833333332
+  },
+  "DAB": {
+    "name": "DAYTONA BEACH INTL",
+    "longitude": -81.05805555555555,
+    "state": "FL",
+    "city": "DAYTONA BEACH",
+    "county": "VOLUSIA",
+    "latitude": 29.179916666666667
+  },
+  "RCA": {
+    "name": "ELLSWORTH AFB",
+    "longitude": -103.10356666666667,
+    "state": "SD",
+    "city": "RAPID CITY",
+    "county": "PENNINGTON",
+    "latitude": 44.145094444444446
+  },
+  "FCS": {
+    "name": "BUTTS AAF (FORT CARSON)",
+    "longitude": -104.76095555555555,
+    "state": "CO",
+    "city": "FORT CARSON",
+    "county": "EL PASO",
+    "latitude": 38.67971111111111
+  },
+  "JRB": {
+    "name": "DOWNTOWN MANHATTAN/WALL ST",
+    "longitude": -74.00902833333333,
+    "state": "NY",
+    "city": "NEW YORK",
+    "county": "NEW YORK",
+    "latitude": 40.701213611111115
+  },
+  "PEQ": {
+    "name": "PECOS MUNI",
+    "longitude": -103.51072222222223,
+    "state": "TX",
+    "city": "PECOS",
+    "county": "REEVES",
+    "latitude": 31.38238888888889
+  },
+  "ANP": {
+    "name": "LEE",
+    "longitude": -76.56839916666667,
+    "state": "MD",
+    "city": "ANNAPOLIS",
+    "county": "ANNE ARUNDEL",
+    "latitude": 38.942877777777774
+  },
+  "IGQ": {
+    "name": "LANSING MUNI",
+    "longitude": -87.52952777777777,
+    "state": "IL",
+    "city": "CHICAGO",
+    "county": "COOK",
+    "latitude": 41.53491666666667
+  },
+  "GKY": {
+    "name": "ARLINGTON MUNI",
+    "longitude": -97.09427777777778,
+    "state": "TX",
+    "city": "ARLINGTON",
+    "county": "TARRANT",
+    "latitude": 32.66386111111111
+  },
+  "AHN": {
+    "name": "ATHENS/BEN EPPS",
+    "longitude": -83.32591666666666,
+    "state": "GA",
+    "city": "ATHENS",
+    "county": "CLARKE",
+    "latitude": 33.94863888888889
+  },
+  "VGT": {
+    "name": "NORTH LAS VEGAS",
+    "longitude": -115.19444444444444,
+    "state": "NV",
+    "city": "LAS VEGAS",
+    "county": "CLARK",
+    "latitude": 36.21069444444445
+  },
+  "DNN": {
+    "name": "DALTON MUNI",
+    "longitude": -84.87025,
+    "state": "GA",
+    "city": "DALTON",
+    "county": "WHITFIELD",
+    "latitude": 34.722944444444444
+  },
+  "BJC": {
+    "name": "ROCKY MOUNTAIN METROPOLITAN",
+    "longitude": -105.11719444444444,
+    "state": "CO",
+    "city": "DENVER",
+    "county": "JEFFERSON",
+    "latitude": 39.90880555555555
+  },
+  "TIW": {
+    "name": "TACOMA NARROWS",
+    "longitude": -122.57811111111111,
+    "state": "WA",
+    "city": "TACOMA",
+    "county": "PIERCE",
+    "latitude": 47.267944444444446
+  },
+  "BHM": {
+    "arrivals": "24198",
+    "name": "BIRMINGHAM-SHUTTLESWORTH INTL",
+    "longitude": -86.75230555555555,
+    "state": "AL",
+    "departures": "24331",
+    "city": "BIRMINGHAM",
+    "county": "JEFFERSON",
+    "latitude": 33.56388888888888
+  },
+  "SAN": {
+    "arrivals": "90745",
+    "name": "SAN DIEGO INTL",
+    "longitude": -117.18966666666667,
+    "state": "CA",
+    "departures": "91269",
+    "city": "SAN DIEGO",
+    "county": "SAN DIEGO",
+    "latitude": 32.733555555555554
+  },
+  "KOA": {
+    "name": "KONA INTL AT KEAHOLE",
+    "longitude": -156.0456313888889,
+    "state": "HI",
+    "city": "KAILUA/KONA",
+    "county": "HAWAII",
+    "latitude": 19.738765833333336
+  },
+  "NXP": {
+    "name": "TWENTYNINE PALMS SELF",
+    "longitude": -116.1620951388889,
+    "state": "CA",
+    "city": "TWENTYNINE PALMS",
+    "county": "SAN BERNARDINO",
+    "latitude": 34.296110416666664
+  },
+  "ATL": {
+    "arrivals": "435732",
+    "name": "HARTSFIELD - JACKSON ATLANTA INTL",
+    "longitude": -84.427864,
+    "state": "GA",
+    "departures": "436697",
+    "city": "ATLANTA",
+    "county": "FULTON",
+    "latitude": 33.63669961111111
+  },
+  "FSD": {
+    "name": "JOE FOSS FIELD",
+    "longitude": -96.74191361111112,
+    "state": "SD",
+    "city": "SIOUX FALLS",
+    "county": "MINNEHAHA",
+    "latitude": 43.582013333333336
+  },
+  "EVW": {
+    "name": "EVANSTON-UINTA COUNTY BURNS FIELD",
+    "longitude": -111.03463888888889,
+    "state": "WY",
+    "city": "EVANSTON",
+    "county": "UINTA",
+    "latitude": 41.27477777777778
+  },
+  "WHP": {
+    "name": "WHITEMAN",
+    "longitude": -118.41343305555556,
+    "state": "CA",
+    "city": "LOS ANGELES",
+    "county": "LOS ANGELES",
+    "latitude": 34.259325277777776
+  },
+  "AZO": {
+    "name": "KALAMAZOO/BATTLE CREEK INTL",
+    "longitude": -85.55155555555555,
+    "state": "MI",
+    "city": "KALAMAZOO",
+    "county": "KALAMAZOO",
+    "latitude": 42.23438888888889
+  },
+  "SDM": {
+    "name": "BROWN FIELD MUNI",
+    "longitude": -116.98016111111112,
+    "state": "CA",
+    "city": "SAN DIEGO",
+    "county": "SAN DIEGO",
+    "latitude": 32.572272222222225
+  },
+  "HKY": {
+    "name": "HICKORY RGNL",
+    "longitude": -81.3895488888889,
+    "state": "NC",
+    "city": "HICKORY",
+    "county": "CATAWBA",
+    "latitude": 35.74114638888889
+  },
+  "VAD": {
+    "name": "MOODY AFB",
+    "longitude": -83.1929638888889,
+    "state": "GA",
+    "city": "VALDOSTA",
+    "county": "LOWNDES",
+    "latitude": 30.9687
+  },
+  "FOD": {
+    "name": "FORT DODGE RGNL",
+    "longitude": -94.19183333333334,
+    "state": "IA",
+    "city": "FORT DODGE",
+    "county": "WEBSTER",
+    "latitude": 42.55119444444444
+  },
+  "FME": {
+    "name": "TIPTON",
+    "longitude": -76.75941444444445,
+    "state": "MD",
+    "city": "FORT MEADE(ODENTON)",
+    "county": "ANNE ARUNDEL",
+    "latitude": 39.08538666666667
+  },
+  "MGJ": {
+    "name": "ORANGE COUNTY",
+    "longitude": -74.26464444444444,
+    "state": "NY",
+    "city": "MONTGOMERY",
+    "county": "ORANGE",
+    "latitude": 41.509988388888885
+  },
+  "FFZ": {
+    "name": "FALCON FLD",
+    "longitude": -111.72833333333334,
+    "state": "AZ",
+    "city": "MESA",
+    "county": "MARICOPA",
+    "latitude": 33.46083333333333
+  },
+  "VCT": {
+    "name": "VICTORIA RGNL",
+    "longitude": -96.91848872222222,
+    "state": "TX",
+    "city": "VICTORIA",
+    "county": "VICTORIA",
+    "latitude": 28.852545833333334
+  },
+  "IMM": {
+    "name": "IMMOKALEE RGNL",
+    "longitude": -81.40137730555556,
+    "state": "FL",
+    "city": "IMMOKALEE",
+    "county": "COLLIER",
+    "latitude": 26.433820805555555
+  },
+  "PUB": {
+    "name": "PUEBLO MEMORIAL",
+    "longitude": -104.49802777777778,
+    "state": "CO",
+    "city": "PUEBLO",
+    "county": "PUEBLO",
+    "latitude": 38.289944444444444
+  },
+  "NGU": {
+    "name": "NORFOLK NS (CHAMBERS FLD)",
+    "longitude": -76.28927794444444,
+    "state": "VA",
+    "city": "NORFOLK",
+    "county": "NORFOLK",
+    "latitude": 36.937467722222216
+  },
+  "IND": {
+    "arrivals": "67388",
+    "name": "INDIANAPOLIS INTL",
+    "longitude": -86.29463888888888,
+    "state": "IN",
+    "departures": "67415",
+    "city": "INDIANAPOLIS",
+    "county": "MARION",
+    "latitude": 39.717305555555555
+  },
+  "TTD": {
+    "name": "PORTLAND-TROUTDALE",
+    "longitude": -122.40125,
+    "state": "OR",
+    "city": "PORTLAND",
+    "county": "MULTNOMAH",
+    "latitude": 45.54936111111111
+  },
+  "BFM": {
+    "name": "MOBILE DOWNTOWN",
+    "longitude": -88.06808333333333,
+    "state": "AL",
+    "city": "MOBILE",
+    "county": "MOBILE",
+    "latitude": 30.62677777777778
+  },
+  "MTC": {
+    "name": "SELFRIDGE ANGB",
+    "longitude": -82.83690972222222,
+    "state": "MI",
+    "city": "MOUNT CLEMENS",
+    "county": "MACOMB",
+    "latitude": 42.61389361111111
+  },
+  "PCW": {
+    "name": "ERIE-OTTAWA INTL",
+    "longitude": -82.86948677777777,
+    "state": "OH",
+    "city": "PORT CLINTON",
+    "county": "OTTAWA",
+    "latitude": 41.51627033333333
+  },
+  "FBG": {
+    "name": "SIMMONS AAF",
+    "longitude": -78.93620694444445,
+    "state": "NC",
+    "city": "FORT BRAGG",
+    "county": "CUMBERLAND",
+    "latitude": 35.13206944444445
+  },
+  "NID": {
+    "name": "CHINA LAKE NAWS (ARMITAGE FLD)",
+    "longitude": -117.69181788888889,
+    "state": "CA",
+    "city": "CHINA LAKE",
+    "county": "KERN",
+    "latitude": 35.685642888888886
+  },
+  "PVU": {
+    "name": "PROVO MUNI",
+    "longitude": -111.72336111111112,
+    "state": "UT",
+    "city": "PROVO",
+    "county": "UTAH",
+    "latitude": 40.21919444444445
+  },
+  "SFZ": {
+    "name": "NORTH CENTRAL STATE",
+    "longitude": -71.49141666666667,
+    "state": "RI",
+    "city": "PAWTUCKET",
+    "county": "PROVIDENCE",
+    "latitude": 41.92075
+  },
+  "PSP": {
+    "arrivals": "14529",
+    "name": "PALM SPRINGS INTL",
+    "longitude": -116.50669444444445,
+    "state": "CA",
+    "departures": "14524",
+    "city": "PALM SPRINGS",
+    "county": "RIVERSIDE",
+    "latitude": 33.82966666666667
+  },
+  "DAW": {
+    "name": "SKYHAVEN",
+    "longitude": -70.92954950000001,
+    "state": "NH",
+    "city": "ROCHESTER",
+    "county": "STRAFFORD",
+    "latitude": 43.28423483333333
+  },
+  "MOT": {
+    "name": "MINOT INTL",
+    "longitude": -101.27802777777778,
+    "state": "ND",
+    "city": "MINOT",
+    "county": "WARD",
+    "latitude": 48.25763888888889
+  },
+  "MUE": {
+    "name": "WAIMEA-KOHALA",
+    "longitude": -155.6681072222222,
+    "state": "HI",
+    "city": "KAMUELA",
+    "county": "HAWAII",
+    "latitude": 20.001326944444443
+  },
+  "FLV": {
+    "name": "SHERMAN AAF",
+    "longitude": -94.91433972222222,
+    "state": "KS",
+    "city": "FORT LEAVENWORTH",
+    "county": "LEAVENWORTH",
+    "latitude": 39.367575555555554
+  },
+  "SRQ": {
+    "name": "SARASOTA/BRADENTON INTL",
+    "longitude": -82.55438888888888,
+    "state": "FL",
+    "city": "SARASOTA/BRADENTON",
+    "county": "SARASOTA",
+    "latitude": 27.395444444444443
+  },
+  "IDL": {
+    "name": "INDIANOLA MUNI",
+    "longitude": -90.67888888888889,
+    "state": "MS",
+    "city": "INDIANOLA",
+    "county": "SUNFLOWER",
+    "latitude": 33.48572222222222
+  },
+  "SGF": {
+    "name": "SPRINGFIELD-BRANSON NATIONAL",
+    "longitude": -93.38863888888889,
+    "state": "MO",
+    "city": "SPRINGFIELD",
+    "county": "GREENE",
+    "latitude": 37.245666666666665
+  },
+  "BFF": {
+    "name": "WESTERN NEBRASKA RGNL/WILLIAM B HEILIG FIE",
+    "longitude": -103.59563888888889,
+    "state": "NE",
+    "city": "SCOTTSBLUFF",
+    "county": "SCOTTS BLUFF",
+    "latitude": 41.874027777777776
+  },
+  "DAL": {
+    "arrivals": "76086",
+    "name": "DALLAS LOVE FIELD",
+    "longitude": -96.85177194444444,
+    "state": "TX",
+    "departures": "76005",
+    "city": "DALLAS",
+    "county": "DALLAS",
+    "latitude": 32.84711222222222
+  },
+  "OLS": {
+    "name": "NOGALES INTL",
+    "longitude": -110.84788888888889,
+    "state": "AZ",
+    "city": "NOGALES",
+    "county": "SANTA CRUZ",
+    "latitude": 31.417722222222224
+  },
+  "OXC": {
+    "name": "WATERBURY-OXFORD",
+    "longitude": -73.13525000000001,
+    "state": "CT",
+    "city": "OXFORD",
+    "county": "NEW HAVEN",
+    "latitude": 41.47855555555556
+  },
+  "LRO": {
+    "name": "MT PLEASANT RGNL-FAISON FIELD",
+    "longitude": -79.78286111111112,
+    "state": "SC",
+    "city": "MOUNT PLEASANT",
+    "county": "CHARLESTON",
+    "latitude": 32.89783333333333
+  },
+  "VNW": {
+    "name": "VAN WERT COUNTY",
+    "longitude": -84.606358,
+    "state": "OH",
+    "city": "VAN WERT",
+    "county": "VAN WERT",
+    "latitude": 40.86382947222222
+  },
+  "GLH": {
+    "name": "GREENVILLE MID-DELTA",
+    "longitude": -90.98561388888889,
+    "state": "MS",
+    "city": "GREENVILLE",
+    "county": "WASHINGTON",
+    "latitude": 33.48288111111111
+  },
+  "LIH": {
+    "name": "LIHUE",
+    "longitude": -159.33895772222223,
+    "state": "HI",
+    "city": "LIHUE",
+    "county": "KAUAI",
+    "latitude": 21.97598286111111
+  },
+  "FFO": {
+    "name": "WRIGHT-PATTERSON AFB",
+    "longitude": -84.04610283333334,
+    "state": "OH",
+    "city": "DAYTON",
+    "county": "GREENE",
+    "latitude": 39.825970527777784
+  },
+  "SBA": {
+    "name": "SANTA BARBARA MUNI",
+    "longitude": -119.8415,
+    "state": "CA",
+    "city": "SANTA BARBARA",
+    "county": "SANTA BARBARA",
+    "latitude": 34.42619444444444
+  },
+  "DKK": {
+    "name": "CHAUTAUQUA COUNTY/DUNKIRK",
+    "longitude": -79.27109744444445,
+    "state": "NY",
+    "city": "DUNKIRK",
+    "county": "CHAUTAUQUA",
+    "latitude": 42.493936
+  },
+  "DKX": {
+    "name": "KNOXVILLE DOWNTOWN ISLAND",
+    "longitude": -83.87366666666667,
+    "state": "TN",
+    "city": "KNOXVILLE",
+    "county": "KNOX",
+    "latitude": 35.96383333333333
+  },
+  "ZPH": {
+    "name": "ZEPHYRHILLS MUNI",
+    "longitude": -82.1559956388889,
+    "state": "FL",
+    "city": "ZEPHYRHILLS",
+    "county": "PASCO",
+    "latitude": 28.227991555555555
+  },
+  "DRM": {
+    "name": "DRUMMOND ISLAND",
+    "longitude": -83.74393416666666,
+    "state": "MI",
+    "city": "DRUMMOND ISLAND",
+    "county": "CHIPPEWA",
+    "latitude": 46.00931138888889
+  },
+  "MZJ": {
+    "name": "PINAL AIRPARK",
+    "longitude": -111.32533333333333,
+    "state": "AZ",
+    "city": "MARANA",
+    "county": "PINAL",
+    "latitude": 32.50983333333333
+  },
+  "RMY": {
+    "name": "BROOKS FIELD",
+    "longitude": -84.95544430555556,
+    "state": "MI",
+    "city": "MARSHALL",
+    "county": "CALHOUN",
+    "latitude": 42.25119316666667
+  },
+  "BUU": {
+    "name": "BURLINGTON MUNI",
+    "longitude": -88.30468252777777,
+    "state": "WI",
+    "city": "BURLINGTON",
+    "county": "RACINE",
+    "latitude": 42.690717111111105
+  },
+  "EDW": {
+    "name": "EDWARDS AFB",
+    "longitude": -117.88552852777778,
+    "state": "CA",
+    "city": "EDWARDS",
+    "county": "KERN",
+    "latitude": 34.908088388888885
+  },
+  "LGU": {
+    "name": "LOGAN-CACHE",
+    "longitude": -111.85160938888889,
+    "state": "UT",
+    "city": "LOGAN",
+    "county": "CACHE",
+    "latitude": 41.79128380555555
+  },
+  "SIK": {
+    "name": "SIKESTON MEMORIAL MUNI",
+    "longitude": -89.56175,
+    "state": "MO",
+    "city": "SIKESTON",
+    "county": "SCOTT",
+    "latitude": 36.89888888888889
+  },
+  "JOT": {
+    "name": "JOLIET RGNL",
+    "longitude": -88.17552441666668,
+    "state": "IL",
+    "city": "JOLIET",
+    "county": "WILL",
+    "latitude": 41.51765913888889
+  },
+  "LEX": {
+    "name": "BLUE GRASS",
+    "longitude": -84.60863888888888,
+    "state": "KY",
+    "city": "LEXINGTON",
+    "county": "FAYETTE",
+    "latitude": 38.03675
+  },
+  "FLG": {
+    "name": "FLAGSTAFF PULLIAM",
+    "longitude": -111.66925,
+    "state": "AZ",
+    "city": "FLAGSTAFF",
+    "county": "COCONINO",
+    "latitude": 35.14030555555556
+  },
+  "AVL": {
+    "name": "ASHEVILLE RGNL",
+    "longitude": -82.54272888888889,
+    "state": "NC",
+    "city": "ASHEVILLE",
+    "county": "BUNCOMBE",
+    "latitude": 35.43444444444444
+  },
+  "HQM": {
+    "name": "BOWERMAN",
+    "longitude": -123.93655555555556,
+    "state": "WA",
+    "city": "HOQUIAM",
+    "county": "GRAYS HARBOR",
+    "latitude": 46.97119444444445
+  },
+  "SMF": {
+    "arrivals": "48331",
+    "name": "SACRAMENTO INTL",
+    "longitude": -121.59077777777777,
+    "state": "CA",
+    "departures": "48379",
+    "city": "SACRAMENTO",
+    "county": "SACRAMENTO",
+    "latitude": 38.69544444444444
+  },
+  "ITO": {
+    "name": "HILO INTL",
+    "longitude": -155.0484701388889,
+    "state": "HI",
+    "city": "HILO",
+    "county": "HAWAII",
+    "latitude": 19.720263
+  },
+  "LBT": {
+    "name": "LUMBERTON RGNL",
+    "longitude": -79.05955555555555,
+    "state": "NC",
+    "city": "LUMBERTON",
+    "county": "ROBESON",
+    "latitude": 34.60980555555556
+  },
+  "STS": {
+    "name": "CHARLES M SCHULZ - SONOMA COUNTY",
+    "longitude": -122.81289888888888,
+    "state": "CA",
+    "city": "SANTA ROSA",
+    "county": "SONOMA",
+    "latitude": 38.50968066666667
+  },
+  "LMT": {
+    "name": "CRATER LAKE-KLAMATH RGNL",
+    "longitude": -121.73319444444445,
+    "state": "OR",
+    "city": "KLAMATH FALLS",
+    "county": "KLAMATH",
+    "latitude": 42.15613888888889
+  },
+  "SLK": {
+    "name": "ADIRONDACK RGNL",
+    "longitude": -74.20618069444444,
+    "state": "NY",
+    "city": "SARANAC LAKE",
+    "county": "FRANKLIN",
+    "latitude": 44.385308055555555
+  },
+  "DHN": {
+    "name": "DOTHAN RGNL",
+    "longitude": -85.44947222222223,
+    "state": "AL",
+    "city": "DOTHAN",
+    "county": "DALE",
+    "latitude": 31.32102777777778
+  },
+  "BTM": {
+    "name": "BERT MOONEY",
+    "longitude": -112.49746111111111,
+    "state": "MT",
+    "city": "BUTTE",
+    "county": "SILVER BOW",
+    "latitude": 45.954794444444445
+  },
+  "SGR": {
+    "name": "SUGAR LAND RGNL",
+    "longitude": -95.65652777777778,
+    "state": "TX",
+    "city": "HOUSTON",
+    "county": "FORT BEND",
+    "latitude": 29.62225
+  },
+  "LGB": {
+    "arrivals": "13224",
+    "name": "LONG BEACH /DAUGHERTY FIELD/",
+    "longitude": -118.15173266666667,
+    "state": "CA",
+    "departures": "13135",
+    "city": "LONG BEACH",
+    "county": "LOS ANGELES",
+    "latitude": 33.81775394444445
+  },
+  "RSW": {
+    "arrivals": "35558",
+    "name": "SOUTHWEST FLORIDA INTL",
+    "longitude": -81.75516666666667,
+    "state": "FL",
+    "departures": "35574",
+    "city": "FORT MYERS",
+    "county": "LEE",
+    "latitude": 26.53616666666667
+  },
+  "FAY": {
+    "name": "FAYETTEVILLE RGNL/GRANNIS FIELD",
+    "longitude": -78.88027777777778,
+    "state": "NC",
+    "city": "FAYETTEVILLE",
+    "county": "CUMBERLAND",
+    "latitude": 34.99122222222222
+  },
+  "BKX": {
+    "name": "BROOKINGS RGNL",
+    "longitude": -96.81891666666667,
+    "state": "SD",
+    "city": "BROOKINGS",
+    "county": "BROOKINGS",
+    "latitude": 44.30452777777778
+  },
+  "CCO": {
+    "name": "NEWNAN COWETA COUNTY",
+    "longitude": -84.76975541666667,
+    "state": "GA",
+    "city": "ATLANTA",
+    "county": "COWETA",
+    "latitude": 33.31156555555555
+  },
+  "SAD": {
+    "name": "SAFFORD RGNL",
+    "longitude": -109.63508333333334,
+    "state": "AZ",
+    "city": "SAFFORD",
+    "county": "GRAHAM",
+    "latitude": 32.85333333333333
+  },
+  "ELM": {
+    "name": "ELMIRA/CORNING RGNL",
+    "longitude": -76.89174566666668,
+    "state": "NY",
+    "city": "ELMIRA/CORNING",
+    "county": "CHEMUNG",
+    "latitude": 42.159856138888884
+  },
+  "VDF": {
+    "name": "TAMPA EXECUTIVE",
+    "longitude": -82.34527777777777,
+    "state": "FL",
+    "city": "TAMPA",
+    "county": "HILLSBOROUGH",
+    "latitude": 28.013972222222222
+  },
+  "MWC": {
+    "name": "LAWRENCE J TIMMERMAN",
+    "longitude": -88.03441666666666,
+    "state": "WI",
+    "city": "MILWAUKEE",
+    "county": "MILWAUKEE",
+    "latitude": 43.11038888888889
+  },
+  "SBM": {
+    "name": "SHEBOYGAN COUNTY MEMORIAL",
+    "longitude": -87.85172222222222,
+    "state": "WI",
+    "city": "SHEBOYGAN",
+    "county": "SHEBOYGAN",
+    "latitude": 43.769777777777776
+  },
+  "ACY": {
+    "name": "ATLANTIC CITY INTL",
+    "longitude": -74.57716666666666,
+    "state": "NJ",
+    "city": "ATLANTIC CITY",
+    "county": "ATLANTIC",
+    "latitude": 39.45758333333334
+  },
+  "LIT": {
+    "name": "BILL AND HILLARY CLINTON NATIONAL/ADAMS FI",
+    "longitude": -92.22477777777777,
+    "state": "AR",
+    "city": "LITTLE ROCK",
+    "county": "PULASKI",
+    "latitude": 34.72944444444445
+  },
+  "SPS": {
+    "name": "SHEPPARD AFB/WICHITA FALLS MUNI",
+    "longitude": -98.49190277777778,
+    "state": "TX",
+    "city": "WICHITA FALLS",
+    "county": "WICHITA",
+    "latitude": 33.98880277777778
+  },
+  "BTV": {
+    "name": "BURLINGTON INTL",
+    "longitude": -73.15327830555556,
+    "state": "VT",
+    "city": "BURLINGTON",
+    "county": "CHITTENDEN",
+    "latitude": 44.47195555555556
+  },
+  "PNS": {
+    "name": "PENSACOLA INTL",
+    "longitude": -87.18661222222222,
+    "state": "FL",
+    "city": "PENSACOLA",
+    "county": "ESCAMBIA",
+    "latitude": 30.473425555555554
+  },
+  "LFK": {
+    "name": "ANGELINA COUNTY",
+    "longitude": -94.75,
+    "state": "TX",
+    "city": "LUFKIN",
+    "county": "ANGELINA",
+    "latitude": 31.23402777777778
+  },
+  "FFT": {
+    "name": "CAPITAL CITY",
+    "longitude": -84.90674977777779,
+    "state": "KY",
+    "city": "FRANKFORT",
+    "county": "FRANKLIN",
+    "latitude": 38.181731694444444
+  },
+  "HZL": {
+    "name": "HAZLETON RGNL",
+    "longitude": -75.9948888888889,
+    "state": "PA",
+    "city": "HAZLETON",
+    "county": "LUZERNE",
+    "latitude": 40.98677777777778
+  },
+  "MGY": {
+    "name": "DAYTON-WRIGHT BROTHERS",
+    "longitude": -84.22486111111111,
+    "state": "OH",
+    "city": "DAYTON",
+    "county": "MONTGOMERY",
+    "latitude": 39.588972222222225
+  },
+  "FYV": {
+    "name": "DRAKE FIELD",
+    "longitude": -94.17005555555556,
+    "state": "AR",
+    "city": "FAYETTEVILLE",
+    "county": "WASHINGTON",
+    "latitude": 36.00508333333333
+  },
+  "EIL": {
+    "name": "EIELSON AFB",
+    "longitude": -147.10143888888888,
+    "state": "AK",
+    "city": "FAIRBANKS",
+    "county": "FAIRBANKS NORTH STAR",
+    "latitude": 64.66564444444445
+  },
+  "ARA": {
+    "name": "ACADIANA RGNL",
+    "longitude": -91.88389611111111,
+    "state": "LA",
+    "city": "NEW IBERIA",
+    "county": "IBERIA",
+    "latitude": 30.037758333333336
+  },
+  "ORF": {
+    "name": "NORFOLK INTL",
+    "longitude": -76.20122222222223,
+    "state": "VA",
+    "city": "NORFOLK",
+    "county": "NORFOLK",
+    "latitude": 36.89461111111111
+  },
+  "COF": {
+    "name": "PATRICK AFB",
+    "longitude": -80.60997947222222,
+    "state": "FL",
+    "city": "COCOA BEACH",
+    "county": "BREVARD",
+    "latitude": 28.235005666666666
+  },
+  "GTU": {
+    "name": "GEORGETOWN MUNI",
+    "longitude": -97.6793888888889,
+    "state": "TX",
+    "city": "GEORGETOWN",
+    "county": "WILLIAMSON",
+    "latitude": 30.678805555555556
+  },
+  "LHM": {
+    "name": "LINCOLN RGNL/KARL HARDER FIELD",
+    "longitude": -121.35133333333333,
+    "state": "CA",
+    "city": "LINCOLN",
+    "county": "PLACER",
+    "latitude": 38.909166666666664
+  },
+  "OQU": {
+    "name": "QUONSET STATE",
+    "longitude": -71.41213888888889,
+    "state": "RI",
+    "city": "NORTH KINGSTOWN",
+    "county": "WASHINGTON",
+    "latitude": 41.59713888888889
+  },
+  "MSL": {
+    "name": "NORTHWEST ALABAMA RGNL",
+    "longitude": -87.61022222222222,
+    "state": "AL",
+    "city": "MUSCLE SHOALS",
+    "county": "COLBERT",
+    "latitude": 34.745305555555554
+  },
+  "HOP": {
+    "name": "CAMPBELL AAF (FORT CAMPBELL)",
+    "longitude": -87.49237319444444,
+    "state": "KY",
+    "city": "FORT CAMPBELL/HOPKINSVILLE",
+    "county": "CHRISTIAN",
+    "latitude": 36.67257677777778
+  },
+  "BLI": {
+    "name": "BELLINGHAM INTL",
+    "longitude": -122.53752777777778,
+    "state": "WA",
+    "city": "BELLINGHAM",
+    "county": "WHATCOM",
+    "latitude": 48.79269444444444
+  },
+  "CNM": {
+    "name": "CAVERN CITY AIR TRML",
+    "longitude": -104.26336111111111,
+    "state": "NM",
+    "city": "CARLSBAD",
+    "county": "EDDY",
+    "latitude": 32.33744444444444
+  },
+  "EOK": {
+    "name": "KEOKUK MUNI",
+    "longitude": -91.42850111111112,
+    "state": "IA",
+    "city": "KEOKUK",
+    "county": "LEE",
+    "latitude": 40.45990777777778
+  },
+  "GRR": {
+    "name": "GERALD R FORD INTL",
+    "longitude": -85.52280555555555,
+    "state": "MI",
+    "city": "GRAND RAPIDS",
+    "county": "KENT",
+    "latitude": 42.880833333333335
+  },
+  "GCK": {
+    "name": "GARDEN CITY RGNL",
+    "longitude": -100.72441666666667,
+    "state": "KS",
+    "city": "GARDEN CITY",
+    "county": "FINNEY",
+    "latitude": 37.927527777777776
+  },
+  "CMH": {
+    "name": "PORT COLUMBUS INTL",
+    "longitude": -82.89216666666667,
+    "state": "OH",
+    "city": "COLUMBUS",
+    "county": "FRANKLIN",
+    "latitude": 39.996944444444445
+  },
+  "OLM": {
+    "name": "OLYMPIA RGNL",
+    "longitude": -122.90254472222223,
+    "state": "WA",
+    "city": "OLYMPIA",
+    "county": "THURSTON",
+    "latitude": 46.96940444444444
+  },
+  "EET": {
+    "name": "SHELBY COUNTY",
+    "longitude": -86.78322222222222,
+    "state": "AL",
+    "city": "ALABASTER",
+    "county": "SHELBY",
+    "latitude": 33.17777777777778
+  },
+  "RIW": {
+    "name": "RIVERTON RGNL",
+    "longitude": -108.45983333333334,
+    "state": "WY",
+    "city": "RIVERTON",
+    "county": "FREMONT",
+    "latitude": 43.064249999999994
+  },
+  "CTJ": {
+    "name": "WEST GEORGIA RGNL - O V GRAY FIELD",
+    "longitude": -85.1522641388889,
+    "state": "GA",
+    "city": "CARROLLTON",
+    "county": "CARROLL",
+    "latitude": 33.631696444444444
+  },
+  "BIS": {
+    "name": "BISMARCK MUNI",
+    "longitude": -100.74575,
+    "state": "ND",
+    "city": "BISMARCK",
+    "county": "BURLEIGH",
+    "latitude": 46.77272222222222
+  },
+  "IGM": {
+    "name": "KINGMAN",
+    "longitude": -113.93805555555556,
+    "state": "AZ",
+    "city": "KINGMAN",
+    "county": "MOHAVE",
+    "latitude": 35.25947222222222
+  },
+  "LHV": {
+    "name": "WILLIAM T PIPER MEMORIAL",
+    "longitude": -77.42230555555555,
+    "state": "PA",
+    "city": "LOCK HAVEN",
+    "county": "CLINTON",
+    "latitude": 41.135777777777776
+  },
+  "TRM": {
+    "name": "JACQUELINE COCHRAN RGNL",
+    "longitude": -116.15966666666667,
+    "state": "CA",
+    "city": "PALM SPRINGS",
+    "county": "RIVERSIDE",
+    "latitude": 33.626666666666665
+  },
+  "MMV": {
+    "name": "MC MINNVILLE MUNI",
+    "longitude": -123.1360681388889,
+    "state": "OR",
+    "city": "MC MINNVILLE",
+    "county": "YAMHILL",
+    "latitude": 45.19454594444444
+  },
+  "PIT": {
+    "arrivals": "61831",
+    "name": "PITTSBURGH INTL",
+    "longitude": -80.23269444444445,
+    "state": "PA",
+    "departures": "61848",
+    "city": "PITTSBURGH",
+    "county": "ALLEGHENY",
+    "latitude": 40.491416666666666
+  },
+  "MGW": {
+    "name": "MORGANTOWN MUNI-WALTER L BILL HART FLD",
+    "longitude": -79.91754697222223,
+    "state": "WV",
+    "city": "MORGANTOWN",
+    "county": "MONONGALIA",
+    "latitude": 39.64359541666666
+  },
+  "PNM": {
+    "name": "PRINCETON MUNI",
+    "longitude": -93.6082161111111,
+    "state": "MN",
+    "city": "PRINCETON",
+    "county": "MILLE LACS",
+    "latitude": 45.559867777777775
+  },
+  "HXD": {
+    "name": "HILTON HEAD",
+    "longitude": -80.69747222222223,
+    "state": "SC",
+    "city": "HILTON HEAD ISLAND",
+    "county": "BEAUFORT",
+    "latitude": 32.224361111111115
+  },
+  "BJI": {
+    "name": "BEMIDJI RGNL",
+    "longitude": -94.93472222222222,
+    "state": "MN",
+    "city": "BEMIDJI",
+    "county": "BELTRAMI",
+    "latitude": 47.51072222222222
+  },
+  "RIV": {
+    "name": "MARCH ARB",
+    "longitude": -117.25901472222222,
+    "state": "CA",
+    "city": "RIVERSIDE",
+    "county": "RIVERSIDE",
+    "latitude": 33.88194083333333
+  },
+  "STL": {
+    "arrivals": "86993",
+    "name": "LAMBERT-ST LOUIS INTL",
+    "longitude": -90.37002888888888,
+    "state": "MO",
+    "departures": "87225",
+    "city": "ST LOUIS",
+    "county": "ST LOUIS",
+    "latitude": 38.748697222222226
+  },
+  "GVQ": {
+    "name": "GENESEE COUNTY",
+    "longitude": -78.16966666666667,
+    "state": "NY",
+    "city": "BATAVIA",
+    "county": "GENESEE",
+    "latitude": 43.03175
+  },
+  "TCL": {
+    "name": "TUSCALOOSA RGNL",
+    "longitude": -87.6114015,
+    "state": "AL",
+    "city": "TUSCALOOSA",
+    "county": "TUSCALOOSA",
+    "latitude": 33.22062752777778
+  },
+  "NEL": {
+    "name": "LAKEHURST MAXFIELD FLD",
+    "longitude": -74.35137024999999,
+    "state": "NJ",
+    "city": "LAKEHURST",
+    "county": "OCEAN",
+    "latitude": 40.03578086111111
+  },
+  "REI": {
+    "name": "REDLANDS MUNI",
+    "longitude": -117.1463888888889,
+    "state": "CA",
+    "city": "REDLANDS",
+    "county": "SAN BERNARDINO",
+    "latitude": 34.08525
+  },
+  "PHF": {
+    "name": "NEWPORT NEWS/WILLIAMSBURG INTL",
+    "longitude": -76.49297222222222,
+    "state": "VA",
+    "city": "NEWPORT NEWS",
+    "county": "NEWPORT NEWS",
+    "latitude": 37.13188888888889
+  },
+  "SUS": {
+    "name": "SPIRIT OF ST LOUIS",
+    "longitude": -90.65205555555556,
+    "state": "MO",
+    "city": "ST LOUIS",
+    "county": "ST LOUIS",
+    "latitude": 38.66211111111111
+  },
+  "HBG": {
+    "name": "HATTIESBURG BOBBY L CHAIN MUNI",
+    "longitude": -89.25288888888889,
+    "state": "MS",
+    "city": "HATTIESBURG",
+    "county": "FORREST",
+    "latitude": 31.264944444444446
+  },
+  "ERV": {
+    "name": "KERRVILLE MUNI/LOUIS SCHREINER FIELD",
+    "longitude": -99.08547222222222,
+    "state": "TX",
+    "city": "KERRVILLE",
+    "county": "KERR",
+    "latitude": 29.976666666666667
+  },
+  "CLT": {
+    "arrivals": "257124",
+    "name": "CHARLOTTE/DOUGLAS INTL",
+    "longitude": -80.94906902777778,
+    "state": "NC",
+    "departures": "257299",
+    "city": "CHARLOTTE",
+    "county": "MECKLENBURG",
+    "latitude": 35.213740666666666
+  },
+  "LBF": {
+    "name": "NORTH PLATTE RGNL AIRPORT LEE BIRD FIELD",
+    "longitude": -100.68366666666667,
+    "state": "NE",
+    "city": "NORTH PLATTE",
+    "county": "LINCOLN",
+    "latitude": 41.126222222222225
+  },
+  "LEW": {
+    "name": "AUBURN/LEWISTON MUNI",
+    "longitude": -70.2835075,
+    "state": "ME",
+    "city": "AUBURN/LEWISTON",
+    "county": "ANDROSCOGGIN",
+    "latitude": 44.048472777777775
+  },
+  "EYW": {
+    "name": "KEY WEST INTL",
+    "longitude": -81.75955555555555,
+    "state": "FL",
+    "city": "KEY WEST",
+    "county": "MONROE",
+    "latitude": 24.55611111111111
+  },
+  "PIA": {
+    "name": "GENERAL DOWNING - PEORIA INTL",
+    "longitude": -89.69325,
+    "state": "IL",
+    "city": "PEORIA",
+    "county": "PEORIA",
+    "latitude": 40.66419444444444
+  },
+  "TZR": {
+    "name": "BOLTON FIELD",
+    "longitude": -83.13691666666668,
+    "state": "OH",
+    "city": "COLUMBUS",
+    "county": "FRANKLIN",
+    "latitude": 39.90116666666667
+  },
+  "UIN": {
+    "name": "QUINCY RGNL-BALDWIN FIELD",
+    "longitude": -91.19446336111112,
+    "state": "IL",
+    "city": "QUINCY",
+    "county": "ADAMS",
+    "latitude": 39.94301738888888
+  },
+  "MWH": {
+    "name": "GRANT CO INTL",
+    "longitude": -119.31913888888889,
+    "state": "WA",
+    "city": "MOSES LAKE",
+    "county": "GRANT",
+    "latitude": 47.20858333333334
+  },
+  "BAB": {
+    "name": "BEALE AFB",
+    "longitude": -121.43658502777778,
+    "state": "CA",
+    "city": "MARYSVILLE",
+    "county": "YUBA",
+    "latitude": 39.13610108333333
+  },
+  "SMX": {
+    "name": "SANTA MARIA PUB/CAPT G ALLAN HANCOCK FLD",
+    "longitude": -120.45807411111112,
+    "state": "CA",
+    "city": "SANTA MARIA",
+    "county": "SANTA BARBARA",
+    "latitude": 34.8999335
+  },
+  "ILN": {
+    "name": "WILMINGTON AIR PARK",
+    "longitude": -83.79211111111111,
+    "state": "OH",
+    "city": "WILMINGTON",
+    "county": "CLINTON",
+    "latitude": 39.42791666666666
+  },
+  "LCH": {
+    "name": "LAKE CHARLES RGNL",
+    "longitude": -93.22341666666667,
+    "state": "LA",
+    "city": "LAKE CHARLES",
+    "county": "CALCASIEU",
+    "latitude": 30.126083333333334
+  },
+  "RWI": {
+    "name": "ROCKY MOUNT-WILSON RGNL",
+    "longitude": -77.89193333333334,
+    "state": "NC",
+    "city": "ROCKY MOUNT",
+    "county": "NASH",
+    "latitude": 35.856252777777776
+  },
+  "GRI": {
+    "name": "CENTRAL NEBRASKA RGNL",
+    "longitude": -98.30963888888888,
+    "state": "NE",
+    "city": "GRAND ISLAND",
+    "county": "HALL",
+    "latitude": 40.9675425
+  },
+  "ACT": {
+    "name": "WACO RGNL",
+    "longitude": -97.23030555555556,
+    "state": "TX",
+    "city": "WACO",
+    "county": "MC LENNAN",
+    "latitude": 31.612194444444444
+  },
+  "TVI": {
+    "name": "THOMASVILLE RGNL",
+    "longitude": -83.88113888888888,
+    "state": "GA",
+    "city": "THOMASVILLE",
+    "county": "THOMAS",
+    "latitude": 30.901805555555555
+  },
+  "NGP": {
+    "name": "CORPUS CHRISTI NAS/TRUAX FIELD",
+    "longitude": -97.29037722222222,
+    "state": "TX",
+    "city": "CORPUS CHRISTI",
+    "county": "NUECES",
+    "latitude": 27.692700555555557
+  },
+  "SPG": {
+    "name": "ALBERT WHITTED",
+    "longitude": -82.62697222222222,
+    "state": "FL",
+    "city": "ST PETERSBURG",
+    "county": "PINELLAS",
+    "latitude": 27.76511111111111
+  },
+  "SAT": {
+    "arrivals": "52438",
+    "name": "SAN ANTONIO INTL",
+    "longitude": -98.46905705555555,
+    "state": "TX",
+    "departures": "52237",
+    "city": "SAN ANTONIO",
+    "county": "BEXAR",
+    "latitude": 29.533958000000002
+  },
+  "ARB": {
+    "name": "ANN ARBOR MUNI",
+    "longitude": -83.74560722222222,
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "county": "WASHTENAW",
+    "latitude": 42.22298361111111
+  },
+  "PSC": {
+    "name": "TRI-CITIES",
+    "longitude": -119.11902777777777,
+    "state": "WA",
+    "city": "PASCO",
+    "county": "FRANKLIN",
+    "latitude": 46.264694444444444
+  },
+  "MYF": {
+    "name": "MONTGOMERY FIELD",
+    "longitude": -117.13958333333333,
+    "state": "CA",
+    "city": "SAN DIEGO",
+    "county": "SAN DIEGO",
+    "latitude": 32.81572222222222
+  },
+  "MNM": {
+    "name": "MENOMINEE-MARINETTE TWIN COUNTY",
+    "longitude": -87.63854294444445,
+    "state": "MI",
+    "city": "MENOMINEE",
+    "county": "MENOMINEE",
+    "latitude": 45.126688055555555
+  },
+  "CRE": {
+    "name": "GRAND STRAND",
+    "longitude": -78.72394444444444,
+    "state": "SC",
+    "city": "NORTH MYRTLE BEACH",
+    "county": "HORRY",
+    "latitude": 33.811749999999996
+  },
+  "CGI": {
+    "name": "CAPE GIRARDEAU RGNL",
+    "longitude": -89.57074999999999,
+    "state": "MO",
+    "city": "CAPE GIRARDEAU",
+    "county": "SCOTT",
+    "latitude": 37.22530555555556
+  },
+  "FIT": {
+    "name": "FITCHBURG MUNI",
+    "longitude": -71.75897222222223,
+    "state": "MA",
+    "city": "FITCHBURG",
+    "county": "WORCESTER",
+    "latitude": 42.554111111111105
+  },
+  "NQI": {
+    "name": "KINGSVILLE NAS",
+    "longitude": -97.80828888888888,
+    "state": "TX",
+    "city": "KINGSVILLE",
+    "county": "KLEBERG",
+    "latitude": 27.504514722222222
+  },
+  "TUL": {
+    "name": "TULSA INTL",
+    "longitude": -95.88811111111112,
+    "state": "OK",
+    "city": "TULSA",
+    "county": "TULSA",
+    "latitude": 36.198388888888886
+  },
+  "GWO": {
+    "name": "GREENWOOD-LEFLORE",
+    "longitude": -90.08479877777778,
+    "state": "MS",
+    "city": "GREENWOOD",
+    "county": "CARROLL",
+    "latitude": 33.49429913888889
+  },
+  "JRA": {
+    "name": "WEST 30TH ST",
+    "longitude": -74.00708388888889,
+    "state": "NY",
+    "city": "NEW YORK",
+    "county": "NEW YORK",
+    "latitude": 40.75454583333333
+  },
+  "NBG": {
+    "name": "NEW ORLEANS NAS JRB/ALVIN CALLENDER FIELD",
+    "longitude": -90.02658908333333,
+    "state": "LA",
+    "city": "NEW ORLEANS",
+    "county": "JEFFERSON",
+    "latitude": 29.82721463888889
+  },
+  "SHR": {
+    "name": "SHERIDAN COUNTY",
+    "longitude": -106.98027777777779,
+    "state": "WY",
+    "city": "SHERIDAN",
+    "county": "SHERIDAN",
+    "latitude": 44.769194444444445
+  },
+  "MFD": {
+    "name": "MANSFIELD LAHM RGNL",
+    "longitude": -82.51663888888889,
+    "state": "OH",
+    "city": "MANSFIELD",
+    "county": "RICHLAND",
+    "latitude": 40.82141666666667
+  },
+  "BYS": {
+    "name": "BICYCLE LAKE AAF",
+    "longitude": -116.63002944444443,
+    "state": "CA",
+    "city": "FORT IRWIN/BARSTOW",
+    "county": "SAN BERNARDINO",
+    "latitude": 35.28053027777778
+  },
+  "HRO": {
+    "name": "BOONE COUNTY",
+    "longitude": -93.1547288888889,
+    "state": "AR",
+    "city": "HARRISON",
+    "county": "BOONE",
+    "latitude": 36.261520555555556
+  },
+  "CLM": {
+    "name": "WILLIAM R FAIRCHILD INTL",
+    "longitude": -123.49969444444444,
+    "state": "WA",
+    "city": "PORT ANGELES",
+    "county": "CLALLAM",
+    "latitude": 48.120194444444444
+  },
+  "MIV": {
+    "name": "MILLVILLE MUNI",
+    "longitude": -75.07222222222222,
+    "state": "NJ",
+    "city": "MILLVILLE",
+    "county": "CUMBERLAND",
+    "latitude": 39.367805555555556
+  },
+  "DET": {
+    "name": "COLEMAN A YOUNG MUNI",
+    "longitude": -83.0101821388889,
+    "state": "MI",
+    "city": "DETROIT",
+    "county": "WAYNE",
+    "latitude": 42.40932708333333
+  },
+  "HNL": {
+    "arrivals": "87047",
+    "name": "HONOLULU INTL",
+    "longitude": -157.92026313888888,
+    "state": "HI",
+    "departures": "90406",
+    "city": "HONOLULU",
+    "county": "HONOLULU",
+    "latitude": 21.3178275
+  },
+  "PUW": {
+    "name": "PULLMAN/MOSCOW RGNL",
+    "longitude": -117.10958333333333,
+    "state": "WA",
+    "city": "PULLMAN/MOSCOW",
+    "county": "WHITMAN",
+    "latitude": 46.74386111111111
+  },
+  "POC": {
+    "name": "BRACKETT FIELD",
+    "longitude": -117.78177777777778,
+    "state": "CA",
+    "city": "LA VERNE",
+    "county": "LOS ANGELES",
+    "latitude": 34.09166666666667
+  },
+  "GEG": {
+    "name": "SPOKANE INTL",
+    "longitude": -117.53522222222222,
+    "state": "WA",
+    "city": "SPOKANE",
+    "county": "SPOKANE",
+    "latitude": 47.61902777777778
+  },
+  "MIB": {
+    "name": "MINOT AFB",
+    "longitude": -101.35804166666667,
+    "state": "ND",
+    "city": "MINOT",
+    "county": "WARD",
+    "latitude": 48.41576666666666
+  },
+  "VSF": {
+    "name": "HARTNESS STATE (SPRINGFIELD)",
+    "longitude": -72.51727777777778,
+    "state": "VT",
+    "city": "SPRINGFIELD",
+    "county": "WINDSOR",
+    "latitude": 43.343722222222226
+  },
+  "JAC": {
+    "name": "JACKSON HOLE",
+    "longitude": -110.73775,
+    "state": "WY",
+    "city": "JACKSON",
+    "county": "TETON",
+    "latitude": 43.60733333333334
+  },
+  "LNR": {
+    "name": "TRI-COUNTY RGNL",
+    "longitude": -90.17983333333333,
+    "state": "WI",
+    "city": "LONE ROCK",
+    "county": "SAUK",
+    "latitude": 43.21186111111111
+  },
+  "HIO": {
+    "name": "PORTLAND-HILLSBORO",
+    "longitude": -122.95072125,
+    "state": "OR",
+    "city": "PORTLAND",
+    "county": "WASHINGTON",
+    "latitude": 45.54212177777777
+  },
+  "TXK": {
+    "name": "TEXARKANA RGNL-WEBB FIELD",
+    "longitude": -93.99102777777777,
+    "state": "AR",
+    "city": "TEXARKANA",
+    "county": "MILLER",
+    "latitude": 33.453722222222225
+  },
+  "FZG": {
+    "name": "FITZGERALD MUNI",
+    "longitude": -83.27090363888888,
+    "state": "GA",
+    "city": "FITZGERALD",
+    "county": "BEN HILL",
+    "latitude": 31.68390461111111
+  },
+  "GUP": {
+    "name": "GALLUP MUNI",
+    "longitude": -108.78930944444444,
+    "state": "NM",
+    "city": "GALLUP",
+    "county": "MC KINLEY",
+    "latitude": 35.51105833333333
+  },
+  "RAC": {
+    "name": "JOHN H BATTEN",
+    "longitude": -87.81391666666666,
+    "state": "WI",
+    "city": "RACINE",
+    "county": "RACINE",
+    "latitude": 42.76116666666667
+  },
+  "ILG": {
+    "name": "NEW CASTLE",
+    "longitude": -75.60663888888888,
+    "state": "DE",
+    "city": "WILMINGTON",
+    "county": "NEW CASTLE",
+    "latitude": 39.67872222222222
+  },
+  "BVY": {
+    "name": "BEVERLY MUNI",
+    "longitude": -70.91614441666667,
+    "state": "MA",
+    "city": "BEVERLY",
+    "county": "ESSEX",
+    "latitude": 42.58414102777778
+  },
+  "SCK": {
+    "name": "STOCKTON METROPOLITAN",
+    "longitude": -121.23830555555556,
+    "state": "CA",
+    "city": "STOCKTON",
+    "county": "SAN JOAQUIN",
+    "latitude": 37.89416666666666
+  },
+  "SUN": {
+    "name": "FRIEDMAN MEMORIAL",
+    "longitude": -114.29555833333333,
+    "state": "ID",
+    "city": "HAILEY",
+    "county": "BLAINE",
+    "latitude": 43.50378055555556
+  },
+  "RYY": {
+    "name": "COBB COUNTY INTL-MCCOLLUM FIELD",
+    "longitude": -84.59702777777777,
+    "state": "GA",
+    "city": "ATLANTA",
+    "county": "COBB",
+    "latitude": 34.01316666666666
+  },
+  "HOT": {
+    "name": "MEMORIAL FIELD",
+    "longitude": -93.09622222222222,
+    "state": "AR",
+    "city": "HOT SPRINGS",
+    "county": "GARLAND",
+    "latitude": 34.47802777777778
+  },
+  "EKY": {
+    "name": "BESSEMER",
+    "longitude": -86.92630555555556,
+    "state": "AL",
+    "city": "BESSEMER",
+    "county": "JEFFERSON",
+    "latitude": 33.31261111111111
+  },
+  "SCH": {
+    "name": "SCHENECTADY COUNTY",
+    "longitude": -73.92897222222223,
+    "state": "NY",
+    "city": "SCHENECTADY",
+    "county": "SCHENECTADY",
+    "latitude": 42.852555555555554
+  },
+  "TKA": {
+    "name": "TALKEETNA",
+    "longitude": -150.09272222222222,
+    "state": "AK",
+    "city": "TALKEETNA",
+    "county": "MATANUSKA-SUSITNA",
+    "latitude": 62.321361111111116
+  },
+  "RKP": {
+    "name": "ARANSAS CO",
+    "longitude": -97.04369444444444,
+    "state": "TX",
+    "city": "ROCKPORT",
+    "county": "ARANSAS",
+    "latitude": 28.086222222222222
+  },
+  "OTH": {
+    "name": "SOUTHWEST OREGON RGNL",
+    "longitude": -124.24702777777777,
+    "state": "OR",
+    "city": "NORTH BEND",
+    "county": "COOS",
+    "latitude": 43.41694444444444
+  },
+  "CKV": {
+    "name": "OUTLAW FIELD",
+    "longitude": -87.41494444444444,
+    "state": "TN",
+    "city": "CLARKSVILLE",
+    "county": "MONTGOMERY",
+    "latitude": 36.62186111111111
+  },
+  "PWK": {
+    "name": "CHICAGO EXECUTIVE",
+    "longitude": -87.90152777777779,
+    "state": "IL",
+    "city": "CHICAGO/PROSPECT HEIGHTS/WHEELING",
+    "county": "COOK",
+    "latitude": 42.11427777777778
+  },
+  "LBL": {
+    "name": "LIBERAL MID-AMERICA RGNL",
+    "longitude": -100.95997222222222,
+    "state": "KS",
+    "city": "LIBERAL",
+    "county": "SEWARD",
+    "latitude": 37.04391666666667
+  },
+  "ISP": {
+    "arrivals": "6886",
+    "name": "LONG ISLAND MAC ARTHUR",
+    "longitude": -73.10022222222221,
+    "state": "NY",
+    "departures": "6956",
+    "city": "NEW YORK",
+    "county": "SUFFOLK",
+    "latitude": 40.795249999999996
+  },
+  "JEF": {
+    "name": "JEFFERSON CITY MEMORIAL",
+    "longitude": -92.15614388888889,
+    "state": "MO",
+    "city": "JEFFERSON CITY",
+    "county": "CALLAWAY",
+    "latitude": 38.59117916666667
+  },
+  "FAF": {
+    "name": "FELKER AAF",
+    "longitude": -76.60893033333333,
+    "state": "VA",
+    "city": "FORT EUSTIS",
+    "county": "NEWPORT NEWS",
+    "latitude": 37.13260102777778
+  },
+  "SBD": {
+    "name": "SAN BERNARDINO INTL",
+    "longitude": -117.23488888888889,
+    "state": "CA",
+    "city": "SAN BERNARDINO",
+    "county": "SAN BERNARDINO",
+    "latitude": 34.09536111111111
+  },
+  "BFD": {
+    "name": "BRADFORD RGNL",
+    "longitude": -78.63997222222223,
+    "state": "PA",
+    "city": "BRADFORD",
+    "county": "MC KEAN",
+    "latitude": 41.80294444444444
+  },
+  "HLR": {
+    "name": "HOOD AAF",
+    "longitude": -97.71448416666667,
+    "state": "TX",
+    "city": "FORT HOOD(KILLEEN)",
+    "county": "BELL",
+    "latitude": 31.138740555555554
+  },
+  "ILM": {
+    "name": "WILMINGTON INTL",
+    "longitude": -77.9028888888889,
+    "state": "NC",
+    "city": "WILMINGTON",
+    "county": "NEW HANOVER",
+    "latitude": 34.271138888888885
+  },
+  "DSM": {
+    "name": "DES MOINES INTL",
+    "longitude": -93.66308333333333,
+    "state": "IA",
+    "city": "DES MOINES",
+    "county": "POLK",
+    "latitude": 41.53397222222222
+  },
+  "FCM": {
+    "name": "FLYING CLOUD",
+    "longitude": -93.45858333333334,
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "county": "HENNEPIN",
+    "latitude": 44.8275
+  },
+  "SZL": {
+    "name": "WHITEMAN AFB",
+    "longitude": -93.54786388888888,
+    "state": "MO",
+    "city": "KNOB NOSTER",
+    "county": "JOHNSON",
+    "latitude": 38.73030555555556
+  },
+  "BKL": {
+    "name": "BURKE LAKEFRONT",
+    "longitude": -81.68263888888889,
+    "state": "OH",
+    "city": "CLEVELAND",
+    "county": "CUYAHOGA",
+    "latitude": 41.51786111111111
+  },
+  "PBF": {
+    "name": "GRIDER FIELD",
+    "longitude": -91.93560422222222,
+    "state": "AR",
+    "city": "PINE BLUFF",
+    "county": "JEFFERSON",
+    "latitude": 34.17451305555555
+  },
+  "BWD": {
+    "name": "BROWNWOOD RGNL",
+    "longitude": -98.9565,
+    "state": "TX",
+    "city": "BROWNWOOD",
+    "county": "BROWN",
+    "latitude": 31.79361111111111
+  },
+  "MCE": {
+    "name": "MERCED RGNL/MACREADY FIELD",
+    "longitude": -120.51391666666666,
+    "state": "CA",
+    "city": "MERCED",
+    "county": "MERCED",
+    "latitude": 37.284749999999995
+  },
+  "FTY": {
+    "name": "FULTON COUNTY AIRPORT-BROWN FIELD",
+    "longitude": -84.521366,
+    "state": "GA",
+    "city": "ATLANTA",
+    "county": "FULTON",
+    "latitude": 33.77912638888889
+  },
+  "VPC": {
+    "name": "CARTERSVILLE",
+    "longitude": -84.84870669444445,
+    "state": "GA",
+    "city": "CARTERSVILLE",
+    "county": "BARTOW",
+    "latitude": 34.12314747222222
+  },
+  "LPC": {
+    "name": "LOMPOC",
+    "longitude": -120.46750277777778,
+    "state": "CA",
+    "city": "LOMPOC",
+    "county": "SANTA BARBARA",
+    "latitude": 34.665619444444445
+  },
+  "PHK": {
+    "name": "PALM BEACH CO GLADES",
+    "longitude": -80.69336111111112,
+    "state": "FL",
+    "city": "PAHOKEE",
+    "county": "PALM BEACH",
+    "latitude": 26.78502777777778
+  },
+  "XNA": {
+    "name": "NORTHWEST ARKANSAS RGNL",
+    "longitude": -94.30776644444444,
+    "state": "AR",
+    "city": "FAYETTEVILLE/SPRINGDALE/",
+    "county": "BENTON",
+    "latitude": 36.281579388888886
+  },
+  "MCO": {
+    "arrivals": "148446",
+    "name": "ORLANDO INTL",
+    "longitude": -81.309,
+    "state": "FL",
+    "departures": "148884",
+    "city": "ORLANDO",
+    "county": "ORANGE",
+    "latitude": 28.42938888888889
+  },
+  "DFW": {
+    "arrivals": "335903",
+    "name": "DALLAS-FORT WORTH INTL",
+    "longitude": -97.03769494444444,
+    "state": "TX",
+    "departures": "335820",
+    "city": "DALLAS-FORT WORTH",
+    "county": "TARRANT",
+    "latitude": 32.89723155555556
+  },
+  "EAT": {
+    "name": "PANGBORN MEMORIAL",
+    "longitude": -120.20573741666666,
+    "state": "WA",
+    "city": "WENATCHEE",
+    "county": "DOUGLAS",
+    "latitude": 47.39808925
+  },
+  "VNY": {
+    "arrivals": "7811",
+    "name": "VAN NUYS",
+    "longitude": -118.48997222222222,
+    "state": "CA",
+    "departures": "7647",
+    "city": "VAN NUYS",
+    "county": "LOS ANGELES",
+    "latitude": 34.20980555555556
+  },
+  "DNV": {
+    "name": "VERMILION REGIONAL",
+    "longitude": -87.59552777777778,
+    "state": "IL",
+    "city": "DANVILLE",
+    "county": "VERMILION",
+    "latitude": 40.19969444444444
+  },
+  "MQI": {
+    "name": "DARE COUNTY RGNL",
+    "longitude": -75.69553575,
+    "state": "NC",
+    "city": "MANTEO",
+    "county": "DARE",
+    "latitude": 35.918982666666665
+  },
+  "DPA": {
+    "name": "DUPAGE",
+    "longitude": -88.248,
+    "state": "IL",
+    "city": "CHICAGO/WEST CHICAGO",
+    "county": "DU PAGE",
+    "latitude": 41.90705555555555
+  },
+  "HGR": {
+    "name": "HAGERSTOWN RGNL-RICHARD A HENSON FLD",
+    "longitude": -77.7265,
+    "state": "MD",
+    "city": "HAGERSTOWN",
+    "county": "WASHINGTON",
+    "latitude": 39.7085
+  },
+  "TPL": {
+    "name": "DRAUGHON-MILLER CENTRAL TEXAS RGNL",
+    "longitude": -97.40766294444445,
+    "state": "TX",
+    "city": "TEMPLE",
+    "county": "BELL",
+    "latitude": 31.151900416666667
+  },
+  "MER": {
+    "name": "CASTLE",
+    "longitude": -120.56819444444444,
+    "state": "CA",
+    "city": "ATWATER",
+    "county": "MERCED",
+    "latitude": 37.380472222222224
+  },
+  "DMA": {
+    "name": "DAVIS MONTHAN AFB",
+    "longitude": -110.88316969444443,
+    "state": "AZ",
+    "city": "TUCSON",
+    "county": "PIMA",
+    "latitude": 32.16636441666667
+  },
+  "GTR": {
+    "name": "GOLDEN TRIANGLE RGNL",
+    "longitude": -88.59138888888889,
+    "state": "MS",
+    "city": "COLUMBUS/W POINT/STARKVILLE",
+    "county": "LOWNDES",
+    "latitude": 33.448277777777776
+  },
+  "SLE": {
+    "name": "MCNARY FLD",
+    "longitude": -123.0025,
+    "state": "OR",
+    "city": "SALEM",
+    "county": "MARION",
+    "latitude": 44.909527777777775
+  },
+  "MKC": {
+    "name": "CHARLES B WHEELER DOWNTOWN",
+    "longitude": -94.59283333333333,
+    "state": "MO",
+    "city": "KANSAS CITY",
+    "county": "CLAY",
+    "latitude": 39.12294444444444
+  },
+  "CKF": {
+    "name": "CRISP COUNTY-CORDELE",
+    "longitude": -83.77391666666666,
+    "state": "GA",
+    "city": "CORDELE",
+    "county": "CRISP",
+    "latitude": 31.988833333333336
+  },
+  "NQA": {
+    "name": "MILLINGTON RGNL JETPORT",
+    "longitude": -89.87041666666666,
+    "state": "TN",
+    "city": "MILLINGTON",
+    "county": "SHELBY",
+    "latitude": 35.35663888888889
+  },
+  "BOI": {
+    "name": "BOISE AIR TERMINAL/GOWEN FLD",
+    "longitude": -116.22286111111111,
+    "state": "ID",
+    "city": "BOISE",
+    "county": "ADA",
+    "latitude": 43.56436111111111
+  },
+  "PIM": {
+    "name": "HARRIS COUNTY",
+    "longitude": -84.88244444444443,
+    "state": "GA",
+    "city": "PINE MOUNTAIN",
+    "county": "HARRIS",
+    "latitude": 32.840694444444445
+  },
+  "JHW": {
+    "name": "CHAUTAUQUA COUNTY/JAMESTOWN",
+    "longitude": -79.25802777777778,
+    "state": "NY",
+    "city": "JAMESTOWN",
+    "county": "CHAUTAUQUA",
+    "latitude": 42.15338888888889
+  },
+  "ERI": {
+    "name": "ERIE INTL/TOM RIDGE FIELD",
+    "longitude": -80.17394444444444,
+    "state": "PA",
+    "city": "ERIE",
+    "county": "ERIE",
+    "latitude": 42.083083333333335
+  },
+  "PYM": {
+    "name": "PLYMOUTH MUNI",
+    "longitude": -70.72877777777778,
+    "state": "MA",
+    "city": "PLYMOUTH",
+    "county": "PLYMOUTH",
+    "latitude": 41.90902777777777
+  },
+  "ALO": {
+    "name": "WATERLOO RGNL",
+    "longitude": -92.40033333333334,
+    "state": "IA",
+    "city": "WATERLOO",
+    "county": "BLACK HAWK",
+    "latitude": 42.55708333333333
+  },
+  "HON": {
+    "name": "HURON RGNL",
+    "longitude": -98.22855555555556,
+    "state": "SD",
+    "city": "HURON",
+    "county": "BEADLE",
+    "latitude": 44.385194444444444
+  },
+  "DNL": {
+    "name": "DANIEL FIELD",
+    "longitude": -82.0393888888889,
+    "state": "GA",
+    "city": "AUGUSTA",
+    "county": "RICHMOND",
+    "latitude": 33.46658333333334
+  },
+  "SPB": {
+    "name": "SCAPPOOSE INDUSTRIAL AIRPARK",
+    "longitude": -122.86183333333332,
+    "state": "OR",
+    "city": "SCAPPOOSE",
+    "county": "COLUMBIA",
+    "latitude": 45.771027777777775
+  },
+  "COI": {
+    "name": "MERRITT ISLAND",
+    "longitude": -80.68547222222223,
+    "state": "FL",
+    "city": "MERRITT ISLAND",
+    "county": "BREVARD",
+    "latitude": 28.34161111111111
+  },
+  "ROC": {
+    "name": "GREATER ROCHESTER INTL",
+    "longitude": -77.67186927777779,
+    "state": "NY",
+    "city": "ROCHESTER",
+    "county": "MONROE",
+    "latitude": 43.11914211111111
+  },
+  "FSM": {
+    "name": "FORT SMITH RGNL",
+    "longitude": -94.36744444444444,
+    "state": "AR",
+    "city": "FORT SMITH",
+    "county": "SEBASTIAN",
+    "latitude": 35.33658333333334
+  },
+  "HOB": {
+    "name": "LEA COUNTY RGNL",
+    "longitude": -103.21733333333333,
+    "state": "NM",
+    "city": "HOBBS",
+    "county": "LEA",
+    "latitude": 32.6875
+  },
+  "RIR": {
+    "name": "FLABOB",
+    "longitude": -117.40990972222222,
+    "state": "CA",
+    "city": "RIVERSIDE/RUBIDOUX/",
+    "county": "RIVERSIDE",
+    "latitude": 33.9887875
+  },
+  "FAI": {
+    "name": "FAIRBANKS INTL",
+    "longitude": -147.85644444444443,
+    "state": "AK",
+    "city": "FAIRBANKS",
+    "county": "FAIRBANKS NORTH STAR",
+    "latitude": 64.81511111111111
+  },
+  "AST": {
+    "name": "ASTORIA RGNL",
+    "longitude": -123.8786111111111,
+    "state": "OR",
+    "city": "ASTORIA",
+    "county": "CLATSOP",
+    "latitude": 46.15797222222222
+  },
+  "CGC": {
+    "name": "CRYSTAL RIVER-CAPTAIN TOM DAVIS FLD",
+    "longitude": -82.57411111111111,
+    "state": "FL",
+    "city": "CRYSTAL RIVER",
+    "county": "CITRUS",
+    "latitude": 28.867611111111113
+  },
+  "BID": {
+    "name": "BLOCK ISLAND STATE",
+    "longitude": -71.57783333333333,
+    "state": "RI",
+    "city": "BLOCK ISLAND",
+    "county": "WASHINGTON",
+    "latitude": 41.16811111111111
+  },
+  "HQU": {
+    "name": "THOMSON-MCDUFFIE COUNTY",
+    "longitude": -82.51694444444445,
+    "state": "GA",
+    "city": "THOMSON",
+    "county": "MC DUFFIE",
+    "latitude": 33.52972222222222
+  },
+  "EQY": {
+    "name": "CHARLOTTE-MONROE EXECUTIVE",
+    "longitude": -80.62205102777777,
+    "state": "NC",
+    "city": "MONROE",
+    "county": "UNION",
+    "latitude": 35.017419833333335
+  },
+  "EEN": {
+    "name": "DILLANT-HOPKINS",
+    "longitude": -72.27077777777778,
+    "state": "NH",
+    "city": "KEENE",
+    "county": "CHESHIRE",
+    "latitude": 42.89838888888889
+  },
+  "PHD": {
+    "name": "HARRY CLEVER FIELD",
+    "longitude": -81.41994444444445,
+    "state": "OH",
+    "city": "NEW PHILADELPHIA",
+    "county": "TUSCARAWAS",
+    "latitude": 40.47016666666667
+  },
+  "EWR": {
+    "arrivals": "199480",
+    "name": "NEWARK LIBERTY INTL",
+    "longitude": -74.16868677777778,
+    "state": "NJ",
+    "departures": "200800",
+    "city": "NEWARK",
+    "county": "ESSEX",
+    "latitude": 40.69247983333333
+  },
+  "BLF": {
+    "name": "MERCER COUNTY",
+    "longitude": -81.20751886111111,
+    "state": "WV",
+    "city": "BLUEFIELD",
+    "county": "MERCER",
+    "latitude": 37.29594836111111
+  },
+  "GGE": {
+    "name": "GEORGETOWN COUNTY",
+    "longitude": -79.32030555555555,
+    "state": "SC",
+    "city": "GEORGETOWN",
+    "county": "GEORGETOWN",
+    "latitude": 33.311388888888885
+  },
+  "STE": {
+    "name": "STEVENS POINT MUNI",
+    "longitude": -89.53028444444445,
+    "state": "WI",
+    "city": "STEVENS POINT",
+    "county": "PORTAGE",
+    "latitude": 44.545135555555554
+  },
+  "RNO": {
+    "name": "RENO/TAHOE INTL",
+    "longitude": -119.76811111111111,
+    "state": "NV",
+    "city": "RENO",
+    "county": "WASHOE",
+    "latitude": 39.49911111111111
+  },
+  "FKL": {
+    "name": "VENANGO RGNL",
+    "longitude": -79.86063888888889,
+    "state": "PA",
+    "city": "FRANKLIN",
+    "county": "VENANGO",
+    "latitude": 41.37741666666667
+  },
+  "OGS": {
+    "name": "OGDENSBURG INTL",
+    "longitude": -75.4655,
+    "state": "NY",
+    "city": "OGDENSBURG",
+    "county": "ST LAWRENCE",
+    "latitude": 44.68186111111111
+  },
+  "IPT": {
+    "name": "WILLIAMSPORT RGNL",
+    "longitude": -76.92180555555557,
+    "state": "PA",
+    "city": "WILLIAMSPORT",
+    "county": "LYCOMING",
+    "latitude": 41.24166666666667
+  },
+  "IAB": {
+    "name": "MC CONNELL AFB",
+    "longitude": -97.26762916666667,
+    "state": "KS",
+    "city": "WICHITA",
+    "county": "SEDGWICK",
+    "latitude": 37.62311597222222
+  },
+  "POF": {
+    "name": "POPLAR BLUFF MUNI",
+    "longitude": -90.3248611111111,
+    "state": "MO",
+    "city": "POPLAR BLUFF",
+    "county": "BUTLER",
+    "latitude": 36.773944444444446
+  },
+  "MGR": {
+    "name": "MOULTRIE MUNI",
+    "longitude": -83.80324999999999,
+    "state": "GA",
+    "city": "MOULTRIE",
+    "county": "COLQUITT",
+    "latitude": 31.084916666666665
+  },
+  "SYR": {
+    "name": "SYRACUSE HANCOCK INTL",
+    "longitude": -76.10630555555555,
+    "state": "NY",
+    "city": "SYRACUSE",
+    "county": "ONONDAGA",
+    "latitude": 43.11119444444444
+  },
+  "BRD": {
+    "name": "BRAINERD LAKES RGNL",
+    "longitude": -94.13380555555557,
+    "state": "MN",
+    "city": "BRAINERD",
+    "county": "CROW WING",
+    "latitude": 46.404222222222224
+  },
+  "ESC": {
+    "name": "DELTA COUNTY",
+    "longitude": -87.09372222222221,
+    "state": "MI",
+    "city": "ESCANABA",
+    "county": "DELTA",
+    "latitude": 45.72266666666667
+  },
+  "JVL": {
+    "name": "SOUTHERN WISCONSIN RGNL",
+    "longitude": -89.04155555555555,
+    "state": "WI",
+    "city": "JANESVILLE",
+    "county": "ROCK",
+    "latitude": 42.62025
+  },
+  "NZY": {
+    "name": "NORTH ISLAND NAS /HALSEY FIELD/",
+    "longitude": -117.21311,
+    "state": "CA",
+    "city": "SAN DIEGO",
+    "county": "SAN DIEGO",
+    "latitude": 32.69819611111111
+  },
+  "BDL": {
+    "arrivals": "37872",
+    "name": "BRADLEY INTL",
+    "longitude": -72.68337127777778,
+    "state": "CT",
+    "departures": "38024",
+    "city": "WINDSOR LOCKS",
+    "county": "HARTFORD",
+    "latitude": 41.93914511111111
+  },
+  "WBW": {
+    "name": "WILKES-BARRE WYOMING VALLEY",
+    "longitude": -75.85224052777777,
+    "state": "PA",
+    "city": "WILKES-BARRE",
+    "county": "LUZERNE",
+    "latitude": 41.29730744444444
+  },
+  "OAR": {
+    "name": "MARINA MUNI",
+    "longitude": -121.76166666666667,
+    "state": "CA",
+    "city": "MARINA",
+    "county": "MONTEREY",
+    "latitude": 36.681527777777774
+  },
+  "SPW": {
+    "name": "SPENCER MUNI",
+    "longitude": -95.20280555555556,
+    "state": "IA",
+    "city": "SPENCER",
+    "county": "CLAY",
+    "latitude": 43.165638888888886
+  },
+  "CVS": {
+    "name": "CANNON AFB",
+    "longitude": -103.32214952777777,
+    "state": "NM",
+    "city": "CLOVIS",
+    "county": "CURRY",
+    "latitude": 34.38277455555556
+  },
+  "BAD": {
+    "name": "BARKSDALE AFB",
+    "longitude": -93.66262777777779,
+    "state": "LA",
+    "city": "BOSSIER CITY",
+    "county": "BOSSIER",
+    "latitude": 32.501933333333334
+  },
+  "TYR": {
+    "name": "TYLER POUNDS RGNL",
+    "longitude": -95.4026908888889,
+    "state": "TX",
+    "city": "TYLER",
+    "county": "SMITH",
+    "latitude": 32.35383105555556
+  },
+  "OFF": {
+    "name": "OFFUTT AFB",
+    "longitude": -95.90851944444445,
+    "state": "NE",
+    "city": "OMAHA",
+    "county": "SARPY",
+    "latitude": 41.11932777777778
+  },
+  "IOW": {
+    "name": "IOWA CITY MUNI",
+    "longitude": -91.54813888888889,
+    "state": "IA",
+    "city": "IOWA CITY",
+    "county": "JOHNSON",
+    "latitude": 41.63977777777778
+  },
+  "HRT": {
+    "name": "HURLBURT FIELD",
+    "longitude": -86.68880111111112,
+    "state": "FL",
+    "city": "MARY ESTHER",
+    "county": "OKALOOSA",
+    "latitude": 30.428918055555556
+  },
+  "BUR": {
+    "arrivals": "30045",
+    "name": "BOB HOPE",
+    "longitude": -118.35866666666666,
+    "state": "CA",
+    "departures": "30164",
+    "city": "BURBANK",
+    "county": "LOS ANGELES",
+    "latitude": 34.200694444444444
+  },
+  "TCM": {
+    "name": "MCCHORD FIELD (JOINT BASE LEWIS-MCCHORD)",
+    "longitude": -122.47647500000001,
+    "state": "WA",
+    "city": "TACOMA",
+    "county": "PIERCE",
+    "latitude": 47.137677777777775
+  },
+  "SLN": {
+    "name": "SALINA RGNL",
+    "longitude": -97.65222222222222,
+    "state": "KS",
+    "city": "SALINA",
+    "county": "SALINE",
+    "latitude": 38.79061111111111
+  },
+  "WYS": {
+    "name": "YELLOWSTONE",
+    "longitude": -111.11763888888888,
+    "state": "MT",
+    "city": "WEST YELLOWSTONE",
+    "county": "GALLATIN",
+    "latitude": 44.68838888888889
+  },
+  "FAT": {
+    "name": "FRESNO YOSEMITE INTL",
+    "longitude": -119.71883333333334,
+    "state": "CA",
+    "city": "FRESNO",
+    "county": "FRESNO",
+    "latitude": 36.776555555555554
+  },
+  "SNA": {
+    "arrivals": "49617",
+    "name": "JOHN WAYNE AIRPORT-ORANGE COUNTY",
+    "longitude": -117.86822222222222,
+    "state": "CA",
+    "departures": "49491",
+    "city": "SANTA ANA",
+    "county": "ORANGE",
+    "latitude": 33.675666666666665
+  },
+  "CKB": {
+    "name": "NORTH CENTRAL WEST VIRGINIA",
+    "longitude": -80.22753194444445,
+    "state": "WV",
+    "city": "CLARKSBURG",
+    "county": "HARRISON",
+    "latitude": 39.29765472222222
+  },
+  "GSB": {
+    "name": "SEYMOUR JOHNSON AFB",
+    "longitude": -77.96059444444445,
+    "state": "NC",
+    "city": "GOLDSBORO",
+    "county": "WAYNE",
+    "latitude": 35.33938472222223
+  },
+  "PTB": {
+    "name": "DINWIDDIE COUNTY",
+    "longitude": -77.50738888888888,
+    "state": "VA",
+    "city": "PETERSBURG",
+    "county": "DINWIDDIE",
+    "latitude": 37.183749999999996
+  },
+  "CID": {
+    "name": "THE EASTERN IOWA",
+    "longitude": -91.71079861111112,
+    "state": "IA",
+    "city": "CEDAR RAPIDS",
+    "county": "LINN",
+    "latitude": 41.884688583333336
+  },
+  "IRK": {
+    "name": "KIRKSVILLE RGNL",
+    "longitude": -92.54491666666667,
+    "state": "MO",
+    "city": "KIRKSVILLE",
+    "county": "ADAIR",
+    "latitude": 40.093472222222225
+  },
+  "MDW": {
+    "arrivals": "104838",
+    "name": "CHICAGO MIDWAY INTL",
+    "longitude": -87.75241666666666,
+    "state": "IL",
+    "departures": "104656",
+    "city": "CHICAGO",
+    "county": "COOK",
+    "latitude": 41.78597222222222
+  },
+  "MAE": {
+    "name": "MADERA MUNI",
+    "longitude": -120.1126301111111,
+    "state": "CA",
+    "city": "MADERA",
+    "county": "MADERA",
+    "latitude": 36.98650719444444
+  },
+  "PAQ": {
+    "name": "PALMER MUNI",
+    "longitude": -149.0887113888889,
+    "state": "AK",
+    "city": "PALMER",
+    "county": "MATANUSKA-SUSITNA",
+    "latitude": 61.59491361111111
+  },
+  "ALB": {
+    "name": "ALBANY INTL",
+    "longitude": -73.80197222222222,
+    "state": "NY",
+    "city": "ALBANY",
+    "county": "ALBANY",
+    "latitude": 42.74911111111111
+  },
+  "HHI": {
+    "name": "WHEELER AAF",
+    "longitude": -158.03783791666666,
+    "state": "HI",
+    "city": "WAHIAWA",
+    "county": "HONOLULU",
+    "latitude": 21.481447499999998
+  },
+  "PDK": {
+    "name": "DEKALB-PEACHTREE",
+    "longitude": -84.30197222222222,
+    "state": "GA",
+    "city": "ATLANTA",
+    "county": "DE KALB",
+    "latitude": 33.87561111111111
+  },
+  "CLL": {
+    "name": "EASTERWOOD FIELD",
+    "longitude": -96.36383333333333,
+    "state": "TX",
+    "city": "COLLEGE STATION",
+    "county": "BRAZOS",
+    "latitude": 30.588583333333332
+  },
+  "OMA": {
+    "arrivals": "32076",
+    "name": "EPPLEY AIRFIELD",
+    "longitude": -95.89405555555557,
+    "state": "NE",
+    "departures": "32115",
+    "city": "OMAHA",
+    "county": "DOUGLAS",
+    "latitude": 41.30316666666666
+  },
+  "TOC": {
+    "name": "TOCCOA RG LETOURNEAU FIELD",
+    "longitude": -83.29637166666666,
+    "state": "GA",
+    "city": "TOCCOA",
+    "county": "STEPHENS",
+    "latitude": 34.59281166666667
+  },
+  "SPF": {
+    "name": "BLACK HILLS-CLYDE ICE FIELD",
+    "longitude": -103.786,
+    "state": "SD",
+    "city": "SPEARFISH",
+    "county": "LAWRENCE",
+    "latitude": 44.48105555555556
+  },
+  "LOU": {
+    "name": "BOWMAN FIELD",
+    "longitude": -85.66374905555556,
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "county": "JEFFERSON",
+    "latitude": 38.22798402777778
+  },
+  "LUP": {
+    "name": "KALAUPAPA",
+    "longitude": -156.97359722222222,
+    "state": "HI",
+    "city": "KALAUPAPA",
+    "county": "KALAWAO",
+    "latitude": 21.211040277777776
+  },
+  "TVL": {
+    "name": "LAKE TAHOE",
+    "longitude": -119.99533333333333,
+    "state": "CA",
+    "city": "SOUTH LAKE TAHOE",
+    "county": "EL DORADO",
+    "latitude": 38.89388888888889
+  },
+  "DKB": {
+    "name": "DE KALB TAYLOR MUNI",
+    "longitude": -88.70568638888889,
+    "state": "IL",
+    "city": "DE KALB",
+    "county": "DE KALB",
+    "latitude": 41.93383425
+  },
+  "PHX": {
+    "arrivals": "202031",
+    "name": "PHOENIX SKY HARBOR INTL",
+    "longitude": -112.01158333333333,
+    "state": "AZ",
+    "departures": "203151",
+    "city": "PHOENIX",
+    "county": "MARICOPA",
+    "latitude": 33.43427777777777
+  },
+  "BAF": {
+    "name": "WESTFIELD-BARNES RGNL",
+    "longitude": -72.71586111111111,
+    "state": "MA",
+    "city": "WESTFIELD/SPRINGFIELD",
+    "county": "HAMPDEN",
+    "latitude": 42.157944444444446
+  },
+  "UES": {
+    "name": "WAUKESHA COUNTY",
+    "longitude": -88.23705555555556,
+    "state": "WI",
+    "city": "WAUKESHA",
+    "county": "WAUKESHA",
+    "latitude": 43.04102777777778
+  },
+  "FLO": {
+    "name": "FLORENCE RGNL",
+    "longitude": -79.7238888888889,
+    "state": "SC",
+    "city": "FLORENCE",
+    "county": "FLORENCE",
+    "latitude": 34.185361111111106
+  },
+  "DRI": {
+    "name": "BEAUREGARD RGNL",
+    "longitude": -93.33991666666667,
+    "state": "LA",
+    "city": "DE RIDDER",
+    "county": "BEAUREGARD",
+    "latitude": 30.831722222222222
+  },
+  "GFK": {
+    "name": "GRAND FORKS INTL",
+    "longitude": -97.17377777777779,
+    "state": "ND",
+    "city": "GRAND FORKS",
+    "county": "GRAND FORKS",
+    "latitude": 47.94727777777778
+  },
+  "PIE": {
+    "name": "ST PETE-CLEARWATER INTL",
+    "longitude": -82.68649325,
+    "state": "FL",
+    "city": "ST PETERSBURG-CLEARWATER",
+    "county": "PINELLAS",
+    "latitude": 27.90868797222222
+  },
+  "ALW": {
+    "name": "WALLA WALLA RGNL",
+    "longitude": -118.28594383333333,
+    "state": "WA",
+    "city": "WALLA WALLA",
+    "county": "WALLA WALLA",
+    "latitude": 46.095198833333335
+  },
+  "ELD": {
+    "name": "SOUTH ARKANSAS RGNL AT GOODWIN FIELD",
+    "longitude": -92.81327777777777,
+    "state": "AR",
+    "city": "EL DORADO",
+    "county": "UNION",
+    "latitude": 33.22097222222222
+  },
+  "LVS": {
+    "name": "LAS VEGAS MUNI",
+    "longitude": -105.1423888888889,
+    "state": "NM",
+    "city": "LAS VEGAS",
+    "county": "SAN MIGUEL",
+    "latitude": 35.654222222222224
+  },
+  "CXO": {
+    "name": "LONE STAR EXECUTIVE",
+    "longitude": -95.41508194444445,
+    "state": "TX",
+    "city": "HOUSTON",
+    "county": "MONTGOMERY",
+    "latitude": 30.353395527777778
+  },
+  "ALM": {
+    "name": "ALAMOGORDO-WHITE SANDS RGNL",
+    "longitude": -105.9888611111111,
+    "state": "NM",
+    "city": "ALAMOGORDO",
+    "county": "OTERO",
+    "latitude": 32.84127777777778
+  },
+  "VIS": {
+    "name": "VISALIA MUNI",
+    "longitude": -119.39286111111112,
+    "state": "CA",
+    "city": "VISALIA",
+    "county": "TULARE",
+    "latitude": 36.31863888888889
+  },
+  "RAL": {
+    "name": "RIVERSIDE MUNI",
+    "longitude": -117.44511111111112,
+    "state": "CA",
+    "city": "RIVERSIDE",
+    "county": "RIVERSIDE",
+    "latitude": 33.951888888888895
+  },
+  "HLG": {
+    "name": "WHEELING OHIO CO",
+    "longitude": -80.64627777777778,
+    "state": "WV",
+    "city": "WHEELING",
+    "county": "OHIO",
+    "latitude": 40.175
+  },
+  "ORD": {
+    "arrivals": "425676",
+    "name": "CHICAGO O'HARE INTL",
+    "longitude": -87.90800591666667,
+    "state": "IL",
+    "departures": "425717",
+    "city": "CHICAGO",
+    "county": "COOK",
+    "latitude": 41.97732013888889
+  },
+  "HTS": {
+    "name": "TRI-STATE/MILTON J FERGUSON FIELD",
+    "longitude": -82.56036022222222,
+    "state": "WV",
+    "city": "HUNTINGTON",
+    "county": "WAYNE",
+    "latitude": 38.36850780555556
+  },
+  "CHU": {
+    "name": "HOUSTON COUNTY",
+    "longitude": -91.50394638888889,
+    "state": "MN",
+    "city": "CALEDONIA",
+    "county": "HOUSTON",
+    "latitude": 43.596358611111114
+  },
+  "ABI": {
+    "name": "ABILENE RGNL",
+    "longitude": -99.68188888888889,
+    "state": "TX",
+    "city": "ABILENE",
+    "county": "TAYLOR",
+    "latitude": 32.41133333333333
+  },
+  "ACV": {
+    "name": "ARCATA",
+    "longitude": -124.10847222222222,
+    "state": "CA",
+    "city": "ARCATA/EUREKA",
+    "county": "HUMBOLDT",
+    "latitude": 40.977833333333336
+  },
+  "VCV": {
+    "name": "SOUTHERN CALIFORNIA LOGISTICS",
+    "longitude": -117.383,
+    "state": "CA",
+    "city": "VICTORVILLE",
+    "county": "SAN BERNARDINO",
+    "latitude": 34.59747222222222
+  },
+  "OMN": {
+    "name": "ORMOND BEACH MUNI",
+    "longitude": -81.11380555555554,
+    "state": "FL",
+    "city": "ORMOND BEACH",
+    "county": "VOLUSIA",
+    "latitude": 29.30113888888889
+  },
+  "AUO": {
+    "name": "AUBURN UNIVERSITY RGNL",
+    "longitude": -85.434,
+    "state": "AL",
+    "city": "AUBURN",
+    "county": "LEE",
+    "latitude": 32.61511111111111
+  },
+  "SOW": {
+    "name": "SHOW LOW RGNL",
+    "longitude": -110.00566666666667,
+    "state": "AZ",
+    "city": "SHOW LOW",
+    "county": "NAVAJO",
+    "latitude": 34.26547222222222
+  },
+  "BEH": {
+    "name": "SOUTHWEST MICHIGAN RGNL",
+    "longitude": -86.42613530555556,
+    "state": "MI",
+    "city": "BENTON HARBOR",
+    "county": "BERRIEN",
+    "latitude": 42.12853011111111
+  },
+  "BIL": {
+    "name": "BILLINGS LOGAN INTL",
+    "longitude": -108.542875,
+    "state": "MT",
+    "city": "BILLINGS",
+    "county": "YELLOWSTONE",
+    "latitude": 45.80766111111111
+  },
+  "SSC": {
+    "name": "SHAW AFB",
+    "longitude": -80.47056436111112,
+    "state": "SC",
+    "city": "SUMTER",
+    "county": "SUMTER",
+    "latitude": 33.97272402777778
+  },
+  "LFT": {
+    "name": "LAFAYETTE RGNL/PAUL FOURNET FIELD",
+    "longitude": -91.98775,
+    "state": "LA",
+    "city": "LAFAYETTE",
+    "county": "LAFAYETTE",
+    "latitude": 30.205027777777776
+  },
+  "OBE": {
+    "name": "OKEECHOBEE COUNTY",
+    "longitude": -80.85038888888889,
+    "state": "FL",
+    "city": "OKEECHOBEE",
+    "county": "OKEECHOBEE",
+    "latitude": 27.266583333333333
+  },
+  "FTW": {
+    "name": "FORT WORTH MEACHAM INTL",
+    "longitude": -97.36245,
+    "state": "TX",
+    "city": "FORT WORTH",
+    "county": "TARRANT",
+    "latitude": 32.81977027777778
+  },
+  "VYS": {
+    "name": "ILLINOIS VALLEY RGNL-WALTER A DUNCAN FIELD",
+    "longitude": -89.15294444444444,
+    "state": "IL",
+    "city": "PERU",
+    "county": "LA SALLE",
+    "latitude": 41.35013888888889
+  },
+  "RDD": {
+    "name": "REDDING MUNI",
+    "longitude": -122.29338888888888,
+    "state": "CA",
+    "city": "REDDING",
+    "county": "SHASTA",
+    "latitude": 40.509
+  },
+  "NKX": {
+    "name": "MIRAMAR MCAS",
+    "longitude": -117.1431883888889,
+    "state": "CA",
+    "city": "SAN DIEGO",
+    "county": "SAN DIEGO",
+    "latitude": 32.86852897222222
+  },
+  "LAN": {
+    "name": "CAPITAL REGION INTL",
+    "longitude": -84.58619444444444,
+    "state": "MI",
+    "city": "LANSING",
+    "county": "CLINTON",
+    "latitude": 42.778638888888885
+  },
+  "IYK": {
+    "name": "INYOKERN",
+    "longitude": -117.8295325,
+    "state": "CA",
+    "city": "INYOKERN",
+    "county": "KERN",
+    "latitude": 35.65874127777778
+  },
+  "SJT": {
+    "name": "SAN ANGELO RGNL/MATHIS FIELD",
+    "longitude": -100.49630555555555,
+    "state": "TX",
+    "city": "SAN ANGELO",
+    "county": "TOM GREEN",
+    "latitude": 31.357750000000003
+  },
+  "FTK": {
+    "name": "GODMAN AAF",
+    "longitude": -85.97154497222222,
+    "state": "KY",
+    "city": "FORT KNOX",
+    "county": "HARDIN",
+    "latitude": 37.90721813888889
+  },
+  "RBM": {
+    "name": "ROBINSON AAF/NG",
+    "longitude": -92.30015138888889,
+    "state": "AR",
+    "city": "CAMP ROBINSON/LITTLE ROCK",
+    "county": "PULASKI",
+    "latitude": 34.85009
+  },
+  "NPA": {
+    "name": "PENSACOLA NAS/FORREST SHERMAN FIELD",
+    "longitude": -87.31796955555555,
+    "state": "FL",
+    "city": "PENSACOLA",
+    "county": "ESCAMBIA",
+    "latitude": 30.35327277777778
+  },
+  "LAL": {
+    "name": "LAKELAND LINDER RGNL",
+    "longitude": -82.01855555555555,
+    "state": "FL",
+    "city": "LAKELAND",
+    "county": "POLK",
+    "latitude": 27.988916666666668
+  },
+  "SAF": {
+    "name": "SANTA FE MUNI",
+    "longitude": -106.08941666666666,
+    "state": "NM",
+    "city": "SANTA FE",
+    "county": "SANTA FE",
+    "latitude": 35.617111111111114
+  },
+  "HUA": {
+    "name": "REDSTONE AAF",
+    "longitude": -86.6847825,
+    "state": "AL",
+    "city": "REDSTONE ARSNL HUNTSVILLE",
+    "county": "MADISON",
+    "latitude": 34.67865472222222
+  },
+  "MTN": {
+    "name": "MARTIN STATE",
+    "longitude": -76.41377777777778,
+    "state": "MD",
+    "city": "BALTIMORE",
+    "county": "BALTIMORE",
+    "latitude": 39.32566666666667
+  },
+  "OEB": {
+    "name": "BRANCH COUNTY MEMORIAL",
+    "longitude": -85.05229349999999,
+    "state": "MI",
+    "city": "COLDWATER",
+    "county": "BRANCH",
+    "latitude": 41.933569138888885
+  },
+  "BXK": {
+    "name": "BUCKEYE MUNI",
+    "longitude": -112.68618083333334,
+    "state": "AZ",
+    "city": "BUCKEYE",
+    "county": "MARICOPA",
+    "latitude": 33.42041666666666
+  },
+  "NUI": {
+    "name": "WEBSTER NOLF",
+    "longitude": -76.42847222222223,
+    "state": "MD",
+    "city": "ST INIGOES",
+    "county": "WICOMICO",
+    "latitude": 38.146
+  },
+  "ABR": {
+    "name": "ABERDEEN RGNL",
+    "longitude": -98.42244444444445,
+    "state": "SD",
+    "city": "ABERDEEN",
+    "county": "BROWN",
+    "latitude": 45.44830555555555
+  },
+  "SBY": {
+    "name": "SALISBURY-OCEAN CITY WICOMICO RGNL",
+    "longitude": -75.50947961111112,
+    "state": "MD",
+    "city": "SALISBURY",
+    "county": "WICOMICO",
+    "latitude": 38.34018925
+  },
+  "GNT": {
+    "name": "GRANTS-MILAN MUNI",
+    "longitude": -107.90205555555556,
+    "state": "NM",
+    "city": "GRANTS",
+    "county": "CIBOLA",
+    "latitude": 35.16727777777778
+  },
+  "SBN": {
+    "name": "SOUTH BEND INTL",
+    "longitude": -86.31733333333332,
+    "state": "IN",
+    "city": "SOUTH BEND",
+    "county": "ST JOSEPH",
+    "latitude": 41.708222222222226
+  },
+  "BMG": {
+    "name": "MONROE COUNTY",
+    "longitude": -86.61668047222221,
+    "state": "IN",
+    "city": "BLOOMINGTON",
+    "county": "MONROE",
+    "latitude": 39.14602083333333
+  },
+  "SVC": {
+    "name": "GRANT COUNTY",
+    "longitude": -108.15638527777779,
+    "state": "NM",
+    "city": "SILVER CITY",
+    "county": "GRANT",
+    "latitude": 32.63654694444445
+  },
+  "CAE": {
+    "name": "COLUMBIA METROPOLITAN",
+    "longitude": -81.11952777777778,
+    "state": "SC",
+    "city": "COLUMBIA",
+    "county": "LEXINGTON",
+    "latitude": 33.93883333333333
+  },
+  "GSP": {
+    "name": "GREENVILLE SPARTANBURG INTL",
+    "longitude": -82.21886111111111,
+    "state": "SC",
+    "city": "GREER",
+    "county": "GREENVILLE",
+    "latitude": 34.89566666666666
+  },
+  "FLL": {
+    "arrivals": "114640",
+    "name": "FORT LAUDERDALE/HOLLYWOOD INTL",
+    "longitude": -80.14969444444445,
+    "state": "FL",
+    "departures": "115651",
+    "city": "FORT LAUDERDALE",
+    "county": "BROWARD",
+    "latitude": 26.071666666666665
+  },
+  "SJC": {
+    "arrivals": "56871",
+    "name": "NORMAN Y MINETA SAN JOSE INTL",
+    "longitude": -121.92911111111111,
+    "state": "CA",
+    "departures": "56833",
+    "city": "SAN JOSE",
+    "county": "SANTA CLARA",
+    "latitude": 37.36266666666667
+  },
+  "JAX": {
+    "arrivals": "35500",
+    "name": "JACKSONVILLE INTL",
+    "longitude": -81.68783333333333,
+    "state": "FL",
+    "departures": "35577",
+    "city": "JACKSONVILLE",
+    "county": "DUVAL",
+    "latitude": 30.494055555555555
+  },
+  "CHA": {
+    "name": "LOVELL FIELD",
+    "longitude": -85.20355555555555,
+    "state": "TN",
+    "city": "CHATTANOOGA",
+    "county": "HAMILTON",
+    "latitude": 35.03519444444444
+  },
+  "FUL": {
+    "name": "FULLERTON MUNI",
+    "longitude": -117.97978416666668,
+    "state": "CA",
+    "city": "FULLERTON",
+    "county": "ORANGE",
+    "latitude": 33.872014166666666
+  },
+  "ABQ": {
+    "arrivals": "32951",
+    "name": "ALBUQUERQUE INTL SUNPORT",
+    "longitude": -106.60826216666666,
+    "state": "NM",
+    "departures": "33231",
+    "city": "ALBUQUERQUE",
+    "county": "BERNALILLO",
+    "latitude": 35.03893155555556
+  },
+  "EAU": {
+    "name": "CHIPPEWA VALLEY RGNL",
+    "longitude": -91.48425516666667,
+    "state": "WI",
+    "city": "EAU CLAIRE",
+    "county": "CHIPPEWA",
+    "latitude": 44.865804527777776
+  },
+  "SMO": {
+    "name": "SANTA MONICA MUNI",
+    "longitude": -118.45130555555556,
+    "state": "CA",
+    "city": "SANTA MONICA",
+    "county": "LOS ANGELES",
+    "latitude": 34.01583333333333
+  },
+  "MLB": {
+    "name": "MELBOURNE INTL",
+    "longitude": -80.64525,
+    "state": "FL",
+    "city": "MELBOURNE",
+    "county": "BREVARD",
+    "latitude": 28.10275
+  },
+  "HWD": {
+    "name": "HAYWARD EXECUTIVE",
+    "longitude": -122.12174999999999,
+    "state": "CA",
+    "city": "HAYWARD",
+    "county": "ALAMEDA",
+    "latitude": 37.65891666666666
+  },
+  "MLC": {
+    "name": "MC ALESTER RGNL",
+    "longitude": -95.78347222222222,
+    "state": "OK",
+    "city": "MC ALESTER",
+    "county": "PITTSBURG",
+    "latitude": 34.88238888888889
+  },
+  "SQL": {
+    "name": "SAN CARLOS",
+    "longitude": -122.2495235,
+    "state": "CA",
+    "city": "SAN CARLOS",
+    "county": "SAN MATEO",
+    "latitude": 37.511854916666664
+  },
+  "AMA": {
+    "name": "RICK HUSBAND AMARILLO INTL",
+    "longitude": -101.70591666666667,
+    "state": "TX",
+    "city": "AMARILLO",
+    "county": "POTTER",
+    "latitude": 35.21936111111111
+  },
+  "TIK": {
+    "name": "TINKER AFB",
+    "longitude": -97.3866388888889,
+    "state": "OK",
+    "city": "OKLAHOMA CITY",
+    "county": "OKLAHOMA",
+    "latitude": 35.41475
+  },
+  "APN": {
+    "name": "ALPENA COUNTY RGNL",
+    "longitude": -83.56030555555556,
+    "state": "MI",
+    "city": "ALPENA",
+    "county": "ALPENA",
+    "latitude": 45.07808333333334
+  },
+  "ADS": {
+    "name": "ADDISON",
+    "longitude": -96.83644444444444,
+    "state": "TX",
+    "city": "DALLAS",
+    "county": "DALLAS",
+    "latitude": 32.96855555555556
+  },
+  "GYY": {
+    "arrivals": "679",
+    "name": "GARY/CHICAGO INTL",
+    "longitude": -87.41452777777778,
+    "state": "IN",
+    "departures": "653",
+    "city": "GARY",
+    "county": "LAKE",
+    "latitude": 41.61725
+  },
+  "MOB": {
+    "name": "MOBILE RGNL",
+    "longitude": -88.24283333333334,
+    "state": "AL",
+    "city": "MOBILE",
+    "county": "MOBILE",
+    "latitude": 30.691416666666665
+  },
+  "LAS": {
+    "arrivals": "185386",
+    "name": "MC CARRAN INTL",
+    "longitude": -115.15225000000001,
+    "state": "NV",
+    "departures": "185106",
+    "city": "LAS VEGAS",
+    "county": "CLARK",
+    "latitude": 36.08005555555556
+  },
+  "APC": {
+    "name": "NAPA COUNTY",
+    "longitude": -122.28069444444445,
+    "state": "CA",
+    "city": "NAPA",
+    "county": "NAPA",
+    "latitude": 38.21319444444445
+  },
+  "SBP": {
+    "name": "SAN LUIS COUNTY RGNL",
+    "longitude": -120.64261111111112,
+    "state": "CA",
+    "city": "SAN LUIS OBISPO",
+    "county": "SAN LUIS OBISPO",
+    "latitude": 35.23727777777778
+  },
+  "CVO": {
+    "name": "CORVALLIS MUNI",
+    "longitude": -123.28952777777778,
+    "state": "OR",
+    "city": "CORVALLIS",
+    "county": "BENTON",
+    "latitude": 44.49711111111111
+  },
+  "AIK": {
+    "name": "AIKEN MUNI",
+    "longitude": -81.68502777777778,
+    "state": "SC",
+    "city": "AIKEN",
+    "county": "AIKEN",
+    "latitude": 33.649388888888886
+  },
+  "CCR": {
+    "name": "BUCHANAN FIELD",
+    "longitude": -122.05688888888889,
+    "state": "CA",
+    "city": "CONCORD",
+    "county": "CONTRA COSTA",
+    "latitude": 37.989666666666665
+  },
+  "NTU": {
+    "name": "OCEANA NAS /APOLLO SOUCEK FIELD/",
+    "longitude": -76.03189655555555,
+    "state": "VA",
+    "city": "VIRGINIA BEACH",
+    "county": "VIRGINIA BEACH",
+    "latitude": 36.822741944444445
+  },
+  "BFI": {
+    "name": "BOEING FIELD/KING COUNTY INTL",
+    "longitude": -122.30197222222222,
+    "state": "WA",
+    "city": "SEATTLE",
+    "county": "KING",
+    "latitude": 47.53
+  },
+  "STC": {
+    "name": "ST CLOUD RGNL",
+    "longitude": -94.05988888888889,
+    "state": "MN",
+    "city": "ST CLOUD",
+    "county": "SHERBURNE",
+    "latitude": 45.54655555555556
+  },
+  "PDX": {
+    "arrivals": "94399",
+    "name": "PORTLAND INTL",
+    "longitude": -122.59686941666666,
+    "state": "OR",
+    "departures": "94558",
+    "city": "PORTLAND",
+    "county": "MULTNOMAH",
+    "latitude": 45.588708861111115
+  },
+  "LAR": {
+    "name": "LARAMIE RGNL",
+    "longitude": -105.67500000000001,
+    "state": "WY",
+    "city": "LARAMIE",
+    "county": "ALBANY",
+    "latitude": 41.31205555555555
+  },
+  "FOK": {
+    "name": "FRANCIS S GABRESKI",
+    "longitude": -72.63177777777777,
+    "state": "NY",
+    "city": "WESTHAMPTON BEACH",
+    "county": "SUFFOLK",
+    "latitude": 40.84366666666667
+  },
+  "SDC": {
+    "name": "WILLIAMSON-SODUS",
+    "longitude": -77.11947222222221,
+    "state": "NY",
+    "city": "WILLIAMSON/SODUS",
+    "county": "WAYNE",
+    "latitude": 43.234611111111114
+  },
+  "UGN": {
+    "name": "WAUKEGAN RGNL",
+    "longitude": -87.86790694444444,
+    "state": "IL",
+    "city": "CHICAGO/WAUKEGAN",
+    "county": "LAKE",
+    "latitude": 42.42216
+  },
+  "DDC": {
+    "name": "DODGE CITY RGNL",
+    "longitude": -99.96541666666667,
+    "state": "KS",
+    "city": "DODGE CITY",
+    "county": "FORD",
+    "latitude": 37.76311111111111
+  },
+  "CEF": {
+    "name": "WESTOVER ARB/METROPOLITAN",
+    "longitude": -72.53478430555555,
+    "state": "MA",
+    "city": "SPRINGFIELD/CHICOPEE",
+    "county": "HAMPDEN",
+    "latitude": 42.19401497222222
+  },
+  "CPR": {
+    "name": "CASPER/NATRONA COUNTY INTL",
+    "longitude": -106.4636388888889,
+    "state": "WY",
+    "city": "CASPER",
+    "county": "NATRONA",
+    "latitude": 42.90586111111111
+  },
+  "SWF": {
+    "arrivals": "4538",
+    "name": "STEWART INTL",
+    "longitude": -74.10483333333333,
+    "state": "NY",
+    "departures": "4529",
+    "city": "NEWBURGH",
+    "county": "ORANGE",
+    "latitude": 41.50411111111111
+  },
+  "MSO": {
+    "name": "MISSOULA INTL",
+    "longitude": -114.09055555555555,
+    "state": "MT",
+    "city": "MISSOULA",
+    "county": "MISSOULA",
+    "latitude": 46.91630555555555
+  },
+  "MKO": {
+    "name": "DAVIS FIELD",
+    "longitude": -95.36163888888888,
+    "state": "OK",
+    "city": "MUSKOGEE",
+    "county": "MUSKOGEE",
+    "latitude": 35.65775
+  },
+  "MFE": {
+    "name": "MC ALLEN MILLER INTL",
+    "longitude": -98.23861111111111,
+    "state": "TX",
+    "city": "MC ALLEN",
+    "county": "HIDALGO",
+    "latitude": 26.175833333333333
+  },
+  "PIB": {
+    "name": "HATTIESBURG-LAUREL RGNL",
+    "longitude": -89.33705555555555,
+    "state": "MS",
+    "city": "HATTIESBURG-LAUREL",
+    "county": "JONES",
+    "latitude": 31.467138888888886
+  },
+  "MWL": {
+    "name": "MINERAL WELLS",
+    "longitude": -98.060175,
+    "state": "TX",
+    "city": "MINERAL WELLS",
+    "county": "PARKER",
+    "latitude": 32.78160555555556
+  },
+  "CBM": {
+    "name": "COLUMBUS AFB",
+    "longitude": -88.445925,
+    "state": "MS",
+    "city": "COLUMBUS",
+    "county": "LOWNDES",
+    "latitude": 33.64516666666667
+  },
+  "WST": {
+    "name": "WESTERLY STATE",
+    "longitude": -71.80341683333333,
+    "state": "RI",
+    "city": "WESTERLY",
+    "county": "WASHINGTON",
+    "latitude": 41.349632972222224
+  },
+  "AFW": {
+    "name": "FORT WORTH ALLIANCE",
+    "longitude": -97.3188006111111,
+    "state": "TX",
+    "city": "FORT WORTH",
+    "county": "TARRANT",
+    "latitude": 32.98763313888889
+  },
+  "RST": {
+    "name": "ROCHESTER INTL",
+    "longitude": -92.50002777777777,
+    "state": "MN",
+    "city": "ROCHESTER",
+    "county": "OLMSTED",
+    "latitude": 43.908277777777776
+  },
+  "BMI": {
+    "name": "CENTRAL IL RGNL ARPT AT BLOOMINGTON-NORMAL",
+    "longitude": -88.91591666666667,
+    "state": "IL",
+    "city": "BLOOMINGTON/NORMAL",
+    "county": "MC LEAN",
+    "latitude": 40.477111111111114
+  },
+  "NGF": {
+    "name": "KANEOHE BAY MCAS (MARION E CARL FIELD)",
+    "longitude": -157.76794861111114,
+    "state": "HI",
+    "city": "KANEOHE",
+    "county": "HONOLULU",
+    "latitude": 21.450455555555553
+  },
+  "LCQ": {
+    "name": "LAKE CITY GATEWAY",
+    "longitude": -82.57686111111111,
+    "state": "FL",
+    "city": "LAKE CITY",
+    "county": "COLUMBIA",
+    "latitude": 30.182055555555557
+  },
+  "ANQ": {
+    "name": "TRI-STATE STEUBEN COUNTY",
+    "longitude": -85.08349333333332,
+    "state": "IN",
+    "city": "ANGOLA",
+    "county": "STEUBEN",
+    "latitude": 41.639698333333335
+  },
+  "RNM": {
+    "name": "RAMONA",
+    "longitude": -116.91525,
+    "state": "CA",
+    "city": "RAMONA",
+    "county": "SAN DIEGO",
+    "latitude": 33.03916666666667
+  },
+  "HRL": {
+    "name": "VALLEY INTL",
+    "longitude": -97.6551388888889,
+    "state": "TX",
+    "city": "HARLINGEN",
+    "county": "CAMERON",
+    "latitude": 26.22711111111111
+  },
+  "JYO": {
+    "name": "LEESBURG EXECUTIVE",
+    "longitude": -77.55749999999999,
+    "state": "VA",
+    "city": "LEESBURG",
+    "county": "LOUDOUN",
+    "latitude": 39.07797222222223
+  },
+  "AUG": {
+    "name": "AUGUSTA STATE",
+    "longitude": -69.79731805555555,
+    "state": "ME",
+    "city": "AUGUSTA",
+    "county": "KENNEBEC",
+    "latitude": 44.32064972222223
+  },
+  "LNA": {
+    "name": "PALM BEACH COUNTY PARK",
+    "longitude": -80.08506461111111,
+    "state": "FL",
+    "city": "WEST PALM BEACH",
+    "county": "PALM BEACH",
+    "latitude": 26.593055555555555
+  },
+  "ATY": {
+    "name": "WATERTOWN RGNL",
+    "longitude": -97.15472222222223,
+    "state": "SD",
+    "city": "WATERTOWN",
+    "county": "CODINGTON",
+    "latitude": 44.91397222222222
+  },
+  "ADM": {
+    "name": "ARDMORE MUNI",
+    "longitude": -97.02058333333333,
+    "state": "OK",
+    "city": "ARDMORE",
+    "county": "CARTER",
+    "latitude": 34.30427777777778
+  },
+  "CRW": {
+    "name": "YEAGER",
+    "longitude": -81.59300388888889,
+    "state": "WV",
+    "city": "CHARLESTON",
+    "county": "KANAWHA",
+    "latitude": 38.37592905555556
+  },
+  "FMY": {
+    "name": "PAGE FIELD",
+    "longitude": -81.86325,
+    "state": "FL",
+    "city": "FORT MYERS",
+    "county": "LEE",
+    "latitude": 26.58661111111111
+  },
+  "CSG": {
+    "name": "COLUMBUS",
+    "longitude": -84.93886111111111,
+    "state": "GA",
+    "city": "COLUMBUS",
+    "county": "MUSCOGEE",
+    "latitude": 32.516333333333336
+  },
+  "MAF": {
+    "name": "MIDLAND INTL",
+    "longitude": -102.20191666666668,
+    "state": "TX",
+    "city": "MIDLAND",
+    "county": "MIDLAND",
+    "latitude": 31.942527777777777
+  },
+  "NSE": {
+    "name": "WHITING FIELD NAS NORTH",
+    "longitude": -87.02390125,
+    "state": "FL",
+    "city": "MILTON",
+    "county": "SANTA ROSA",
+    "latitude": 30.722470138888887
+  },
+  "LTS": {
+    "name": "ALTUS AFB",
+    "longitude": -99.26809513888888,
+    "state": "OK",
+    "city": "ALTUS",
+    "county": "JACKSON",
+    "latitude": 34.666462305555555
+  },
+  "AGS": {
+    "name": "AUGUSTA RGNL AT BUSH FIELD",
+    "longitude": -81.9645,
+    "state": "GA",
+    "city": "AUGUSTA",
+    "county": "RICHMOND",
+    "latitude": 33.36994444444444
+  },
+  "OAJ": {
+    "name": "ALBERT J ELLIS",
+    "longitude": -77.61213888888888,
+    "state": "NC",
+    "city": "JACKSONVILLE",
+    "county": "ONSLOW",
+    "latitude": 34.82916666666667
+  },
+  "BWG": {
+    "name": "BOWLING GREEN-WARREN COUNTY RGNL",
+    "longitude": -86.41966666666667,
+    "state": "KY",
+    "city": "BOWLING GREEN",
+    "county": "WARREN",
+    "latitude": 36.96452777777778
+  },
+  "ASH": {
+    "name": "BOIRE FIELD",
+    "longitude": -71.51409444444444,
+    "state": "NH",
+    "city": "NASHUA",
+    "county": "HILLSBOROUGH",
+    "latitude": 42.78241388888889
+  },
+  "MSN": {
+    "name": "DANE COUNTY RGNL-TRUAX FIELD",
+    "longitude": -89.33750447222222,
+    "state": "WI",
+    "city": "MADISON",
+    "county": "DANE",
+    "latitude": 43.13987913888889
+  },
+  "MOD": {
+    "name": "MODESTO CITY-CO-HARRY SHAM FLD",
+    "longitude": -120.95441666666667,
+    "state": "CA",
+    "city": "MODESTO",
+    "county": "STANISLAUS",
+    "latitude": 37.62583333333333
+  },
+  "OWD": {
+    "name": "NORWOOD MEMORIAL",
+    "longitude": -71.17294444444445,
+    "state": "MA",
+    "city": "NORWOOD",
+    "county": "NORFOLK",
+    "latitude": 42.190527777777774
+  },
+  "FSI": {
+    "name": "HENRY POST AAF (FORT SILL)",
+    "longitude": -98.40216666666667,
+    "state": "OK",
+    "city": "FORT SILL",
+    "county": "COMANCHE",
+    "latitude": 34.64983333333333
+  },
+  "LBE": {
+    "name": "ARNOLD PALMER RGNL",
+    "longitude": -79.41032555555556,
+    "state": "PA",
+    "city": "LATROBE",
+    "county": "WESTMORELAND",
+    "latitude": 40.2731005
+  },
+  "BKF": {
+    "name": "BUCKLEY AFB",
+    "longitude": -104.75196111111111,
+    "state": "CO",
+    "city": "AURORA",
+    "county": "ARAPAHOE",
+    "latitude": 39.70176111111111
+  },
+  "GRK": {
+    "name": "ROBERT GRAY AAF",
+    "longitude": -97.82891666666666,
+    "state": "TX",
+    "city": "FORT HOOD/KILLEEN",
+    "county": "BELL",
+    "latitude": 31.06725
+  },
+  "HDH": {
+    "name": "DILLINGHAM AIRFIELD",
+    "longitude": -158.19728138888888,
+    "state": "HI",
+    "city": "MOKULEIA",
+    "county": "HONOLULU",
+    "latitude": 21.579473611111112
+  },
+  "LAX": {
+    "arrivals": "307846",
+    "name": "LOS ANGELES INTL",
+    "longitude": -118.40711288888889,
+    "state": "CA",
+    "departures": "308611",
+    "city": "LOS ANGELES",
+    "county": "LOS ANGELES",
+    "latitude": 33.942504944444444
+  },
+  "RDG": {
+    "name": "READING RGNL/CARL A SPAATZ FIELD",
+    "longitude": -75.96525,
+    "state": "PA",
+    "city": "READING",
+    "county": "BERKS",
+    "latitude": 40.3785
+  },
+  "RCZ": {
+    "name": "RICHMOND COUNTY",
+    "longitude": -79.75961111111111,
+    "state": "NC",
+    "city": "ROCKINGHAM",
+    "county": "RICHMOND",
+    "latitude": 34.891305555555554
+  },
+  "SGU": {
+    "name": "ST GEORGE RGNL",
+    "longitude": -113.51030555555556,
+    "state": "UT",
+    "city": "ST GEORGE",
+    "county": "WASHINGTON",
+    "latitude": 37.03638888888889
+  },
+  "SHD": {
+    "name": "SHENANDOAH VALLEY RGNL",
+    "longitude": -78.89644444444446,
+    "state": "VA",
+    "city": "STAUNTON/WAYNESBORO/HARRISONBURG",
+    "county": "AUGUSTA",
+    "latitude": 38.26383333333333
+  },
+  "MQB": {
+    "name": "MACOMB MUNI",
+    "longitude": -90.6523888888889,
+    "state": "IL",
+    "city": "MACOMB",
+    "county": "MC DONOUGH",
+    "latitude": 40.52008333333333
+  },
+  "IMT": {
+    "name": "FORD",
+    "longitude": -88.11455555555555,
+    "state": "MI",
+    "city": "IRON MOUNTAIN KINGSFORD",
+    "county": "DICKINSON",
+    "latitude": 45.818361111111116
+  },
+  "COS": {
+    "name": "CITY OF COLORADO SPRINGS MUNI",
+    "longitude": -104.70077777777779,
+    "state": "CO",
+    "city": "COLORADO SPRINGS",
+    "county": "EL PASO",
+    "latitude": 38.80580555555555
+  },
+  "JBR": {
+    "name": "JONESBORO MUNI",
+    "longitude": -90.64641666666667,
+    "state": "AR",
+    "city": "JONESBORO",
+    "county": "CRAIGHEAD",
+    "latitude": 35.831722222222226
+  },
+  "DBN": {
+    "name": "W H 'BUD' BARRON",
+    "longitude": -82.98497222222223,
+    "state": "GA",
+    "city": "DUBLIN",
+    "county": "LAURENS",
+    "latitude": 32.56472222222222
+  },
+  "ECG": {
+    "name": "ELIZABETH CITY CG AIR STATION/RGNL",
+    "longitude": -76.17457222222222,
+    "state": "NC",
+    "city": "ELIZABETH CITY",
+    "county": "PASQUOTANK",
+    "latitude": 36.260580555555556
+  },
+  "HVN": {
+    "name": "TWEED-NEW HAVEN",
+    "longitude": -72.88680555555557,
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "county": "NEW HAVEN",
+    "latitude": 41.26375
+  },
+  "GHG": {
+    "name": "MARSHFIELD MUNI - GEORGE HARLOW FIELD",
+    "longitude": -70.67301986111111,
+    "state": "MA",
+    "city": "MARSHFIELD",
+    "county": "PLYMOUTH",
+    "latitude": 42.09749883333333
+  },
+  "SUX": {
+    "name": "SIOUX GATEWAY/COL BUD DAY FIELD",
+    "longitude": -96.38436111111112,
+    "state": "IA",
+    "city": "SIOUX CITY",
+    "county": "WOODBURY",
+    "latitude": 42.402611111111106
+  },
+  "LEB": {
+    "name": "LEBANON MUNI",
+    "longitude": -72.30419444444445,
+    "state": "NH",
+    "city": "LEBANON",
+    "county": "GRAFTON",
+    "latitude": 43.626111111111115
+  },
+  "NOW": {
+    "name": "PORT ANGELES CGAS",
+    "longitude": -123.41395402777778,
+    "state": "WA",
+    "city": "PORT ANGELES",
+    "county": "CLALLAM",
+    "latitude": 48.141292638888885
+  },
+  "RID": {
+    "name": "RICHMOND MUNI",
+    "longitude": -84.84269444444443,
+    "state": "IN",
+    "city": "RICHMOND",
+    "county": "WAYNE",
+    "latitude": 39.756083333333336
+  },
+  "CMX": {
+    "name": "HOUGHTON COUNTY MEMORIAL",
+    "longitude": -88.48906083333334,
+    "state": "MI",
+    "city": "HANCOCK",
+    "county": "HOUGHTON",
+    "latitude": 47.16841722222222
+  },
+  "END": {
+    "name": "VANCE AFB",
+    "longitude": -97.91729000000001,
+    "state": "OK",
+    "city": "ENID",
+    "county": "GARFIELD",
+    "latitude": 36.339530333333336
+  },
+  "FXE": {
+    "name": "FORT LAUDERDALE EXECUTIVE",
+    "longitude": -80.17070627777778,
+    "state": "FL",
+    "city": "FORT LAUDERDALE",
+    "county": "BROWARD",
+    "latitude": 26.19727936111111
+  },
+  "MWA": {
+    "name": "WILLIAMSON COUNTY RGNL",
+    "longitude": -89.01108333333333,
+    "state": "IL",
+    "city": "MARION",
+    "county": "WILLIAMSON",
+    "latitude": 37.75497222222222
+  },
+  "ATW": {
+    "name": "APPLETON INTL",
+    "longitude": -88.51908333333333,
+    "state": "WI",
+    "city": "APPLETON",
+    "county": "OUTAGAMIE",
+    "latitude": 44.25808333333333
+  },
+  "VRB": {
+    "name": "VERO BEACH MUNI",
+    "longitude": -80.41794444444444,
+    "state": "FL",
+    "city": "VERO BEACH",
+    "county": "INDIAN RIVER",
+    "latitude": 27.655555555555555
+  },
+  "NFL": {
+    "name": "FALLON NAS (VAN VOORHIS FLD)",
+    "longitude": -118.69858805555556,
+    "state": "NV",
+    "city": "FALLON",
+    "county": "CHURCHILL",
+    "latitude": 39.417830277777774
+  },
+  "GCC": {
+    "name": "GILLETTE-CAMPBELL COUNTY",
+    "longitude": -105.5393611111111,
+    "state": "WY",
+    "city": "GILLETTE",
+    "county": "CAMPBELL",
+    "latitude": 44.34891666666667
+  },
+  "CIC": {
+    "name": "CHICO MUNI",
+    "longitude": -121.85841666666666,
+    "state": "CA",
+    "city": "CHICO",
+    "county": "BUTTE",
+    "latitude": 39.79538888888889
+  },
+  "HUT": {
+    "name": "HUTCHINSON RGNL",
+    "longitude": -97.86063888888889,
+    "state": "KS",
+    "city": "HUTCHINSON",
+    "county": "RENO",
+    "latitude": 38.0655
+  },
+  "AUS": {
+    "arrivals": "63480",
+    "name": "AUSTIN-BERGSTROM INTL",
+    "longitude": -97.66988888888889,
+    "state": "TX",
+    "departures": "63821",
+    "city": "AUSTIN",
+    "county": "TRAVIS",
+    "latitude": 30.19452777777778
+  },
+  "MLT": {
+    "name": "MILLINOCKET MUNI",
+    "longitude": -68.68555555555555,
+    "state": "ME",
+    "city": "MILLINOCKET",
+    "county": "PENOBSCOT",
+    "latitude": 45.64783333333333
+  },
+  "MDT": {
+    "name": "HARRISBURG INTL",
+    "longitude": -76.76262061111112,
+    "state": "PA",
+    "city": "HARRISBURG",
+    "county": "DAUPHIN",
+    "latitude": 40.193190666666666
+  },
+  "BED": {
+    "name": "LAURENCE G HANSCOM FLD",
+    "longitude": -71.289,
+    "state": "MA",
+    "city": "BEDFORD",
+    "county": "MIDDLESEX",
+    "latitude": 42.469944444444444
+  },
+  "RBD": {
+    "name": "DALLAS EXECUTIVE",
+    "longitude": -96.86819444444444,
+    "state": "TX",
+    "city": "DALLAS",
+    "county": "DALLAS",
+    "latitude": 32.680861111111106
+  },
+  "GRB": {
+    "name": "AUSTIN STRAUBEL INTL",
+    "longitude": -88.12972222222221,
+    "state": "WI",
+    "city": "GREEN BAY",
+    "county": "BROWN",
+    "latitude": 44.48463888888889
+  },
+  "AVP": {
+    "name": "WILKES-BARRE/SCRANTON INTL",
+    "longitude": -75.72338888888889,
+    "state": "PA",
+    "city": "WILKES-BARRE/SCRANTON",
+    "county": "LUZERNE",
+    "latitude": 41.33847222222222
+  },
+  "BGE": {
+    "name": "DECATUR COUNTY INDUSTRIAL AIR PARK",
+    "longitude": -84.63692780555556,
+    "state": "GA",
+    "city": "BAINBRIDGE",
+    "county": "DECATUR",
+    "latitude": 30.971598083333333
+  },
+  "SKA": {
+    "name": "FAIRCHILD AFB",
+    "longitude": -117.65580555555556,
+    "state": "WA",
+    "city": "SPOKANE",
+    "county": "SPOKANE",
+    "latitude": 47.61505555555556
+  },
+  "ESN": {
+    "name": "EASTON/NEWNAM FIELD",
+    "longitude": -76.069,
+    "state": "MD",
+    "city": "EASTON",
+    "county": "TALBOT",
+    "latitude": 38.80416666666667
+  },
+  "CDI": {
+    "name": "CAMBRIDGE MUNI",
+    "longitude": -81.57758333333332,
+    "state": "OH",
+    "city": "CAMBRIDGE",
+    "county": "GUERNSEY",
+    "latitude": 39.97502777777778
+  },
+  "ANB": {
+    "name": "ANNISTON RGNL",
+    "longitude": -85.8581111111111,
+    "state": "AL",
+    "city": "ANNISTON",
+    "county": "CALHOUN",
+    "latitude": 33.588166666666666
+  },
+  "MCI": {
+    "arrivals": "57579",
+    "name": "KANSAS CITY INTL",
+    "longitude": -94.71388888888889,
+    "state": "MO",
+    "departures": "57656",
+    "city": "KANSAS CITY",
+    "county": "PLATTE",
+    "latitude": 39.29761111111111
+  },
+  "DVT": {
+    "name": "PHOENIX DEER VALLEY",
+    "longitude": -112.08255555555556,
+    "state": "AZ",
+    "city": "PHOENIX",
+    "county": "MARICOPA",
+    "latitude": 33.68830555555555
+  },
+  "BKW": {
+    "name": "RALEIGH COUNTY MEMORIAL",
+    "longitude": -81.12416666666665,
+    "state": "WV",
+    "city": "BECKLEY",
+    "county": "RALEIGH",
+    "latitude": 37.78733333333333
+  },
+  "ICT": {
+    "name": "WICHITA DWIGHT D EISENHOWER NATIONAL",
+    "longitude": -97.43305555555555,
+    "state": "KS",
+    "city": "WICHITA",
+    "county": "SEDGWICK",
+    "latitude": 37.64994444444444
+  },
+  "MHV": {
+    "name": "MOJAVE AIR AND SPACE PORT",
+    "longitude": -118.1506083888889,
+    "state": "CA",
+    "city": "MOJAVE",
+    "county": "KERN",
+    "latitude": 35.05894219444444
+  },
+  "AND": {
+    "name": "ANDERSON RGNL",
+    "longitude": -82.7093888888889,
+    "state": "SC",
+    "city": "ANDERSON",
+    "county": "ANDERSON",
+    "latitude": 34.49458333333333
+  },
+  "ALI": {
+    "name": "ALICE INTL",
+    "longitude": -98.02694444444444,
+    "state": "TX",
+    "city": "ALICE",
+    "county": "JIM WELLS",
+    "latitude": 27.74088888888889
+  },
+  "LNY": {
+    "name": "LANAI",
+    "longitude": -156.95141805555554,
+    "state": "HI",
+    "city": "LANAI CITY",
+    "county": "MAUI",
+    "latitude": 20.785611111111113
+  },
+  "COU": {
+    "name": "COLUMBIA RGNL",
+    "longitude": -92.21962916666666,
+    "state": "MO",
+    "city": "COLUMBIA",
+    "county": "BOONE",
+    "latitude": 38.81809305555556
+  },
+  "WRI": {
+    "name": "MC GUIRE FLD (JOINT BASE MC GUIRE DIX LAKE",
+    "longitude": -74.59169913888888,
+    "state": "NJ",
+    "city": "WRIGHTSTOWN",
+    "county": "BURLINGTON",
+    "latitude": 40.01558333333333
+  },
+  "IJD": {
+    "name": "WINDHAM",
+    "longitude": -72.18022222222223,
+    "state": "CT",
+    "city": "WILLIMANTIC",
+    "county": "WINDHAM",
+    "latitude": 41.74402777777778
+  },
+  "RNT": {
+    "name": "RENTON MUNI",
+    "longitude": -122.21575,
+    "state": "WA",
+    "city": "RENTON",
+    "county": "KING",
+    "latitude": 47.49313888888889
+  },
+  "HDN": {
+    "name": "YAMPA VALLEY",
+    "longitude": -107.21766666666667,
+    "state": "CO",
+    "city": "HAYDEN",
+    "county": "ROUTT",
+    "latitude": 40.48119444444445
+  },
+  "NLC": {
+    "name": "LEMOORE NAS (REEVES FLD)",
+    "longitude": -119.9521616388889,
+    "state": "CA",
+    "city": "LEMOORE",
+    "county": "KINGS",
+    "latitude": 36.33312677777778
+  },
+  "ZUN": {
+    "name": "BLACK ROCK",
+    "longitude": -108.79177694444444,
+    "state": "NM",
+    "city": "ZUNI PUEBLO",
+    "county": "MC KINLEY",
+    "latitude": 35.08322694444445
+  },
+  "MCW": {
+    "name": "MASON CITY MUNI",
+    "longitude": -93.33125,
+    "state": "IA",
+    "city": "MASON CITY",
+    "county": "CERRO GORDO",
+    "latitude": 43.157805555555555
+  },
+  "VLD": {
+    "name": "VALDOSTA RGNL",
+    "longitude": -83.27621944444445,
+    "state": "GA",
+    "city": "VALDOSTA",
+    "county": "LOWNDES",
+    "latitude": 30.78137222222222
+  },
+  "CHO": {
+    "name": "CHARLOTTESVILLE-ALBEMARLE",
+    "longitude": -78.45234241666667,
+    "state": "VA",
+    "city": "CHARLOTTESVILLE",
+    "county": "ALBEMARLE",
+    "latitude": 38.13964277777778
+  },
+  "MUO": {
+    "name": "MOUNTAIN HOME AFB",
+    "longitude": -115.87243333333333,
+    "state": "ID",
+    "city": "MOUNTAIN HOME",
+    "county": "ELMORE",
+    "latitude": 43.04359722222222
+  },
+  "MKG": {
+    "name": "MUSKEGON COUNTY",
+    "longitude": -86.23543872222223,
+    "state": "MI",
+    "city": "MUSKEGON",
+    "county": "MUSKEGON",
+    "latitude": 43.16767172222222
+  },
+  "GAI": {
+    "name": "MONTGOMERY COUNTY AIRPARK",
+    "longitude": -77.16600000000001,
+    "state": "MD",
+    "city": "GAITHERSBURG",
+    "county": "MONTGOMERY",
+    "latitude": 39.16833333333333
+  },
+  "ABE": {
+    "name": "LEHIGH VALLEY INTL",
+    "longitude": -75.44041666666666,
+    "state": "PA",
+    "city": "ALLENTOWN",
+    "county": "LEHIGH",
+    "latitude": 40.65236111111111
+  },
+  "EWN": {
+    "name": "COASTAL CAROLINA REGIONAL",
+    "longitude": -77.04302008333333,
+    "state": "NC",
+    "city": "NEW BERN",
+    "county": "CRAVEN",
+    "latitude": 35.07285252777778
+  },
+  "RFD": {
+    "arrivals": "4438",
+    "name": "CHICAGO/ROCKFORD INTL",
+    "longitude": -89.09722222222221,
+    "state": "IL",
+    "departures": "4454",
+    "city": "CHICAGO/ROCKFORD",
+    "county": "WINNEBAGO",
+    "latitude": 42.195361111111104
+  },
+  "HYA": {
+    "name": "BARNSTABLE MUNI-BOARDMAN/POLANDO FIELD",
+    "longitude": -70.2803611111111,
+    "state": "MA",
+    "city": "HYANNIS",
+    "county": "BARNSTABLE",
+    "latitude": 41.669333333333334
+  },
+  "HUF": {
+    "name": "TERRE HAUTE INTL-HULMAN FIELD",
+    "longitude": -87.30758333333333,
+    "state": "IN",
+    "city": "TERRE HAUTE",
+    "county": "VIGO",
+    "latitude": 39.45147222222222
+  },
+  "FMN": {
+    "name": "FOUR CORNERS RGNL",
+    "longitude": -108.22994444444444,
+    "state": "NM",
+    "city": "FARMINGTON",
+    "county": "SAN JUAN",
+    "latitude": 36.74125
+  },
+  "TUS": {
+    "arrivals": "22095",
+    "name": "TUCSON INTL",
+    "longitude": -110.94102777777778,
+    "state": "AZ",
+    "departures": "22279",
+    "city": "TUCSON",
+    "county": "PIMA",
+    "latitude": 32.116083333333336
+  },
+  "EAR": {
+    "name": "KEARNEY RGNL",
+    "longitude": -99.00677777777778,
+    "state": "NE",
+    "city": "KEARNEY",
+    "county": "BUFFALO",
+    "latitude": 40.72702777777778
+  },
+  "VPS": {
+    "name": "EGLIN AFB/DESTIN-FT WALTON BEACH",
+    "longitude": -86.52604433333333,
+    "state": "FL",
+    "city": "VALPARAISO/DESTIN-FT WALTON BEACH",
+    "county": "OKALOOSA",
+    "latitude": 30.483219416666664
+  },
+  "APA": {
+    "name": "CENTENNIAL",
+    "longitude": -104.84930555555555,
+    "state": "CO",
+    "city": "DENVER",
+    "county": "ARAPAHOE",
+    "latitude": 39.57012783333334
+  },
+  "ISN": {
+    "name": "SLOULIN FLD INTL",
+    "longitude": -103.64234666666667,
+    "state": "ND",
+    "city": "WILLISTON",
+    "county": "WILLIAMS",
+    "latitude": 48.17793861111111
+  },
+  "SVN": {
+    "name": "HUNTER AAF",
+    "longitude": -81.14598777777779,
+    "state": "GA",
+    "city": "SAVANNAH",
+    "county": "CHATHAM",
+    "latitude": 32.01002027777778
+  },
+  "GFL": {
+    "name": "FLOYD BENNETT MEMORIAL",
+    "longitude": -73.61030555555556,
+    "state": "NY",
+    "city": "GLENS FALLS",
+    "county": "WARREN",
+    "latitude": 43.34122222222222
+  },
+  "BYH": {
+    "name": "ARKANSAS INTL",
+    "longitude": -89.94394444444445,
+    "state": "AR",
+    "city": "BLYTHEVILLE",
+    "county": "MISSISSIPPI",
+    "latitude": 35.964333333333336
+  },
+  "BRO": {
+    "name": "BROWNSVILLE/SOUTH PADRE ISLAND INTL",
+    "longitude": -97.42599494444445,
+    "state": "TX",
+    "city": "BROWNSVILLE",
+    "county": "CAMERON",
+    "latitude": 25.906135361111108
+  },
+  "ELP": {
+    "name": "EL PASO INTL",
+    "longitude": -106.37636111111111,
+    "state": "TX",
+    "city": "EL PASO",
+    "county": "EL PASO",
+    "latitude": 31.807333333333332
+  },
+  "EKO": {
+    "name": "ELKO RGNL",
+    "longitude": -115.79144511111112,
+    "state": "NV",
+    "city": "ELKO",
+    "county": "ELKO",
+    "latitude": 40.824961611111114
+  },
+  "DWH": {
+    "name": "DAVID WAYNE HOOKS MEMORIAL",
+    "longitude": -95.55277777777778,
+    "state": "TX",
+    "city": "HOUSTON",
+    "county": "HARRIS",
+    "latitude": 30.061833333333333
+  },
+  "TAN": {
+    "name": "TAUNTON MUNI - KING FIELD",
+    "longitude": -71.0163165,
+    "state": "MA",
+    "city": "TAUNTON",
+    "county": "BRISTOL",
+    "latitude": 41.87446738888889
+  },
+  "CXL": {
+    "name": "CALEXICO INTL",
+    "longitude": -115.51758333333333,
+    "state": "CA",
+    "city": "CALEXICO",
+    "county": "IMPERIAL",
+    "latitude": 32.66744444444444
+  },
+  "LWC": {
+    "name": "LAWRENCE MUNI",
+    "longitude": -95.21647222222222,
+    "state": "KS",
+    "city": "LAWRENCE",
+    "county": "DOUGLAS",
+    "latitude": 39.01111111111111
+  },
+  "GLS": {
+    "name": "SCHOLES INTL AT GALVESTON",
+    "longitude": -94.86041666666667,
+    "state": "TX",
+    "city": "GALVESTON",
+    "county": "GALVESTON",
+    "latitude": 29.265333333333334
+  },
+  "CXY": {
+    "name": "CAPITAL CITY",
+    "longitude": -76.8513611111111,
+    "state": "PA",
+    "city": "HARRISBURG",
+    "county": "YORK",
+    "latitude": 40.21713888888889
+  },
+  "IKV": {
+    "name": "ANKENY RGNL",
+    "longitude": -93.56634913888888,
+    "state": "IA",
+    "city": "ANKENY",
+    "county": "POLK",
+    "latitude": 41.691346805555554
+  },
+  "STK": {
+    "name": "STERLING MUNI",
+    "longitude": -103.26426130555555,
+    "state": "CO",
+    "city": "STERLING",
+    "county": "LOGAN",
+    "latitude": 40.614298194444444
+  },
+  "SVH": {
+    "name": "STATESVILLE RGNL",
+    "longitude": -80.9538888888889,
+    "state": "NC",
+    "city": "STATESVILLE",
+    "county": "IREDELL",
+    "latitude": 35.765
+  },
+  "AVO": {
+    "name": "AVON PARK EXECUTIVE",
+    "longitude": -81.52896683333333,
+    "state": "FL",
+    "city": "AVON PARK",
+    "county": "HIGHLANDS",
+    "latitude": 27.591299888888887
+  },
+  "ISO": {
+    "name": "KINSTON RGNL JETPORT AT STALLINGS FLD",
+    "longitude": -77.60883333333332,
+    "state": "NC",
+    "city": "KINSTON",
+    "county": "LENOIR",
+    "latitude": 35.33144444444445
+  },
+  "IDA": {
+    "name": "IDAHO FALLS RGNL",
+    "longitude": -112.07074999999999,
+    "state": "ID",
+    "city": "IDAHO FALLS",
+    "county": "BONNEVILLE",
+    "latitude": 43.51372222222222
+  },
+  "LDJ": {
+    "name": "LINDEN",
+    "longitude": -74.24458333333334,
+    "state": "NJ",
+    "city": "LINDEN",
+    "county": "UNION",
+    "latitude": 40.617444444444445
+  },
+  "SFO": {
+    "arrivals": "203334",
+    "name": "SAN FRANCISCO INTL",
+    "longitude": -122.37541666666667,
+    "state": "CA",
+    "departures": "204425",
+    "city": "SAN FRANCISCO",
+    "county": "SAN MATEO",
+    "latitude": 37.618805555555554
+  },
+  "BEC": {
+    "name": "BEECH FACTORY",
+    "longitude": -97.21491666666667,
+    "state": "KS",
+    "city": "WICHITA",
+    "county": "SEDGWICK",
+    "latitude": 37.69391666666667
+  },
+  "ITH": {
+    "name": "ITHACA TOMPKINS RGNL",
+    "longitude": -76.45872222222222,
+    "state": "NY",
+    "city": "ITHACA",
+    "county": "TOMPKINS",
+    "latitude": 42.49136111111111
+  },
+  "YKN": {
+    "name": "CHAN GURNEY MUNI",
+    "longitude": -97.38594444444445,
+    "state": "SD",
+    "city": "YANKTON",
+    "county": "YANKTON",
+    "latitude": 42.916694444444445
+  },
+  "OXD": {
+    "name": "MIAMI UNIVERSITY",
+    "longitude": -84.78436111111111,
+    "state": "OH",
+    "city": "OXFORD",
+    "county": "BUTLER",
+    "latitude": 39.50225
+  },
+  "NQX": {
+    "name": "KEY WEST NAS /BOCA CHICA FIELD/",
+    "longitude": -81.68664544444445,
+    "state": "FL",
+    "city": "KEY WEST",
+    "county": "MONROE",
+    "latitude": 24.574637055555556
+  },
+  "MRB": {
+    "name": "EASTERN WV RGNL/SHEPHERD FLD",
+    "longitude": -77.98299908333334,
+    "state": "WV",
+    "city": "MARTINSBURG",
+    "county": "BERKELEY",
+    "latitude": 39.402356805555556
+  },
+  "BGR": {
+    "name": "BANGOR INTL",
+    "longitude": -68.82813888888889,
+    "state": "ME",
+    "city": "BANGOR",
+    "county": "PENOBSCOT",
+    "latitude": 44.80744444444444
+  },
+  "JST": {
+    "name": "JOHN MURTHA JOHNSTOWN-CAMBRIA CO",
+    "longitude": -78.83466075,
+    "state": "PA",
+    "city": "JOHNSTOWN",
+    "county": "CAMBRIA",
+    "latitude": 40.31555519444444
+  },
+  "PMP": {
+    "name": "POMPANO BEACH AIRPARK",
+    "longitude": -80.11120805555555,
+    "state": "FL",
+    "city": "POMPANO BEACH",
+    "county": "BROWARD",
+    "latitude": 26.247400805555557
+  },
+  "EFD": {
+    "name": "ELLINGTON",
+    "longitude": -95.15875000000001,
+    "state": "TX",
+    "city": "HOUSTON",
+    "county": "HARRIS",
+    "latitude": 29.607333333333333
+  },
+  "SFF": {
+    "name": "FELTS FIELD",
+    "longitude": -117.32241666666667,
+    "state": "WA",
+    "city": "SPOKANE",
+    "county": "SPOKANE",
+    "latitude": 47.682944444444445
+  },
+  "CLE": {
+    "arrivals": "53519",
+    "name": "CLEVELAND-HOPKINS INTL",
+    "longitude": -81.85469444444443,
+    "state": "OH",
+    "departures": "53630",
+    "city": "CLEVELAND",
+    "county": "CUYAHOGA",
+    "latitude": 41.409416666666665
+  },
+  "CWA": {
+    "name": "CENTRAL WISCONSIN",
+    "longitude": -89.66677802777778,
+    "state": "WI",
+    "city": "MOSINEE",
+    "county": "MARATHON",
+    "latitude": 44.77762366666666
+  },
+  "INT": {
+    "name": "SMITH REYNOLDS",
+    "longitude": -80.22198772222222,
+    "state": "NC",
+    "city": "WINSTON SALEM",
+    "county": "FORSYTH",
+    "latitude": 36.13371380555556
+  },
+  "CGF": {
+    "name": "CUYAHOGA COUNTY",
+    "longitude": -81.48636111111111,
+    "state": "OH",
+    "city": "CLEVELAND",
+    "county": "CUYAHOGA",
+    "latitude": 41.56511111111111
+  },
+  "BMC": {
+    "name": "BRIGHAM CITY",
+    "longitude": -112.06224999999999,
+    "state": "UT",
+    "city": "BRIGHAM CITY",
+    "county": "BOX ELDER",
+    "latitude": 41.55430555555555
+  },
+  "CVN": {
+    "name": "CLOVIS MUNI",
+    "longitude": -103.07758002777777,
+    "state": "NM",
+    "city": "CLOVIS",
+    "county": "CURRY",
+    "latitude": 34.42659025
+  },
+  "PWT": {
+    "name": "BREMERTON NATIONAL",
+    "longitude": -122.76480555555555,
+    "state": "WA",
+    "city": "BREMERTON",
+    "county": "KITSAP",
+    "latitude": 47.49025
+  },
+  "HIF": {
+    "name": "HILL AFB",
+    "longitude": -111.97305972222222,
+    "state": "UT",
+    "city": "OGDEN",
+    "county": "DAVIS",
+    "latitude": 41.123936111111114
+  },
+  "GCN": {
+    "name": "GRAND CANYON NATIONAL PARK",
+    "longitude": -112.14697222222223,
+    "state": "AZ",
+    "city": "GRAND CANYON",
+    "county": "COCONINO",
+    "latitude": 35.95236111111112
+  },
+  "BOW": {
+    "name": "BARTOW MUNI",
+    "longitude": -81.78341666666667,
+    "state": "FL",
+    "city": "BARTOW",
+    "county": "POLK",
+    "latitude": 27.943361111111113
+  },
+  "OKC": {
+    "name": "WILL ROGERS WORLD",
+    "longitude": -97.60076172222222,
+    "state": "OK",
+    "city": "OKLAHOMA CITY",
+    "county": "OKLAHOMA",
+    "latitude": 35.39307402777778
+  },
+  "TPA": {
+    "arrivals": "82097",
+    "name": "TAMPA INTL",
+    "longitude": -82.53325,
+    "state": "FL",
+    "departures": "82467",
+    "city": "TAMPA",
+    "county": "HILLSBOROUGH",
+    "latitude": 27.97547222222222
+  },
+  "SOP": {
+    "name": "MOORE COUNTY",
+    "longitude": -79.38902777777778,
+    "state": "NC",
+    "city": "PINEHURST/SOUTHERN PINES",
+    "county": "MOORE",
+    "latitude": 35.23741666666667
+  },
+  "PHN": {
+    "name": "ST CLAIR COUNTY INTL",
+    "longitude": -82.52886111111111,
+    "state": "MI",
+    "city": "PORT HURON",
+    "county": "ST CLAIR",
+    "latitude": 42.91097222222222
+  },
+  "PBG": {
+    "name": "PLATTSBURGH INTL",
+    "longitude": -73.46813888888889,
+    "state": "NY",
+    "city": "PLATTSBURGH",
+    "county": "CLINTON",
+    "latitude": 44.65094444444444
+  },
+  "RIC": {
+    "name": "RICHMOND INTL",
+    "longitude": -77.31966666666666,
+    "state": "VA",
+    "city": "RICHMOND",
+    "county": "HENRICO",
+    "latitude": 37.50516666666667
+  },
+  "EWB": {
+    "name": "NEW BEDFORD RGNL",
+    "longitude": -70.957836,
+    "state": "MA",
+    "city": "NEW BEDFORD",
+    "county": "BRISTOL",
+    "latitude": 41.676566
+  },
+  "RCE": {
+    "name": "CLARENCE E PAGE MUNI",
+    "longitude": -97.82355555555556,
+    "state": "OK",
+    "city": "OKLAHOMA CITY",
+    "county": "CANADIAN",
+    "latitude": 35.488083333333336
+  },
+  "STJ": {
+    "name": "ROSECRANS MEMORIAL",
+    "longitude": -94.90970555555556,
+    "state": "MO",
+    "city": "ST JOSEPH",
+    "county": "BUCHANAN",
+    "latitude": 39.77194444444444
+  },
+  "TYS": {
+    "name": "MC GHEE TYSON",
+    "longitude": -83.99532144444444,
+    "state": "TN",
+    "city": "KNOXVILLE",
+    "county": "BLOUNT",
+    "latitude": 35.809373861111105
+  },
+  "LVK": {
+    "name": "LIVERMORE MUNI",
+    "longitude": -121.82036111111111,
+    "state": "CA",
+    "city": "LIVERMORE",
+    "county": "ALAMEDA",
+    "latitude": 37.69338888888888
+  },
+  "MSY": {
+    "arrivals": "55100",
+    "name": "LOUIS ARMSTRONG NEW ORLEANS INTL",
+    "longitude": -90.25902777777777,
+    "state": "LA",
+    "departures": "55117",
+    "city": "NEW ORLEANS",
+    "county": "JEFFERSON",
+    "latitude": 29.993277777777777
+  },
+  "OAK": {
+    "arrivals": "67506",
+    "name": "METROPOLITAN OAKLAND INTL",
+    "longitude": -122.22114888888889,
+    "state": "CA",
+    "departures": "67648",
+    "city": "OAKLAND",
+    "county": "ALAMEDA",
+    "latitude": 37.72125966666667
+  },
+  "AOH": {
+    "name": "LIMA ALLEN COUNTY",
+    "longitude": -84.02707805555555,
+    "state": "OH",
+    "city": "LIMA",
+    "county": "ALLEN",
+    "latitude": 40.70747797222222
+  },
+  "PKB": {
+    "name": "MID-OHIO VALLEY RGNL",
+    "longitude": -81.43930555555556,
+    "state": "WV",
+    "city": "PARKERSBURG",
+    "county": "WOOD",
+    "latitude": 39.344972222222225
+  },
+  "PSX": {
+    "name": "PALACIOS MUNI",
+    "longitude": -96.25094444444444,
+    "state": "TX",
+    "city": "PALACIOS",
+    "county": "MATAGORDA",
+    "latitude": 28.7275
+  },
+  "DGL": {
+    "name": "DOUGLAS MUNI",
+    "longitude": -109.50645444444444,
+    "state": "AZ",
+    "city": "DOUGLAS",
+    "county": "COCHISE",
+    "latitude": 31.342602777777778
+  },
+  "MRY": {
+    "name": "MONTEREY RGNL",
+    "longitude": -121.84278305555556,
+    "state": "CA",
+    "city": "MONTEREY",
+    "county": "MONTEREY",
+    "latitude": 36.58695222222222
+  },
+  "RVS": {
+    "name": "RICHARD LLOYD JONES JR",
+    "longitude": -95.9846388888889,
+    "state": "OK",
+    "city": "TULSA",
+    "county": "TULSA",
+    "latitude": 36.03961111111111
+  },
+  "GRF": {
+    "name": "GRAY AAF (JOINT BASE LEWIS-MCCHORD)",
+    "longitude": -122.58076666666666,
+    "state": "WA",
+    "city": "FORT LEWIS/TACOMA",
+    "county": "PIERCE",
+    "latitude": 47.079214444444446
+  },
+  "RAP": {
+    "name": "RAPID CITY RGNL",
+    "longitude": -103.0573611111111,
+    "state": "SD",
+    "city": "RAPID CITY",
+    "county": "PENNINGTON",
+    "latitude": 44.04533333333333
+  },
+  "ISW": {
+    "name": "ALEXANDER FIELD SOUTH WOOD COUNTY",
+    "longitude": -89.83814116666666,
+    "state": "WI",
+    "city": "WISCONSIN RAPIDS",
+    "county": "WOOD",
+    "latitude": 44.36064555555556
+  },
+  "LSV": {
+    "name": "NELLIS AFB",
+    "longitude": -115.03425277777778,
+    "state": "NV",
+    "city": "LAS VEGAS",
+    "county": "CLARK",
+    "latitude": 36.236200000000004
+  },
+  "HFD": {
+    "name": "HARTFORD-BRAINARD",
+    "longitude": -72.64944444444446,
+    "state": "CT",
+    "city": "HARTFORD",
+    "county": "HARTFORD",
+    "latitude": 41.73672222222223
+  },
+  "MIC": {
+    "name": "CRYSTAL",
+    "longitude": -93.35394444444444,
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "county": "HENNEPIN",
+    "latitude": 45.062
+  },
+  "ART": {
+    "name": "WATERTOWN INTL",
+    "longitude": -76.02066666666667,
+    "state": "NY",
+    "city": "WATERTOWN",
+    "county": "JEFFERSON",
+    "latitude": 43.99188888888889
+  },
+  "RND": {
+    "name": "RANDOLPH AFB",
+    "longitude": -98.27803083333333,
+    "state": "TX",
+    "city": "UNIVERSAL CITY",
+    "county": "BEXAR",
+    "latitude": 29.528905833333333
+  },
+  "JMS": {
+    "name": "JAMESTOWN RGNL",
+    "longitude": -98.67819444444444,
+    "state": "ND",
+    "city": "JAMESTOWN",
+    "county": "STUTSMAN",
+    "latitude": 46.92972222222222
+  },
+  "EGT": {
+    "name": "WELLINGTON MUNI",
+    "longitude": -97.38833333333334,
+    "state": "KS",
+    "city": "WELLINGTON",
+    "county": "SUMNER",
+    "latitude": 37.32361111111111
+  },
+  "RKS": {
+    "name": "ROCK SPRINGS-SWEETWATER COUNTY",
+    "longitude": -109.06519444444444,
+    "state": "WY",
+    "city": "ROCK SPRINGS",
+    "county": "SWEETWATER",
+    "latitude": 41.59422222222222
+  },
+  "NUW": {
+    "name": "WHIDBEY ISLAND NAS /AULT FIELD",
+    "longitude": -122.65595886111112,
+    "state": "WA",
+    "city": "OAK HARBOR",
+    "county": "ISLAND",
+    "latitude": 48.351840027777776
+  },
+  "DIK": {
+    "name": "DICKINSON - THEODORE ROOSEVELT RGNL",
+    "longitude": -102.80186111111111,
+    "state": "ND",
+    "city": "DICKINSON",
+    "county": "STARK",
+    "latitude": 46.797333333333334
+  },
+  "UVA": {
+    "name": "GARNER FIELD",
+    "longitude": -99.74358333333333,
+    "state": "TX",
+    "city": "UVALDE",
+    "county": "UVALDE",
+    "latitude": 29.211333333333332
+  },
+  "LNK": {
+    "name": "LINCOLN",
+    "longitude": -96.75911111111111,
+    "state": "NE",
+    "city": "LINCOLN",
+    "county": "LANCASTER",
+    "latitude": 40.85088888888889
+  },
+  "LYH": {
+    "name": "LYNCHBURG RGNL/PRESTON GLENN FLD",
+    "longitude": -79.20122222222223,
+    "state": "VA",
+    "city": "LYNCHBURG",
+    "county": "CAMPBELL",
+    "latitude": 37.325388888888895
+  },
+  "ECP": {
+    "name": "NORTHWEST FLORIDA BEACHES INTL",
+    "longitude": -85.79561111111111,
+    "state": "FL",
+    "city": "PANAMA CITY",
+    "county": "BAY",
+    "latitude": 30.35825
+  },
+  "YNG": {
+    "name": "YOUNGSTOWN-WARREN RGNL",
+    "longitude": -80.68036111111111,
+    "state": "OH",
+    "city": "YOUNGSTOWN/WARREN",
+    "county": "TRUMBULL",
+    "latitude": 41.261583333333334
+  },
+  "DLH": {
+    "name": "DULUTH INTL",
+    "longitude": -92.1936388888889,
+    "state": "MN",
+    "city": "DULUTH",
+    "county": "ST LOUIS",
+    "latitude": 46.842083333333335
+  },
+  "GED": {
+    "name": "DELAWARE COASTAL",
+    "longitude": -75.35930425,
+    "state": "DE",
+    "city": "GEORGETOWN",
+    "county": "SUSSEX",
+    "latitude": 38.68763219444444
+  },
+  "RIU": {
+    "name": "RANCHO MURIETA",
+    "longitude": -121.10277777777777,
+    "state": "CA",
+    "city": "RANCHO MURIETA",
+    "county": "SACRAMENTO",
+    "latitude": 38.48677777777778
+  },
+  "APF": {
+    "name": "NAPLES MUNI",
+    "longitude": -81.77563877777777,
+    "state": "FL",
+    "city": "NAPLES",
+    "county": "COLLIER",
+    "latitude": 26.152441527777775
+  },
+  "RDU": {
+    "arrivals": "66355",
+    "name": "RALEIGH-DURHAM INTL",
+    "longitude": -78.78747222222222,
+    "state": "NC",
+    "departures": "66510",
+    "city": "RALEIGH/DURHAM",
+    "county": "WAKE",
+    "latitude": 35.87763888888889
+  },
+  "APG": {
+    "name": "PHILLIPS AAF",
+    "longitude": -76.16880833333333,
+    "state": "MD",
+    "city": "ABERDEEN PROVING GROUNDS(ABERDEEN)",
+    "county": "HARFORD",
+    "latitude": 39.46621944444445
+  },
+  "MXF": {
+    "name": "MAXWELL AFB",
+    "longitude": -86.36577777777777,
+    "state": "AL",
+    "city": "MONTGOMERY",
+    "county": "MONTGOMERY",
+    "latitude": 32.38294444444445
+  },
+  "DEC": {
+    "name": "DECATUR",
+    "longitude": -88.86568916666666,
+    "state": "IL",
+    "city": "DECATUR",
+    "county": "MACON",
+    "latitude": 39.834562500000004
+  },
+  "ESF": {
+    "name": "ESLER RGNL",
+    "longitude": -92.29577194444444,
+    "state": "LA",
+    "city": "ALEXANDRIA",
+    "county": "RAPIDES",
+    "latitude": 31.3949025
+  },
+  "UPP": {
+    "name": "UPOLU",
+    "longitude": -155.85994444444444,
+    "state": "HI",
+    "city": "HAWI",
+    "county": "HAWAII",
+    "latitude": 20.265194444444443
+  },
+  "MTJ": {
+    "name": "MONTROSE RGNL",
+    "longitude": -107.89425,
+    "state": "CO",
+    "city": "MONTROSE",
+    "county": "MONTROSE",
+    "latitude": 38.50980555555556
+  },
+  "GSO": {
+    "name": "PIEDMONT TRIAD INTL",
+    "longitude": -79.94112344444444,
+    "state": "NC",
+    "city": "GREENSBORO",
+    "county": "GUILFORD",
+    "latitude": 36.101325861111114
+  },
+  "MKL": {
+    "name": "MC KELLAR-SIPES RGNL",
+    "longitude": -88.91561111111112,
+    "state": "TN",
+    "city": "JACKSON",
+    "county": "MADISON",
+    "latitude": 35.59988888888889
+  },
+  "EWK": {
+    "name": "NEWTON-CITY-COUNTY",
+    "longitude": -97.27522777777777,
+    "state": "KS",
+    "city": "NEWTON",
+    "county": "HARVEY",
+    "latitude": 38.057078527777776
+  },
+  "MCC": {
+    "name": "MC CLELLAN AIRFIELD",
+    "longitude": -121.40061111111112,
+    "state": "CA",
+    "city": "SACRAMENTO",
+    "county": "SACRAMENTO",
+    "latitude": 38.66763888888889
+  },
+  "HIB": {
+    "name": "RANGE RGNL",
+    "longitude": -92.83897222222221,
+    "state": "MN",
+    "city": "HIBBING",
+    "county": "ST LOUIS",
+    "latitude": 47.386583333333334
+  },
+  "MYR": {
+    "name": "MYRTLE BEACH INTL",
+    "longitude": -78.92833333333334,
+    "state": "SC",
+    "city": "MYRTLE BEACH",
+    "county": "HORRY",
+    "latitude": 33.67975
+  },
+  "DRO": {
+    "name": "DURANGO-LA PLATA COUNTY",
+    "longitude": -107.75377777777778,
+    "state": "CO",
+    "city": "DURANGO",
+    "county": "LA PLATA",
+    "latitude": 37.15152777777778
+  },
+  "LWA": {
+    "name": "SOUTH HAVEN AREA RGNL",
+    "longitude": -86.25563888888888,
+    "state": "MI",
+    "city": "SOUTH HAVEN",
+    "county": "VAN BUREN",
+    "latitude": 42.351194444444445
+  },
+  "OJC": {
+    "name": "JOHNSON COUNTY EXECUTIVE",
+    "longitude": -94.73758583333334,
+    "state": "KS",
+    "city": "OLATHE",
+    "county": "JOHNSON",
+    "latitude": 38.84760194444445
+  },
+  "ORL": {
+    "name": "EXECUTIVE",
+    "longitude": -81.33291666666666,
+    "state": "FL",
+    "city": "ORLANDO",
+    "county": "ORANGE",
+    "latitude": 28.545472222222223
+  },
+  "NMM": {
+    "name": "MERIDIAN NAS /MC CAIN FIELD/",
+    "longitude": -88.55526388888889,
+    "state": "MS",
+    "city": "MERIDIAN",
+    "county": "LAUDERDALE",
+    "latitude": 32.55348055555555
+  },
+  "FDW": {
+    "name": "FAIRFIELD COUNTY",
+    "longitude": -81.10880555555555,
+    "state": "SC",
+    "city": "WINNSBORO",
+    "county": "FAIRFIELD",
+    "latitude": 34.31547222222222
+  },
+  "MBS": {
+    "name": "MBS INTL",
+    "longitude": -84.07963888888888,
+    "state": "MI",
+    "city": "SAGINAW",
+    "county": "SAGINAW",
+    "latitude": 43.532916666666665
+  },
+  "RUT": {
+    "name": "RUTLAND - SOUTHERN VERMONT RGNL",
+    "longitude": -72.9496388888889,
+    "state": "VT",
+    "city": "RUTLAND",
+    "county": "RUTLAND",
+    "latitude": 43.529916666666665
+  },
+  "ORT": {
+    "name": "NORTHWAY",
+    "longitude": -141.92808333333332,
+    "state": "AK",
+    "city": "NORTHWAY",
+    "county": "FAIRBANKS NORTH STAR",
+    "latitude": 62.96116666666667
+  },
+  "TBN": {
+    "name": "WAYNESVILLE-ST ROBERT RGNL FORNEY FLD",
+    "longitude": -92.14073611111112,
+    "state": "MO",
+    "city": "FORT LEONARD WOOD",
+    "county": "PULASKI",
+    "latitude": 37.74163111111111
+  },
+  "NTD": {
+    "name": "POINT MUGU NAS (NAVAL BASE VENTURA CO)",
+    "longitude": -119.11958499999999,
+    "state": "CA",
+    "city": "OXNARD",
+    "county": "VENTURA",
+    "latitude": 34.11927444444444
+  },
+  "TVC": {
+    "name": "CHERRY CAPITAL",
+    "longitude": -85.58177777777777,
+    "state": "MI",
+    "city": "TRAVERSE CITY",
+    "county": "GRAND TRAVERSE",
+    "latitude": 44.74158333333333
+  },
+  "HPN": {
+    "arrivals": "31003",
+    "name": "WESTCHESTER COUNTY",
+    "longitude": -73.70756655555556,
+    "state": "NY",
+    "departures": "30424",
+    "city": "WHITE PLAINS",
+    "county": "WESTCHESTER",
+    "latitude": 41.066952750000006
+  },
+  "SPZ": {
+    "name": "SILVER SPRINGS",
+    "longitude": -119.25119444444445,
+    "state": "NV",
+    "city": "SILVER SPRINGS",
+    "county": "LYON",
+    "latitude": 39.403055555555554
+  },
+  "TOL": {
+    "name": "TOLEDO EXPRESS",
+    "longitude": -83.80783333333333,
+    "state": "OH",
+    "city": "TOLEDO",
+    "county": "LUCAS",
+    "latitude": 41.58680555555556
+  },
+  "LCK": {
+    "name": "RICKENBACKER INTL",
+    "longitude": -82.92780555555557,
+    "state": "OH",
+    "city": "COLUMBUS",
+    "county": "FRANKLIN",
+    "latitude": 39.81377777777777
+  },
+  "OQN": {
+    "name": "BRANDYWINE",
+    "longitude": -75.58190694444444,
+    "state": "PA",
+    "city": "WEST CHESTER",
+    "county": "CHESTER",
+    "latitude": 39.990117777777776
+  },
+  "DAY": {
+    "arrivals": "19504",
+    "name": "JAMES M COX DAYTON INTL",
+    "longitude": -84.21941666666667,
+    "state": "OH",
+    "departures": "19526",
+    "city": "DAYTON",
+    "county": "MONTGOMERY",
+    "latitude": 39.902249999999995
+  },
+  "CLW": {
+    "name": "CLEARWATER AIR PARK",
+    "longitude": -82.75905694444444,
+    "state": "FL",
+    "city": "CLEARWATER",
+    "county": "PINELLAS",
+    "latitude": 27.977213888888887
+  },
+  "JES": {
+    "name": "JESUP-WAYNE COUNTY",
+    "longitude": -81.8825,
+    "state": "GA",
+    "city": "JESUP",
+    "county": "WAYNE",
+    "latitude": 31.553972222222225
+  },
+  "GJT": {
+    "name": "GRAND JUNCTION REGIONAL",
+    "longitude": -108.52673472222222,
+    "state": "CO",
+    "city": "GRAND JUNCTION",
+    "county": "MESA",
+    "latitude": 39.1224125
+  },
+  "JKA": {
+    "name": "JACK EDWARDS",
+    "longitude": -87.67177777777778,
+    "state": "AL",
+    "city": "GULF SHORES",
+    "county": "BALDWIN",
+    "latitude": 30.28963888888889
+  },
+  "LBB": {
+    "name": "LUBBOCK PRESTON SMITH INTL",
+    "longitude": -101.82055555555556,
+    "state": "TX",
+    "city": "LUBBOCK",
+    "county": "LUBBOCK",
+    "latitude": 33.663666666666664
+  },
+  "JZP": {
+    "name": "PICKENS COUNTY",
+    "longitude": -84.45722222222223,
+    "state": "GA",
+    "city": "JASPER",
+    "county": "PICKENS",
+    "latitude": 34.453472222222224
+  },
+  "LSF": {
+    "name": "LAWSON AAF (FORT BENNING)",
+    "longitude": -84.98715888888889,
+    "state": "GA",
+    "city": "FORT BENNING(COLUMBUS)",
+    "county": "CHATTAHOOCHEE",
+    "latitude": 32.33178986111111
+  },
+  "CLS": {
+    "name": "CHEHALIS-CENTRALIA",
+    "longitude": -122.98275,
+    "state": "WA",
+    "city": "CHEHALIS",
+    "county": "LEWIS",
+    "latitude": 46.677027777777774
+  },
+  "MKE": {
+    "arrivals": "47277",
+    "name": "GENERAL MITCHELL INTL",
+    "longitude": -87.89705555555557,
+    "state": "WI",
+    "departures": "47442",
+    "city": "MILWAUKEE",
+    "county": "MILWAUKEE",
+    "latitude": 42.94694444444444
+  },
+  "MSS": {
+    "name": "MASSENA INTL-RICHARDS FIELD",
+    "longitude": -74.84511922222222,
+    "state": "NY",
+    "city": "MASSENA",
+    "county": "ST LAWRENCE",
+    "latitude": 44.93624208333333
+  },
+  "BIF": {
+    "name": "BIGGS AAF (FORT BLISS)",
+    "longitude": -106.38003888888888,
+    "state": "TX",
+    "city": "FORT BLISS/EL PASO/",
+    "county": "EL PASO",
+    "latitude": 31.849525
+  },
+  "GON": {
+    "name": "GROTON-NEW LONDON",
+    "longitude": -72.04513888888889,
+    "state": "CT",
+    "city": "GROTON (NEW LONDON)",
+    "county": "NEW LONDON",
+    "latitude": 41.33005555555556
+  },
+  "FBR": {
+    "name": "FORT BRIDGER",
+    "longitude": -110.40597222222223,
+    "state": "WY",
+    "city": "FORT BRIDGER",
+    "county": "UINTA",
+    "latitude": 41.39333333333333
+  },
+  "OXR": {
+    "arrivals": "527",
+    "name": "OXNARD",
+    "longitude": -119.20722222222223,
+    "state": "CA",
+    "departures": "444",
+    "city": "OXNARD",
+    "county": "VENTURA",
+    "latitude": 34.20080555555556
+  },
+  "FWA": {
+    "name": "FORT WAYNE INTL",
+    "longitude": -85.19516666666667,
+    "state": "IN",
+    "city": "FORT WAYNE",
+    "county": "ALLEN",
+    "latitude": 40.97847222222222
+  },
+  "DTW": {
+    "arrivals": "186018",
+    "name": "DETROIT METROPOLITAN WAYNE COUNTY",
+    "longitude": -83.35338888888889,
+    "state": "MI",
+    "departures": "186389",
+    "city": "DETROIT",
+    "county": "WAYNE",
+    "latitude": 42.21241666666667
+  },
+  "OWB": {
+    "name": "OWENSBORO-DAVIESS COUNTY",
+    "longitude": -87.16682855555555,
+    "state": "KY",
+    "city": "OWENSBORO",
+    "county": "DAVIESS",
+    "latitude": 37.73883416666667
+  },
+  "GPT": {
+    "name": "GULFPORT-BILOXI INTL",
+    "longitude": -89.07008333333333,
+    "state": "MS",
+    "city": "GULFPORT",
+    "county": "HARRISON",
+    "latitude": 30.407277777777775
+  },
+  "BCT": {
+    "name": "BOCA RATON",
+    "longitude": -80.10769444444443,
+    "state": "FL",
+    "city": "BOCA RATON",
+    "county": "PALM BEACH",
+    "latitude": 26.3785
+  },
+  "SLC": {
+    "arrivals": "126534",
+    "name": "SALT LAKE CITY INTL",
+    "longitude": -111.97777305555556,
+    "state": "UT",
+    "departures": "126943",
+    "city": "SALT LAKE CITY",
+    "county": "SALT LAKE",
+    "latitude": 40.78838777777778
+  },
+  "TIX": {
+    "name": "SPACE COAST RGNL",
+    "longitude": -80.79922777777777,
+    "state": "FL",
+    "city": "TITUSVILLE",
+    "county": "BREVARD",
+    "latitude": 28.5148
+  },
+  "SME": {
+    "name": "LAKE CUMBERLAND RGNL",
+    "longitude": -84.61563888888888,
+    "state": "KY",
+    "city": "SOMERSET",
+    "county": "PULASKI",
+    "latitude": 37.05358333333333
+  },
+  "JLN": {
+    "name": "JOPLIN RGNL",
+    "longitude": -94.49827777777777,
+    "state": "MO",
+    "city": "JOPLIN",
+    "county": "JASPER",
+    "latitude": 37.151805555555555
+  },
+  "RDM": {
+    "name": "ROBERTS FIELD",
+    "longitude": -121.14997222222223,
+    "state": "OR",
+    "city": "REDMOND",
+    "county": "DESCHUTES",
+    "latitude": 44.25405555555555
+  },
+  "BWI": {
+    "arrivals": "111855",
+    "name": "BALTIMORE/WASHINGTON INTL THURGOOD MARSHAL",
+    "longitude": -76.66899227777779,
+    "state": "MD",
+    "departures": "112184",
+    "city": "BALTIMORE",
+    "county": "ANNE ARUNDEL",
+    "latitude": 39.17572766666667
+  },
+  "SPI": {
+    "name": "ABRAHAM LINCOLN CAPITAL",
+    "longitude": -89.67808333333333,
+    "state": "IL",
+    "city": "SPRINGFIELD",
+    "county": "SANGAMON",
+    "latitude": 39.84422222222222
+  },
+  "PAH": {
+    "name": "BARKLEY RGNL",
+    "longitude": -88.77295833333334,
+    "state": "KY",
+    "city": "PADUCAH",
+    "county": "MC CRACKEN",
+    "latitude": 37.060287499999994
+  },
+  "SUU": {
+    "name": "TRAVIS AFB",
+    "longitude": -121.92413147222223,
+    "state": "CA",
+    "city": "FAIRFIELD",
+    "county": "SOLANO",
+    "latitude": 38.264536666666665
+  },
+  "FRI": {
+    "name": "MARSHALL AAF",
+    "longitude": -96.7644875,
+    "state": "KS",
+    "city": "FORT RILEY(JUNCTION CITY)",
+    "county": "RILEY",
+    "latitude": 39.05264111111111
+  },
+  "TKI": {
+    "name": "MCKINNEY NATIONAL",
+    "longitude": -96.58876666666666,
+    "state": "TX",
+    "city": "DALLAS",
+    "county": "COLLIN",
+    "latitude": 33.17706527777778
+  },
+  "MLJ": {
+    "name": "BALDWIN COUNTY",
+    "longitude": -83.24141388888889,
+    "state": "GA",
+    "city": "MILLEDGEVILLE",
+    "county": "BALDWIN",
+    "latitude": 33.154225
+  },
+  "LGC": {
+    "name": "LAGRANGE-CALLAWAY",
+    "longitude": -85.0726111111111,
+    "state": "GA",
+    "city": "LAGRANGE",
+    "county": "TROUP",
+    "latitude": 33.00886111111111
+  },
+  "DBQ": {
+    "name": "DUBUQUE RGNL",
+    "longitude": -90.70947222222223,
+    "state": "IA",
+    "city": "DUBUQUE",
+    "county": "DUBUQUE",
+    "latitude": 42.402
+  },
+  "PIR": {
+    "name": "PIERRE RGNL",
+    "longitude": -100.28597222222223,
+    "state": "SD",
+    "city": "PIERRE",
+    "county": "HUGHES",
+    "latitude": 44.382694444444446
+  },
+  "PGD": {
+    "name": "PUNTA GORDA",
+    "longitude": -81.99092580555556,
+    "state": "FL",
+    "city": "PUNTA GORDA",
+    "county": "CHARLOTTE",
+    "latitude": 26.918937666666668
+  },
+  "CMI": {
+    "name": "UNIVERSITY OF ILLINOIS-WILLARD",
+    "longitude": -88.27780555555556,
+    "state": "IL",
+    "city": "CHAMPAIGN/URBANA",
+    "county": "CHAMPAIGN",
+    "latitude": 40.03883333333333
+  },
+  "ONT": {
+    "arrivals": "33565",
+    "name": "ONTARIO INTL",
+    "longitude": -117.60119444444445,
+    "state": "CA",
+    "departures": "33635",
+    "city": "ONTARIO",
+    "county": "SAN BERNARDINO",
+    "latitude": 34.056
+  },
+  "HNM": {
+    "name": "HANA",
+    "longitude": -156.0144378888889,
+    "state": "HI",
+    "city": "HANA",
+    "county": "MAUI",
+    "latitude": 20.79563716666667
+  },
+  "PWM": {
+    "name": "PORTLAND INTL JETPORT",
+    "longitude": -70.3086163611111,
+    "state": "ME",
+    "city": "PORTLAND",
+    "county": "CUMBERLAND",
+    "latitude": 43.6456435
+  },
+  "SGH": {
+    "name": "SPRINGFIELD-BECKLEY MUNI",
+    "longitude": -83.84016666666666,
+    "state": "OH",
+    "city": "SPRINGFIELD",
+    "county": "CLARK",
+    "latitude": 39.84027777777778
+  },
+  "UDD": {
+    "name": "BERMUDA DUNES",
+    "longitude": -116.27481333333333,
+    "state": "CA",
+    "city": "PALM SPRINGS",
+    "county": "RIVERSIDE",
+    "latitude": 33.7484375
+  },
+  "OSH": {
+    "name": "WITTMAN RGNL",
+    "longitude": -88.5569348611111,
+    "state": "WI",
+    "city": "OSHKOSH",
+    "county": "WINNEBAGO",
+    "latitude": 43.98449113888889
+  },
+  "DLF": {
+    "name": "LAUGHLIN AFB",
+    "longitude": -100.77791305555556,
+    "state": "TX",
+    "city": "DEL RIO",
+    "county": "VAL VERDE",
+    "latitude": 29.359393333333333
+  },
+  "LPR": {
+    "name": "LORAIN COUNTY RGNL",
+    "longitude": -82.1776388888889,
+    "state": "OH",
+    "city": "LORAIN/ELYRIA",
+    "county": "LORAIN",
+    "latitude": 41.34427777777778
+  },
+  "SFB": {
+    "name": "ORLANDO SANFORD INTL",
+    "longitude": -81.23491666666666,
+    "state": "FL",
+    "city": "ORLANDO",
+    "county": "SEMINOLE",
+    "latitude": 28.77697222222222
+  },
+  "RIL": {
+    "name": "GARFIELD COUNTY RGNL",
+    "longitude": -107.72800000000001,
+    "state": "CO",
+    "city": "RIFLE",
+    "county": "GARFIELD",
+    "latitude": 39.52661111111111
+  },
+  "MGC": {
+    "name": "MICHIGAN CITY MUNI-PHILLIPS FIELD",
+    "longitude": -86.82124166666667,
+    "state": "IN",
+    "city": "MICHIGAN CITY",
+    "county": "LA PORTE",
+    "latitude": 41.703316944444445
+  },
+  "CPS": {
+    "name": "ST LOUIS DOWNTOWN",
+    "longitude": -90.15508333333334,
+    "state": "IL",
+    "city": "CAHOKIA/ST LOUIS",
+    "county": "ST CLAIR",
+    "latitude": 38.57036111111111
+  },
+  "MHK": {
+    "name": "MANHATTAN RGNL",
+    "longitude": -96.671797,
+    "state": "KS",
+    "city": "MANHATTAN",
+    "county": "RILEY",
+    "latitude": 39.141233944444444
+  },
+  "NEW": {
+    "name": "LAKEFRONT",
+    "longitude": -90.02825,
+    "state": "LA",
+    "city": "NEW ORLEANS",
+    "county": "ORLEANS",
+    "latitude": 30.042416666666668
+  },
+  "WWD": {
+    "name": "CAPE MAY COUNTY",
+    "longitude": -74.90858333333334,
+    "state": "NJ",
+    "city": "WILDWOOD",
+    "county": "CAPE MAY",
+    "latitude": 39.0085
+  },
+  "LFI": {
+    "name": "LANGLEY AFB",
+    "longitude": -76.36053888888888,
+    "state": "VA",
+    "city": "HAMPTON",
+    "county": "HAMPTON",
+    "latitude": 37.082886111111115
+  },
+  "FZI": {
+    "name": "FOSTORIA METROPOLITAN",
+    "longitude": -83.39308333333334,
+    "state": "OH",
+    "city": "FOSTORIA",
+    "county": "SENECA",
+    "latitude": 41.19083333333333
+  },
+  "OLV": {
+    "name": "OLIVE BRANCH",
+    "longitude": -89.78686111111111,
+    "state": "MS",
+    "city": "OLIVE BRANCH",
+    "county": "DE SOTO",
+    "latitude": 34.978750000000005
+  },
+  "UDG": {
+    "name": "DARLINGTON COUNTY",
+    "longitude": -79.89006083333334,
+    "state": "SC",
+    "city": "DARLINGTON",
+    "county": "DARLINGTON",
+    "latitude": 34.44938447222222
+  },
+  "BZN": {
+    "name": "BOZEMAN YELLOWSTONE INTL",
+    "longitude": -111.15202155555556,
+    "state": "MT",
+    "city": "BOZEMAN",
+    "county": "GALLATIN",
+    "latitude": 45.77757166666667
+  },
+  "MUI": {
+    "name": "MUIR AAF (FORT INDIANTOWN GAP)",
+    "longitude": -76.56862783333332,
+    "state": "PA",
+    "city": "FORT INDIANTOWN GAP(ANNVILLE)",
+    "county": "LEBANON",
+    "latitude": 40.43523558333333
+  },
+  "IAG": {
+    "name": "NIAGARA FALLS INTL",
+    "longitude": -78.94584666666667,
+    "state": "NY",
+    "city": "NIAGARA FALLS",
+    "county": "NIAGARA",
+    "latitude": 43.10755736111111
+  },
+  "LAM": {
+    "name": "LOS ALAMOS",
+    "longitude": -106.26868611111111,
+    "state": "NM",
+    "city": "LOS ALAMOS",
+    "county": "LOS ALAMOS",
+    "latitude": 35.87968611111111
+  },
+  "BRL": {
+    "name": "SOUTHEAST IOWA RGNL",
+    "longitude": -91.12549999999999,
+    "state": "IA",
+    "city": "BURLINGTON",
+    "county": "DES MOINES",
+    "latitude": 40.78322222222222
+  },
+  "DRT": {
+    "name": "DEL RIO INTL",
+    "longitude": -100.92715694444445,
+    "state": "TX",
+    "city": "DEL RIO",
+    "county": "VAL VERDE",
+    "latitude": 29.374206944444445
+  },
+  "HDO": {
+    "name": "SOUTH TEXAS RGNL AT HONDO",
+    "longitude": -99.17749166666667,
+    "state": "TX",
+    "city": "HONDO",
+    "county": "MEDINA",
+    "latitude": 29.359130555555556
+  },
+  "MEM": {
+    "arrivals": "91533",
+    "name": "MEMPHIS INTL",
+    "longitude": -89.97666666666667,
+    "state": "TN",
+    "departures": "91908",
+    "city": "MEMPHIS",
+    "county": "SHELBY",
+    "latitude": 35.04241666666667
+  },
+  "LSE": {
+    "name": "LA CROSSE RGNL",
+    "longitude": -91.25663888888889,
+    "state": "WI",
+    "city": "LA CROSSE",
+    "county": "LA CROSSE",
+    "latitude": 43.87927777777778
+  },
+  "FOE": {
+    "name": "TOPEKA RGNL",
+    "longitude": -95.66361111111112,
+    "state": "KS",
+    "city": "TOPEKA",
+    "county": "SHAWNEE",
+    "latitude": 38.950944444444445
+  },
+  "ROA": {
+    "name": "ROANOKE-BLACKSBURG RGNL/WOODRUM FIELD",
+    "longitude": -79.97541666666667,
+    "state": "VA",
+    "city": "ROANOKE",
+    "county": "ROANOKE",
+    "latitude": 37.325472222222224
+  },
+  "CVG": {
+    "arrivals": "60742",
+    "name": "CINCINNATI/NORTHERN KENTUCKY INTL",
+    "longitude": -84.66782222222223,
+    "state": "KY",
+    "departures": "60317",
+    "city": "COVINGTON",
+    "county": "BOONE",
+    "latitude": 39.048836666666666
+  },
+  "BNA": {
+    "arrivals": "71634",
+    "name": "NASHVILLE INTL",
+    "longitude": -86.67816666666667,
+    "state": "TN",
+    "departures": "71763",
+    "city": "NASHVILLE",
+    "county": "DAVIDSON",
+    "latitude": 36.124472222222224
+  },
+  "TLH": {
+    "name": "TALLAHASSEE INTL",
+    "longitude": -84.3508611111111,
+    "state": "FL",
+    "city": "TALLAHASSEE",
+    "county": "LEON",
+    "latitude": 30.39675
+  },
+  "KLS": {
+    "name": "SOUTHWEST WASHINGTON RGNL",
+    "longitude": -122.89838888888889,
+    "state": "WA",
+    "city": "KELSO",
+    "county": "COWLITZ",
+    "latitude": 46.118
+  },
+  "TMA": {
+    "name": "HENRY TIFT MYERS",
+    "longitude": -83.48852777777778,
+    "state": "GA",
+    "city": "TIFTON",
+    "county": "TIFT",
+    "latitude": 31.428972222222225
+  },
+  "BIV": {
+    "name": "WEST MICHIGAN RGNL",
+    "longitude": -86.10783333333333,
+    "state": "MI",
+    "city": "HOLLAND",
+    "county": "ALLEGAN",
+    "latitude": 42.74277777777778
+  },
+  "FNL": {
+    "name": "FORT COLLINS-LOVELAND MUNI",
+    "longitude": -105.01133555555556,
+    "state": "CO",
+    "city": "FORT COLLINS/LOVELAND",
+    "county": "LARIMER",
+    "latitude": 40.45182722222223
+  },
+  "BIX": {
+    "name": "KEESLER AFB",
+    "longitude": -88.92443333333334,
+    "state": "MS",
+    "city": "BILOXI",
+    "county": "HARRISON",
+    "latitude": 30.410425
+  },
+  "PMD": {
+    "name": "PALMDALE USAF PLANT 42",
+    "longitude": -118.08455277777777,
+    "state": "CA",
+    "city": "PALMDALE",
+    "county": "LOS ANGELES",
+    "latitude": 34.62938888888889
+  },
+  "SEA": {
+    "arrivals": "187082",
+    "name": "SEATTLE-TACOMA INTL",
+    "longitude": -122.31177777777778,
+    "state": "WA",
+    "departures": "187043",
+    "city": "SEATTLE",
+    "county": "KING",
+    "latitude": 47.449888888888886
+  },
+  "PVD": {
+    "arrivals": "21154",
+    "name": "THEODORE FRANCIS GREEN STATE",
+    "longitude": -71.42822111111111,
+    "state": "RI",
+    "departures": "21687",
+    "city": "PROVIDENCE",
+    "county": "KENT",
+    "latitude": 41.723999166666665
+  },
+  "IFP": {
+    "name": "LAUGHLIN/BULLHEAD INTL",
+    "longitude": -114.55944444444444,
+    "state": "AZ",
+    "city": "BULLHEAD CITY",
+    "county": "MOHAVE",
+    "latitude": 35.15597222222222
+  },
+  "BGM": {
+    "name": "GREATER BINGHAMTON/EDWIN A LINK FIELD",
+    "longitude": -75.97960727777777,
+    "state": "NY",
+    "city": "BINGHAMTON",
+    "county": "BROOME",
+    "latitude": 42.20844291666667
+  },
+  "CRP": {
+    "name": "CORPUS CHRISTI INTL",
+    "longitude": -97.50241666666666,
+    "state": "TX",
+    "city": "CORPUS CHRISTI",
+    "county": "NUECES",
+    "latitude": 27.772194444444445
+  },
+  "BLH": {
+    "name": "BLYTHE",
+    "longitude": -114.71688888888889,
+    "state": "CA",
+    "city": "BLYTHE",
+    "county": "RIVERSIDE",
+    "latitude": 33.619166666666665
+  },
+  "SDF": {
+    "arrivals": "64455",
+    "name": "LOUISVILLE INTL-STANDIFORD FIELD",
+    "longitude": -85.73649888888889,
+    "state": "KY",
+    "departures": "64884",
+    "city": "LOUISVILLE",
+    "county": "JEFFERSON",
+    "latitude": 38.17408583333333
+  },
+  "MHT": {
+    "arrivals": "18307",
+    "name": "MANCHESTER",
+    "longitude": -71.43575,
+    "state": "NH",
+    "departures": "18324",
+    "city": "MANCHESTER",
+    "county": "HILLSBOROUGH",
+    "latitude": 42.932805555555554
+  },
+  "PSM": {
+    "name": "PORTSMOUTH INTL AT PEASE",
+    "longitude": -70.82327777777778,
+    "state": "NH",
+    "city": "PORTSMOUTH",
+    "county": "ROCKINGHAM",
+    "latitude": 43.07794444444445
+  },
+  "DQH": {
+    "name": "DOUGLAS MUNI",
+    "longitude": -82.86056641666666,
+    "state": "GA",
+    "city": "DOUGLAS",
+    "county": "COFFEE",
+    "latitude": 31.47673847222222
+  },
+  "FHU": {
+    "name": "SIERRA VISTA MUNI-LIBBY AAF",
+    "longitude": -110.34438888888889,
+    "state": "AZ",
+    "city": "FORT HUACHUCA SIERRA VISTA",
+    "county": "COCHISE",
+    "latitude": 31.588472222222222
+  },
+  "RME": {
+    "name": "GRIFFISS INTL",
+    "longitude": -75.40702777777778,
+    "state": "NY",
+    "city": "ROME",
+    "county": "ONEIDA",
+    "latitude": 43.233805555555556
+  },
+  "BIG": {
+    "name": "ALLEN AAF",
+    "longitude": -145.72002466666666,
+    "state": "AK",
+    "city": "DELTA JUNCTION FT GREELY",
+    "county": "FAIRBANKS NORTH STAR",
+    "latitude": 63.99516030555556
+  },
+  "BMT": {
+    "name": "BEAUMONT MUNI",
+    "longitude": -94.21509672222223,
+    "state": "TX",
+    "city": "BEAUMONT",
+    "county": "JEFFERSON",
+    "latitude": 30.07020438888889
+  },
+  "UUU": {
+    "name": "NEWPORT STATE",
+    "longitude": -71.28154394444444,
+    "state": "RI",
+    "city": "NEWPORT",
+    "county": "NEWPORT",
+    "latitude": 41.53243975
+  },
+  "IKK": {
+    "name": "GREATER KANKAKEE",
+    "longitude": -87.84627777777777,
+    "state": "IL",
+    "city": "KANKAKEE",
+    "county": "KANKAKEE",
+    "latitude": 41.07138888888889
+  },
+  "MTH": {
+    "name": "THE FLORIDA KEYS MARATHON INTL",
+    "longitude": -81.0513611111111,
+    "state": "FL",
+    "city": "MARATHON",
+    "county": "MONROE",
+    "latitude": 24.72619444444444
+  },
+  "MIE": {
+    "name": "DELAWARE COUNTY RGNL",
+    "longitude": -85.39575,
+    "state": "IN",
+    "city": "MUNCIE",
+    "county": "DELAWARE",
+    "latitude": 40.242472222222226
+  },
+  "MMU": {
+    "name": "MORRISTOWN MUNI",
+    "longitude": -74.4148888888889,
+    "state": "NJ",
+    "city": "MORRISTOWN",
+    "county": "MORRIS",
+    "latitude": 40.79933333333333
+  },
+  "RMG": {
+    "name": "RICHARD B RUSSELL REGIONAL - J H TOWERS FI",
+    "longitude": -85.15866666666668,
+    "state": "GA",
+    "city": "ROME",
+    "county": "FLOYD",
+    "latitude": 34.35077777777778
+  },
+  "GIF": {
+    "name": "WINTER HAVEN'S GILBERT",
+    "longitude": -81.75330555555556,
+    "state": "FL",
+    "city": "WINTER HAVEN",
+    "county": "POLK",
+    "latitude": 28.062916666666666
+  },
+  "HHR": {
+    "name": "JACK NORTHROP FIELD/HAWTHORNE MUNI",
+    "longitude": -118.33518722222222,
+    "state": "CA",
+    "city": "HAWTHORNE",
+    "county": "LOS ANGELES",
+    "latitude": 33.92283972222222
+  },
+  "NUQ": {
+    "name": "MOFFETT FEDERAL AFLD",
+    "longitude": -122.04913888888889,
+    "state": "CA",
+    "city": "MOUNTAIN VIEW",
+    "county": "ALAMEDA",
+    "latitude": 37.41613888888889
+  },
+  "OCF": {
+    "name": "OCALA INTL-JIM TAYLOR FIELD",
+    "longitude": -82.22411463888889,
+    "state": "FL",
+    "city": "OCALA",
+    "county": "MARION",
+    "latitude": 29.17187677777778
+  },
+  "GGG": {
+    "name": "EAST TEXAS RGNL",
+    "longitude": -94.71148666666667,
+    "state": "TX",
+    "city": "LONGVIEW",
+    "county": "GREGG",
+    "latitude": 32.384014444444446
+  },
+  "ROW": {
+    "name": "ROSWELL INTL AIR CENTER",
+    "longitude": -104.53055555555555,
+    "state": "NM",
+    "city": "ROSWELL",
+    "county": "CHAVES",
+    "latitude": 33.30155555555555
+  },
+  "NIP": {
+    "name": "JACKSONVILLE NAS (TOWERS FLD)",
+    "longitude": -81.67496527777779,
+    "state": "FL",
+    "city": "JACKSONVILLE",
+    "county": "DUVAL",
+    "latitude": 30.23385686111111
+  },
+  "LWM": {
+    "name": "LAWRENCE MUNI",
+    "longitude": -71.12341666666666,
+    "state": "MA",
+    "city": "LAWRENCE",
+    "county": "ESSEX",
+    "latitude": 42.717194444444445
+  },
+  "CDC": {
+    "name": "CEDAR CITY RGNL",
+    "longitude": -113.09884583333333,
+    "state": "UT",
+    "city": "CEDAR CITY",
+    "county": "IRON",
+    "latitude": 37.700966388888894
+  },
+  "BUY": {
+    "name": "BURLINGTON-ALAMANCE RGNL",
+    "longitude": -79.4730096388889,
+    "state": "NC",
+    "city": "BURLINGTON",
+    "county": "ALAMANCE",
+    "latitude": 36.04972783333333
+  },
+  "SMD": {
+    "name": "SMITH FIELD",
+    "longitude": -85.15277777777779,
+    "state": "IN",
+    "city": "FORT WAYNE",
+    "county": "ALLEN",
+    "latitude": 41.14336111111111
+  },
+  "BQK": {
+    "name": "BRUNSWICK GOLDEN ISLES",
+    "longitude": -81.46631583333334,
+    "state": "GA",
+    "city": "BRUNSWICK",
+    "county": "GLYNN",
+    "latitude": 31.259034694444445
+  },
+  "PVC": {
+    "name": "PROVINCETOWN MUNI",
+    "longitude": -70.22072222222222,
+    "state": "MA",
+    "city": "PROVINCETOWN",
+    "county": "BARNSTABLE",
+    "latitude": 42.07227777777778
+  },
+  "GNV": {
+    "name": "GAINESVILLE RGNL",
+    "longitude": -82.27177777777777,
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "county": "ALACHUA",
+    "latitude": 29.690055555555556
+  },
+  "JAN": {
+    "name": "JACKSON-MEDGAR WILEY EVERS INTL",
+    "longitude": -90.07588888888888,
+    "state": "MS",
+    "city": "JACKSON",
+    "county": "RANKIN",
+    "latitude": 32.311166666666665
+  },
+  "SEE": {
+    "name": "GILLESPIE FIELD",
+    "longitude": -116.97244444444445,
+    "state": "CA",
+    "city": "SAN DIEGO/EL CAJON",
+    "county": "SAN DIEGO",
+    "latitude": 32.82622222222223
+  },
+  "PAE": {
+    "name": "SNOHOMISH COUNTY (PAINE FLD)",
+    "longitude": -122.28158333333333,
+    "state": "WA",
+    "city": "EVERETT",
+    "county": "SNOHOMISH",
+    "latitude": 47.907
+  },
+  "PTK": {
+    "name": "OAKLAND COUNTY INTL",
+    "longitude": -83.4205056388889,
+    "state": "MI",
+    "city": "PONTIAC",
+    "county": "OAKLAND",
+    "latitude": 42.665636194444446
+  },
+  "AGC": {
+    "name": "ALLEGHENY COUNTY",
+    "longitude": -79.92904666666666,
+    "state": "PA",
+    "city": "PITTSBURGH",
+    "county": "ALLEGHENY",
+    "latitude": 40.35443763888889
+  },
+  "ABY": {
+    "name": "SOUTHWEST GEORGIA RGNL",
+    "longitude": -84.19447222222223,
+    "state": "GA",
+    "city": "ALBANY",
+    "county": "DOUGHERTY",
+    "latitude": 31.53552777777778
+  },
+  "SEF": {
+    "name": "SEBRING RGNL",
+    "longitude": -81.34238888888889,
+    "state": "FL",
+    "city": "SEBRING",
+    "county": "HIGHLANDS",
+    "latitude": 27.45638888888889
+  },
+  "TEB": {
+    "arrivals": "31834",
+    "name": "TETERBORO",
+    "longitude": -74.06083333333333,
+    "state": "NJ",
+    "departures": "31831",
+    "city": "TETERBORO",
+    "county": "BERGEN",
+    "latitude": 40.85011111111111
+  },
+  "ANN": {
+    "name": "ANNETTE ISLAND",
+    "longitude": -131.57089936111112,
+    "state": "AK",
+    "city": "ANNETTE",
+    "county": "KETCHIKAN GATEWAY",
+    "latitude": 55.04229358333333
+  },
+  "BOS": {
+    "arrivals": "171231",
+    "name": "GENERAL EDWARD LAWRENCE LOGAN INTL",
+    "longitude": -71.00638888888889,
+    "state": "MA",
+    "departures": "176397",
+    "city": "BOSTON",
+    "county": "SUFFOLK",
+    "latitude": 42.362944444444445
+  },
+  "INS": {
+    "name": "CREECH AFB",
+    "longitude": -115.67737055555556,
+    "state": "NV",
+    "city": "INDIAN SPRINGS",
+    "county": "CLARK",
+    "latitude": 36.58634377777778
+  },
+  "CON": {
+    "name": "CONCORD MUNI",
+    "longitude": -71.50227777777778,
+    "state": "NH",
+    "city": "CONCORD",
+    "county": "MERRIMACK",
+    "latitude": 43.20272222222223
+  },
+  "NYG": {
+    "name": "QUANTICO MCAF /TURNER FIELD",
+    "longitude": -77.30503166666666,
+    "state": "VA",
+    "city": "QUANTICO",
+    "county": "STAFFORD",
+    "latitude": 38.50362444444445
+  },
+  "CDW": {
+    "name": "ESSEX COUNTY",
+    "longitude": -74.28136111111111,
+    "state": "NJ",
+    "city": "CALDWELL",
+    "county": "ESSEX",
+    "latitude": 40.87522222222222
+  },
+  "MFI": {
+    "name": "MARSHFIELD MUNI",
+    "longitude": -90.18932666666667,
+    "state": "WI",
+    "city": "MARSHFIELD",
+    "county": "WOOD",
+    "latitude": 44.63687972222222
+  },
+  "JXN": {
+    "name": "JACKSON COUNTY-REYNOLDS FIELD",
+    "longitude": -84.46044444444445,
+    "state": "MI",
+    "city": "JACKSON",
+    "county": "JACKSON",
+    "latitude": 42.260416666666664
+  },
+  "CFD": {
+    "name": "COULTER FIELD",
+    "longitude": -96.33136111111111,
+    "state": "TX",
+    "city": "BRYAN",
+    "county": "BRAZOS",
+    "latitude": 30.715694444444445
+  },
+  "MSP": {
+    "arrivals": "194029",
+    "name": "MINNEAPOLIS-ST PAUL INTL/WOLD-CHAMBERLAIN",
+    "longitude": -93.22177777777777,
+    "state": "MN",
+    "departures": "193790",
+    "city": "MINNEAPOLIS",
+    "county": "HENNEPIN",
+    "latitude": 44.881972222222224
+  },
+  "POE": {
+    "name": "POLK AAF",
+    "longitude": -93.19164208333333,
+    "state": "LA",
+    "city": "FORT POLK",
+    "county": "VERNON",
+    "latitude": 31.044782361111114
+  },
+  "DWA": {
+    "name": "YOLO COUNTY",
+    "longitude": -121.85694444444444,
+    "state": "CA",
+    "city": "DAVIS/WOODLAND/WINTERS",
+    "county": "YOLO",
+    "latitude": 38.57938888888889
+  },
+  "RDR": {
+    "name": "GRAND FORKS AFB",
+    "longitude": -97.40081111111111,
+    "state": "ND",
+    "city": "GRAND FORKS",
+    "county": "GRAND FORKS",
+    "latitude": 47.96128055555556
+  },
+  "MGM": {
+    "name": "MONTGOMERY RGNL (DANNELLY FIELD)",
+    "longitude": -86.39397222222223,
+    "state": "AL",
+    "city": "MONTGOMERY",
+    "county": "MONTGOMERY",
+    "latitude": 32.300638888888884
+  },
+  "LNN": {
+    "name": "WILLOUGHBY LOST NATION MUNI",
+    "longitude": -81.38975,
+    "state": "OH",
+    "city": "WILLOUGHBY",
+    "county": "LAKE",
+    "latitude": 41.68402777777777
+  },
+  "GUS": {
+    "name": "GRISSOM ARB",
+    "longitude": -86.15211822222223,
+    "state": "IN",
+    "city": "PERU",
+    "county": "MIAMI",
+    "latitude": 40.64809172222222
+  },
+  "VAY": {
+    "name": "SOUTH JERSEY RGNL",
+    "longitude": -74.84575,
+    "state": "NJ",
+    "city": "MOUNT HOLLY",
+    "county": "BURLINGTON",
+    "latitude": 39.94288888888889
+  },
+  "MYV": {
+    "name": "YUBA COUNTY",
+    "longitude": -121.56983333333334,
+    "state": "CA",
+    "city": "MARYSVILLE",
+    "county": "YUBA",
+    "latitude": 39.09777777777778
+  },
+  "JHM": {
+    "name": "KAPALUA",
+    "longitude": -156.67303166666665,
+    "state": "HI",
+    "city": "LAHAINA",
+    "county": "MAUI",
+    "latitude": 20.962936388888888
+  },
+  "LRF": {
+    "name": "LITTLE ROCK AFB",
+    "longitude": -92.14500102777778,
+    "state": "AR",
+    "city": "JACKSONVILLE",
+    "county": "PULASKI",
+    "latitude": 34.91751211111111
+  },
+  "JFK": {
+    "arrivals": "211931",
+    "name": "JOHN F KENNEDY INTL",
+    "longitude": -73.77869497222223,
+    "state": "NY",
+    "departures": "213431",
+    "city": "NEW YORK",
+    "county": "QUEENS",
+    "latitude": 40.639925749999996
+  },
+  "SFM": {
+    "name": "SANFORD SEACOAST RGNL",
+    "longitude": -70.708,
+    "state": "ME",
+    "city": "SANFORD",
+    "county": "YORK",
+    "latitude": 43.39380555555555
+  },
+  "CEW": {
+    "name": "BOB SIKES",
+    "longitude": -86.52211111111112,
+    "state": "FL",
+    "city": "CRESTVIEW",
+    "county": "OKALOOSA",
+    "latitude": 30.77883333333333
+  },
+  "PBI": {
+    "arrivals": "38466",
+    "name": "PALM BEACH INTL",
+    "longitude": -80.09558333333332,
+    "state": "FL",
+    "departures": "39038",
+    "city": "WEST PALM BEACH",
+    "county": "PALM BEACH",
+    "latitude": 26.68316666666667
+  },
+  "HOU": {
+    "arrivals": "67318",
+    "name": "WILLIAM P HOBBY",
+    "longitude": -95.27888888888889,
+    "state": "TX",
+    "departures": "67226",
+    "city": "HOUSTON",
+    "county": "HARRIS",
+    "latitude": 29.645416666666666
+  },
+  "ORH": {
+    "name": "WORCESTER RGNL",
+    "longitude": -71.8756111111111,
+    "state": "MA",
+    "city": "WORCESTER",
+    "county": "WORCESTER",
+    "latitude": 42.26713888888889
+  },
+  "PUC": {
+    "name": "CARBON COUNTY RGNL/BUCK DAVIS FIELD",
+    "longitude": -110.75144444444445,
+    "state": "UT",
+    "city": "PRICE",
+    "county": "CARBON",
+    "latitude": 39.61391666666667
+  }
+}
