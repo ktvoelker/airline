@@ -4,7 +4,7 @@ import json
 import re
 
 
-RE_COUNTY = re.compile(r'^(.*?)( (County|Parish|city))?, ([A-Z]{2})$')
+RE_COUNTY = re.compile(r'^(.*?)( (Borough|County|Parish|city))?, ([A-Z]{2})$')
 CBSA_TYPES = {
     'metropolitan statistical area',
     'micropolitan statistical area',

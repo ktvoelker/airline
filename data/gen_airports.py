@@ -6,6 +6,10 @@ import sys
 
 
 RE_GEO = re.compile(r'^(\d+)-(\d+)-(\d+\.\d+)([NSEW])$')
+SKIP_STATES = {
+    'MQ',
+    'WQ',
+}
 
 
 def geo_sign(xs: str) -> int:
@@ -32,8 +36,11 @@ with open('airports.csv', 'r') as airports_file:
             fac_id = row[9]
             if len(fac_id) != 3 or not fac_id.isalpha():
                 continue
+            state = row[1]
+            if state in SKIP_STATES:
+                continue
             facilities[fac_id] = {
-                'state': row[1],
+                'state': state,
                 'city': row[4],
                 'county': row[5],
                 'name': row[6],
