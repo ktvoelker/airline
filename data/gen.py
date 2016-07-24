@@ -24,34 +24,31 @@ def parse_geo(xs: str) -> float:
 
 facilities = {}
 
-with open('APM-Report-45560.csv', 'r') as apm_file:
-    apm = csv.reader(apm_file)
-    next(apm)
-    for row in apm:
-        facility = row[0]
-        departures = row[3]
-        arrivals = row[4]
-        facilities[facility] = {
-            'departures': int(departures),
-            'arrivals': int(arrivals),
-        }
-
 with open('airports.csv', 'r') as airports_file:
     airports = csv.reader(airports_file)
     next(airports)
     for row in airports:
-        long_name = row[6]
-        facility = row[9]
-        latitude = row[11]
-        longitude = row[12]
-        if facility not in facilities:
-            continue
-        facilities[facility]['name'] = long_name
-        facilities[facility]['latitude'] = parse_geo(latitude)
-        facilities[facility]['longitude'] = parse_geo(longitude)
+        try:
+            fac_id = row[9]
+            if len(fac_id) != 3 or not fac_id.isalpha():
+                continue
+            facilities[fac_id] = {
+                'state': row[1],
+                'city': row[4],
+                'county': row[5],
+                'name': row[6],
+                'latitude': parse_geo(row[11]),
+                'longitude': parse_geo(row[12])
+            }
+        except ValueError:
+            sys.stderr.write('Bad line %s\n' % row)
 
-for name, facility in facilities.items():
-    if 'latitude' not in facility:
-        sys.stderr.write('Warning: no location for %s.\n' % name)
+with open('APM-Report-45560.csv', 'r') as apm_file:
+    apm = csv.reader(apm_file)
+    next(apm)
+    for row in apm:
+        facility = facilities[row[0]]
+        facility['departures'] = row[3]
+        facility['arrivals'] = row[4]
 
 print(json.dumps(facilities, indent=2))
